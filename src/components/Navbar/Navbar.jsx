@@ -16,11 +16,11 @@ import {
 export const Navbar = () => {
   return (
     <SNavbar>
-      <SLogo src="public/assets/images/LogoNoBackground.png" width={180}/>
+      <SLogo src="public/assets/images/LogoNoBackground.png" alt="logo" width={180}/>
       <SNavMenu>
         <SNavItem>მთავარი</SNavItem>
+        <SNavItem>Online განვადება</SNavItem>
         <SNavItem>კონტაქტი</SNavItem>
-        <SNavItem>შესახებ</SNavItem>
       </SNavMenu>
       <SNavActions>
         <SNavInputContainer>
