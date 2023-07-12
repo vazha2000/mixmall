@@ -16,7 +16,7 @@ import {
 export const Navbar = () => {
   return (
     <SNavbar>
-      <SLogo>MixMall</SLogo>
+      <SLogo src="public/assets/images/LogoNoBackground.png" width={180}/>
       <SNavMenu>
         <SNavItem>მთავარი</SNavItem>
         <SNavItem>კონტაქტი</SNavItem>

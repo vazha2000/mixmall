@@ -8,12 +8,16 @@ export const SNavbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 1024px){
+    background-color: red;
+  }
 `;
 
-export const SLogo = styled.h1`
-  font-size: 3rem;
-  color: #2dd64f;
-`;
+
+export const SLogo = styled.img`
+  cursor: pointer;
+`
 
 export const SNavMenu = styled.ul`
   display: flex;
