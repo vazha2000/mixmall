@@ -17,7 +17,7 @@ import {
 export const Navbar = () => {
   return (
     <SNavbar>
-      <SLogo src="public/assets/images/LogoNoBackground.png" alt="logo" width={180}/>
+      <SLogo src="assets/images/LogoNoBackground.png" alt="logo" width={180}/>
       <SNavMenu>
         <SNavItem>მთავარი</SNavItem>
         <SNavItem>Online განვადება</SNavItem>
