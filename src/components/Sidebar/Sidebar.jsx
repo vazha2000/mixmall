@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SSideBarCategories,
   SSideBarCategoriesList,
   SSidebarContainer,
 } from "./Sidebar.styled";
+import { motion } from "framer-motion";
 
 const categoriesListItems = [
   {
@@ -61,21 +62,45 @@ const categoriesListItems = [
   },
 ];
 
-console.log(categoriesListItems)
+const DropdownMenu = ({ subcategories }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      {subcategories.map((subcategory, index) => (
+        <div key={index}>{subcategory}</div>
+      ))}
+    </motion.div>
+  );
+};
 
 export const Sidebar = () => {
+  const [hoveredCategory, setHoveredCategory] = useState(null);
+
+const handleCategoryHover = (category) => {
+  setHoveredCategory(category)
+  console.log("hovered on: ", category.name)
+}
   return (
     <SSidebarContainer>
       <SSideBarCategories>
         {categoriesListItems.map((item, index) => {
           return (
-            <SSideBarCategoriesList key={index}>
+            <SSideBarCategoriesList key={index} onMouseEnter={() => handleCategoryHover(item)}>
               <span>{item.name}</span>
               <img src="assets/svg/vectorRight.svg" alt="vectorRight" />
             </SSideBarCategoriesList>
           );
         })}
       </SSideBarCategories>
+      {hoveredCategory && (
+        <motion.div initial={{opacity: 0, x: -20}} animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.3 }}>
+          <DropdownMenu subcategories={hoveredCategory.subcategories} />
+        </motion.div>
+      )}
     </SSidebarContainer>
   );
 };
