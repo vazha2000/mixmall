@@ -20,6 +20,6 @@ export const SSideBarCategoriesList = styled.li`
   justify-content: space-between;
   padding-right: 10px;
   &:hover {
-    color: red;
+    color: #df3d41;
   }
 `;
