@@ -1,24 +1,38 @@
-import React from 'react'
-import { SSideBarCategories, SSideBarCategoriesList, SSidebarContainer } from './Sidebar.styled'
+import React from "react";
+import {
+  SSideBarCategories,
+  SSideBarCategoriesList,
+  SSidebarContainer,
+} from "./Sidebar.styled";
 
+const categoriesListItems = [
+  "კომპიუტერული ტექნიკა",
+  "მსხვილი საყოფაცხოვრებო ტექნიკა",
+  "წვრილი საყოფაცხოვრებო ტექნიკა",
+  "ხელსაწყო ინსტრუმენტები",
+  "მობილური ტელეფონები",
+  "თავის მოვლის საშუალებები",
+  "სპორტი და გართობა",
+  "გათბობა და გაგრილება",
+  "საბავშვო ინვენტარი",
+  "სამზარეულოს ტექნიკა",
+  "ინტერიერი და ავეჯი",
+  "სამშენებლო მასალები",
+  "ავტომობილების განყოფილება",
+];
 export const Sidebar = () => {
   return (
     <SSidebarContainer>
       <SSideBarCategories>
-        <SSideBarCategoriesList>კომპიუტერული ტექნიკა</SSideBarCategoriesList>
-        <SSideBarCategoriesList>მსხვილი საყოფაცხოვრებო ტექნიკა</SSideBarCategoriesList>
-        <SSideBarCategoriesList>წვრილი საყოფაცხოვრებო ტექნიკა</SSideBarCategoriesList>
-        <SSideBarCategoriesList>ხელსაწყო ინსტრუმენტები</SSideBarCategoriesList>
-        <SSideBarCategoriesList>მობილური ტელეფონები</SSideBarCategoriesList>
-        <SSideBarCategoriesList>თავის მოვლის საშუალებები</SSideBarCategoriesList>
-        <SSideBarCategoriesList>სპორტი და გართობა</SSideBarCategoriesList>
-        <SSideBarCategoriesList>გათბობა და გაგრილება</SSideBarCategoriesList>
-        <SSideBarCategoriesList>საბავშვო ინვენტარი</SSideBarCategoriesList>
-        <SSideBarCategoriesList>სამზარეულოს ტექნიკა</SSideBarCategoriesList>
-        <SSideBarCategoriesList>ინტერიერი და ავეჯი</SSideBarCategoriesList>
-        <SSideBarCategoriesList>სამშენებლო მასალები</SSideBarCategoriesList>
-        <SSideBarCategoriesList>ავტომობილების განყოფილება</SSideBarCategoriesList>
+        {categoriesListItems.map((item, index) => {
+          return (
+            <SSideBarCategoriesList key={index}>
+              <span>{item}</span>
+              <img src="assets/svg/vectorRight.svg" alt="vectorRight" />
+            </SSideBarCategoriesList>
+          );
+        })}
       </SSideBarCategories>
     </SSidebarContainer>
-  )
-}
+  );
+};
