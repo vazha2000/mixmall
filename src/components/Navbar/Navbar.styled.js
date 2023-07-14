@@ -1,21 +1,16 @@
 import styled from "styled-components";
 
 export const SNavbar = styled.nav`
-  padding: 0 8.5rem;
+  width: 82%;
+  margin: 0 auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   height: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  @media screen and (max-width: 1200px){
-    padding: 0 4rem;
-  }
   @media screen and (max-width: 968px) {
-    padding: 0 2rem;
-  }
-  @media screen and (max-width: 650px) {
-    padding: 0 1rem;
+    width: 95%;
   }
 `;
 
