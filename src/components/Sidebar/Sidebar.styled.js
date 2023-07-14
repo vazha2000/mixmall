@@ -22,4 +22,8 @@ export const SSideBarCategoriesList = styled.li`
   &:hover {
     color: #df3d41;
   }
+
+  &:hover > img {
+    filter: invert(38%) sepia(90%) saturate(4338%) hue-rotate(349deg) brightness(92%) contrast(100%);
+  }
 `;
