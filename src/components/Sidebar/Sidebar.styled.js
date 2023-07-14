@@ -12,13 +12,13 @@ export const SSideBarCategories = styled.ul`
 
 export const SSideBarCategoriesList = styled.li`
   cursor: pointer;
-  padding: 10px 0;
+  padding: .625rem 0;
   font-weight: bold;
   border-bottom: 1px solid rgba(0,0,0, 0.3);
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding-right: 10px;
+  padding-right: .625rem;
   &:hover {
     color: #df3d41;
   }
