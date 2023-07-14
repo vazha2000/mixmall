@@ -1,17 +1,14 @@
 import styled from "styled-components";
 
 export const SNavbar = styled.nav`
-  width: 82%;
-  margin: 0 auto;
+  /* width: 82%;
+  margin: 0 auto; */
+  width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   height: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @media screen and (max-width: 968px) {
-    width: 95%;
-  }
 `;
 
 
@@ -79,7 +76,8 @@ export const SWishlistCartContainer = styled.div`
   margin-left: 1.5rem;
 
   @media screen and (max-width: 768px) {
-    margin-left: .5rem;
+    margin-left: 0;
+    gap: 0;
   }
 `
 
