@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SSidebarContainer = styled.div`
   flex: 1;
   /* background-color: #d5d8de; */
+  position: relative;
 `;
 
 export const SSideBarCategories = styled.ul`
