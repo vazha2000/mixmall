@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   SSideBarCategories,
   SSideBarCategoriesList,
@@ -65,29 +65,29 @@ const categoriesListItems = [
 
 export const Sidebar = () => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
+  const [dropdownPosition, setDropdownPosition] = useState({top: 0, left: 0})
+  
 
-const handleCategoryHover = (category) => {
+  const handleCategoryHover = (category, event) => {
+  const {top, left} = event.target.getBoundingClientRect()
   setHoveredCategory(category)
-  console.log("hovered on: ", category.name)
+  setDropdownPosition({top, left})
 }
   return (
     <SSidebarContainer>
       <SSideBarCategories>
         {categoriesListItems.map((item, index) => {
           return (
-            <SSideBarCategoriesList key={index} onMouseEnter={() => handleCategoryHover(item)}>
+            <SSideBarCategoriesList key={index} onMouseEnter={(event) => handleCategoryHover(item, event)}>
               <span>{item.name}</span>
               <img src="assets/svg/vectorRight.svg" alt="vectorRight" />
             </SSideBarCategoriesList>
           );
         })}
       </SSideBarCategories>
-      {hoveredCategory && (
-        <motion.div initial={{opacity: 0, x: -20}} animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.3 }}>
-          <DropdownMenu subcategories={hoveredCategory.subcategories} />
-        </motion.div>
-      )}
+      {hoveredCategory && 
+          <DropdownMenu subcategories={hoveredCategory.subcategories} topPosition={dropdownPosition.top} />
+      }
     </SSidebarContainer>
   );
 };
