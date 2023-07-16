@@ -7,7 +7,7 @@ export const MainPage = () => {
   return (
     <SMainPage>
       <Navbar />
-      <div style={{ display: "flex",}}>
+      <div style={{ display: "flex", marginTop: "40px"}}>
         <Sidebar />
         <div
           className="background"
