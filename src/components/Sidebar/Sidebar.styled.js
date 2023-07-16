@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const SSidebarContainer = styled.div`
   flex: 1;
-  /* background-color: #d5d8de; */
   position: relative;
 `;
 
@@ -10,6 +9,10 @@ export const SSideBarCategories = styled.ul`
   display: flex;
   flex-direction: column;
 `;
+
+export const SSideBarCategoriesListWrapper = styled.div`
+  //
+`
 
 export const SSideBarCategoriesList = styled.li`
   cursor: pointer;

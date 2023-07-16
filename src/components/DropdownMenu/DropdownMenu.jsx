@@ -1,17 +1,18 @@
 import React from 'react'
-import { motion } from 'framer-motion';
+import { SDropDownMenu } from './DropdownMenu.styled';
 
 export const DropdownMenu = ({subcategories, topPosition}) => {
   return (
-    <motion.div
-      // initial={{ opacity: 1, x: "100%" }}
-      // animate={{ opacity: 1, x: 100 }}
-      // transition={{ duration: 0.3 }}
-      style={{backgroundColor: "yellowgreen", position: "absolute", top: topPosition - 137, left: "100%", padding: "20px"}}
+    <SDropDownMenu
+      initial={{ clipPath: 'inset(0% 100% 0% 0%)', opacity: 1 }}
+      animate={{ clipPath: 'inset(0% 0% 0% 0%)', opacity: 1, transition: {duration: 0.5, delay: 0.2} }} 
+      exit={{ clipPath: 'inset(0% 100% 0% 0%)', opacity: 1, transition: {delay: 0.1, duration: 0.5}}} 
+      transition={{type: "tween", duration: 0.4, delay: 0.1}}
+      topPosition={topPosition}
     >
       {subcategories.map((subcategory, index) => (
         <div key={index}>{subcategory}</div>
       ))}
-    </motion.div>
+    </SDropDownMenu>    
   );
 }
