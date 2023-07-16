@@ -8,6 +8,12 @@ export const SSidebarContainer = styled.div`
 export const SSideBarCategories = styled.ul`
   display: flex;
   flex-direction: column;
+  background-color: #fcfcfc;
+  padding: 0 .5rem;
+  border-radius: .313rem;
+  -webkit-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.2);
 `;
 
 export const SSideBarCategoriesListWrapper = styled.div`
