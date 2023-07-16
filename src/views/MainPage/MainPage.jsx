@@ -2,6 +2,7 @@ import React from "react";
 import { SMainPage } from "./MainPage.styled";
 import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
+import { AdSlider } from "../../components/AdSlider";
 
 export const MainPage = () => {
   return (
@@ -9,11 +10,7 @@ export const MainPage = () => {
       <Navbar />
       <div style={{ display: "flex", marginTop: "40px"}}>
         <Sidebar />
-        <div
-          className="background"
-          style={{ flex: 3}}
-        ></div>{" "}
-        {/*temporary code */}
+        <AdSlider />
       </div>
     </SMainPage>
   );
