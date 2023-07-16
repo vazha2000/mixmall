@@ -1,7 +1,10 @@
 import React from 'react'
+import { SAdSlider, SSlider } from './AdSlider.styled'
 
 export const AdSlider = () => {
   return (
-    <div>AdSlider</div>
+    <SAdSlider>
+      <SSlider></SSlider>
+    </SAdSlider>
   )
 }
