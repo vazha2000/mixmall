@@ -8,5 +8,6 @@ export const SDropDownMenu = styled(motion.div)`
   left: calc(100% + 2px);
   padding: 20px;
   border-radius: .188rem;
-  border: 2px solid rgba(0,0,0, 0.8);
+  border: 1px solid rgba(0,0,0, 0.8);
+  z-index: 1;
 `
