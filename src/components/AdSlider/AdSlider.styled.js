@@ -2,17 +2,52 @@ import styled from "styled-components";
 
 export const SAdSlider = styled.div`
   flex: 3;
-  /* background-color: red; */
   display: flex;
-  justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  width: 0;
 `
 
 export const SSlider = styled.div`
-  max-width: 900px;
-  width: 95%;
-  max-height: 480px;
-  height: 90%;
-  background-color: blue;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .slick-dots {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .slick-dots li {
+    margin: 0 5px;
+  }
+
+  .slick-dots li button {
+    width: 10px; 
+    height: 10px; 
+    background-color: #f2f2f2; 
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+  }
+
+  .slick-dots li button:before {
+    content: "";
+  }
+
+  .slick-dots li.slick-active button {
+    opacity: 1;
+  }
+`
+
+export const SSliderImage = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 520px;
 `
