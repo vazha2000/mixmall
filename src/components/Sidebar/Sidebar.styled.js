@@ -23,7 +23,8 @@ export const SSideBarCategoriesListWrapper = styled.div`
 export const SSideBarCategoriesList = styled.li`
   cursor: pointer;
   padding: .625rem 0;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 14px;
   border-bottom: 1px solid rgba(0,0,0, 0.3);
   display: flex;
   width: 100%;
