@@ -8,7 +8,7 @@ export const MainPage = () => {
   return (
     <SMainPage>
       <Navbar />
-      <div style={{ display: "flex", marginTop: "40px"}}>
+      <div style={{ display: "flex", marginTop: "30px"}}>
         <Sidebar />
         <AdSlider />
       </div>

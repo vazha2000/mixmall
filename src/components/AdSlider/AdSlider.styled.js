@@ -6,6 +6,9 @@ export const SAdSlider = styled.div`
   align-items: center;
   justify-content: flex-end;
   width: 0;
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+  }
 `
 
 export const SSlider = styled.div`
@@ -13,6 +16,10 @@ export const SSlider = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 
   .slick-dots {
     position: absolute;

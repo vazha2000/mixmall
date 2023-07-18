@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const SSidebarContainer = styled.div`
   flex: 1;
   position: relative;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const SSideBarCategories = styled.ul`
