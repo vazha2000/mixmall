@@ -17,6 +17,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: #f2f2f2;
     color: #1f1f1f;
-    font-family: "Noto Sans Georgian";
+    font-family: "BPG Mrgvlovani Caps 2010";
   }
 `
