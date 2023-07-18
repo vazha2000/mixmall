@@ -4,11 +4,12 @@ export const SAdSlider = styled.div`
   flex: 3;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   width: 0;
 `
 
 export const SSlider = styled.div`
-  width: 100%;
+  width: 97%;
   height: 100%;
   display: flex;
   flex-direction: column;
