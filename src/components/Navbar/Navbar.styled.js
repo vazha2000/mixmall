@@ -26,8 +26,18 @@ export const SNavMenu = styled.ul`
 export const SNavItem = styled.li`
   font-size: 1rem;
   cursor: pointer;
+  font-family: "BPG Mrgvlovani Caps 2010";
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
   display: flex;
   align-items: center;
+  font-size: 14px;
+
+  &:hover {
+    background-color: #df3d41;
+    color: #ffffff;
+  }
 `;
 
 export const SNavActions = styled.div`
@@ -55,11 +65,6 @@ export const SWishlistCartContainer = styled.div`
   display: flex;
   gap: 1rem;
   margin-left: 1.5rem;
-
-  /* @media screen and (max-width: 768px) {
-    margin-left: 0;
-    gap: 0;
-  } */
 `
 
 export const SWishlistIcon = styled.img`
