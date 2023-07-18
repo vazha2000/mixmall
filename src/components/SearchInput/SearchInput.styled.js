@@ -11,7 +11,6 @@ export const SSearchInputContainer = styled.div`
   @media screen and (max-width: 1024px) {
   border-radius: .25rem;
   display: flex;
-  margin-top: .5rem;
   overflow: hidden;
   box-shadow: ${({isFocused}) => isFocused ? ("1px 1px 11px 1px rgba(0,0,0,0.15)") : "none"};
   }
