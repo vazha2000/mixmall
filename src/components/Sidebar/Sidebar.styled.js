@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SSidebarContainer = styled.div`
-  flex: 1;
+  flex: 1.2;
   position: relative;
   @media screen and (max-width: 1024px) {
     display: none;
@@ -16,7 +16,7 @@ export const SSideBarCategories = styled.ul`
   border-radius: .313rem;
   -webkit-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
   -moz-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
-  box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.1);
 `;
 
 export const SSideBarCategoriesListWrapper = styled.div`
