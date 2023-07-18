@@ -2,18 +2,15 @@ import React from "react";
 import { SMainPage } from "./MainPage.styled";
 import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
+import { AdSlider } from "../../components/AdSlider";
 
 export const MainPage = () => {
   return (
     <SMainPage>
       <Navbar />
-      <div style={{ display: "flex", marginTop: "40px"}}>
+      <div style={{ display: "flex", marginTop: "30px"}}>
         <Sidebar />
-        <div
-          className="background"
-          style={{ flex: 3}}
-        ></div>{" "}
-        {/*temporary code */}
+        <AdSlider />
       </div>
     </SMainPage>
   );
