@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const SNavbar = styled.nav`
-  /* width: 82%;
-  margin: 0 auto; */
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   height: 6rem;
@@ -20,7 +18,7 @@ export const SNavMenu = styled.ul`
   display: flex;
   gap: 3rem;
   padding: 0 1rem;
-  @media screen and (max-width: 968px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -34,40 +32,23 @@ export const SNavItem = styled.li`
 
 export const SNavActions = styled.div`
   display: flex;
+  width: 40%;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 1024px){
+    width: auto;
+  }
 `;
 
 export const SNavInputContainer = styled.div`
-  position: relative;
-  background-color: #f5f5f5;
-  height: 2.375rem;
-  width: 15rem;
-  border-radius: .25rem;
   display: flex;
-
-  @media screen and (max-width: 650px){
-    width: 9rem;
-  }
-`
-
-export const SNavInput = styled.input`
-  border: none;
-  background-color: transparent;
-  color: rgba(0,0,0, 0.8);
-  padding-left: 1.25rem;
   width: 70%;
-  &:focus {
-    outline: none;
-  }
-  &::placeholder {
-    color: rgba(0,0,0, 0.3);
-  }
-`;
+  border-radius: .5rem;
+  overflow: hidden;
 
-export const SSearchIcon = styled.img`
-  position: absolute;
-  top: .5rem;
-  right: .75rem;
-  cursor: pointer;
+  @media screen and (max-width: 1024px){
+    display: none;
+  }
 `
 
 export const SWishlistCartContainer = styled.div`
@@ -75,10 +56,10 @@ export const SWishlistCartContainer = styled.div`
   gap: 1rem;
   margin-left: 1.5rem;
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     margin-left: 0;
     gap: 0;
-  }
+  } */
 `
 
 export const SWishlistIcon = styled.img`
