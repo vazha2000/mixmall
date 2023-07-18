@@ -33,6 +33,7 @@ export const SSideBarCategoriesList = styled.li`
   width: 100%;
   justify-content: space-between;
   padding-right: .625rem;
+  white-space: nowrap;
   &:hover {
     color: #df3d41;
   }
