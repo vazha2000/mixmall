@@ -1,5 +1,5 @@
 import React from "react";
-import { SMainPage, SSearchInputHamburger } from "./MainPage.styled";
+import { SBurgerMenuIcon, SMainPage, SSearchInputHamburger } from "./MainPage.styled";
 import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
 import { AdSlider } from "../../components/AdSlider";
@@ -10,6 +10,7 @@ export const MainPage = () => {
     <SMainPage>
       <Navbar />
       <SSearchInputHamburger>
+        <SBurgerMenuIcon width={40} src="assets/svg/burgerMenu.svg" alt="menu"/>
         <SearchInput />
       </SSearchInputHamburger>
       <div style={{ display: "flex", marginTop: "30px"}}>
