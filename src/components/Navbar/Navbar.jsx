@@ -19,7 +19,7 @@ export const Navbar = () => {
       <SLogo src="assets/images/LogoNoBackground.png" alt="logo" width={180}/>
       <SNavMenu>
         <SNavItem>მთავარი</SNavItem>
-        <SNavItem>Online განვადება</SNavItem>
+        <SNavItem>ONLINE განვადება</SNavItem>
         <SNavItem>კონტაქტი</SNavItem>
       </SNavMenu>
       <SNavActions>
