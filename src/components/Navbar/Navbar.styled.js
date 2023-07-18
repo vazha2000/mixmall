@@ -24,6 +24,7 @@ export const SNavMenu = styled.ul`
 `;
 
 export const SNavItem = styled.li`
+  position: relative;
   font-size: 1rem;
   cursor: pointer;
   font-family: "BPG Mrgvlovani Caps 2010";
@@ -33,10 +34,22 @@ export const SNavItem = styled.li`
   display: flex;
   align-items: center;
   font-size: 14px;
-
+  white-space: nowrap;
   &:hover {
     background-color: #df3d41;
     color: #ffffff;
+  }
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: calc(-1.5rem + 1px);
+    width: 1px;
+    height: 50%;
+    transform: translateY(50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
   }
 `;
 
