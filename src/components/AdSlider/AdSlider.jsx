@@ -23,7 +23,7 @@
         <SSlider>
           <Slider {...settings}>
               <SSliderImage src='assets/images/bremen.png' alt="" />
-              <SSliderImage src="assets/images/berlin.jpg" alt="" />
+              <SSliderImage src='assets/images/bremen.png' alt="" />
               
           </Slider>
         </SSlider>
