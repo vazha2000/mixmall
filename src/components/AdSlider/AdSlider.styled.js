@@ -14,8 +14,6 @@ export const SAdSlider = styled.div`
 export const SSlider = styled.div`
   width: 97%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
 
   @media screen and (max-width: 1024px) {
     width: 100%;
@@ -56,6 +54,4 @@ export const SSlider = styled.div`
 
 export const SSliderImage = styled.img`
   object-fit: cover;
-  width: 100%;
-  height: 520px;
 `
