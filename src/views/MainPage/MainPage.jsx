@@ -29,7 +29,6 @@ export const MainPage = () => {
     }
   }, [isClicked])
 
-  console.log(isClicked)
   return (
     <SMainPage>
       <Navbar />
