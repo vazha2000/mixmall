@@ -13,7 +13,7 @@ import {
 } from "./MobileMenu.styled";
 import { useState } from "react";
 import { categoriesListItems } from "../../data/data";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 
 export const MobileMenu = ({handleMobileMenuClick}) => {
@@ -58,7 +58,7 @@ export const MobileMenu = ({handleMobileMenuClick}) => {
           onClick={() => setIsCategoryClicked(!isCategoryClicked)}
         >
           <span>კატეგორიები</span>
-          <img src="assets/svg/vectorDown.svg" alt="vector down" />
+          <motion.img animate={isCategoryClicked ? {rotateX: 180} : {rotateX: 0}} src="assets/svg/vectorDown.svg" alt="vector down" />
         </SMobileMenuCategoriesList>
         {/* triggered when isCategoryClicked state changes */}
           <SMobileMenuCategoriesContainer
@@ -73,14 +73,16 @@ export const MobileMenu = ({handleMobileMenuClick}) => {
                     onClick={() => handleCategoryClick(index)}
                   >
                     <span>{item.name}</span>
-                    <img
+                    <motion.img
+                      animate={openSubcategories[index] ? {rotateX: 180} : {rotateX: 0}}
                       src="assets/svg/vectorDown.svg"
                       width={25}
                       alt="vector down"
                     />
                   </SMobileMenuCategoriesListItems>
+                  <AnimatePresence>
                   {openSubcategories[index] && (
-                    <SMobileSubcategoriesList >
+                    <SMobileSubcategoriesList variants={dropdownVariants} initial="hidden" animate="visible" exit="hidden">
                       {item.subcategories.map((subcategory, subIndex) => (
                         <SMobileSubcategoriesListItems key={subIndex}>
                           {subcategory}
@@ -88,6 +90,7 @@ export const MobileMenu = ({handleMobileMenuClick}) => {
                       ))}
                     </SMobileSubcategoriesList>
                   )}
+                  </AnimatePresence>
                 </motion.div>
               );
             })}
