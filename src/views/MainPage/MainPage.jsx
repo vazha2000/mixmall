@@ -7,6 +7,7 @@ import { SearchInput } from "../../components/SearchInput";
 import { MobileMenu } from "../../components/MobileMenu";
 import { AnimatePresence } from "framer-motion";
 import { Overlay } from "../../components/MobileMenu/Overlay/Overlay";
+import { BrowseByCategory } from "../../components/BrowseByCategory";
 
 export const MainPage = () => {
   const [isClicked, setIsClicked] = useState(false)
@@ -48,6 +49,7 @@ export const MainPage = () => {
         <Sidebar />
         <AdSlider />
       </div>
+      <BrowseByCategory />
     </SMainPage>
   );
 };
