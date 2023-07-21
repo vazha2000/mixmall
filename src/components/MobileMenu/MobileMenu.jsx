@@ -5,15 +5,17 @@ import {
   SMobileMenuCategoriesContainer,
   SMobileMenuCategoriesList,
   SMobileMenuCategoriesListItems,
+  SMobileMenuClose,
   SMobileMenuTitle,
   SMobileSubcategoriesList,
+  SMobileSubcategoriesListItems,
   STitleCloseButton,
 } from "./MobileMenu.styled";
 import { useState } from "react";
 import { categoriesListItems } from "../../data/data";
 
-export const MobileMenu = () => {
-  const [isMenuClicked, setIsMenuClicked] = useState(false);
+export const MobileMenu = ({handleMobileMenuClick}) => {
+  const [isCategoryClicked, setIsCategoryClicked] = useState(false);
   const [openSubcategories, setOpenSubcategories] = useState(
     Array(categoriesListItems.length).fill(false)
   );
@@ -28,16 +30,16 @@ export const MobileMenu = () => {
     <SMobileMenu>
       <STitleCloseButton>
         <SMobileMenuTitle>კატეგორიები</SMobileMenuTitle>
-        <img src="assets/svg/close.svg" alt="close icon" />
+        <SMobileMenuClose onClick={handleMobileMenuClick} src="assets/svg/close.svg" alt="close icon" />
       </STitleCloseButton>
       <SMobileMenuCategories>
         <SMobileMenuCategoriesList
-          onClick={() => setIsMenuClicked(!isMenuClicked)}
+          onClick={() => setIsCategoryClicked(!isCategoryClicked)}
         >
           <span>კატეგორიები</span>
           <img src="assets/svg/vectorDown.svg" alt="vector down" />
         </SMobileMenuCategoriesList>
-        {isMenuClicked && (
+        {isCategoryClicked && (
           <SMobileMenuCategoriesContainer>
             {categoriesListItems.map((item, index) => {
               return (
@@ -55,9 +57,9 @@ export const MobileMenu = () => {
                   {openSubcategories[index] && (
                     <SMobileSubcategoriesList>
                       {item.subcategories.map((subcategory, subIndex) => (
-                        <SMobileMenuCategoriesListItems key={subIndex}>
+                        <SMobileSubcategoriesListItems key={subIndex}>
                           {subcategory}
-                        </SMobileMenuCategoriesListItems>
+                        </SMobileSubcategoriesListItems>
                       ))}
                     </SMobileSubcategoriesList>
                   )}
