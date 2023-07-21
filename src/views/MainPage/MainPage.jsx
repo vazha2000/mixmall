@@ -5,6 +5,7 @@ import { Sidebar } from "../../components/Sidebar";
 import { AdSlider } from "../../components/AdSlider";
 import { SearchInput } from "../../components/SearchInput";
 import { MobileMenu } from "../../components/MobileMenu";
+import { AnimatePresence } from "framer-motion";
 
 export const MainPage = () => {
   const [isClicked, setIsClicked] = useState(false)
@@ -18,7 +19,9 @@ export const MainPage = () => {
       <SSearchInputHamburger>
         <SBurgerMenuIcon onClick={handleMobileMenuClick}  width={40} src="assets/svg/burgerMenu.svg" alt="menu"/>
         <SearchInput />
-        {isClicked && <MobileMenu handleMobileMenuClick={handleMobileMenuClick}/>}
+        <AnimatePresence>
+          {isClicked && <MobileMenu handleMobileMenuClick={handleMobileMenuClick}/>}
+        </AnimatePresence>
       </SSearchInputHamburger>
       <div style={{ display: "flex", marginTop: "30px"}}>
         <Sidebar />
