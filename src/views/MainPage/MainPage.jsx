@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SBurgerMenuIcon, SMainPage, SSearchInputHamburger } from "./MainPage.styled";
 import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
@@ -14,6 +14,22 @@ export const MainPage = () => {
   const handleMobileMenuClick = () => {
     setIsClicked(!isClicked)
   }
+
+  const autoCloseMobileMenu = () => {
+    if(window.innerWidth > 1024 && isClicked) {
+      setIsClicked(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", autoCloseMobileMenu);
+
+    return () => {
+      window.removeEventListener("resize", autoCloseMobileMenu)
+    }
+  }, [isClicked])
+
+  console.log(isClicked)
   return (
     <SMainPage>
       <Navbar />
