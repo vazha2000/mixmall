@@ -13,6 +13,8 @@ import {
 } from "./MobileMenu.styled";
 import { useState } from "react";
 import { categoriesListItems } from "../../data/data";
+import { motion } from "framer-motion";
+
 
 export const MobileMenu = ({handleMobileMenuClick}) => {
   const [isCategoryClicked, setIsCategoryClicked] = useState(false);
@@ -26,8 +28,27 @@ export const MobileMenu = ({handleMobileMenuClick}) => {
     setOpenSubcategories(newOpenSubcategories)
   };
 
+  const mobileMenuVariants = {
+    close: {
+      x: "-100%",
+      transition: {stiffness: 0, duration: 0.4}
+    },
+    open: {
+      x: 0,
+      transition: {stiffness: 0, duration: 0.4}
+    }
+  }
+  const dropdownVariants = {
+    hidden: { opacity: 1, height: 0 },
+    visible: { opacity: 1, height: "auto", transition: { duration: 0.5 } },
+  };
+
+  const hiddenVariant = {
+    hidden: {opacity: 1, height: 0}
+  }
+
   return (
-    <SMobileMenu>
+    <SMobileMenu variants={mobileMenuVariants} initial="close" animate="open" exit="close">
       <STitleCloseButton>
         <SMobileMenuTitle>კატეგორიები</SMobileMenuTitle>
         <SMobileMenuClose onClick={handleMobileMenuClick} src="assets/svg/close.svg" alt="close icon" />
@@ -39,11 +60,15 @@ export const MobileMenu = ({handleMobileMenuClick}) => {
           <span>კატეგორიები</span>
           <img src="assets/svg/vectorDown.svg" alt="vector down" />
         </SMobileMenuCategoriesList>
-        {isCategoryClicked && (
-          <SMobileMenuCategoriesContainer>
+        {/* triggered when isCategoryClicked state changes */}
+          <SMobileMenuCategoriesContainer
+          variants={isCategoryClicked ? dropdownVariants : hiddenVariant}
+          initial={isCategoryClicked ? "hidden" : "hidden"}
+          animate="visible"
+          >
             {categoriesListItems.map((item, index) => {
               return (
-                <React.Fragment key={index}>
+                <motion.div key={index}>
                   <SMobileMenuCategoriesListItems
                     onClick={() => handleCategoryClick(index)}
                   >
@@ -55,7 +80,7 @@ export const MobileMenu = ({handleMobileMenuClick}) => {
                     />
                   </SMobileMenuCategoriesListItems>
                   {openSubcategories[index] && (
-                    <SMobileSubcategoriesList>
+                    <SMobileSubcategoriesList >
                       {item.subcategories.map((subcategory, subIndex) => (
                         <SMobileSubcategoriesListItems key={subIndex}>
                           {subcategory}
@@ -63,11 +88,10 @@ export const MobileMenu = ({handleMobileMenuClick}) => {
                       ))}
                     </SMobileSubcategoriesList>
                   )}
-                </React.Fragment>
+                </motion.div>
               );
             })}
           </SMobileMenuCategoriesContainer>
-        )}
         <SMobileMenuCategoriesList>მთავარი</SMobileMenuCategoriesList>
         <SMobileMenuCategoriesList>ONLINE განვადება</SMobileMenuCategoriesList>
         <SMobileMenuCategoriesList>კონტაქტი</SMobileMenuCategoriesList>
