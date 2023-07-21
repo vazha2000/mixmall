@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { SBurgerMenuIcon, SMainPage, SSearchInputHamburger } from "./MainPage.styled";
+import { SBurgerMenuIcon, SMainPage, SSearchInputHamburger, SSidebarAndSlider } from "./MainPage.styled";
 import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
 import { AdSlider } from "../../components/AdSlider";
@@ -45,10 +45,10 @@ export const MainPage = () => {
           }
         </AnimatePresence>
       </SSearchInputHamburger>
-      <div style={{ display: "flex", marginTop: "30px"}}>
+      <SSidebarAndSlider>
         <Sidebar />
         <AdSlider />
-      </div>
+      </SSidebarAndSlider>
       <BrowseByCategory />
     </SMainPage>
   );
