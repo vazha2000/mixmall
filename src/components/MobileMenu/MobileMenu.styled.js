@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { SSideBarCategories, SSideBarCategoriesList } from "../Sidebar/Sidebar.styled";
+import { motion } from "framer-motion";
 
-export const SMobileMenu = styled.div`
+export const SMobileMenu = styled(motion.div)`
   position: absolute;
   top: 0;
   left: 0;
@@ -48,8 +49,8 @@ export const SMobileMenuCategoriesList = styled(SSideBarCategoriesList)`
     }
   }
 `
-export const SMobileMenuCategoriesContainer = styled.ul`
-  /* background-color: yellow; */
+export const SMobileMenuCategoriesContainer = styled(motion.ul)`
+  overflow: hidden;
 `
 
 export const SMobileMenuCategoriesListItems = styled.li`
@@ -67,8 +68,9 @@ export const SMobileMenuCategoriesListItems = styled.li`
   }
 `
 
-export const SMobileSubcategoriesList = styled.ul`
+export const SMobileSubcategoriesList = styled(motion.ul)`
   padding: 0 .8rem;
+  overflow: hidden;
 `
 
 export const SMobileSubcategoriesListItems = styled.li`
