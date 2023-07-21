@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const SOverlay = styled.div`
+export const SOverlay = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
