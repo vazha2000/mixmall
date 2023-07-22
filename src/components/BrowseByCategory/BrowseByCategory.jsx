@@ -14,24 +14,6 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import { CustomNextArrow, CustomPrevArrow } from "./CustomArrows/CustomArrows";
 
-const PrevArrow = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  background-color: red;
-`
-
- const NextArrow = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  background-color: red;
-`
-
 export const BrowseByCategory = () => {
   const settings = {
     dots: false,
