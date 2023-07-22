@@ -2,6 +2,7 @@ import React from "react";
 import {
   SBrowseByCategory,
   SBrowseByCategoryBox,
+  SBrowseByCategoryBoxWrapper,
   SBrowseByCategoryHeader,
   SBrowseByCategoryHeaderSlider,
   SBrowseByCategoryLabel,
@@ -11,8 +12,8 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import styled from "styled-components";
 import { CustomNextArrow, CustomPrevArrow } from "./CustomArrows/CustomArrows";
+import { categoriesListItems } from "../../data/data";
 
 export const BrowseByCategory = () => {
   const settings = {
@@ -24,9 +25,7 @@ export const BrowseByCategory = () => {
     initialSlide: 0,
     autoplay: false,
     swipeToSlide: true,
-    speed: 200,   
-    PrevArrow: <CustomPrevArrow />,
-    NextArrow: <CustomNextArrow />
+    speed: 200,
   };
   return (
     <SBrowseByCategory>
@@ -39,20 +38,21 @@ export const BrowseByCategory = () => {
           მოძებნე კატეგორიების მიხედვით
         </SBrowseByCategoryHeader>
         <SBrowseByCategorySlider>
-          <Slider {...settings} prevArrow={<CustomPrevArrow />} nextArrow={<CustomNextArrow />}>
-            <SBrowseByCategoryBox>1. gela</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>2. bnela</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>3. cxela</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>4. aba raa</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>5. modiii</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>6. mausi</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>7. keyboard</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>8. modiii</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>9. modiii</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>10. modiii</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>11. modiii</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>12. modiii</SBrowseByCategoryBox>
-            <SBrowseByCategoryBox>13. modiii</SBrowseByCategoryBox>
+          <Slider
+            {...settings}
+            prevArrow={<CustomPrevArrow />}
+            nextArrow={<CustomNextArrow />}
+          >
+            {categoriesListItems.map((item, index) => {
+              return (
+                <SBrowseByCategoryBoxWrapper key={index}>
+                  <SBrowseByCategoryBox>
+                    <img src={item.svg} alt={item.alt} width={40} />
+                    <span>{item.name}</span>
+                  </SBrowseByCategoryBox>
+                </SBrowseByCategoryBoxWrapper>
+              );
+            })}
           </Slider>
         </SBrowseByCategorySlider>
       </SBrowseByCategoryHeaderSlider>
