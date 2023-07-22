@@ -17,6 +17,13 @@ export const SCustromPrevArrow = styled.div`
     cursor: pointer;
     transition: all 0.1s ease-in;
   }
+
+  @media screen and (max-width: 650px) {
+    right: 110px;
+  }
+  @media screen and (max-width: 650px) {
+    right: 80px;
+  }
 `
 
 export const SCustomNextArrow = styled.div`
@@ -38,5 +45,12 @@ export const SCustomNextArrow = styled.div`
     background-color: #cfcfcf;
     cursor: pointer;
     transition: all 0.1s ease-in;
+  }
+
+  @media screen and (max-width: 650px) {
+    right: 40px;
+  }
+  @media screen and (max-width: 650px) {
+    right: 10px;
   }
 `

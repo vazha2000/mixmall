@@ -23,6 +23,10 @@ export const SBrowseByCategoryHeaderSlider = styled.div`
 `
 export const SBrowseByCategoryHeader = styled.h2`
   margin-bottom: 3rem;
+
+  @media screen and (max-width: 650px) {
+    margin-bottom: 5rem;
+  }
 `
 
 export const SBrowseByCategorySlider = styled.div`
