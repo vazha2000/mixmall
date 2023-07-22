@@ -9,6 +9,11 @@ export const SMainPage = styled.div`
   }
 `
 
+export const SSidebarAndSlider = styled.div`
+  display: flex;
+  margin-top: 1.875rem;
+`
+
 export const SBurgerMenuIcon = styled.img`
   cursor: pointer;
   margin-right: 1.25rem;
