@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SBrowseByCategory = styled.div`
   width: 100%;
   margin-top: 5rem;
-  height: 31.25rem;
+  /* height: 31.25rem; */
   position: relative;
 `
 
@@ -62,6 +62,11 @@ export const SBrowseByCategoryBox = styled.div`
   width: 100%;
   height: 100%;
 `
-
+export const SLine = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0,0,0, 0.3);
+  margin: 4.375rem 0;
+`
 
 
