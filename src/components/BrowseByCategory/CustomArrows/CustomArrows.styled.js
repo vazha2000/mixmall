@@ -50,7 +50,4 @@ export const SCustomNextArrow = styled.div`
   @media screen and (max-width: 650px) {
     right: 7%;
   }
-  /* @media screen and (max-width: 650px) {
-    right: 10px;
-  } */
 `
