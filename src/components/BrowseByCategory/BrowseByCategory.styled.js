@@ -34,7 +34,7 @@ export const SBrowseByCategorySlider = styled.div`
 
 export const SBrowseByCategoryBoxWrapper = styled.div`
   border: 1px solid rgba(0,0,0, 0.3);
-  border-radius: .25rem;
+  border-radius: 8px;
   height: 9.125rem;
   width: 10.625rem !important;
   font-size: 12px;
