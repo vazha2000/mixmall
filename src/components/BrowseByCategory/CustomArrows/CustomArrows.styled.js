@@ -19,10 +19,10 @@ export const SCustromPrevArrow = styled.div`
   }
 
   @media screen and (max-width: 650px) {
-    right: 110px;
+    right: 20%;
   }
-  @media screen and (max-width: 650px) {
-    right: 80px;
+  @media screen and (max-width: 440px) {
+    right: 23%;
   }
 `
 
@@ -48,9 +48,9 @@ export const SCustomNextArrow = styled.div`
   }
 
   @media screen and (max-width: 650px) {
-    right: 40px;
+    right: 7%;
   }
-  @media screen and (max-width: 650px) {
+  /* @media screen and (max-width: 650px) {
     right: 10px;
-  }
+  } */
 `
