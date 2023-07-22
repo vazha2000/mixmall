@@ -13,7 +13,7 @@ export const SCustromPrevArrow = styled.div`
   border-radius: 50%;
   
   &:hover {
-    background-color: #e0e0e0;
+    background-color: #cfcfcf;
     cursor: pointer;
     transition: all 0.1s ease-in;
   }
@@ -35,7 +35,7 @@ export const SCustomNextArrow = styled.div`
   border-radius: 50%;
 
   &:hover {
-    background-color: #e0e0e0;
+    background-color: #cfcfcf;
     cursor: pointer;
     transition: all 0.1s ease-in;
   }
