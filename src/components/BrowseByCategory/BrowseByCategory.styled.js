@@ -48,6 +48,7 @@ export const SBrowseByCategoryBoxWrapper = styled.div`
     cursor: pointer;
     transition: 0.1s ease-in;
     color: black;
+    background-color: #df3d41;
   }
 `
 
