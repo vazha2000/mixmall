@@ -32,8 +32,8 @@ export const Card = (props) => {
       isHovered={isHovered}
     >
       <SCardImageContainer>
-        <SCardImage src={productImage} alt={alt} />
-        <SCardWishlist src="assets/svg/wishlist.svg" alt="" />
+        <SCardImage src={productImage} alt={alt} isHovered={isHovered} />
+        <SCardWishlist src="assets/svg/wishlist.svg" alt="favorites icon" />
         {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
       </SCardImageContainer>
       <SCardInfo>
