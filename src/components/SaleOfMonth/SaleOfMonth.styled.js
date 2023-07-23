@@ -37,7 +37,6 @@ export const SSaleOfMonthButton = styled.button`
   }
 `;
 
-
 export const SSaleOfMonthItems = styled.div`
   margin-top: 60px;
   row-gap: 40px;
