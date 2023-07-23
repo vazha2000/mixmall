@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
 export const SCard = styled.div`
-  width: 250px;
+  width: calc(25% - 50px);
+  min-width: 250px;
   height: auto;
-  border: 1px solid rgba(0,0,0, 0.3);
+  border: ${({isHovered}) => (isHovered ? "1px solid rgba(0,0,0, 0.6);" : "1px solid rgba(0,0,0, 0.3);")};
   border-radius: 4px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   overflow: hidden;
+  cursor: pointer;
+  transition: 100ms ease-in;
 `
 
 export const SCardImageContainer = styled.div`
   width: 100%;
   height: 250px;
-  /* border-radius: 5px 5px 0 0; */
   background-color: #e8e8e8;
   position: relative;
   display: flex;
@@ -21,7 +23,9 @@ export const SCardImageContainer = styled.div`
 `
 
 export const SCardImage = styled.img`
-  width: 180px;
+  width: 70%;
+  scale: ${({isHovered}) => (isHovered ? 1.05 : 1)};
+  transition: 0.1s ease-in;
 `
 
 export const SCardWishlist = styled.img`
@@ -42,7 +46,6 @@ export const SCardSaleDiscount = styled.span`
   padding: 4px 10px;
   border-radius: 4px;
   color: #f2f2f2;
-  pointer-events: none;
 `
 
 export const SCardInfo = styled.div`
