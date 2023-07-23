@@ -9,7 +9,7 @@ export const SSaleOfMonth = styled.div`
 `;
 
 export const SSaleOfMonthLabel = styled(SBrowseByCategoryLabel)`
-  margin-bottom: 3.75rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const SSaleOfMonthLabelText = styled(SBrowseByCategoryLabelText)``;
@@ -20,6 +20,21 @@ export const SSaleOfMonthHeaderButton = styled.div`
 `;
 
 export const SSaleOfMonthHeader = styled.h2``;
+
+export const SCountingDown = styled.div`
+  display: flex;
+  gap: 20px;
+`
+
+export const SCountingDownTimeContainer = styled.div`
+  > span {
+    font-size: 13px;
+    text-shadow: 0px 0px 0px black;
+  }
+  > h2 {
+    text-align: center;
+  }
+`
 
 export const SSaleOfMonthButton = styled.button`
   padding: 1rem 3rem;
