@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const SBrowseByCategory = styled.div`
-  /* width: 100%; */
   margin-top: 5rem;
   /* height: 31.25rem; */
   position: relative;
