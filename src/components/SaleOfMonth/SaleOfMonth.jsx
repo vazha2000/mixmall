@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import {
-  SCountingDown,
-  SCountingDownTimeContainer,
   SSaleOfMonth,
   SSaleOfMonthButton,
   SSaleOfMonthHeader,
@@ -12,6 +10,7 @@ import {
 } from "./SaleOfMonth.styled";
 import { Card } from "../Card";
 import { testProducts } from "../../data/data";
+import { CountingDown } from "./CountingDown/CountingDown";
 
 export const SaleOfMonth = () => {
 
@@ -34,27 +33,7 @@ export const SaleOfMonth = () => {
       <SSaleOfMonthHeaderButton>
         <div style={{display: "flex", gap: "87px", alignItems: "flex-end"}}>
           <SSaleOfMonthHeader>თვის აქცია</SSaleOfMonthHeader>
-          <SCountingDown>
-            <SCountingDownTimeContainer>
-              <span>დღე</span>
-              <h2>04</h2>
-            </SCountingDownTimeContainer>
-            <img src="assets/svg/colon.svg" alt="colon" />
-            <SCountingDownTimeContainer>
-              <span>საათი</span>
-              <h2>11</h2>
-            </SCountingDownTimeContainer>
-            <img src="assets/svg/colon.svg" alt="colon" />
-            <SCountingDownTimeContainer>
-              <span>წუთი</span>
-              <h2>30</h2>
-            </SCountingDownTimeContainer>
-            <img src="assets/svg/colon.svg" alt="colon" />
-            <SCountingDownTimeContainer>
-              <span>წამი</span>
-              <h2>20</h2>
-            </SCountingDownTimeContainer>
-          </SCountingDown>
+          <CountingDown />
         </div>
         <SSaleOfMonthButton>ყველას ნახვა</SSaleOfMonthButton>
       </SSaleOfMonthHeaderButton>
