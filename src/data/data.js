@@ -84,3 +84,46 @@ export const categoriesListItems = [
     alt: "car"
   },
 ];
+
+export const testProducts = [
+  {
+    id: 1,
+    productImage: "assets/images/testImage.png",
+    discountRate: "20%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+  {
+    id: 2,
+    productImage: "assets/images/testImage.png",
+    discountRate: "40%",
+    isDiscount: true,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+  {
+    id: 3,
+    productImage: "assets/images/testImage.png",
+    discountRate: "10%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+  {
+    id: 4,
+    productImage: "assets/images/testImage.png",
+    discountRate: "900%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+]
