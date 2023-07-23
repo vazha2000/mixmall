@@ -78,13 +78,6 @@ export const categoriesListItems = [
   },
   {
     id: 12,
-    name: "სამშენებლო მასალები",
-    subcategories: ["subcategory 34", "subcategory 35", "subcategory 36"],
-    svg: "assets/svg/CategoriesIcons/buildingTools.svg",
-    alt: "building tools"
-  },
-  {
-    id: 13,
     name: "ავტომობილების განყოფილება",
     subcategories: ["subcategory 37", "subcategory 38", "subcategory 39"],
     svg: "assets/svg/CategoriesIcons/car.svg",
