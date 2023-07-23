@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SSaleOfMonth,
   SSaleOfMonthButton,
   SSaleOfMonthHeader,
   SSaleOfMonthHeaderButton,
   SSaleOfMonthItems,
-  SSaleOfMonthItemsCard,
-  SSaleOfMonthItemsCardImage,
-  SSaleOfMonthItemsCardImageContainer,
-  SSaleOfMonthItemsCardInfo,
-  SSaleOfMonthItemsCardName,
-  SSaleOfMonthItemsCardOldPrice,
-  SSaleOfMonthItemsCardPrice,
-  SSaleOfMonthItemsCardPriceContainer,
   SSaleOfMonthLabel,
   SSaleOfMonthLabelText,
-  SSaleOfMonthWishlist,
 } from "./SaleOfMonth.styled";
+import { Card } from "../Card";
+import { testProducts } from "../../data/data";
 
 export const SaleOfMonth = () => {
+
+  const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
+
+  const handleHover = (index) => {
+    setHoverStates((prevStates) => {
+      const updatedStates = [...prevStates];
+      updatedStates[index] = !updatedStates[index];
+      return updatedStates
+    })
+  }
+
   return (
     <SSaleOfMonth>
       <SSaleOfMonthLabel>
@@ -30,21 +34,20 @@ export const SaleOfMonth = () => {
         <SSaleOfMonthButton>ყველას ნახვა</SSaleOfMonthButton>
       </SSaleOfMonthHeaderButton>
       <SSaleOfMonthItems>
-        <SSaleOfMonthItemsCard>
-          <SSaleOfMonthItemsCardImageContainer>
-            <SSaleOfMonthItemsCardImage src="assets/images/testImage.png" alt="" />
-              <SSaleOfMonthWishlist src="assets/svg/wishlist.svg"/>
-          </SSaleOfMonthItemsCardImageContainer>
-          <SSaleOfMonthItemsCardInfo>
-            <SSaleOfMonthItemsCardName>
-              რამე ტექსტი 
-            </SSaleOfMonthItemsCardName>
-            <SSaleOfMonthItemsCardPriceContainer>
-              <SSaleOfMonthItemsCardPrice>$220</SSaleOfMonthItemsCardPrice>
-              <SSaleOfMonthItemsCardOldPrice>$260</SSaleOfMonthItemsCardOldPrice>
-            </SSaleOfMonthItemsCardPriceContainer>
-          </SSaleOfMonthItemsCardInfo>
-        </SSaleOfMonthItemsCard>
+        {testProducts.map((item, index) => {
+          return <Card
+          key={index}
+          productImage={item.productImage}
+          discountRate={item.discountRate}
+          isDiscount={item.isDiscount}
+          productName={item.productName}
+          currentPrice={item.currentPrice}
+          oldPrice={item.oldPrice}
+          alt={item.alt}
+          handleHover={() => handleHover(index)}
+          isHovered={hoverStates[index]}
+        />
+        })} 
       </SSaleOfMonthItems>
     </SSaleOfMonth>
   );

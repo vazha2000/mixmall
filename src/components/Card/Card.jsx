@@ -12,13 +12,29 @@ import {
   SCardWishlist,
 } from "./Card.styled";
 
-export const Card = ({ productImage, productName, currentPrice, oldPrice, alt, discountRate, isDiscount }) => {
+export const Card = (props) => {
+  const {
+    handleHover,
+    isHovered,
+    productImage,
+    productName,
+    currentPrice,
+    oldPrice,
+    alt,
+    discountRate,
+    isDiscount,
+  } = props;
+
   return (
-    <SCard>
+    <SCard
+      onMouseEnter={handleHover}
+      onMouseLeave={handleHover}
+      isHovered={isHovered}
+    >
       <SCardImageContainer>
-        <SCardImage src={productImage} alt="" />
+        <SCardImage src={productImage} alt={alt} />
         <SCardWishlist src="assets/svg/wishlist.svg" alt="" />
-        {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount> }
+        {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
       </SCardImageContainer>
       <SCardInfo>
         <SCardProductName>{productName}</SCardProductName>
