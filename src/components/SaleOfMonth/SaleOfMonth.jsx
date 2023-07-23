@@ -4,6 +4,7 @@ import {
   SSaleOfMonthButton,
   SSaleOfMonthHeader,
   SSaleOfMonthHeaderButton,
+  SSaleOfMonthHeaderCountingDown,
   SSaleOfMonthItems,
   SSaleOfMonthLabel,
   SSaleOfMonthLabelText,
@@ -31,10 +32,10 @@ export const SaleOfMonth = () => {
         <SSaleOfMonthLabelText>ამ თვეში</SSaleOfMonthLabelText>
       </SSaleOfMonthLabel>
       <SSaleOfMonthHeaderButton>
-        <div style={{display: "flex", gap: "87px", alignItems: "flex-end"}}>
+        <SSaleOfMonthHeaderCountingDown>
           <SSaleOfMonthHeader>თვის აქცია</SSaleOfMonthHeader>
           <CountingDown />
-        </div>
+        </SSaleOfMonthHeaderCountingDown>
         <SSaleOfMonthButton>ყველას ნახვა</SSaleOfMonthButton>
       </SSaleOfMonthHeaderButton>
       <SSaleOfMonthItems>
