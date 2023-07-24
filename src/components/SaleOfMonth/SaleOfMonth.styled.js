@@ -5,7 +5,7 @@ import {
 } from "../BrowseByCategory/BrowseByCategory.styled";
 
 export const SSaleOfMonth = styled.div`
-  height: 700px;
+  margin-bottom: 4.375rem;
 `;
 
 export const SSaleOfMonthLabel = styled(SBrowseByCategoryLabel)`

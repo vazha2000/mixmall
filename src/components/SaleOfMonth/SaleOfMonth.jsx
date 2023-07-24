@@ -12,6 +12,7 @@ import {
 import { Card } from "../Card";
 import { testProducts } from "../../data/data";
 import { CountingDown } from "./CountingDown/CountingDown";
+import { SLine } from "../BrowseByCategory/BrowseByCategory.styled";
 
 export const SaleOfMonth = () => {
 
@@ -24,6 +25,8 @@ export const SaleOfMonth = () => {
       return updatedStates
     })
   }
+
+  const visibleProducts = testProducts.slice(0, 4)
 
   return (
     <SSaleOfMonth>
@@ -39,7 +42,7 @@ export const SaleOfMonth = () => {
         <SSaleOfMonthButton>ყველას ნახვა</SSaleOfMonthButton>
       </SSaleOfMonthHeaderButton>
       <SSaleOfMonthItems>
-        {testProducts.map((item, index) => {
+        {visibleProducts.map((item, index) => {
           return <Card
           key={index}
           productImage={item.productImage}
@@ -54,6 +57,7 @@ export const SaleOfMonth = () => {
         />
         })} 
       </SSaleOfMonthItems>
+      <SLine />
     </SSaleOfMonth>
   );
 };
