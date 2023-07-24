@@ -126,4 +126,44 @@ export const testProducts = [
     oldPrice: "$300",
     alt: "test"
   },
+  {
+    id: 5,
+    productImage: "assets/images/testImage.png",
+    discountRate: "900%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+  {
+    id: 5,
+    productImage: "assets/images/testImage.png",
+    discountRate: "900%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+  {
+    id: 7,
+    productImage: "assets/images/testImage.png",
+    discountRate: "900%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+  {
+    id: 8,
+    productImage: "assets/images/testImage.png",
+    discountRate: "900%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
 ]
