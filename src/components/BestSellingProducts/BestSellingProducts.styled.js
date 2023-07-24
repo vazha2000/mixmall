@@ -13,3 +13,15 @@ export const SBestSellingProductsLabel = styled(SBrowseByCategoryLabel)`
 export const SBestSellingProductsLabelText = styled(SBrowseByCategoryLabelText)`
 
 `
+
+export const SBestSellingProductsHeader = styled.h2`
+  white-space: nowrap;
+`
+
+export const SBestSellingProductsItems = styled.div`
+  margin-top: 60px;
+  row-gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
