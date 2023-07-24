@@ -7,7 +7,7 @@ export const SBestSellingProducts = styled(SSaleOfMonth)`
 `
 
 export const SBestSellingProductsLabel = styled(SBrowseByCategoryLabel)`
-
+    margin-bottom: 1.5rem;
 `
 
 export const SBestSellingProductsLabelText = styled(SBrowseByCategoryLabelText)`
