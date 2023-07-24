@@ -13,6 +13,7 @@ import { MobileMenu } from "../../components/MobileMenu";
 import { AnimatePresence } from "framer-motion";
 import { Overlay } from "../../components/MobileMenu/Overlay/Overlay";
 import { BrowseByCategory } from "../../components/BrowseByCategory";
+import { SaleOfMonth } from "../../components/SaleOfMonth";
 
 export const MainPage = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -63,6 +64,7 @@ export const MainPage = () => {
         <AdSlider />
       </SSidebarAndSlider>
       <BrowseByCategory />
+      <SaleOfMonth />
     </SMainPage>
   );
 };

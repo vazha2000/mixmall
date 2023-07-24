@@ -8,6 +8,7 @@ import {
   SBrowseByCategoryLabel,
   SBrowseByCategoryLabelText,
   SBrowseByCategorySlider,
+  SLine,
 } from "./BrowseByCategory.styled";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -86,6 +87,7 @@ export const BrowseByCategory = () => {
           </Slider>
         </SBrowseByCategorySlider>
       </SBrowseByCategoryHeaderSlider>
+      <SLine />
     </SBrowseByCategory>
   );
 };

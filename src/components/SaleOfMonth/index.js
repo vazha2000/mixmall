@@ -1,0 +1,1 @@
+export { SaleOfMonth } from "./SaleOfMonth"

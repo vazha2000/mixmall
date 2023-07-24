@@ -78,16 +78,52 @@ export const categoriesListItems = [
   },
   {
     id: 12,
-    name: "სამშენებლო მასალები",
-    subcategories: ["subcategory 34", "subcategory 35", "subcategory 36"],
-    svg: "assets/svg/CategoriesIcons/buildingTools.svg",
-    alt: "building tools"
-  },
-  {
-    id: 13,
     name: "ავტომობილების განყოფილება",
     subcategories: ["subcategory 37", "subcategory 38", "subcategory 39"],
     svg: "assets/svg/CategoriesIcons/car.svg",
     alt: "car"
   },
 ];
+
+export const testProducts = [
+  {
+    id: 1,
+    productImage: "assets/images/testImage.png",
+    discountRate: "20%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+  {
+    id: 2,
+    productImage: "assets/images/testImage.png",
+    discountRate: "40%",
+    isDiscount: true,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+  {
+    id: 3,
+    productImage: "assets/images/testImage.png",
+    discountRate: "10%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+  {
+    id: 4,
+    productImage: "assets/images/testImage.png",
+    discountRate: "900%",
+    isDiscount: false,
+    productName: "რამე სახელი",
+    currentPrice: "$260",
+    oldPrice: "$300",
+    alt: "test"
+  },
+]
