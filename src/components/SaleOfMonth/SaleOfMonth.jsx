@@ -12,6 +12,7 @@ import {
 import { Card } from "../Card";
 import { testProducts } from "../../data/data";
 import { CountingDown } from "./CountingDown/CountingDown";
+import { SLine } from "../BrowseByCategory/BrowseByCategory.styled";
 
 export const SaleOfMonth = () => {
 
@@ -54,6 +55,7 @@ export const SaleOfMonth = () => {
         />
         })} 
       </SSaleOfMonthItems>
+      <SLine />
     </SSaleOfMonth>
   );
 };
