@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  SAddToCardButton,
   SCard,
   SCardImage,
   SCardImageContainer,
@@ -11,6 +12,7 @@ import {
   SCardSaleDiscount,
   SCardWishlist,
 } from "./Card.styled";
+import { AnimatePresence } from "framer-motion";
 
 export const Card = (props) => {
   const {
@@ -35,6 +37,11 @@ export const Card = (props) => {
         <SCardImage src={productImage} alt={alt} isHovered={isHovered} />
         <SCardWishlist src="assets/svg/wishlist.svg" alt="favorites icon" />
         {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
+        <AnimatePresence>
+          <SAddToCardButton initial={{y: "100%", opacity: 1}} animate={isHovered ? {y: 0, opacity: 1, transition: {stiffness: 0, duration: 0.2}} : {y: "100%", opacity: 1, transition: {stiffness: 0, duration: 0.2}}}>
+            <span>კალათაში დამატება</span>
+          </SAddToCardButton>
+        </AnimatePresence>
       </SCardImageContainer>
       <SCardInfo>
         <SCardProductName>{productName}</SCardProductName>

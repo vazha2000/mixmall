@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const SCard = styled.div`
@@ -8,7 +9,6 @@ export const SCard = styled.div`
   border-radius: 4px;
   padding-bottom: 20px;
   overflow: hidden;
-  cursor: pointer;
   transition: 100ms ease-in;
 `
 
@@ -18,14 +18,37 @@ export const SCardImageContainer = styled.div`
   background-color: #e8e8e8;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+`
+
+export const SAddToCardButton = styled(motion.div)`
+  position: absolute;
+  bottom: 0;
+  height: 15%;
+  width: 100%;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > span {
+    color: #f2f2f2;
+    font-size: 14px;
+  }
 `
 
 export const SCardImage = styled.img`
   width: 70%;
-  scale: ${({isHovered}) => (isHovered ? 1.05 : 1)};
+  /* scale: ${({isHovered}) => (isHovered ? 1.05 : 1)}; */
   transition: 0.1s ease-in;
+
+  &:hover {
+    scale: 1.05;
+  }
 `
 
 export const SCardWishlist = styled.img`
