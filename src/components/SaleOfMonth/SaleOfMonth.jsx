@@ -26,6 +26,8 @@ export const SaleOfMonth = () => {
     })
   }
 
+  const visibleProducts = testProducts.slice(0, 4)
+
   return (
     <SSaleOfMonth>
       <SSaleOfMonthLabel>
@@ -40,7 +42,7 @@ export const SaleOfMonth = () => {
         <SSaleOfMonthButton>ყველას ნახვა</SSaleOfMonthButton>
       </SSaleOfMonthHeaderButton>
       <SSaleOfMonthItems>
-        {testProducts.map((item, index) => {
+        {visibleProducts.map((item, index) => {
           return <Card
           key={index}
           productImage={item.productImage}
