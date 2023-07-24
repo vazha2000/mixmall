@@ -15,7 +15,7 @@ export const SBestSellingProductsLabelText = styled(SBrowseByCategoryLabelText)`
 `
 
 export const SBestSellingProductsHeader = styled.h2`
-  white-space: nowrap;
+
 `
 
 export const SBestSellingProductsItems = styled.div`
@@ -24,6 +24,10 @@ export const SBestSellingProductsItems = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media screen and (max-width: 530px){
+    justify-content: center;
+  }
 `
 
 export const SBestSellingProductsButtonWrapper = styled.div`
