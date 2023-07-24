@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SSaleOfMonth } from "../SaleOfMonth/SaleOfMonth.styled";
+import { SSaleOfMonth, SSaleOfMonthButton } from "../SaleOfMonth/SaleOfMonth.styled";
 import { SBrowseByCategoryLabel, SBrowseByCategoryLabelText } from "../BrowseByCategory/BrowseByCategory.styled";
 
 export const SBestSellingProducts = styled(SSaleOfMonth)`
@@ -24,4 +24,15 @@ export const SBestSellingProductsItems = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+`
+
+export const SBestSellingProductsButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3.75rem;
+`
+
+export const SBestSellingProductsButton = styled(SSaleOfMonthButton)`
+  position: relative;
 `

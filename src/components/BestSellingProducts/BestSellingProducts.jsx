@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SBestSellingProducts, SBestSellingProductsHeader, SBestSellingProductsItems, SBestSellingProductsLabel, SBestSellingProductsLabelText } from './BestSellingProducts.styled'
+import { SBestSellingProducts, SBestSellingProductsButton, SBestSellingProductsButtonWrapper, SBestSellingProductsHeader, SBestSellingProductsItems, SBestSellingProductsLabel, SBestSellingProductsLabelText } from './BestSellingProducts.styled'
 import { testProducts } from '../../data/data'
 import { Card } from '../Card'
 
@@ -38,6 +38,10 @@ export const BestSellingProducts = () => {
         />
         })}
       </SBestSellingProductsItems>
+      <SBestSellingProductsButtonWrapper>
+      <SBestSellingProductsButton>ყველას ნახვა</SBestSellingProductsButton>
+
+      </SBestSellingProductsButtonWrapper>
     </SBestSellingProducts>
   )
 }
