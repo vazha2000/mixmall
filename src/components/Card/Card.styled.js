@@ -80,6 +80,11 @@ export const SCardProductName = styled.h4`
   margin: 1rem 0;
   font-size: 14px;
   text-shadow: 0px 0px 0px black;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding-left: 4px;
 `
 
 export const SCardPriceContainer = styled.div`
@@ -92,6 +97,7 @@ export const SCardPriceContainer = styled.div`
 
 export const SCardPrice = styled.span`
   color: #df3d41;
+  padding-left: 4px;
 `
 
 export const SCardOldPrice = styled.span`

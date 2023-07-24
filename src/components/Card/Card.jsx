@@ -44,7 +44,7 @@ export const Card = (props) => {
         </AnimatePresence>
       </SCardImageContainer>
       <SCardInfo>
-        <SCardProductName>{productName}</SCardProductName>
+        <SCardProductName>უმაღლესი ხარისხის თმის მოვლის საშუალებები და რავი კიდე ბევრი რამე</SCardProductName>
         <SCardPriceContainer>
           <SCardPrice>{currentPrice}</SCardPrice>
           {isDiscount && <SCardOldPrice>{oldPrice}</SCardOldPrice>}
