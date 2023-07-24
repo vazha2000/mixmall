@@ -34,7 +34,7 @@ export const Card = (props) => {
       isHovered={isHovered}
     >
       <SCardImageContainer>
-        <SCardImage src={productImage} alt={alt} isHovered={isHovered} />
+        <SCardImage src={productImage} alt={alt} />
         <SCardWishlist src="assets/svg/wishlist.svg" alt="favorites icon" />
         {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
         <AnimatePresence>
@@ -44,7 +44,7 @@ export const Card = (props) => {
         </AnimatePresence>
       </SCardImageContainer>
       <SCardInfo>
-        <SCardProductName>უმაღლესი ხარისხის თმის მოვლის საშუალებები და რავი კიდე ბევრი რამე</SCardProductName>
+        <SCardProductName>{productName}</SCardProductName>
         <SCardPriceContainer>
           <SCardPrice>{currentPrice}</SCardPrice>
           {isDiscount && <SCardOldPrice>{oldPrice}</SCardOldPrice>}
