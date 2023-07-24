@@ -14,6 +14,7 @@ import { AnimatePresence } from "framer-motion";
 import { Overlay } from "../../components/MobileMenu/Overlay/Overlay";
 import { BrowseByCategory } from "../../components/BrowseByCategory";
 import { SaleOfMonth } from "../../components/SaleOfMonth";
+import { BestSellingProducts } from "../../components/BestSellingProducts"
 
 export const MainPage = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -65,6 +66,7 @@ export const MainPage = () => {
       </SSidebarAndSlider>
       <BrowseByCategory />
       <SaleOfMonth />
+      <BestSellingProducts />
     </SMainPage>
   );
 };
