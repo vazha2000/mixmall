@@ -43,7 +43,7 @@ export const categoriesListItems = [
   },
   {
     id: 7,
-    name: "სპორტი და გართობა",
+    name: "ჰობი და გართობა",
     subcategories: ["subcategory 19", "subcategory 20", "subcategory 21"],
     svg: "assets/svg/CategoriesIcons/sports.svg",
     alt: "sports"
