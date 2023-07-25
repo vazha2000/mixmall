@@ -1,7 +1,8 @@
 import React from 'react'
-import { SDropDownMenu } from './DropdownMenu.styled';
+import { SDropDownMenu, SMenuGridContainer, SMenuItems } from './DropdownMenu.styled';
 
-export const DropdownMenu = ({subcategories, topPosition}) => {
+export const DropdownMenu = ({item, topPosition}) => {
+  
   return (
     <SDropDownMenu
       initial={{ clipPath: 'inset(0% 100% 0% 0%)', opacity: 1 }}
@@ -10,9 +11,11 @@ export const DropdownMenu = ({subcategories, topPosition}) => {
       transition={{type: "tween", duration: 0.4, delay: 0.1}}
       topPosition={topPosition}
     >
-      {subcategories.map((subcategory, index) => (
-        <div key={index}>{subcategory}</div>
-      ))}
+      <SMenuGridContainer>
+        {item.subcategories.map((subcategory, index) => (
+          <SMenuItems key={index}>{subcategory}</SMenuItems>
+        ))}
+      </SMenuGridContainer>
     </SDropDownMenu>    
   );
 }
