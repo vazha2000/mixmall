@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const SDropDownMenu = styled(motion.div)`
   background-color: #fcfcfc;
   position: absolute;
-  top: ${({ topPosition }) => topPosition - 127}px;
+  top: ${({ topPosition }) => topPosition -1}px;
   left: calc(100% + 2px);
   padding: 20px;
   border-radius: .188rem;
