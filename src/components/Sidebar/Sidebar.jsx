@@ -21,9 +21,6 @@ export const Sidebar = () => {
     const leftRelativeToSidebar = left - sidebarRect.left;
     setHoveredCategory(category);
     setDropdownPosition({ top: topRelativeToSidebar, left: leftRelativeToSidebar });
-
-
-
   };
 
   const handleCategoryUnhover = () => {
