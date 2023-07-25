@@ -39,7 +39,7 @@ export const Sidebar = () => {
               <AnimatePresence>
                 {hoveredCategory === item && (
                   <DropdownMenu
-                    subcategories={item.subcategories}
+                    item={item}
                     topPosition={dropdownPosition.top}
                   />
                 )}
