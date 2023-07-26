@@ -1,14 +1,19 @@
+import { computerTechnic } from "./computerTechnic/computerTechnic";
+
 export const categoriesListItems = [
   {
     id: 1,
     name: "კომპიუტერული ტექნიკა",
     categoryName: "computer&technic",
+    // subcategories: [
+    //   "პერსონალური კომპიუტერები",
+    //   "ALL-IN-ONE კომპიუტერები",
+    //   "ლეპტოპები",
+    //   "პლანშეტები",
+    //   "მონიტორები",
+    // ],
     subcategories: [
-      "პერსონალური კომპიუტერები",
-      "ALL-IN-ONE კომპიუტერები",
-      "ლეპტოპები",
-      "პლანშეტები",
-      "მონიტორები",
+      ...computerTechnic
     ],
     svg: "assets/svg/CategoriesIcons/computer.svg",
     alt: "computer",
@@ -312,6 +317,8 @@ export const categoriesListItems = [
     alt: "car",
   },
 ];
+
+// console.log(categoriesListItems[0])
 
 export const testProducts = [
   {
