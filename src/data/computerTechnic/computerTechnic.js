@@ -4,7 +4,7 @@ export const computerTechnic = [
   {
     id: uuidv4(),
     name: "პერსონალური კომპიუტერები",
-    subcategoryName: "pc",
+    subcategoryName: "1",
     products: [
       {
         id: uuidv4(),
@@ -51,7 +51,7 @@ export const computerTechnic = [
   {
     id: uuidv4(),
     name: "ALL-IN-ONE კომპიუტერები",
-    subcategoryName: "all-in-one",
+    subcategoryName: "2",
     products: [
       {
         id: uuidv4(),
@@ -145,7 +145,7 @@ export const computerTechnic = [
   {
     id: uuidv4(),
     name: "პლანშეტები",
-    subcategoryName: "tablets",
+    subcategoryName: "3",
     products: [
       {
         id: uuidv4(),
@@ -192,11 +192,11 @@ export const computerTechnic = [
   {
     id: uuidv4(),
     name: "მონიტორები",
-    subcategoryName: "monitors",
+    subcategoryName: "4",
     products: [
       {
         id: uuidv4(),
-        productImage: "assets/images/computerTechnic/monitor.png",
+        productImage: "../assets/images/computerTechnic/monitor.png",
         discountRate: "20%",
         isDiscount: false,
         productName: "2E Monitor",
@@ -206,7 +206,7 @@ export const computerTechnic = [
       },
       {
         id: uuidv4(),
-        productImage: "assets/images/computerTechnic/monitor.png",
+        productImage: "../assets/images/computerTechnic/monitor.png",
         discountRate: "20%",
         isDiscount: false,
         productName: "AMD Monitor",
@@ -216,7 +216,7 @@ export const computerTechnic = [
       },
       {
         id: uuidv4(),
-        productImage: "assets/images/computerTechnic/monitor.png",
+        productImage: "../assets/images/computerTechnic/monitor.png",
         discountRate: "20%",
         isDiscount: false,
         productName: "XFX Monitor",
@@ -226,7 +226,7 @@ export const computerTechnic = [
       },
       {
         id: uuidv4(),
-        productImage: "assets/images/computerTechnic/monitor.png",
+        productImage: "../assets/images/computerTechnic/monitor.png",
         discountRate: "20%",
         isDiscount: false,
         productName: "Samsung Monitor",
