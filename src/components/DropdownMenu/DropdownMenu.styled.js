@@ -9,7 +9,7 @@ export const SDropDownMenu = styled(motion.div)`
   padding: 20px;
   border-radius: .188rem;
   border: 1px solid rgba(0,0,0, 0.8);
-  z-index: 1;
+  z-index: 2;
 `
 
 export const SMenuGridContainer = styled.ul`
@@ -34,4 +34,7 @@ export const SMenuItems = styled.li`
     font-size: 20px;
   }
 
+  @media screen and (max-width: 1168px){
+    font-size: 13px;
+  }
 `
