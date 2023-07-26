@@ -5,13 +5,6 @@ export const categoriesListItems = [
     id: 1,
     name: "კომპიუტერული ტექნიკა",
     categoryName: "computer&technic",
-    // subcategories: [
-    //   "პერსონალური კომპიუტერები",
-    //   "ALL-IN-ONE კომპიუტერები",
-    //   "ლეპტოპები",
-    //   "პლანშეტები",
-    //   "მონიტორები",
-    // ],
     subcategories: [
       ...computerTechnic
     ],
