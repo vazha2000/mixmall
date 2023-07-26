@@ -14,7 +14,7 @@ export const SDropDownMenu = styled(motion.div)`
 
 export const SMenuGridContainer = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: ${({isOverflowing}) => (isOverflowing ? "repeat(2, 1fr)" : "repeat(3, 1fr)")};
   gap: 10px 20px;
   white-space: nowrap;
 `
