@@ -16,7 +16,7 @@ import { SearchInput } from "../SearchInput";
 export const Navbar = () => {
   return (
     <SNavbar>
-      <SLogo src="assets/images/LogoNoBackground.png" alt="logo" width={180}/>
+      <SLogo src="../assets/images/LogoNoBackground.png" alt="logo" width={180}/>
       <SNavMenu>
         <SNavItem>მთავარი</SNavItem>
         <SNavItem>ONLINE განვადება</SNavItem>
@@ -27,8 +27,8 @@ export const Navbar = () => {
           <SearchInput />
         </SNavInputContainer>
         <SWishlistCartContainer>
-          <SWishlistIcon src="assets/svg/wishlist.svg" alt="wishlist icon"/>
-          <SCartIcon src="assets/svg/cart.svg" alt="cart icon"/>
+          <SWishlistIcon src="../assets/svg/wishlist.svg" alt="wishlist icon"/>
+          <SCartIcon src="../assets/svg/cart.svg" alt="cart icon"/>
         </SWishlistCartContainer>
       </SNavActions>
       {/* <SBurgerMenuIcon src="assets/svg/burgerMenu.svg" alt="menu"/> */}

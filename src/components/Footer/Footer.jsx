@@ -6,12 +6,12 @@ export const Footer = () => {
     <SFooter>
       <SFooterLogoSocial>
         <SFooterLogoContainer>
-          <SFooterLogo src='assets/images/LogoDark.png'/>
+          <SFooterLogo src='../assets/images/LogoDark.png'/>
         </SFooterLogoContainer>
         <SFooterSocialContainer>
-          <SFooterSocial src='assets/svg/Footer/fb.svg'/>
-          <SFooterSocial src='assets/svg/Footer/instagram.svg'/>
-          <SFooterSocial src='assets/svg/Footer/tiktok.svg'/>
+          <SFooterSocial src='../assets/svg/Footer/fb.svg'/>
+          <SFooterSocial src='../assets/svg/Footer/instagram.svg'/>
+          <SFooterSocial src='../assets/svg/Footer/tiktok.svg'/>
         </SFooterSocialContainer>
       </SFooterLogoSocial>
       <SFooterInfo>
