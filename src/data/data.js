@@ -1,5 +1,6 @@
 import { computerTechnic } from "./computerTechnic/computerTechnic";
 import { majorAppliance } from "./majorAppliance/majorAppliance";
+import { smallAppliance } from "./smallAppliance/smallAppliance";
 
 export const categoriesListItems = [
   {
@@ -24,15 +25,7 @@ export const categoriesListItems = [
     id: 3,
     name: "წვრილი საყოფაცხოვრებო ტექნიკა",
     categoryName: "small&appliance",
-    subcategories: [
-      "მტვერსასრუტი სველი წმენდით",
-      "უსადენო მტვერსასრუტები",
-      "რობოტი მტვერსასრუტები",
-      "ხელის მტვერსასრუტი",
-      "მტვერსასრუტები",
-      "უთოები",
-      "უთოს მაგიდები",
-    ],
+    subcategories: [...smallAppliance],
     svg: "assets/svg/CategoriesIcons/iron.svg",
     alt: "iron",
   },
