@@ -38,6 +38,7 @@ export const DropdownMenu = ({item, topPosition}) => {
       <SMenuGridContainer isOverflowing={isOverflowing}>
         {item.subcategories.map((subcategory, index) => (
           <SMenuItems key={index}>{subcategory}</SMenuItems>
+          //after every subcategory is filled in, I should write {subcategory.name} inside SMenuItems
         ))}
       </SMenuGridContainer>
     </SDropDownMenu>    
