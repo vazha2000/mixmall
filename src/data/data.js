@@ -2,6 +2,7 @@ export const categoriesListItems = [
   {
     id: 1,
     name: "კომპიუტერული ტექნიკა",
+    categoryName: "computer&technic",
     subcategories: [
       "პერსონალური კომპიუტერები",
       "ALL-IN-ONE კომპიუტერები",
@@ -15,6 +16,7 @@ export const categoriesListItems = [
   {
     id: 2,
     name: "მსხვილი საყოფაცხოვრებო ტექნიკა",
+    categoryName: "major&appliance",
     subcategories: [
       "ჩასაშენებელი მაცივრები",
       "მაცივრები",
@@ -43,6 +45,7 @@ export const categoriesListItems = [
   {
     id: 3,
     name: "წვრილი საყოფაცხოვრებო ტექნიკა",
+    categoryName: "small&appliance",
     subcategories: [
       "მტვერსასრუტი სველი წმენდით",
       "უსადენო მტვერსასრუტები",
@@ -58,6 +61,7 @@ export const categoriesListItems = [
   {
     id: 4,
     name: "ხელსაწყო ინსტრუმენტები",
+    categoryName: "tools",
     subcategories: [
       "ქანჩის გასაღები",
       "წრიული ხერხები",
@@ -81,6 +85,7 @@ export const categoriesListItems = [
   {
     id: 5,
     name: "მობილური ტელეფონები",
+    categoryName: "mobile&phones",
     subcategories: [
       "Apple",
       "Samsung",
@@ -104,6 +109,7 @@ export const categoriesListItems = [
   {
     id: 6,
     name: "თავის მოვლის საშუალებები",
+    categoryName: "selfcare",
     subcategories: [
       "ეპილატორები",
       "ფოტო ეპილატორები",
@@ -124,6 +130,7 @@ export const categoriesListItems = [
   {
     id: 7,
     name: "ჰობი და გართობა",
+    categoryName: "hobbies",
     subcategories: [
       "ჰოვერბორდები",
       "საბავშვო ტრანსპორტი",
@@ -145,6 +152,7 @@ export const categoriesListItems = [
   {
     id: 8,
     name: "გათბობა და გაგრილება",
+    categoryName: "hvac",
     subcategories: [
       "კონდიციონერები",
       "ცენტრალური გათბობის ქვაბები",
@@ -166,6 +174,7 @@ export const categoriesListItems = [
   {
     id: 9,
     name: "საბავშვო ინვენტარი",
+    categoryName: "children&inventory",
     subcategories: [
       "საბავშვო ეტლები",
       "სათამაშოები",
@@ -191,6 +200,7 @@ export const categoriesListItems = [
   {
     id: 10,
     name: "სამზარეულოს ტექნიკა",
+    categoryName: "kitchen&technic",
     subcategories: [
       "აერო გრილები",
       "ბლენდერები",
@@ -234,6 +244,7 @@ export const categoriesListItems = [
   {
     id: 11,
     name: "ინტერიერი და ავეჯი",
+    categoryName: "interior&furniture",
     subcategories: [
       "ყავის მაგიდები",
       "ტელევიზორის მაგიდები",
@@ -266,6 +277,7 @@ export const categoriesListItems = [
   {
     id: 12,
     name: "ავტომობილების განყოფილება",
+    categoryName: "vehicles",
     subcategories: [
       "Bluetooth გარნიტურები",
       "მანქანის მაგნიტოფონები",
