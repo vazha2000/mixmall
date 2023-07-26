@@ -26,20 +26,6 @@ export const Subcategories = ({item}) => {
           <Sidebar />
         </SSubcategoriesSidebarContainer>
         <SSubcategoriesProducts>
-          {/* {testProducts.map((card, index) => {
-            return <Card key={index}
-            productImage={card.productImage}
-            discountRate={card.discountRate}
-            isDiscount={card.isDiscount}
-            productName={card.productName}
-            currentPrice={card.currentPrice}
-            oldPrice={card.oldPrice}
-            alt={card.alt}
-            handleHover={() => handleHover(index)}
-            isHovered={hoverStates[index]}
-            />
-
-          })} */}
           {item.products.map((card, index) => {
             return <Card 
             key={index}
