@@ -1,6 +1,7 @@
 import { computerTechnic } from "./computerTechnic/computerTechnic";
 import { majorAppliance } from "./majorAppliance/majorAppliance";
 import { smallAppliance } from "./smallAppliance/smallAppliance";
+import { tools } from "./tools/tools";
 
 export const categoriesListItems = [
   {
@@ -33,23 +34,7 @@ export const categoriesListItems = [
     id: 4,
     name: "ხელსაწყო ინსტრუმენტები",
     categoryName: "tools",
-    subcategories: [
-      "ქანჩის გასაღები",
-      "წრიული ხერხები",
-      "ბეწვა ხერხები",
-      "დრელი-სახრახნისი",
-      "დარტყმითი დრელები",
-      "თარაზოები",
-      "სახრახნისები",
-      "საბურღები",
-      "კუთხსახეხები",
-      "ინსტრუმენტების ნაკრებები",
-      "პერფერატორები",
-      "ჩაქუჩები",
-      "ინსტრუმენტის ჩანთები",
-      "რკინის ხერხები",
-      "საზომები",
-    ],
+    subcategories: [...tools],
     svg: "assets/svg/CategoriesIcons/tools.svg",
     alt: "tools",
   },
