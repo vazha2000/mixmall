@@ -7,7 +7,6 @@ export const SMobileMenu = styled(motion.div)`
   top: 0;
   left: 0;
   background-color: #e3e2de;
-  /* background-color: #f2f2f2; */
   height: 150vh;
   width: 70%;
   z-index: 2;
@@ -62,7 +61,6 @@ export const SMobileMenuCategoriesListItems = styled.li`
   &:hover {
     background-color: aquamarine;
     cursor: pointer;
-    /* background-color: #df3d41; */
     background-color: rgba(223, 61, 65, 0.4);
     color: #f2f2f2;
   }
@@ -77,6 +75,6 @@ export const SMobileSubcategoriesListItems = styled.li`
   font-size: 13px;
   cursor: pointer;
   &:hover {
-    background-color: red;
+    background-color: rgba(223, 61, 65, 0.6);
   }
 `

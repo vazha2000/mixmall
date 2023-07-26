@@ -12,7 +12,6 @@ export const SSideBarCategories = styled.ul`
   display: flex;
   flex-direction: column;
   background-color: #fcfcfc;
-  padding: 0 .5rem;
   border-radius: .313rem;
   -webkit-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
   -moz-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
@@ -24,16 +23,16 @@ export const SSideBarCategoriesListWrapper = styled.div`
 `
 
 export const SSideBarCategoriesList = styled.li`
-  cursor: pointer;
-  padding: .625rem 0;
-  font-weight: 500;
-  font-size: 14px;
-  border-bottom: 1px solid rgba(0,0,0, 0.3);
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  padding-right: .625rem;
+  width: 100%;
+  padding: .625rem .5rem;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0,0,0, 0.3);
   white-space: nowrap;
+  cursor: pointer;
+
   &:hover {
     color: #df3d41;
   }
