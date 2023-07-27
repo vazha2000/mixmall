@@ -6,6 +6,7 @@ export const SSidebarContainer = styled.div`
   @media screen and (max-width: 1024px) {
     display: none;
   }
+  width: ${({width}) => (width ? width : "auto")};
 `;
 
 export const SSideBarCategories = styled.ul`

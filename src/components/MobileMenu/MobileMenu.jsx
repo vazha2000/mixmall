@@ -86,7 +86,7 @@ export const MobileMenu = ({handleMobileMenuClick}) => {
                     <SMobileSubcategoriesList variants={dropdownVariants} initial="hidden" animate="visible" exit="hidden">
                       {item.subcategories.map((subcategory, subIndex) => (
                         <SStyledLink to={`/${item.categoryName}/${subcategory.subcategoryName}`}  key={uuidv4()}>
-                          <SMobileSubcategoriesListItems key={subIndex}>
+                          <SMobileSubcategoriesListItems onClick={handleMobileMenuClick} key={subIndex}>
                             {subcategory.name}
                           </SMobileSubcategoriesListItems>
                         </SStyledLink>
