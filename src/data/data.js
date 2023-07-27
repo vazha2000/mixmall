@@ -1,5 +1,6 @@
 import { computerTechnic } from "./computerTechnic/computerTechnic";
 import { hobbies } from "./hobbies/hobbies";
+import { hvac } from "./hvac/hvac";
 import { majorAppliance } from "./majorAppliance/majorAppliance";
 import { phones } from "./phones/phones";
 import { selfcare } from "./selfcare/selfcare";
@@ -69,21 +70,7 @@ export const categoriesListItems = [
     id: 8,
     name: "გათბობა და გაგრილება",
     categoryName: "hvac",
-    subcategories: [
-      "კონდიციონერები",
-      "ცენტრალური გათბობის ქვაბები",
-      "ელექტრო გამათბობლები",
-      "ვენტილატორები",
-      "გაზის გამათბობლები",
-      "ზეთის რადიატორები",
-      "რადიატორები",
-      "წყლის გამაცხელებლები",
-      "გაერის დამატენიანებლები",
-      "კონვექტორები",
-      "გაზის წყლის გამაცხელებელი",
-      "ჰაერის გამწმენდები",
-      "გამაგრილებელი ზეთები",
-    ],
+    subcategories: [...hvac],
     svg: "assets/svg/CategoriesIcons/conditioner.svg",
     alt: "air conditioner",
   },
