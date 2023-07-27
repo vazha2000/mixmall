@@ -3,6 +3,7 @@ import { SDropDownMenu, SMenuGridContainer, SMenuItems } from './DropdownMenu.st
 import { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export const DropdownMenu = ({item, topPosition}) => {
   const menuRef = useRef(null)
@@ -37,8 +38,9 @@ export const DropdownMenu = ({item, topPosition}) => {
     >
       <SMenuGridContainer isOverflowing={isOverflowing}>
         {item.subcategories.map((subcategory, index) => (
-          <SMenuItems key={index}>{subcategory.name}</SMenuItems>
-          //after every subcategory is filled in, I should write {subcategory.name} inside SMenuItems
+          <Link to={`/${item.categoryName}/${subcategory.subcategoryName}`}  key={index}>
+            <SMenuItems>{subcategory.name}</SMenuItems>
+          </Link>
         ))}
       </SMenuGridContainer>
     </SDropDownMenu>    
