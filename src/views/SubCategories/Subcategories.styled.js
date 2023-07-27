@@ -23,14 +23,14 @@ export const SSubcategoriesSidebarContainer = styled.div`
 `
 
 export const SSubcategoriesCategories = styled(motion.button)`
-  width: fit-content;
   background-color: #df3d41;
   color: #f2f2f2;
   padding: 10px 18px;
   border-radius: 5px;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
+  width: 95%;
 
   &:hover {
     background-color: #c93034;
