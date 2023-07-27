@@ -12,11 +12,14 @@ import {
   SWishlistIcon,
 } from "./Navbar.styled";
 import { SearchInput } from "../SearchInput";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
     <SNavbar>
-      <SLogo src="../assets/images/LogoNoBackground.png" alt="logo" width={180}/>
+      <Link to="/">
+        <SLogo src="../assets/images/LogoNoBackground.png" alt="logo" width={180}/>
+      </Link>
       <SNavMenu>
         <SNavItem>მთავარი</SNavItem>
         <SNavItem>ONLINE განვადება</SNavItem>
