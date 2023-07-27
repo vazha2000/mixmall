@@ -1,5 +1,6 @@
 import { computerTechnic } from "./computerTechnic/computerTechnic";
 import { majorAppliance } from "./majorAppliance/majorAppliance";
+import { phones } from "./phones/phones";
 import { smallAppliance } from "./smallAppliance/smallAppliance";
 import { tools } from "./tools/tools";
 
@@ -42,23 +43,7 @@ export const categoriesListItems = [
     id: 5,
     name: "მობილური ტელეფონები",
     categoryName: "mobile&phones",
-    subcategories: [
-      "Apple",
-      "Samsung",
-      "Xiaomi",
-      "Alcatel",
-      "Techno",
-      "Realme",
-      "Blackview",
-      "OnePlus",
-      "Nokia",
-      "TLC",
-      "ZTE",
-      "Honor",
-      "Vivo",
-      "Infinix",
-      "Oppo",
-    ],
+    subcategories: [...phones],
     svg: "assets/svg/CategoriesIcons/mobile.svg",
     alt: "mobile",
   },
