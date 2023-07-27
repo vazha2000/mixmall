@@ -1,5 +1,5 @@
 import React from 'react'
-import { SProductsFilter, SProductsFilterHeaderWrapper } from './Products.styled'
+import { SPriceFilter, SPriceFilterButton, SPriceFilterInput, SPriceFilterInputsContainer, SPriceFilterRange, SProductsFilter, SProductsFilterHeaderWrapper } from './Products.styled'
 
 export const ProductsFilter = () => {
   return (
@@ -7,6 +7,15 @@ export const ProductsFilter = () => {
       <SProductsFilterHeaderWrapper>
         <h2>გაფილტრე</h2>
       </SProductsFilterHeaderWrapper>
+      <SPriceFilter>
+        <SPriceFilterRange type="range" />
+        <SPriceFilterInputsContainer>
+          <SPriceFilterInput type='text'/>
+          <SPriceFilterInput type='text'/>
+          <SPriceFilterButton whileTap={{scale: 0.98}}>გაფილტრე</SPriceFilterButton>
+
+        </SPriceFilterInputsContainer>
+      </SPriceFilter>
     </SProductsFilter>
   )
 }
