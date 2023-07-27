@@ -11,6 +11,7 @@ import {
 import { Card } from "../../components/Card";
 import { testProducts } from "../../data/data";
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
+import { ProductsFilter } from "../../components/ProductsFilter";
 
 export const Subcategories = ({ item }) => {
   const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
@@ -50,6 +51,7 @@ export const Subcategories = ({ item }) => {
               <Sidebar width={"115%"}/>
             </SSubcategoriesSidebarWrapper>
           )}
+          <ProductsFilter />
         </SSubcategoriesSidebarContainer>
         <SSubcategoriesProducts>
           {item.products.map((card, index) => {
