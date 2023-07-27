@@ -1,6 +1,7 @@
 import { computerTechnic } from "./computerTechnic/computerTechnic";
 import { majorAppliance } from "./majorAppliance/majorAppliance";
 import { phones } from "./phones/phones";
+import { selfcare } from "./selfcare/selfcare";
 import { smallAppliance } from "./smallAppliance/smallAppliance";
 import { tools } from "./tools/tools";
 
@@ -51,20 +52,7 @@ export const categoriesListItems = [
     id: 6,
     name: "თავის მოვლის საშუალებები",
     categoryName: "selfcare",
-    subcategories: [
-      "ეპილატორები",
-      "ფოტო ეპილატორები",
-      "ფენები",
-      "სავარცხლიანი ფენები",
-      "თმის უთოები",
-      "თმის სახვევები",
-      "კერამიკული სავარცხლები",
-      "შილაკის აპარატები",
-      "წვერის საპარსები",
-      "თმის საკრეჭები",
-      "ტრიმერები",
-      "სასწორები",
-    ],
+    subcategories: [...selfcare],
     svg: "assets/svg/CategoriesIcons/selfcare.svg",
     alt: "self-care",
   },
