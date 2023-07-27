@@ -14,7 +14,7 @@ export const SearchInput = () => {
   return (
     <SSearchInputContainer isFocused={isFocused}>
       <SSearchInput  onFocus={handleFocus} onBlur={handleBlur}/>
-      <SSearchIcon src="assets/svg/search.svg" alt="search icon" />
+      <SSearchIcon src="../assets/svg/search.svg" alt="search icon" />
     </SSearchInputContainer>
   );
 };

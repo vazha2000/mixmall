@@ -38,7 +38,7 @@ export const Sidebar = () => {
             >
               <SSideBarCategoriesList>
                 <span>{item.name}</span>
-                <img src="assets/svg/vectorRight.svg" alt="vectorRight" />
+                <img src="../assets/svg/vectorRight.svg" alt="vectorRight" />
               </SSideBarCategoriesList>
               <AnimatePresence>
                 {hoveredCategory === item && (

@@ -16,6 +16,7 @@ import { BrowseByCategory } from "../../components/BrowseByCategory";
 import { SaleOfMonth } from "../../components/SaleOfMonth";
 import { BestSellingProducts } from "../../components/BestSellingProducts"
 import { Footer } from "../../components/Footer";
+import { Layout } from "../../components/Layout/Layout";
 
 export const MainPage = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -40,7 +41,6 @@ export const MainPage = () => {
 
   return (
     <SMainPage>
-      <Navbar />
       <SSearchInputHamburger>
         <SBurgerMenuIcon
           onClick={handleMobileMenuClick}
@@ -68,7 +68,6 @@ export const MainPage = () => {
       <BrowseByCategory />
       <SaleOfMonth />
       <BestSellingProducts />
-      <Footer />
     </SMainPage>
   );
 };

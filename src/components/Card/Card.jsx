@@ -35,7 +35,7 @@ export const Card = (props) => {
     >
       <SCardImageContainer>
         <SCardImage src={productImage} alt={alt} />
-        <SCardWishlist src="assets/svg/wishlist.svg" alt="favorites icon" />
+        <SCardWishlist src="../assets/svg/wishlist.svg" alt="favorites icon" />
         {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
         <AnimatePresence>
           <SAddToCardButton initial={{y: "100%", opacity: 1}} animate={isHovered ? {y: 0, opacity: 1, transition: {stiffness: 0, duration: 0.2}} : {y: "100%", opacity: 1, transition: {stiffness: 0, duration: 0.2}}}>

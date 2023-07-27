@@ -1,5 +1,5 @@
 import React from 'react'
-import { SDropDownMenu, SMenuGridContainer, SMenuItems } from './DropdownMenu.styled';
+import { SDropDownMenu, SMenuGridContainer, SMenuItems, SStyledLink } from './DropdownMenu.styled';
 import { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
@@ -37,7 +37,9 @@ export const DropdownMenu = ({item, topPosition}) => {
     >
       <SMenuGridContainer isOverflowing={isOverflowing}>
         {item.subcategories.map((subcategory, index) => (
-          <SMenuItems key={index}>{subcategory}</SMenuItems>
+          <SStyledLink to={`/${item.categoryName}/${subcategory.subcategoryName}`}  key={index}>
+            <SMenuItems>{subcategory.name}</SMenuItems>
+          </SStyledLink>
         ))}
       </SMenuGridContainer>
     </SDropDownMenu>    
