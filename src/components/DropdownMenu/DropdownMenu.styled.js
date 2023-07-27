@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const SDropDownMenu = styled(motion.div)`
@@ -38,3 +39,8 @@ export const SMenuItems = styled.li`
     font-size: 13px;
   }
 `
+
+export const SStyledLink = styled(Link)`
+  text-decoration: none;
+  color: #1f1f1f;
+`;
