@@ -98,7 +98,7 @@ export const computerTechnic = [
   {
     id: uuidv4(),
     name: "ლეპტოპები",
-    subcategoryName: "laptops",
+    subcategoryName: "3",
     products: [
       {
         id: uuidv4(),
@@ -145,7 +145,7 @@ export const computerTechnic = [
   {
     id: uuidv4(),
     name: "პლანშეტები",
-    subcategoryName: "3",
+    subcategoryName: "4",
     products: [
       {
         id: uuidv4(),
@@ -192,7 +192,7 @@ export const computerTechnic = [
   {
     id: uuidv4(),
     name: "მონიტორები",
-    subcategoryName: "4",
+    subcategoryName: "5",
     products: [
       {
         id: uuidv4(),
