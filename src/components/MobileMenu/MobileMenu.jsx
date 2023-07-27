@@ -14,7 +14,8 @@ import {
 import { useState } from "react";
 import { categoriesListItems } from "../../data/data";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
+import { v4 as uuidv4 } from "uuid";
 
 export const MobileMenu = ({handleMobileMenuClick}) => {
   const [isCategoryClicked, setIsCategoryClicked] = useState(false);
@@ -84,9 +85,11 @@ export const MobileMenu = ({handleMobileMenuClick}) => {
                   {openSubcategories[index] && (
                     <SMobileSubcategoriesList variants={dropdownVariants} initial="hidden" animate="visible" exit="hidden">
                       {item.subcategories.map((subcategory, subIndex) => (
-                        <SMobileSubcategoriesListItems key={subIndex}>
-                          {subcategory}
-                        </SMobileSubcategoriesListItems>
+                        <SStyledLink to={`/${item.categoryName}/${subcategory.subcategoryName}`}  key={uuidv4()}>
+                          <SMobileSubcategoriesListItems key={subIndex}>
+                            {subcategory.name}
+                          </SMobileSubcategoriesListItems>
+                        </SStyledLink>
                       ))}
                     </SMobileSubcategoriesList>
                   )}
