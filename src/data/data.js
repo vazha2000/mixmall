@@ -1,3 +1,4 @@
+import { childrenInventory } from "./childrenInventory/childrenInventory";
 import { computerTechnic } from "./computerTechnic/computerTechnic";
 import { hobbies } from "./hobbies/hobbies";
 import { hvac } from "./hvac/hvac";
@@ -78,25 +79,7 @@ export const categoriesListItems = [
     id: 9,
     name: "საბავშვო ინვენტარი",
     categoryName: "children&inventory",
-    subcategories: [
-      "საბავშვო ეტლები",
-      "სათამაშოები",
-      "მანქანის სავარძლები",
-      "მანეჟები",
-      "ბატუტები",
-      "საბავშვო ელექტრო მანქანები",
-      "სკეიტბორდები",
-      "ჭოჭინები",
-      "ბავშვის აბაზანები",
-      "საბავშვო საქანელები",
-      "რადიო ძიძები",
-      "ბავშვის საწოლები",
-      "ბავშვის სათამაშოები",
-      "საბავშვო თეთრეული",
-      "საბავშვო ლეიბები",
-      "საბავშვო კენგურუები",
-      "ჯამპერები",
-    ],
+    subcategories: [...childrenInventory],
     svg: "assets/svg/CategoriesIcons/toys.svg",
     alt: "toys",
   },
