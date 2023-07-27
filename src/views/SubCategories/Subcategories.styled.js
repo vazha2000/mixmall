@@ -14,6 +14,10 @@ export const SSidebarContainer = styled.div`
 export const SSubcategoriesSidebarContainer = styled.div`
   background-color: yellow;
   flex: 1;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }  
 `
 
 export const SSubcategoriesProducts = styled.ul`
