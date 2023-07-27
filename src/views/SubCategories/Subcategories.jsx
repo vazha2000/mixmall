@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Sidebar } from "../../components/Sidebar";
 import {
   SSubcategories,
@@ -9,7 +9,7 @@ import {
   SSubcategoriesSidebarWrapper,
 } from "./Subcategories.styled";
 import { Card } from "../../components/Card";
-import { categoriesListItems, testProducts } from "../../data/data";
+import { testProducts } from "../../data/data";
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 
 export const Subcategories = ({ item }) => {
@@ -24,6 +24,20 @@ export const Subcategories = ({ item }) => {
     });
   };
 
+  const autoCloseMobileMenu = () => {
+    if (window.innerWidth < 1024 && isClicked) {
+      setIsClicked(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", autoCloseMobileMenu);
+
+    return () => {
+      window.removeEventListener("resize", autoCloseMobileMenu);
+    };
+  }, [isClicked]);
+
   return (
     <SSubcategories>
       <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs>
@@ -33,7 +47,7 @@ export const Subcategories = ({ item }) => {
           <SSubcategoriesCategories whileTap={{scale: 0.98}} onClick={() => setIsClicked(!isClicked)}>კატეგორიები</SSubcategoriesCategories>
           {isClicked && (
             <SSubcategoriesSidebarWrapper>
-              <Sidebar />
+              <Sidebar width={"115%"}/>
             </SSubcategoriesSidebarWrapper>
           )}
         </SSubcategoriesSidebarContainer>
