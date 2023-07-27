@@ -37,7 +37,7 @@ export const DropdownMenu = ({item, topPosition}) => {
     >
       <SMenuGridContainer isOverflowing={isOverflowing}>
         {item.subcategories.map((subcategory, index) => (
-          <SStyledLink style={{textDecoration: "none", color: "black"}} to={`/${item.categoryName}/${subcategory.subcategoryName}`}  key={index}>
+          <SStyledLink to={`/${item.categoryName}/${subcategory.subcategoryName}`}  key={index}>
             <SMenuItems>{subcategory.name}</SMenuItems>
           </SStyledLink>
         ))}
