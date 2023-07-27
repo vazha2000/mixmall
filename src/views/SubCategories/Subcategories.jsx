@@ -15,7 +15,6 @@ export const Subcategories = ({item}) => {
     })
   }
 
-  console.log(item.products)
   return (
     <SSubcategories>
       <SSubcategoriesBreadcrumbs>
