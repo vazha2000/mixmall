@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { DropdownMenu } from "../DropdownMenu";
 import { categoriesListItems } from "../../data/data";
 
-export const Sidebar = () => {
+export const Sidebar = ({width}) => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const sidebarRef = useRef(null);
@@ -27,7 +27,7 @@ export const Sidebar = () => {
     setHoveredCategory(null);
   };
   return (
-    <SSidebarContainer ref={sidebarRef}>
+    <SSidebarContainer width={width} ref={sidebarRef}>
       <SSideBarCategories>
         {categoriesListItems.map((item, index) => {
           return (
