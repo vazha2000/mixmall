@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 export const SCard = styled.div`
   width: calc(25% - 50px);
-  min-width: 250px;
+  min-width: 15.625rem;
   height: auto;
+  max-height: 21.563rem;
   border: ${({isHovered}) => (isHovered ? "1px solid rgba(0,0,0, 0.6);" : "1px solid rgba(0,0,0, 0.3);")};
   border-radius: 4px;
   padding-bottom: 20px;
