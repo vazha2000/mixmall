@@ -29,6 +29,7 @@ export const SPriceFilterInputRangeValue = styled.span`
 
 export const SPriceFilter = styled.div`
   margin: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0, 0.2);
 `
 
 export const SPriceFilterRangeContainer = styled.div`
@@ -90,4 +91,8 @@ export const SPriceFilterButton = styled(motion.button)`
     background-color: #c93034;
     cursor: pointer;
   }
+`
+
+export const SBrandFilter = styled.div`
+  padding: 10px;
 `
