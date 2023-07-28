@@ -39,6 +39,10 @@ export const Subcategories = ({ item }) => {
     };
   }, [isClicked]);
 
+  // const minPrice = item.products.map((item) => item.currentPrice)
+  // const maxPrice = item.products.map((Item) => item.currentPrice)
+  // console.log(minPrice.map(str => parseInt(str, 10)))
+
   return (
     <SSubcategories>
       <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs>
