@@ -23,7 +23,7 @@ export const SPriceFilterInputRangeValueContainer = styled.div`
 
 export const SPriceFilterInputRangeValue = styled.span`
   padding: 10px;
-  font-size: 30px;
+  font-size: 15px;
   color: red;
 `
 
@@ -31,8 +31,25 @@ export const SPriceFilter = styled.div`
   margin: 1rem 0;
 `
 
-export const SPriceFilterRange = styled.input`
+export const SPriceFilterRangeContainer = styled.div`
+  width: 90%;
+  margin: 0 auto;
+`
+
+export const SPriceFilterRangeBackground = styled.div`
+  height: 4px;
   width: 100%;
+  border-radius: 4px;
+`
+
+export const SPriceFilterRangeThumb = styled.div`
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #df3d41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export const SPriceFilterInputsContainer = styled.div`
@@ -41,6 +58,7 @@ export const SPriceFilterInputsContainer = styled.div`
   gap: 1rem;
   padding: 10px;
   flex-wrap: wrap;
+  margin-top: 10px;
 `
 
 export const SPriceFilterInput = styled.input`
