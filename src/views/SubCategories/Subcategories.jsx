@@ -12,6 +12,8 @@ import { Card } from "../../components/Card";
 import { testProducts } from "../../data/data";
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 import { ProductsFilter } from "../../components/ProductsFilter";
+import { Link } from "react-router-dom";
+import { SStyledLink } from "../../components/DropdownMenu/DropdownMenu.styled";
 
 export const Subcategories = ({ item }) => {
   const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
@@ -43,16 +45,23 @@ export const Subcategories = ({ item }) => {
   // const maxPrice = item.products.map((Item) => item.currentPrice)
   // console.log(minPrice.map(str => parseInt(str, 10)))
 
+  // console.log(item.products.map((gela) => gela.productName))
+
   return (
     <SSubcategories>
       <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs>
       <SearchInputHamburger />
       <div style={{ display: "flex", marginTop: "30px" }}>
         <SSubcategoriesSidebarContainer>
-          <SSubcategoriesCategories whileTap={{scale: 0.98}} onClick={() => setIsClicked(!isClicked)}>კატეგორიები</SSubcategoriesCategories>
+          <SSubcategoriesCategories
+            whileTap={{ scale: 0.98 }}
+            onClick={() => setIsClicked(!isClicked)}
+          >
+            კატეგორიები
+          </SSubcategoriesCategories>
           {isClicked && (
             <SSubcategoriesSidebarWrapper>
-              <Sidebar width={"115%"}/>
+              <Sidebar width={"115%"} />
             </SSubcategoriesSidebarWrapper>
           )}
           <ProductsFilter />
@@ -60,18 +69,21 @@ export const Subcategories = ({ item }) => {
         <SSubcategoriesProducts>
           {item.products.map((card, index) => {
             return (
-              <Card
-                key={index}
-                productImage={card.productImage}
-                discountRate={card.discountRate}
-                isDiscount={card.isDiscount}
-                productName={card.productName}
-                currentPrice={card.currentPrice}
-                oldPrice={card.oldPrice}
-                alt={card.alt}
-                handleHover={() => handleHover(index)}
-                isHovered={hoverStates[index]}
-              />
+              <SStyledLink>
+                <Card
+                  width={"200px"}
+                  key={index}
+                  productImage={card.productImage}
+                  discountRate={card.discountRate}
+                  isDiscount={card.isDiscount}
+                  productName={card.productName}
+                  currentPrice={card.currentPrice}
+                  oldPrice={card.oldPrice}
+                  alt={card.alt}
+                  handleHover={() => handleHover(index)}
+                  isHovered={hoverStates[index]}
+                />
+              </SStyledLink>
             );
           })}
         </SSubcategoriesProducts>
