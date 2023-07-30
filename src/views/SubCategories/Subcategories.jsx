@@ -12,7 +12,6 @@ import { Card } from "../../components/Card";
 import { testProducts } from "../../data/data";
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 import { ProductsFilter } from "../../components/ProductsFilter";
-import { Link } from "react-router-dom";
 import { SStyledLink } from "../../components/DropdownMenu/DropdownMenu.styled";
 
 export const Subcategories = ({ item }) => {
@@ -69,7 +68,10 @@ export const Subcategories = ({ item }) => {
         <SSubcategoriesProducts>
           {item.products.map((card, index) => {
             return (
-              <SStyledLink>
+              <SStyledLink
+                key={index}
+                to={`${card.productName}`}
+              >
                 <Card
                   width={"200px"}
                   key={index}
