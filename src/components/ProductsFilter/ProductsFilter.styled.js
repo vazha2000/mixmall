@@ -92,33 +92,3 @@ export const SPriceFilterButton = styled(motion.button)`
     cursor: pointer;
   }
 `
-
-export const SBrandFilter = styled.div`
-  padding: 0 10px;
-  max-height: 200px;
-  overflow-y: auto;
-`
-
-
-export const SBrandRadioLabel = styled.label`
-display: flex;
-  gap: 10px;
-  align-items: center;
-  cursor: pointer;
-
-  input[type="radio"] {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(0,0,0, 0.8);
-  border-radius: 40%;
-  outline: none;
-  cursor: pointer;
-  
-  &:checked {
-    background-color: #888;
-    box-shadow: inset 0 0 4px black;
-    }
-  }
-  
-`
