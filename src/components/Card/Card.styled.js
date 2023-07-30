@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const SCard = styled.div`
-  width: calc(25% - 50px);
+  width: ${({width}) => (width ? "200px" : "calc(25% - 50px)") };
   min-width: 15.625rem;
   height: auto;
   max-height: 21.563rem;
