@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import {
+  SBrandFilter,
+  SBrandRadioLabel,
   SPriceFilter,
   SPriceFilterButton,
   SPriceFilterInput,
@@ -9,7 +11,6 @@ import {
   SPriceFilterRangeBackground,
   SPriceFilterRangeContainer,
   SPriceFilterRangeThumb,
-  // SPriceFilterRange,
   SProductsFilter,
   SProductsFilterHeaderWrapper,
 } from "./ProductsFilter.styled";
