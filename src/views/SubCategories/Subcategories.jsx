@@ -11,6 +11,7 @@ import {
 import { Card } from "../../components/Card";
 import { testProducts } from "../../data/data";
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
+import { ProductsFilter } from "../../components/ProductsFilter";
 
 export const Subcategories = ({ item }) => {
   const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
@@ -38,6 +39,10 @@ export const Subcategories = ({ item }) => {
     };
   }, [isClicked]);
 
+  // const minPrice = item.products.map((item) => item.currentPrice)
+  // const maxPrice = item.products.map((Item) => item.currentPrice)
+  // console.log(minPrice.map(str => parseInt(str, 10)))
+
   return (
     <SSubcategories>
       <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs>
@@ -50,6 +55,7 @@ export const Subcategories = ({ item }) => {
               <Sidebar width={"115%"}/>
             </SSubcategoriesSidebarWrapper>
           )}
+          <ProductsFilter />
         </SSubcategoriesSidebarContainer>
         <SSubcategoriesProducts>
           {item.products.map((card, index) => {
