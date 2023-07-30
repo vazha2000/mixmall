@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import {
-  SBrandFilter,
-  SBrandRadioLabel,
   SPriceFilter,
   SPriceFilterButton,
   SPriceFilterInput,
