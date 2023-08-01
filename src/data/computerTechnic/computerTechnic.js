@@ -8,7 +8,7 @@ export const computerTechnic = [
     products: [
       {
         id: uuidv4(),
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        productImage: "../assets/images/computerTechnic/orange.png",
         discountRate: "20%",
         isDiscount: true,
         productName: "Asus Gaming PC",
@@ -18,7 +18,7 @@ export const computerTechnic = [
       },
       {
         id: uuidv4(),
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        productImage: "../assets/images/computerTechnic/orange.png",
         discountRate: "20%",
         isDiscount: false,
         productName: "MSI Gaming PC",
@@ -28,7 +28,7 @@ export const computerTechnic = [
       },
       {
         id: uuidv4(),
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        productImage: "../assets/images/computerTechnic/orange.png",
         discountRate: "20%",
         isDiscount: false,
         productName: "Dell Gaming PC",
@@ -38,7 +38,7 @@ export const computerTechnic = [
       },
       {
         id: uuidv4(),
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        productImage: "../assets/images/computerTechnic/orange.png",
         discountRate: "20%",
         isDiscount: false,
         productName: "Alienware Gaming PC",
