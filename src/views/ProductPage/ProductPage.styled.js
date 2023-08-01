@@ -5,13 +5,13 @@ export const SProductPage = styled.div`
   display: flex;
   margin: 3rem 0;
   /* gap: 10px; */
-`
+`;
 
 export const SProductPageImages = styled.div`
   flex: 3;
   display: flex;
   /* gap: 40px; */
-`
+`;
 
 export const SProductPageSmallImages = styled.div`
   flex: 1;
@@ -19,33 +19,99 @@ export const SProductPageSmallImages = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-`
+`;
 
 export const SProductPageSmallImage = styled.img`
   width: 70%;
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.2);
-  -webkit-box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.2);
-  -moz-box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.2);
-`
+  box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+`;
 
 export const SProductPageMainImage = styled.div`
   flex: 4;
-`
+`;
 
 export const SProductPageBigImage = styled.img`
   width: 90%;
   object-fit: cover;
-  border: 1px solid rgba(0,0,0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.2);
-  -webkit-box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.2);
-  -moz-box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.2);
-`
+  box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+`;
 
 export const SProductPageOptions = styled.div`
   flex: 3;
-  border: 1px solid black;
-`
+  /* border: 1px solid black; */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+
+  > h2 {
+    color: #1f1f1f;
+  }
+`;
+
+export const SProductPrices = styled.div`
+  display: flex;
+  gap: 2rem;
+  margin: 3rem 0;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  > span {
+    /* color: #df3d41; */
+    color: #1f1f1f;
+    font-size: 30px;
+  }
+  > span:nth-child(2) {
+    color: #df3d41;
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+  }
+`;
+
+export const SProductQuantityBuyFavorites = styled.div`
+  display: flex;
+  gap: 30px;
+`;
+
+export const SProductQuantity = styled.div`
+  display: flex;
+`;
+
+export const SProductQuantityMinus = styled.button`
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SProductCurrentQuantity = styled.span`
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(0,0,0, 0.5);
+  border-bottom: 1px solid rgba(0,0,0, 0.5);
+  font-weight: bold;
+`;
+
+export const SProductQuantityPlus = styled.button`
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
