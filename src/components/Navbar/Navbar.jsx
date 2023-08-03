@@ -34,7 +34,6 @@ export const Navbar = () => {
           <SCartIcon src="../assets/svg/cart.svg" alt="cart icon"/>
         </SWishlistCartContainer>
       </SNavActions>
-      {/* <SBurgerMenuIcon src="assets/svg/burgerMenu.svg" alt="menu"/> */}
     </SNavbar>
   );
 };
