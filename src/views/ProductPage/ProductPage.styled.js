@@ -1,21 +1,17 @@
 import styled from "styled-components";
 
 export const SProductPage = styled.div`
-  /* background-color: cadetblue; */
   display: flex;
   margin: 3rem 0;
-  /* gap: 10px; */
 `;
 
 export const SProductPageImages = styled.div`
   flex: 3;
   display: flex;
-  /* gap: 40px; */
 `;
 
 export const SProductPageSmallImages = styled.div`
   flex: 1;
-  /* background-color: burlywood; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -47,7 +43,6 @@ export const SProductPageBigImage = styled.img`
 
 export const SProductPageOptions = styled.div`
   flex: 3;
-  /* border: 1px solid black; */
   background-color: #fff;
   border-radius: 10px;
   box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
@@ -67,7 +62,6 @@ export const SProductPrices = styled.div`
   padding-bottom: 3rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   > span {
-    /* color: #df3d41; */
     color: #1f1f1f;
     font-size: 30px;
   }
