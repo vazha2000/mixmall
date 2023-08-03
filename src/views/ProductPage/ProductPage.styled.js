@@ -106,7 +106,7 @@ export const SProductQuantityMinus = styled.button`
 export const SProductCurrentQuantityContainer = styled.div`
   display: flex;
   justify-content: center;
-  width: 100px;
+  width: 80px;
   border: none;
   border-top: 1px solid rgba(0,0,0, 0.5);
   border-bottom: 1px solid rgba(0,0,0, 0.5);
@@ -136,3 +136,36 @@ export const SProductQuantityPlus = styled.button`
     background-color: #df3d41;
   }
 `;
+
+export const SProductBuyNow = styled.button`
+  width: 120px;
+  border: 1px solid rgba(0,0,0, 0.5);
+  background-color: inherit;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #1f1f1f;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #df3d41;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0, 0.9);
+    color: #fff;
+    transition: all .2s ease;
+  }
+`
+
+export const SAddToFavorites = styled.div`
+  width: 40px;
+  border: 1px solid rgba(0,0,0, 0.5);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border: 1px solid rgba(0,0,0, 0.9);
+    background-color: #df3d41;
+    cursor: pointer;
+  }
+`
