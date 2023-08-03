@@ -19,7 +19,7 @@ export const ProductDescriptions = ({ product }) => {
             <td>დეტალური მახასიათებლები</td>
           </SProductDescriptionTableHeader>
           {keys.map((item, index) => (
-            <SProductDescriptionTableRow key={index}>
+            <SProductDescriptionTableRow key={index} isEven={index % 2 === 0}>
               <td>{item}</td>
               <td>{values[index]}</td>
             </SProductDescriptionTableRow>
