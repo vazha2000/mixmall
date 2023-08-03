@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProductDescriptions } from "../../components/ProductDescriptions";
 import {
   SAddToFavorites,
@@ -19,6 +19,32 @@ import {
 } from "./ProductPage.styled";
 
 export const ProductPage = ({ product }) => {
+  const [quantity, setQuantity] = useState(1)
+  console.log(quantity)
+
+  const handleIncrement = () => {
+    if (quantity < 99) {
+      setQuantity((prev) => prev + 1);
+    }
+  }
+
+  const handleDecrement = () => {
+    if(quantity > 1) {
+      setQuantity(prev => prev - 1)
+    }
+  }
+
+  const handleQuantityChange = (e) => {
+    const inputQuantity = parseInt(e.target.value, 10);
+    if (e.target.value.trim() === "" || isNaN(inputQuantity) || inputQuantity < 1) {
+      setQuantity(0);
+    } else if (inputQuantity > 99) {
+      setQuantity(99);
+    } else {
+      setQuantity(inputQuantity);
+    }
+  };
+
   return (
     <>
       <SProductPage>
@@ -41,11 +67,11 @@ export const ProductPage = ({ product }) => {
           </SProductPrices>
           <SProductQuantityBuyFavorites>
             <SProductQuantity>
-              <SProductQuantityMinus>
+              <SProductQuantityMinus onClick={handleDecrement}>
                 <img src="assets/svg/minus.svg" alt="minus" />
               </SProductQuantityMinus>
-              <SProductCurrentQuantity />
-              <SProductQuantityPlus>
+              <SProductCurrentQuantity value={quantity} onChange={handleQuantityChange} maxLength="2"/>
+              <SProductQuantityPlus onClick={handleIncrement}>
                 <img src="assets/svg/plus.svg" alt="plus" />
               </SProductQuantityPlus>
             </SProductQuantity>
