@@ -20,7 +20,6 @@ import {
 
 export const ProductPage = ({ product }) => {
   const [quantity, setQuantity] = useState(1)
-  console.log(quantity)
 
   const handleIncrement = () => {
     if (quantity < 99) {
