@@ -40,6 +40,8 @@ export const SCubcategoryPaginationButton = styled.button`
   &:hover {
     filter: brightness(70%);
     cursor: ${({firstPage}) => (firstPage ? "not-allowed" : "pointer")};
+    cursor: ${({lastPage}) => (lastPage ? "not-allowed" : "pointer")};
     filter: ${({firstPage}) => (firstPage && "saturate(0)")};
+    filter: ${({lastPage}) => (lastPage && "saturate(0)")};
   }
 `
