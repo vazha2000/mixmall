@@ -13,6 +13,7 @@ import { testProducts } from "../../data/data";
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 import { ProductsFilter } from "../../components/ProductsFilter";
 import { SStyledLink } from "../../components/DropdownMenu/DropdownMenu.styled";
+import { SubcategoryPagination } from "../../components/SubcategoryPagination";
 
 export const Subcategories = ({ item }) => {
   const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
@@ -90,6 +91,7 @@ export const Subcategories = ({ item }) => {
           })}
         </SSubcategoriesProducts>
       </div>
+      <SubcategoryPagination />
     </SSubcategories>
   );
 };
