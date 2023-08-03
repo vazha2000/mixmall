@@ -1,7 +1,17 @@
-import React from 'react'
+import React from "react";
+import { SProductDescription, SProductDescriptionTable, SProductDescriptionTableRow } from "./ProductDescriptions.styled";
 
 export const ProductDescriptions = () => {
   return (
-    <div>ProductDescriptions</div>
-  )
-}
+    <SProductDescription>
+      <SProductDescriptionTable>
+        <tbody>
+          <SProductDescriptionTableRow>
+            <td>koko</td>
+            <td>koko</td>
+          </SProductDescriptionTableRow>
+        </tbody>
+      </SProductDescriptionTable>
+    </SProductDescription>
+  );
+};
