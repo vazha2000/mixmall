@@ -15,6 +15,14 @@ export const computerTechnic = [
         currentPrice: 500,
         oldPrice: 600,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "200g",
+            "screen size": "1080p",
+            "color": "yellow",
+          }
+        ]
+        
       },
       {
         id: uuidv4(),
@@ -25,6 +33,13 @@ export const computerTechnic = [
         currentPrice: 700,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "200g",
+            "screen size": "1080p",
+            "color": "yellow",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -35,6 +50,13 @@ export const computerTechnic = [
         currentPrice: 900,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "200g",
+            "screen size": "1080p",
+            "color": "yellow",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -45,6 +67,13 @@ export const computerTechnic = [
         currentPrice: 1000,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
     ]
   },
@@ -62,6 +91,13 @@ export const computerTechnic = [
         currentPrice: 360,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -72,6 +108,13 @@ export const computerTechnic = [
         currentPrice: 460,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -82,6 +125,13 @@ export const computerTechnic = [
         currentPrice: 760,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -92,6 +142,13 @@ export const computerTechnic = [
         currentPrice: 550,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
     ]
   },
@@ -109,6 +166,13 @@ export const computerTechnic = [
         currentPrice: 400,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -119,6 +183,13 @@ export const computerTechnic = [
         currentPrice: 1200,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -129,6 +200,13 @@ export const computerTechnic = [
         currentPrice: 790,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -139,6 +217,13 @@ export const computerTechnic = [
         currentPrice: 460,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
     ]
   },
@@ -156,6 +241,13 @@ export const computerTechnic = [
         currentPrice: 900,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -166,6 +258,13 @@ export const computerTechnic = [
         currentPrice: 500,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -176,6 +275,13 @@ export const computerTechnic = [
         currentPrice: 300,
         oldPrice: 350,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -186,6 +292,13 @@ export const computerTechnic = [
         currentPrice: 1100,
         oldPrice: 1300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
     ]
   },
@@ -203,6 +316,13 @@ export const computerTechnic = [
         currentPrice: 500,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -213,6 +333,13 @@ export const computerTechnic = [
         currentPrice: 800,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -223,6 +350,13 @@ export const computerTechnic = [
         currentPrice: 400,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
       {
         id: uuidv4(),
@@ -233,6 +367,13 @@ export const computerTechnic = [
         currentPrice: 900,
         oldPrice: 300,
         alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
       },
     ]
   },
