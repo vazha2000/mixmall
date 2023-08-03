@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  SAddToFavorites,
+  SProductBuyNow,
   SProductCurrentQuantity,
   SProductCurrentQuantityContainer,
   SProductPage,
@@ -49,6 +51,12 @@ export const ProductPage = ({ product }) => {
               <img src="assets/svg/plus.svg" alt="plus" />
             </SProductQuantityPlus>
           </SProductQuantity>
+          <SProductBuyNow>
+            შეძენა
+          </SProductBuyNow>
+          <SAddToFavorites>
+            <img src="assets/svg/wishlist.svg" alt="wishlist" />
+          </SAddToFavorites>
         </SProductQuantityBuyFavorites>
       </SProductPageOptions>
     </SProductPage>
