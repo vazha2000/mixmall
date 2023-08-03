@@ -6,6 +6,8 @@ import {
   SSubcategoryPaginationList,
   SSubcategoryPaginationListItems,
 } from "./SubcategoryPagination.styled";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export const SubcategoryPagination = ({
   item,
@@ -15,7 +17,21 @@ export const SubcategoryPagination = ({
   setCurrentPage
 }) => {
   const totalPages = Math.ceil(item.products.length / itemsPerPage);
-  const maxPageNumbersToShow = 5;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  const maxPageNumbersToShow = windowWidth < 450 ? 3 : 5;
+
   const pageNumbers = Array.from(
     { length: totalPages },
     (_, index) => index + 1
