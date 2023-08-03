@@ -25,6 +25,7 @@ export const Card = (props) => {
     alt,
     discountRate,
     isDiscount,
+    width
   } = props;
 
   return (
@@ -32,6 +33,7 @@ export const Card = (props) => {
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
       isHovered={isHovered}
+      width={width}
     >
       <SCardImageContainer>
         <SCardImage src={productImage} alt={alt} />
