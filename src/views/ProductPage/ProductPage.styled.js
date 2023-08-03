@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const SProductPage = styled.div`
   display: flex;
   margin: 3rem 0;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const SProductPageImages = styled.div`
@@ -39,6 +44,10 @@ export const SProductPageBigImage = styled.img`
   box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+}
 `;
 
 export const SProductPageOptions = styled.div`
