@@ -94,6 +94,7 @@ export const SProductQuantityMinus = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 4px 0 0 4px;
 `;
 
 export const SProductCurrentQuantity = styled.span`
@@ -114,4 +115,5 @@ export const SProductQuantityPlus = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0 4px 4px 0;
 `;
