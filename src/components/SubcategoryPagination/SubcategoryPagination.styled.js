@@ -36,4 +36,10 @@ export const SCubcategoryPaginationButton = styled.button`
   align-items: center;
   justify-content: center;
   rotate: ${({rotate}) => (rotate ? "180deg" : "0")};
+
+  &:hover {
+    filter: brightness(70%);
+    cursor: ${({firstPage}) => (firstPage ? "not-allowed" : "pointer")};
+    filter: ${({firstPage}) => (firstPage && "saturate(0)")};
+  }
 `
