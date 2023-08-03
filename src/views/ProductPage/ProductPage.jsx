@@ -20,7 +20,7 @@ import {
 } from "./ProductPage.styled";
 
 export const ProductPage = ({ product }) => {
-  console.log(product);
+
   return (
     <>
       <SProductPage>
@@ -60,7 +60,7 @@ export const ProductPage = ({ product }) => {
           </SProductQuantityBuyFavorites>
         </SProductPageOptions>
       </SProductPage>
-      <ProductDescriptions/>
+      <ProductDescriptions product={product}/>
     </>
   );
 };
