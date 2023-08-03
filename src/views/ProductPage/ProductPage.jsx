@@ -1,4 +1,5 @@
 import React from "react";
+import { ProductDescriptions } from "../../components/ProductDescriptions"
 import {
   SAddToFavorites,
   SProductBuyNow,
@@ -59,7 +60,7 @@ export const ProductPage = ({ product }) => {
           </SProductQuantityBuyFavorites>
         </SProductPageOptions>
       </SProductPage>
-      <div>sdjij</div>
+      <ProductDescriptions/>
     </>
   );
 };
