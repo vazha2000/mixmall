@@ -4,7 +4,6 @@ import {
   SAddToFavorites,
   SProductBuyNow,
   SProductCurrentQuantity,
-  SProductCurrentQuantityContainer,
   SProductPage,
   SProductPageBigImage,
   SProductPageImages,
