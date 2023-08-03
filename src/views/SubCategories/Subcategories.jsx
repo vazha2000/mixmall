@@ -97,7 +97,7 @@ export const Subcategories = ({ item }) => {
         </SSubcategoriesProducts>
       </div>
       <SubcategoryPagination item={item} onPageChange={handlePageChange}
-        currentPage={currentPage} itemsPerPage={itemsPerPage}/>
+        currentPage={currentPage} setCurrentPage={setCurrentPage} itemsPerPage={itemsPerPage}/>
     </SSubcategories>
   );
 };
