@@ -9,10 +9,9 @@ export const SNavbar = styled.nav`
   justify-content: space-between;
 `;
 
-
 export const SLogo = styled.img`
   cursor: pointer;
-`
+`;
 
 export const SNavMenu = styled.ul`
   display: flex;
@@ -40,7 +39,7 @@ export const SNavItem = styled.li`
     color: #ffffff;
   }
   &:not(:last-child)::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -58,7 +57,7 @@ export const SNavActions = styled.div`
   width: 40%;
   justify-content: flex-end;
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     width: auto;
   }
 `;
@@ -66,32 +65,50 @@ export const SNavActions = styled.div`
 export const SNavInputContainer = styled.div`
   display: flex;
   width: 70%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     display: none;
   }
-`
+`;
 
 export const SWishlistCartContainer = styled.div`
   display: flex;
   gap: 1rem;
   margin-left: 1.5rem;
-`
+`;
+
+export const SWishlistContainer = styled.div`
+  position: relative;
+`;
+
+export const SWishlistQuantity = styled.div`
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: red;
+`;
 
 export const SWishlistIcon = styled.img`
   cursor: pointer;
-`
+`;
 
 export const SCartIcon = styled.img`
   cursor: pointer;
-`
+`;
 
 export const SBurgerMenuIcon = styled.img`
   cursor: pointer;
   display: none;
-  @media screen and (max-width: 968px){
+  @media screen and (max-width: 968px) {
     display: flex;
   }
-`
+`;
