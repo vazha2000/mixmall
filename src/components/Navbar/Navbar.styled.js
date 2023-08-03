@@ -94,7 +94,13 @@ export const SWishlistQuantity = styled.div`
   height: 20px;
   font-size: 12px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #df3d41;
+  color: #fff;
+
+  &:hover {
+    filter: brightness(120%);
+    transition: .2s ease-in;
+  }
 `;
 
 export const SWishlistIcon = styled.img`
