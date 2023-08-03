@@ -96,15 +96,21 @@ export const SProductQuantityMinus = styled.button`
   align-items: center;
   border-radius: 4px 0 0 4px;
 `;
-
-export const SProductCurrentQuantity = styled.span`
-  width: 100px;
+export const SProductCurrentQuantityContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100px;
+  border: none;
   border-top: 1px solid rgba(0,0,0, 0.5);
   border-bottom: 1px solid rgba(0,0,0, 0.5);
-  font-weight: bold;
+`
+export const SProductCurrentQuantity = styled.input`
+  width: 40px;
+  height: 100%;
+  font-size: 18px;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
 `;
 
 export const SProductQuantityPlus = styled.button`
