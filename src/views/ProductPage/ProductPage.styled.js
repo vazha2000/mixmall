@@ -95,6 +95,13 @@ export const SProductQuantityMinus = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 4px 0 0 4px;
+  background-color: #fff;
+
+  &:hover {
+    cursor: pointer;
+    transition: all .2s ease;
+    background-color: #df3d41;
+  }
 `;
 export const SProductCurrentQuantityContainer = styled.div`
   display: flex;
@@ -122,4 +129,10 @@ export const SProductQuantityPlus = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 0 4px 4px 0;
+
+  &:hover {
+    cursor: pointer;
+    transition: all .2s ease;
+    background-color: #df3d41;
+  }
 `;
