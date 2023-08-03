@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  SBurgerMenuIcon,
   SCartIcon,
   SLogo,
   SNavActions,
@@ -9,7 +8,9 @@ import {
   SNavMenu,
   SNavbar,
   SWishlistCartContainer,
+  SWishlistContainer,
   SWishlistIcon,
+  SWishlistQuantity,
 } from "./Navbar.styled";
 import { SearchInput } from "../SearchInput";
 import { Link } from "react-router-dom";
@@ -30,7 +31,10 @@ export const Navbar = () => {
           <SearchInput />
         </SNavInputContainer>
         <SWishlistCartContainer>
-          <SWishlistIcon src="../assets/svg/wishlist.svg" alt="wishlist icon"/>
+          <SWishlistContainer>
+            <SWishlistIcon src="../assets/svg/wishlist.svg" alt="wishlist icon"/>
+            <SWishlistQuantity>9+</SWishlistQuantity>
+          </SWishlistContainer>
           <SCartIcon src="../assets/svg/cart.svg" alt="cart icon"/>
         </SWishlistCartContainer>
       </SNavActions>
