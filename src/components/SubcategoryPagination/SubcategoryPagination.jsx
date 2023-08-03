@@ -49,7 +49,7 @@ export const SubcategoryPagination = ({
     }
   }
 
-  
+
   return (
     <SSubcategoryPagination>
       <SSubcategoryPaginationList style={{ display: "flex" }}>
@@ -71,7 +71,7 @@ export const SubcategoryPagination = ({
           </React.Fragment>
         ))}
         <SCubcategoryPaginationButton onClick={handleNextPage} rotate="true" lastPage={currentPage === totalPages}>
-          <img src="assets/svg/paginationLeft.svg" alt="left" />
+          <img src="assets/svg/paginationLeft.svg" alt="right" />
         </SCubcategoryPaginationButton>
       </SSubcategoryPaginationList>
     </SSubcategoryPagination>
