@@ -46,3 +46,13 @@ export const SCubcategoryPaginationButton = styled.button`
 
 };
 `;
+
+export const SPaginationEllipsis = styled.span`
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0, 0.4);
+`
