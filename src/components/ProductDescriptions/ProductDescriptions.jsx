@@ -1,7 +1,16 @@
 import React from "react";
-import { SProductDescription, SProductDescriptionTable, SProductDescriptionTableHeader, SProductDescriptionTableRow } from "./ProductDescriptions.styled";
+import {
+  SProductDescription,
+  SProductDescriptionTable,
+  SProductDescriptionTableHeader,
+  SProductDescriptionTableRow,
+} from "./ProductDescriptions.styled";
 
-export const ProductDescriptions = () => {
+export const ProductDescriptions = ({ product }) => {
+  
+  const keys = Object.keys(product.descriptions[0]);
+  const values = Object.values(product.descriptions[0]);
+
   return (
     <SProductDescription>
       <SProductDescriptionTable>
@@ -9,10 +18,12 @@ export const ProductDescriptions = () => {
           <SProductDescriptionTableHeader>
             <td>დეტალური მახასიათებლები</td>
           </SProductDescriptionTableHeader>
-          <SProductDescriptionTableRow>
-            <td>koko</td>
-            <td>koko</td>
-          </SProductDescriptionTableRow>
+          {keys.map((item, index) => (
+            <SProductDescriptionTableRow key={index}>
+              <td>{item}</td>
+              <td>{values[index]}</td>
+            </SProductDescriptionTableRow>
+          ))}
         </tbody>
       </SProductDescriptionTable>
     </SProductDescription>
