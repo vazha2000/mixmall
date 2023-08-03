@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductDescriptions } from "../../components/ProductDescriptions"
+import { ProductDescriptions } from "../../components/ProductDescriptions";
 import {
   SAddToFavorites,
   SProductBuyNow,
@@ -20,7 +20,6 @@ import {
 } from "./ProductPage.styled";
 
 export const ProductPage = ({ product }) => {
-
   return (
     <>
       <SProductPage>
@@ -46,9 +45,7 @@ export const ProductPage = ({ product }) => {
               <SProductQuantityMinus>
                 <img src="assets/svg/minus.svg" alt="minus" />
               </SProductQuantityMinus>
-              <SProductCurrentQuantityContainer>
-                <SProductCurrentQuantity />
-              </SProductCurrentQuantityContainer>
+              <SProductCurrentQuantity />
               <SProductQuantityPlus>
                 <img src="assets/svg/plus.svg" alt="plus" />
               </SProductQuantityPlus>
@@ -60,7 +57,7 @@ export const ProductPage = ({ product }) => {
           </SProductQuantityBuyFavorites>
         </SProductPageOptions>
       </SProductPage>
-      <ProductDescriptions product={product}/>
+      <ProductDescriptions product={product} />
     </>
   );
 };
