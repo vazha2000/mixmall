@@ -7,7 +7,7 @@ export const SSubcategoryPagination = styled.div`
 `;
 
 export const SSubcategoryPaginationList = styled.ul`
-  gap: .6rem;
+  gap: 0.6rem;
 `;
 
 export const SSubcategoryPaginationListItems = styled.li`
@@ -17,13 +17,13 @@ export const SSubcategoryPaginationListItems = styled.li`
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background-color: ${({isActive}) => (isActive ? "#e81318" : "#babfbb")};
+  background-color: ${({ isActive }) => (isActive ? "#e81318" : "#babfbb")};
   cursor: pointer;
-  font-weight: ${({isActive}) => (isActive ? "bold" : "normal")};
-  color: ${({isActive}) => (isActive ? "#fff" : "#1f1f1f")};
+  font-weight: ${({ isActive }) => (isActive ? "bold" : "normal")};
+  color: ${({ isActive }) => (isActive ? "#fff" : "#1f1f1f")};
 
   &:hover {
-    filter: ${({isActive}) => (!isActive && "brightness(80%)")};
+    filter: ${({ isActive }) => !isActive && "brightness(80%)"};
   }
 `;
 
@@ -35,13 +35,14 @@ export const SCubcategoryPaginationButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  rotate: ${({rotate}) => (rotate ? "180deg" : "0")};
+  rotate: ${({ rotate }) => (rotate ? "180deg" : "0")};
 
   &:hover {
     filter: brightness(70%);
-    cursor: ${({firstPage}) => (firstPage ? "not-allowed" : "pointer")};
-    cursor: ${({lastPage}) => (lastPage ? "not-allowed" : "pointer")};
-    filter: ${({firstPage}) => (firstPage && "saturate(0)")};
-    filter: ${({lastPage}) => (lastPage && "saturate(0)")};
-  }
-`
+    cursor: ${({ firstPage, lastPage }) =>
+      firstPage || lastPage ? "not-allowed" : "pointer"};
+    ${({ firstPage }) => firstPage && `filter: saturate(0)`};
+    ${({ lastPage }) => lastPage && `filter: saturate(0)`}
+
+};
+`;
