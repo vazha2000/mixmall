@@ -106,21 +106,16 @@ export const SProductQuantityMinus = styled.button`
     background-color: #df3d41;
   }
 `;
-export const SProductCurrentQuantityContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 80px;
-  border: none;
-  border-top: 1px solid rgba(0,0,0, 0.5);
-  border-bottom: 1px solid rgba(0,0,0, 0.5);
-`
 export const SProductCurrentQuantity = styled.input`
-  width: 40px;
+  width: 80px;
   height: 100%;
   font-size: 18px;
   outline: none;
   box-sizing: border-box;
   border: none;
+  border-top: 1px solid rgba(0,0,0, 0.5);
+  border-bottom: 1px solid rgba(0,0,0, 0.5);
+  text-align: center;
 `;
 
 export const SProductQuantityPlus = styled.button`
