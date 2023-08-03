@@ -12,13 +12,13 @@ export const SubcategoryPagination = ({
   currentPage,
   itemsPerPage,
 }) => {
-  console.log(item);
   const totalPages = Math.ceil(item.products.length / itemsPerPage);
   const maxPageNumbersToShow = 5;
   const pageNumbers = Array.from(
     { length: totalPages },
     (_, index) => index + 1
   );
+
   const getPageNumbersWithEllipsis = () => {
     if (totalPages <= 3) {
       return pageNumbers;
@@ -40,7 +40,7 @@ export const SubcategoryPagination = ({
   return (
     <SSubcategoryPagination>
       <SSubcategoryPaginationList style={{ display: "flex" }}>
-        <SCubcategoryPaginationButton>
+        <SCubcategoryPaginationButton firstPage={currentPage === 1}>
           <img src="assets/svg/paginationLeft.svg" alt="left" />
         </SCubcategoryPaginationButton>
         {getPageNumbersWithEllipsis().map((page, index) => (
@@ -57,7 +57,7 @@ export const SubcategoryPagination = ({
             )}
           </React.Fragment>
         ))}
-        <SCubcategoryPaginationButton rotate={true}>
+        <SCubcategoryPaginationButton rotate="true" lastPage={currentPage === totalPages}>
           <img src="assets/svg/paginationLeft.svg" alt="left" />
         </SCubcategoryPaginationButton>
       </SSubcategoryPaginationList>
