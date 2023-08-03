@@ -41,12 +41,17 @@ export const Subcategories = ({ item }) => {
     };
   }, [isClicked]);
 
-  // const minPrice = item.products.map((item) => item.currentPrice)
-  // const maxPrice = item.products.map((Item) => item.currentPrice)
-  // console.log(minPrice.map(str => parseInt(str, 10)))
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4
 
-  // console.log(item.products.map((gela) => gela.productName))
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  }
 
+  const lastIndex = currentPage * itemsPerPage;
+  const firstIndex = lastIndex - itemsPerPage;
+
+  const paginatedList = item.products.slice(firstIndex, lastIndex)
   return (
     <SSubcategories>
       <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs>
@@ -67,7 +72,7 @@ export const Subcategories = ({ item }) => {
           <ProductsFilter />
         </SSubcategoriesSidebarContainer>
         <SSubcategoriesProducts>
-          {item.products.map((card, index) => {
+          {paginatedList.map((card, index) => {
             return (
               <SStyledLink
                 key={index}
@@ -91,7 +96,8 @@ export const Subcategories = ({ item }) => {
           })}
         </SSubcategoriesProducts>
       </div>
-      <SubcategoryPagination />
+      <SubcategoryPagination item={item} onPageChange={handlePageChange}
+        currentPage={currentPage} itemsPerPage={itemsPerPage}/>
     </SSubcategories>
   );
 };
