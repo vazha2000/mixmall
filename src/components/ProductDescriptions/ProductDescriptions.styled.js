@@ -18,12 +18,13 @@ export const SProductDescriptionTable = styled.table`
   width: 100%;
   box-sizing: border-box;
   border-spacing: 0;
+  margin-bottom: 3rem;
 `;
 
 export const SProductDescriptionTableRow = styled.tr`
   display: flex;
   width: 100%;
-  background-color: gray;
+  background-color: ${({isEven}) => (isEven ? "white" : "#f7dcdd")};
 
   > td {
     height: 50px;
