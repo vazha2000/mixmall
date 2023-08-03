@@ -13,6 +13,7 @@ import { testProducts } from "../../data/data";
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 import { ProductsFilter } from "../../components/ProductsFilter";
 import { SStyledLink } from "../../components/DropdownMenu/DropdownMenu.styled";
+import { SubcategoryPagination } from "../../components/SubcategoryPagination";
 
 export const Subcategories = ({ item }) => {
   const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
@@ -40,12 +41,17 @@ export const Subcategories = ({ item }) => {
     };
   }, [isClicked]);
 
-  // const minPrice = item.products.map((item) => item.currentPrice)
-  // const maxPrice = item.products.map((Item) => item.currentPrice)
-  // console.log(minPrice.map(str => parseInt(str, 10)))
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4
 
-  // console.log(item.products.map((gela) => gela.productName))
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  }
 
+  const lastIndex = currentPage * itemsPerPage;
+  const firstIndex = lastIndex - itemsPerPage;
+
+  const paginatedList = item.products.slice(firstIndex, lastIndex)
   return (
     <SSubcategories>
       <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs>
@@ -66,7 +72,7 @@ export const Subcategories = ({ item }) => {
           <ProductsFilter />
         </SSubcategoriesSidebarContainer>
         <SSubcategoriesProducts>
-          {item.products.map((card, index) => {
+          {paginatedList.map((card, index) => {
             return (
               <SStyledLink
                 key={index}
@@ -90,6 +96,8 @@ export const Subcategories = ({ item }) => {
           })}
         </SSubcategoriesProducts>
       </div>
+      <SubcategoryPagination item={item} onPageChange={handlePageChange}
+        currentPage={currentPage} setCurrentPage={setCurrentPage} itemsPerPage={itemsPerPage}/>
     </SSubcategories>
   );
 };
