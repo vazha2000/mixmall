@@ -2,6 +2,18 @@ import styled from "styled-components";
 
 export const SProductDescription = styled.div``;
 
+export const SProductDescriptionTableHeader = styled.tr`
+  background-color: #df3d41;
+  height: 50px;
+  color: #fff;
+  font-size: 20px;
+
+  > td {
+    border-radius: 10px 10px 0 0;
+    padding: 0 10px;
+  }
+`
+
 export const SProductDescriptionTable = styled.table`
   width: 100%;
   box-sizing: border-box;
@@ -13,6 +25,12 @@ export const SProductDescriptionTableRow = styled.tr`
   width: 100%;
   background-color: gray;
 
+  > td {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
   > td:nth-child(1) {
     flex: 3;
   }
