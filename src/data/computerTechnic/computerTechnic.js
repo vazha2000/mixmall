@@ -75,6 +75,142 @@ export const computerTechnic = [
           }
         ]
       },
+      {
+        id: uuidv4(),
+        productImage: "../assets/images/computerTechnic/orange.png",
+        discountRate: "20%",
+        isDiscount: false,
+        productName: "asus Gaming PC",
+        currentPrice: 800,
+        oldPrice: 300,
+        alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
+      },
+      {
+        id: uuidv4(),
+        productImage: "../assets/images/computerTechnic/orange.png",
+        discountRate: "20%",
+        isDiscount: false,
+        productName: "nokia Gaming PC",
+        currentPrice: 5000,
+        oldPrice: 300,
+        alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
+      },
+      {
+        id: uuidv4(),
+        productImage: "../assets/images/computerTechnic/orange.png",
+        discountRate: "20%",
+        isDiscount: false,
+        productName: "Alienware Gaming PC",
+        currentPrice: 4890,
+        oldPrice: 300,
+        alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
+      },
+      {
+        id: uuidv4(),
+        productImage: "../assets/images/computerTechnic/orange.png",
+        discountRate: "20%",
+        isDiscount: false,
+        productName: "Alienware Gaming PC",
+        currentPrice: 2390,
+        oldPrice: 300,
+        alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
+      },
+      {
+        id: uuidv4(),
+        productImage: "../assets/images/computerTechnic/orange.png",
+        discountRate: "20%",
+        isDiscount: false,
+        productName: "Alienware Gaming PC",
+        currentPrice: 7390,
+        oldPrice: 300,
+        alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
+      },
+      {
+        id: uuidv4(),
+        productImage: "../assets/images/computerTechnic/orange.png",
+        discountRate: "20%",
+        isDiscount: false,
+        productName: "Alienware Gaming PC",
+        currentPrice: 1660,
+        oldPrice: 300,
+        alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
+      },
+      {
+        id: uuidv4(),
+        productImage: "../assets/images/computerTechnic/orange.png",
+        discountRate: "20%",
+        isDiscount: false,
+        productName: "Alienware Gaming PC",
+        currentPrice: 1990,
+        oldPrice: 300,
+        alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
+      },
+      {
+        id: uuidv4(),
+        productImage: "../assets/images/computerTechnic/orange.png",
+        discountRate: "20%",
+        isDiscount: false,
+        productName: "Alienware Gaming PC",
+        currentPrice: 2250,
+        oldPrice: 300,
+        alt: "test",
+        descriptions: [
+          {
+            "weight": "400g",
+            "screen size": "1080p",
+            "color": "red",
+          }
+        ]
+      },
     ]
   },
   {
