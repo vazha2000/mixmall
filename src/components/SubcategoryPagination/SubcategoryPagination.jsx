@@ -1,6 +1,7 @@
 import React from "react";
 import {
   SCubcategoryPaginationButton,
+  SPaginationEllipsis,
   SSubcategoryPagination,
   SSubcategoryPaginationList,
   SSubcategoryPaginationListItems,
@@ -59,7 +60,9 @@ export const SubcategoryPagination = ({
         {getPageNumbersWithEllipsis().map((page, index) => (
           <React.Fragment key={index}>
             {page === "ellipsis" ? (
-              <span>...</span>
+              <SPaginationEllipsis>
+                <img src="assets/svg/ellipsis.svg" alt="ellipsis" />
+              </SPaginationEllipsis>
             ) : (
               <SSubcategoryPaginationListItems
                 onClick={() => onPageChange(page)}
