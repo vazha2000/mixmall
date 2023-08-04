@@ -82,6 +82,8 @@ export const SWishlistCartContainer = styled.div`
 
 export const SWishlistContainer = styled.div`
   position: relative;
+  display: flex;
+  align-items: flex-end;
 `;
 
 export const SWishlistQuantity = styled.div`
