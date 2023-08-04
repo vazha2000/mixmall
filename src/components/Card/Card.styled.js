@@ -107,10 +107,17 @@ position: absolute;
 top: 0;
 left: 50%;
 transform: translateX(-50%);
+width: 50%;
 `;
 
 export const SProductAddedToWishlist = styled(motion.div)`
-  width: 200px;
-  height: 100px;
-  background-color: red;
+  width: 100%;
+  height: 80px;
+  background-color: #df3d41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
 `
