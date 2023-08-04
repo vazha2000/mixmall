@@ -18,11 +18,15 @@ import {
   SProductQuantityPlus,
 } from "./ProductPage.styled";
 import { WishlistContext } from "../../context/WishlistContext";
-import { SCenteredContainer, SProductAddedToWishlist } from "../../components/Card/Card.styled";
+import {
+  SCenteredContainer,
+  SProductAddedToWishlist,
+} from "../../components/Card/Card.styled";
+import { AnimatePresence } from "framer-motion";
 
 export const ProductPage = ({ product }) => {
-  const [quantity, setQuantity] = useState(1)
-  const {wishlist, addToWishlist} = useContext(WishlistContext)
+  const [quantity, setQuantity] = useState(1);
+  const { wishlist, addToWishlist } = useContext(WishlistContext);
 
   const isProductInWishlist = wishlist.includes(product.productName);
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
@@ -34,7 +38,7 @@ export const ProductPage = ({ product }) => {
       addToWishlist(product.productName);
       setShowWishlistPopup(true);
       setTimeout(() => {
-        setShowWishlistPopup(false); 
+        setShowWishlistPopup(false);
       }, 1500);
     }
   };
@@ -42,17 +46,21 @@ export const ProductPage = ({ product }) => {
     if (quantity < 99) {
       setQuantity((prev) => prev + 1);
     }
-  }
+  };
 
   const handleDecrement = () => {
-    if(quantity > 1) {
-      setQuantity(prev => prev - 1)
+    if (quantity > 1) {
+      setQuantity((prev) => prev - 1);
     }
-  }
+  };
 
   const handleQuantityChange = (e) => {
     const inputQuantity = parseInt(e.target.value, 10);
-    if (e.target.value.trim() === "" || isNaN(inputQuantity) || inputQuantity < 1) {
+    if (
+      e.target.value.trim() === "" ||
+      isNaN(inputQuantity) ||
+      inputQuantity < 1
+    ) {
       setQuantity(0);
     } else if (inputQuantity > 99) {
       setQuantity(99);
@@ -64,17 +72,20 @@ export const ProductPage = ({ product }) => {
   return (
     <>
       <SProductPage>
-      {showWishlistPopup && 
-        <SCenteredContainer>
-          <SProductAddedToWishlist
-            initial={{y: 0}}
-            animate={{y: 30}}
-            exit={{ y: -40, opacity: 0, transition: {duration: 0.3} }}
-            >
-              პროდუქტი {product.productName} დაემატა სურვილების სიას
-            </SProductAddedToWishlist>
-        </SCenteredContainer>
-      }
+        <AnimatePresence>
+          {showWishlistPopup && (
+            <SCenteredContainer>
+              <SProductAddedToWishlist
+                initial={{ y: 0 }}
+                animate={{ y: 30 }}
+                exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
+              >
+                პროდუქტი {product.productName} დაემატა სურვილების სიას
+              </SProductAddedToWishlist>
+            </SCenteredContainer>
+          )}
+        </AnimatePresence>
+
         <SProductPageImages>
           <SProductPageSmallImages>
             <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
@@ -97,7 +108,11 @@ export const ProductPage = ({ product }) => {
               <SProductQuantityMinus onClick={handleDecrement}>
                 <img src="assets/svg/minus.svg" alt="minus" />
               </SProductQuantityMinus>
-              <SProductCurrentQuantity value={quantity} onChange={handleQuantityChange} maxLength="2"/>
+              <SProductCurrentQuantity
+                value={quantity}
+                onChange={handleQuantityChange}
+                maxLength="2"
+              />
               <SProductQuantityPlus onClick={handleIncrement}>
                 <img src="assets/svg/plus.svg" alt="plus" />
               </SProductQuantityPlus>
