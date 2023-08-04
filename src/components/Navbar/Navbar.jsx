@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   SCartIcon,
   SLogo,
@@ -14,8 +14,12 @@ import {
 } from "./Navbar.styled";
 import { SearchInput } from "../SearchInput";
 import { Link } from "react-router-dom";
+import { WishlistContext } from "../../context/WishlistContext";
 
 export const Navbar = () => {
+
+  const { wishlist } = useContext(WishlistContext)
+
   return (
     <SNavbar>
       <Link to="/">
@@ -33,7 +37,7 @@ export const Navbar = () => {
         <SWishlistCartContainer>
           <SWishlistContainer>
             <SWishlistIcon src="../assets/svg/wishlist.svg" alt="wishlist icon"/>
-            <SWishlistQuantity>9+</SWishlistQuantity>
+            <SWishlistQuantity>{wishlist.length}</SWishlistQuantity>
           </SWishlistContainer>
           <SCartIcon src="../assets/svg/cart.svg" alt="cart icon"/>
         </SWishlistCartContainer>
