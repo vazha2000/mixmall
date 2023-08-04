@@ -102,3 +102,12 @@ export const SCardPrice = styled.span`
 export const SCardOldPrice = styled.span`
   text-decoration: line-through;
 `
+
+export const SProductAddedToWishlist = styled(motion.div)`
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  background-color: red;
+`
