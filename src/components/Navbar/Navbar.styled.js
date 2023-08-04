@@ -77,6 +77,7 @@ export const SWishlistCartContainer = styled.div`
   display: flex;
   gap: 1rem;
   margin-left: 1.5rem;
+  position: relative;
 `;
 
 export const SWishlistContainer = styled.div`
