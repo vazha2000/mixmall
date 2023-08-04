@@ -15,15 +15,19 @@ import {
 import { SearchInput } from "../SearchInput";
 import { Link } from "react-router-dom";
 import { WishlistContext } from "../../context/WishlistContext";
+import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 
 export const Navbar = () => {
-
-  const { wishlist } = useContext(WishlistContext)
+  const { wishlist } = useContext(WishlistContext);
 
   return (
     <SNavbar>
       <Link to="/">
-        <SLogo src="../assets/images/LogoNoBackground.png" alt="logo" width={180}/>
+        <SLogo
+          src="../assets/images/LogoNoBackground.png"
+          alt="logo"
+          width={180}
+        />
       </Link>
       <SNavMenu>
         <SNavItem>მთავარი</SNavItem>
@@ -35,11 +39,16 @@ export const Navbar = () => {
           <SearchInput />
         </SNavInputContainer>
         <SWishlistCartContainer>
-          <SWishlistContainer>
-            <SWishlistIcon src="../assets/svg/wishlist.svg" alt="wishlist icon"/>
-            <SWishlistQuantity>{wishlist.length}</SWishlistQuantity>
-          </SWishlistContainer>
-          <SCartIcon src="../assets/svg/cart.svg" alt="cart icon"/>
+          <SStyledLink to="/wishlist">
+            <SWishlistContainer>
+              <SWishlistIcon
+                src="../assets/svg/wishlist.svg"
+                alt="wishlist icon"
+              />
+              <SWishlistQuantity>{wishlist.length}</SWishlistQuantity>
+            </SWishlistContainer>
+          </SStyledLink>
+          <SCartIcon src="../assets/svg/cart.svg" alt="cart icon" />
         </SWishlistCartContainer>
       </SNavActions>
     </SNavbar>
