@@ -103,11 +103,12 @@ export const SCardOldPrice = styled.span`
   text-decoration: line-through;
 `
 export const SCenteredContainer = styled.div`
-position: absolute;
+position: fixed;
 top: 0;
 left: 50%;
 transform: translateX(-50%);
 width: 50%;
+z-index: 5;
 `;
 
 export const SProductAddedToWishlist = styled(motion.div)`
