@@ -11,6 +11,7 @@ import {
   SCardProductName,
   SCardSaleDiscount,
   SCardWishlist,
+  SProductAddedToWishlist,
 } from "./Card.styled";
 import { AnimatePresence } from "framer-motion";
 import { WishlistContext } from "../../context/WishlistContext";
@@ -50,6 +51,11 @@ export const Card = (props) => {
       isHovered={isHovered}
       width={width}
     >
+      {isProductInWishlist && 
+      <AnimatePresence>
+        <SProductAddedToWishlist>პროდუქტი {productName} დაემატა სურვილების სიას</SProductAddedToWishlist>
+      </AnimatePresence>
+      }
       <SCardImageContainer>
         <SStyledLink to={path}>
           <SCardImage src={productImage} alt={alt} />
