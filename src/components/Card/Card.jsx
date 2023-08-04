@@ -43,7 +43,7 @@ export const Card = (props) => {
     if (isProductInWishlist) {
       console.log("Product is already in the wishlist!");
     } else {
-      addToWishlist(productName);
+      addToWishlist({productName, currentPrice, oldPrice, productImage, discountRate, isDiscount});
       setShowWishlistPopup(true);
       setTimeout(() => {
         setShowWishlistPopup(false); 
