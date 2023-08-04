@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   SAddToCardButton,
   SCard,
@@ -37,12 +37,17 @@ export const Card = (props) => {
   const {wishlist, addToWishlist} = useContext(WishlistContext)
 
   const isProductInWishlist = wishlist.includes(productName);
+  const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 
   const handleWishlistClick = () => {
     if (isProductInWishlist) {
       console.log("Product is already in the wishlist!");
     } else {
       addToWishlist(productName);
+      setShowWishlistPopup(true);
+      setTimeout(() => {
+        setShowWishlistPopup(false); 
+      }, 1000);
     }
   };
   return (
@@ -52,13 +57,19 @@ export const Card = (props) => {
       isHovered={isHovered}
       width={width}
     >
-      {isProductInWishlist && 
       <AnimatePresence>
+      {showWishlistPopup && 
         <SCenteredContainer>
-          <SProductAddedToWishlist initial={{y: 0}} animate={{y: 30}}>პროდუქტი {productName} დაემატა სურვილების სიას</SProductAddedToWishlist>
+          <SProductAddedToWishlist
+            initial={{y: 0}}
+            animate={{y: 30}}
+            exit={{ y: -40, opacity: 0, transition: {duration: 0.3} }}
+            >
+              პროდუქტი {productName} დაემატა სურვილების სიას
+            </SProductAddedToWishlist>
         </SCenteredContainer>
-      </AnimatePresence>
       }
+      </AnimatePresence>
       <SCardImageContainer>
         <SStyledLink to={path}>
           <SCardImage src={productImage} alt={alt} />
