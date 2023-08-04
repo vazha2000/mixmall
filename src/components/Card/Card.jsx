@@ -71,7 +71,7 @@ export const Card = (props) => {
       }
       </AnimatePresence>
       <SCardImageContainer>
-        <SStyledLink to={path}>
+        <SStyledLink to={path} center="true">
           <SCardImage src={productImage} alt={alt} />
         </SStyledLink>
         <SCardWishlist src="../assets/svg/wishlist.svg" alt="favorites icon" onClick={handleWishlistClick}/>
