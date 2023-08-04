@@ -6,6 +6,7 @@ import { Layout } from "./components/Layout/Layout";
 import { categoriesListItems } from "./data/data";
 import { ProductPage } from "./views/ProductPage/ProductPage";
 import { WishlistProvider } from "./context/WishlistContext";
+import { Wishlist } from "./views/Wishlist";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               </Route>
             );
           })}
+          <Route path="/wishlist" element={<Wishlist />}/>
         </Routes>
       </Layout>
     </WishlistProvider>
