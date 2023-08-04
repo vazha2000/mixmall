@@ -109,6 +109,10 @@ left: 50%;
 transform: translateX(-50%);
 width: 50%;
 z-index: 5;
+
+@media screen and (max-width: 600px){
+  width: 80%;
+}
 `;
 
 export const SProductAddedToWishlist = styled(motion.div)`
