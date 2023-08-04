@@ -19,7 +19,6 @@ export const SCardImageContainer = styled.div`
   background-color: #e8e8e8;
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -44,7 +43,6 @@ export const SAddToCardButton = styled(motion.div)`
 
 export const SCardImage = styled.img`
   width: 70%;
-  /* scale: ${({isHovered}) => (isHovered ? 1.05 : 1)}; */
   transition: 0.1s ease-in;
 
   &:hover {
