@@ -5,8 +5,12 @@ const WishlistContext = createContext();
 const WishlistProvider = ({children}) => {
   const [wishlist, setWishlist] = useState([]);
 
-  const addToWishlist = (item) => {
-    setWishlist(prev => [...prev, item]);
+  const addToWishlist = (product) => {
+    if(wishlist.some((item) => item.productName === product.productName)) {
+      console.log("product is already in the wishlist");
+      return;
+    }
+    setWishlist(prev => [...prev, product]);
   }
 
   const removeFromWishlist = (item) => {
