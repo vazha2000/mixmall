@@ -35,7 +35,8 @@ export const ProductPage = ({ product }) => {
     if (isProductInWishlist) {
       console.log("Product is already in the wishlist!");
     } else {
-      addToWishlist(product.productName);
+      const {productName, currentPrice, oldPrice, productImage, discountRate, isDiscount} = product
+      addToWishlist({productName, currentPrice, oldPrice, productImage, discountRate, isDiscount});
       setShowWishlistPopup(true);
       setTimeout(() => {
         setShowWishlistPopup(false);
