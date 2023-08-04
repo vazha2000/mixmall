@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { ProductDescriptions } from "../../components/ProductDescriptions";
 import {
   SAddToFavorites,
@@ -17,10 +17,27 @@ import {
   SProductQuantityMinus,
   SProductQuantityPlus,
 } from "./ProductPage.styled";
+import { WishlistContext } from "../../context/WishlistContext";
+import { SCenteredContainer, SProductAddedToWishlist } from "../../components/Card/Card.styled";
 
 export const ProductPage = ({ product }) => {
   const [quantity, setQuantity] = useState(1)
+  const {wishlist, addToWishlist} = useContext(WishlistContext)
 
+  const isProductInWishlist = wishlist.includes(product.productName);
+  const [showWishlistPopup, setShowWishlistPopup] = useState(false);
+
+  const handleWishlistClick = () => {
+    if (isProductInWishlist) {
+      console.log("Product is already in the wishlist!");
+    } else {
+      addToWishlist(product.productName);
+      setShowWishlistPopup(true);
+      setTimeout(() => {
+        setShowWishlistPopup(false); 
+      }, 1500);
+    }
+  };
   const handleIncrement = () => {
     if (quantity < 99) {
       setQuantity((prev) => prev + 1);
@@ -47,6 +64,17 @@ export const ProductPage = ({ product }) => {
   return (
     <>
       <SProductPage>
+      {showWishlistPopup && 
+        <SCenteredContainer>
+          <SProductAddedToWishlist
+            initial={{y: 0}}
+            animate={{y: 30}}
+            exit={{ y: -40, opacity: 0, transition: {duration: 0.3} }}
+            >
+              პროდუქტი {product.productName} დაემატა სურვილების სიას
+            </SProductAddedToWishlist>
+        </SCenteredContainer>
+      }
         <SProductPageImages>
           <SProductPageSmallImages>
             <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
@@ -75,7 +103,7 @@ export const ProductPage = ({ product }) => {
               </SProductQuantityPlus>
             </SProductQuantity>
             <SProductBuyNow>შეძენა</SProductBuyNow>
-            <SAddToFavorites>
+            <SAddToFavorites onClick={handleWishlistClick}>
               <img src="assets/svg/wishlist.svg" alt="wishlist" />
             </SAddToFavorites>
           </SProductQuantityBuyFavorites>
