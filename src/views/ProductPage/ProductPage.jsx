@@ -28,20 +28,29 @@ export const ProductPage = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const { wishlist, addToWishlist } = useContext(WishlistContext);
 
-  const isProductInWishlist = wishlist.includes(product.productName);
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 
   const handleWishlistClick = () => {
-    if (isProductInWishlist) {
-      console.log("Product is already in the wishlist!");
-    } else {
-      const {productName, currentPrice, oldPrice, productImage, discountRate, isDiscount} = product
-      addToWishlist({productName, currentPrice, oldPrice, productImage, discountRate, isDiscount});
-      setShowWishlistPopup(true);
-      setTimeout(() => {
-        setShowWishlistPopup(false);
-      }, 1500);
-    }
+    const {
+      productName,
+      currentPrice,
+      oldPrice,
+      productImage,
+      discountRate,
+      isDiscount,
+    } = product;
+    addToWishlist({
+      productName,
+      currentPrice,
+      oldPrice,
+      productImage,
+      discountRate,
+      isDiscount,
+    });
+    setShowWishlistPopup(true);
+    setTimeout(() => {
+      setShowWishlistPopup(false);
+    }, 1500);
   };
   const handleIncrement = () => {
     if (quantity < 99) {

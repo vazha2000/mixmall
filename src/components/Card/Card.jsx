@@ -31,24 +31,26 @@ export const Card = (props) => {
     isDiscount,
     width,
     index,
-    path
+    path,
   } = props;
-  
-  const {wishlist, addToWishlist} = useContext(WishlistContext)
 
-  const isProductInWishlist = wishlist.includes(productName);
+  const { wishlist, addToWishlist } = useContext(WishlistContext);
+
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 
   const handleWishlistClick = () => {
-    if (isProductInWishlist) {
-      console.log("Product is already in the wishlist!");
-    } else {
-      addToWishlist({productName, currentPrice, oldPrice, productImage, discountRate, isDiscount});
-      setShowWishlistPopup(true);
-      setTimeout(() => {
-        setShowWishlistPopup(false); 
-      }, 1500);
-    }
+    addToWishlist({
+      productName,
+      currentPrice,
+      oldPrice,
+      productImage,
+      discountRate,
+      isDiscount,
+    });
+    setShowWishlistPopup(true);
+    setTimeout(() => {
+      setShowWishlistPopup(false);
+    }, 1500);
   };
   return (
     <SCard
@@ -58,26 +60,45 @@ export const Card = (props) => {
       width={width}
     >
       <AnimatePresence>
-      {showWishlistPopup && 
-        <SCenteredContainer>
-          <SProductAddedToWishlist
-            initial={{y: 0}}
-            animate={{y: 30}}
-            exit={{ y: -40, opacity: 0, transition: {duration: 0.3} }}
+        {showWishlistPopup && (
+          <SCenteredContainer>
+            <SProductAddedToWishlist
+              initial={{ y: 0 }}
+              animate={{ y: 30 }}
+              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
             >
               პროდუქტი {productName} დაემატა სურვილების სიას
             </SProductAddedToWishlist>
-        </SCenteredContainer>
-      }
+          </SCenteredContainer>
+        )}
       </AnimatePresence>
       <SCardImageContainer>
         <SStyledLink to={path} center="true">
           <SCardImage src={productImage} alt={alt} />
         </SStyledLink>
-        <SCardWishlist src="../assets/svg/wishlist.svg" alt="favorites icon" onClick={handleWishlistClick}/>
+        <SCardWishlist
+          src="../assets/svg/wishlist.svg"
+          alt="favorites icon"
+          onClick={handleWishlistClick}
+        />
         {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
         <AnimatePresence>
-          <SAddToCardButton initial={{y: "100%", opacity: 1}} animate={isHovered ? {y: 0, opacity: 1, transition: {stiffness: 0, duration: 0.2}} : {y: "100%", opacity: 1, transition: {stiffness: 0, duration: 0.2}}}>
+          <SAddToCardButton
+            initial={{ y: "100%", opacity: 1 }}
+            animate={
+              isHovered
+                ? {
+                    y: 0,
+                    opacity: 1,
+                    transition: { stiffness: 0, duration: 0.2 },
+                  }
+                : {
+                    y: "100%",
+                    opacity: 1,
+                    transition: { stiffness: 0, duration: 0.2 },
+                  }
+            }
+          >
             <span>კალათაში დამატება</span>
           </SAddToCardButton>
         </AnimatePresence>
