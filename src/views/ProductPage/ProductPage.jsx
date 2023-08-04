@@ -39,6 +39,10 @@ export const ProductPage = ({ product }) => {
       discountRate,
       isDiscount,
     } = product;
+    if (wishlist.some((item) => item.productName === productName)) {
+      console.log("product is already in the wishlist");
+      return;
+    }
     addToWishlist({
       productName,
       currentPrice,

@@ -6,10 +6,10 @@ const WishlistProvider = ({children}) => {
   const [wishlist, setWishlist] = useState([]);
 
   const addToWishlist = (product) => {
-    if(wishlist.some((item) => item.productName === product.productName)) {
-      console.log("product is already in the wishlist");
-      return;
-    }
+    // if(wishlist.some((item) => item.productName === product.productName)) {
+    //   console.log("product is already in the wishlist");
+    //   return;
+    // }
     setWishlist(prev => [...prev, product]);
   }
 

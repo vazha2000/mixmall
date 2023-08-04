@@ -39,6 +39,10 @@ export const Card = (props) => {
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 
   const handleWishlistClick = () => {
+    if (wishlist.some((item) => item.productName === productName)) {
+      console.log("product is already in the wishlist");
+      return;
+    }
     addToWishlist({
       productName,
       currentPrice,
