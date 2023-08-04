@@ -47,7 +47,7 @@ export const Card = (props) => {
       setShowWishlistPopup(true);
       setTimeout(() => {
         setShowWishlistPopup(false); 
-      }, 1000);
+      }, 1500);
     }
   };
   return (
