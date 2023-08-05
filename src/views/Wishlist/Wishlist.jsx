@@ -21,7 +21,7 @@ export const Wishlist = () => {
           oldPrice={item.oldPrice}
           discountRate={item.discountRate}
           isDiscount={item.isDiscount}
-          path={item.subcategoryPath + item.path}
+          path={item.path}
           />
       ))}
     </SWishlist>
