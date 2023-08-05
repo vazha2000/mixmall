@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 export const Wishlist = () => {
   const { wishlist } = useContext(WishlistContext);
-  console.log(wishlist)
 
   const navigate = useNavigate();
 
