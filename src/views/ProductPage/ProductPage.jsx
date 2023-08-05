@@ -41,7 +41,7 @@ export const ProductPage = ({ product }) => {
 
   const { pathname } = useLocation();  
   
-  const subcategoryPath = pathname + "/";
+  const path = pathname;
 
   const handleWishlistClick = () => {
     const {
@@ -69,7 +69,7 @@ export const ProductPage = ({ product }) => {
       productImage,
       discountRate,
       isDiscount,
-      subcategoryPath,
+      path,
       id
     });
     setShowWishlistPopup(true);

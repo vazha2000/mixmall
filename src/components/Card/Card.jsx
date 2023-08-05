@@ -32,8 +32,6 @@ export const Card = (props) => {
     width,
     index,
     path,
-    subcategoryPath,
-    onClick,
     id
   } = props;
 
@@ -66,7 +64,6 @@ export const Card = (props) => {
       productImage,
       discountRate,
       isDiscount,
-      subcategoryPath,
       path,
       id
     });
@@ -111,7 +108,7 @@ export const Card = (props) => {
       </AnimatePresence>
       <SCardImageContainer >
         <SStyledLink to={path} center="true">
-          <SCardImage src={productImage} alt={alt} onClick={onClick}/>
+          <SCardImage src={productImage} alt={alt}/>
         </SStyledLink>
         <SCardWishlist
           src="../assets/svg/wishlist.svg"
