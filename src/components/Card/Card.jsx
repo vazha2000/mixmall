@@ -34,21 +34,29 @@ export const Card = (props) => {
     path,
     subcategoryPath,
     onClick,
+    id
   } = props;
 
-  const { wishlist, addToWishlist } = useContext(WishlistContext);
+  const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
 
   const [isInWishlist, setIsInWishlist] = useState(false); 
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
+  const [showRemovePopup, setShowRemovePopup] = useState(false);
+
   
   useEffect(() => {
-    setIsInWishlist(wishlist.some((item) => item.productName === productName));
-  }, [wishlist, productName]);
+    setIsInWishlist(wishlist.some((item) => item.id === id));
+  }, [wishlist, id]);
 
   const handleWishlistClick = () => {
     if (isInWishlist) {
-      console.log("product is already in the wishlist");
+      removeFromWishlist({ id });
+      setIsInWishlist(false);
+      setShowRemovePopup(true);
+      setTimeout(() => {
+        setShowRemovePopup(false);
+      }, 1500);
       return;
     }
     addToWishlist({
@@ -60,6 +68,7 @@ export const Card = (props) => {
       isDiscount,
       subcategoryPath,
       path,
+      id
     });
     setIsInWishlist(true);
     setShowWishlistPopup(true);
@@ -87,9 +96,22 @@ export const Card = (props) => {
           </SCenteredContainer>
         )}
       </AnimatePresence>
-      <SCardImageContainer onClick={onClick}>
+      <AnimatePresence>
+        {showRemovePopup && (
+          <SCenteredContainer>
+            <SProductAddedToWishlist
+              initial={{ y: 0 }}
+              animate={{ y: 30 }}
+              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
+            >
+              პროდუქტი {productName} წაიშალა სურვილების სიიდან
+            </SProductAddedToWishlist>
+          </SCenteredContainer>
+        )}
+      </AnimatePresence>
+      <SCardImageContainer >
         <SStyledLink to={path} center="true">
-          <SCardImage src={productImage} alt={alt}/>
+          <SCardImage src={productImage} alt={alt} onClick={onClick}/>
         </SStyledLink>
         <SCardWishlist
           src="../assets/svg/wishlist.svg"

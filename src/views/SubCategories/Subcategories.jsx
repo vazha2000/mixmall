@@ -93,6 +93,7 @@ export const Subcategories = ({ item }) => {
                 isHovered={hoverStates[index]}
                 path={card.productName}
                 subcategoryPath={subcategoryPath}
+                id={card.id}
               />
             );
           })}

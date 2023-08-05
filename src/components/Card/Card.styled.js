@@ -57,6 +57,10 @@ export const SCardWishlist = styled.img`
   background-color: ${({isInWishlist}) => (isInWishlist ? "#df3d41" : "#f2f2f2")};
   border-radius: 50%;
   padding: 5px;
+
+  &:hover {
+    filter: brightness(120%);
+  }
 `
 
 export const SCardSaleDiscount = styled.span`

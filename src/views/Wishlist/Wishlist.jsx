@@ -19,7 +19,7 @@ export const Wishlist = () => {
   };
 
   return (
-    <SWishlist quantity={wishlist.length > 2}>
+    <SWishlist quantity={wishlist.length % 4 !== 2}>
       {wishlist.length === 0 && (
         <SWishlistEmpty>შენი სურვილების სია ცარიელია</SWishlistEmpty>
       )}
@@ -28,6 +28,7 @@ export const Wishlist = () => {
           key={index}
           productImage={item.productImage}
           productName={item.productName}
+          id={item.id}
           currentPrice={item.currentPrice}
           oldPrice={item.oldPrice}
           discountRate={item.discountRate}
