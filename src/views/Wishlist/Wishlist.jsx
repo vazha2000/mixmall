@@ -6,12 +6,17 @@ import { useNavigate } from "react-router-dom";
 
 export const Wishlist = () => {
   const { wishlist } = useContext(WishlistContext);
+  console.log(wishlist)
 
   const navigate = useNavigate();
 
   const handleProductClick = (product) => {
-    const productPath = product.subcategoryPath + product.path;
-    navigate(productPath);
+    if(product.path) {
+      const productPath = product.subcategoryPath + product.path;
+      navigate(productPath);
+    } else {
+      navigate(product.subcategoryPath)
+    }
   };
 
   return (
