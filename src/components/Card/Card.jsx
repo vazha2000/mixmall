@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   SAddToCardButton,
   SCard,
@@ -33,17 +33,21 @@ export const Card = (props) => {
     index,
     path,
     subcategoryPath,
-    onClick
+    onClick,
   } = props;
 
   const { wishlist, addToWishlist } = useContext(WishlistContext);
 
-  const [showWishlistPopup, setShowWishlistPopup] = useState(false);
+  const [isInWishlist, setIsInWishlist] = useState(false); 
 
-  const [isInWishlist, setIsInWishlist] = useState(false);
+  const [showWishlistPopup, setShowWishlistPopup] = useState(false);
+  
+  useEffect(() => {
+    setIsInWishlist(wishlist.some((item) => item.productName === productName));
+  }, [wishlist, productName]);
 
   const handleWishlistClick = () => {
-    if (wishlist.some((item) => item.productName === productName)) {
+    if (isInWishlist) {
       console.log("product is already in the wishlist");
       return;
     }
@@ -55,10 +59,10 @@ export const Card = (props) => {
       discountRate,
       isDiscount,
       subcategoryPath,
-      path
+      path,
     });
+    setIsInWishlist(true);
     setShowWishlistPopup(true);
-    setIsInWishlist(true)
     setTimeout(() => {
       setShowWishlistPopup(false);
     }, 1500);
@@ -90,8 +94,8 @@ export const Card = (props) => {
         <SCardWishlist
           src="../assets/svg/wishlist.svg"
           alt="favorites icon"
-          onClick={handleWishlistClick}
           isInWishlist={isInWishlist}
+          onClick={handleWishlistClick}
         />
         {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
         <AnimatePresence>
