@@ -13,10 +13,15 @@ import { testProducts } from "../../data/data";
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 import { ProductsFilter } from "../../components/ProductsFilter";
 import { SubcategoryPagination } from "../../components/SubcategoryPagination";
+import { useLocation } from "react-router-dom";
 
 export const Subcategories = ({ item }) => {
+
   const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
   const [isClicked, setIsClicked] = useState(false);
+
+  const { pathname } = useLocation();  
+  const subcategoryPath = pathname + "/";
 
   const handleHover = (index) => {
     setHoverStates((prevStates) => {
@@ -87,6 +92,7 @@ export const Subcategories = ({ item }) => {
                 handleHover={() => handleHover(index)}
                 isHovered={hoverStates[index]}
                 path={card.productName}
+                subcategoryPath={subcategoryPath}
               />
             );
           })}
