@@ -42,7 +42,7 @@ export const Card = (props) => {
   const [isInWishlist, setIsInWishlist] = useState(false); 
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
-  // const [showRemovePopup, setShowRemovePopup] = useState(false);
+  const [showRemovePopup, setShowRemovePopup] = useState(false);
 
   
   useEffect(() => {
@@ -51,7 +51,8 @@ export const Card = (props) => {
 
   const handleWishlistClick = () => {
     if (isInWishlist) {
-      console.log("aodosakdosp")
+      removeFromWishlist({ id });
+      setIsInWishlist(false);
       return;
     }
     addToWishlist({

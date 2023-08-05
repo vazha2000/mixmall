@@ -27,7 +27,7 @@ import { useLocation } from "react-router-dom";
 
 export const ProductPage = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
-  const { wishlist, addToWishlist } = useContext(WishlistContext);
+  const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 
@@ -53,7 +53,8 @@ export const ProductPage = ({ product }) => {
       id
     } = product;
     if (isInWishlist) {
-      console.log("product is already in the wishlist");
+      removeFromWishlist({ id });
+      setIsInWishlist(false);
       return;
     }
     addToWishlist({
