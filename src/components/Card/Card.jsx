@@ -32,7 +32,6 @@ export const Card = (props) => {
     width,
     index,
     path,
-    subcategoryPath,
     id
   } = props;
 
@@ -65,7 +64,6 @@ export const Card = (props) => {
       productImage,
       discountRate,
       isDiscount,
-      subcategoryPath,
       path,
       id
     });
