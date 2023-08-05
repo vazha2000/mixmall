@@ -32,6 +32,7 @@ export const ProductPage = ({ product }) => {
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 
   const [isInWishlist, setIsInWishlist] = useState(false); 
+  const [showRemovePopup, setShowRemovePopup] = useState(false);
 
   useEffect(() => {
     setIsInWishlist(wishlist.some((item) => item.id === product.id));
@@ -55,6 +56,10 @@ export const ProductPage = ({ product }) => {
     if (isInWishlist) {
       removeFromWishlist({ id });
       setIsInWishlist(false);
+      setShowRemovePopup(true);
+      setTimeout(() => {
+        setShowRemovePopup(false);
+      }, 1500);
       return;
     }
     addToWishlist({
@@ -116,7 +121,19 @@ export const ProductPage = ({ product }) => {
             </SCenteredContainer>
           )}
         </AnimatePresence>
-
+        <AnimatePresence>
+        {showRemovePopup && (
+          <SCenteredContainer>
+            <SProductAddedToWishlist
+              initial={{ y: 0 }}
+              animate={{ y: 30 }}
+              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
+            >
+              პროდუქტი {product.productName} წაიშალა სურვილების სიიდან
+            </SProductAddedToWishlist>
+          </SCenteredContainer>
+        )}
+      </AnimatePresence>
         <SProductPageImages>
           <SProductPageSmallImages>
             <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />

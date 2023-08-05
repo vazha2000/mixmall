@@ -53,6 +53,10 @@ export const Card = (props) => {
     if (isInWishlist) {
       removeFromWishlist({ id });
       setIsInWishlist(false);
+      setShowRemovePopup(true);
+      setTimeout(() => {
+        setShowRemovePopup(false);
+      }, 1500);
       return;
     }
     addToWishlist({
@@ -92,7 +96,7 @@ export const Card = (props) => {
           </SCenteredContainer>
         )}
       </AnimatePresence>
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {showRemovePopup && (
           <SCenteredContainer>
             <SProductAddedToWishlist
@@ -104,7 +108,7 @@ export const Card = (props) => {
             </SProductAddedToWishlist>
           </SCenteredContainer>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
       <SCardImageContainer onClick={onClick}>
         <SStyledLink to={path} center="true">
           <SCardImage src={productImage} alt={alt}/>
