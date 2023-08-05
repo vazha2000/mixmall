@@ -32,6 +32,8 @@ export const Card = (props) => {
     width,
     index,
     path,
+    subcategoryPath,
+    onClick
   } = props;
 
   const { wishlist, addToWishlist } = useContext(WishlistContext);
@@ -50,6 +52,8 @@ export const Card = (props) => {
       productImage,
       discountRate,
       isDiscount,
+      subcategoryPath,
+      path
     });
     setShowWishlistPopup(true);
     setTimeout(() => {
@@ -76,9 +80,9 @@ export const Card = (props) => {
           </SCenteredContainer>
         )}
       </AnimatePresence>
-      <SCardImageContainer>
+      <SCardImageContainer onClick={onClick}>
         <SStyledLink to={path} center="true">
-          <SCardImage src={productImage} alt={alt} />
+          <SCardImage src={productImage} alt={alt}/>
         </SStyledLink>
         <SCardWishlist
           src="../assets/svg/wishlist.svg"
