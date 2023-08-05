@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ProductDescriptions } from "../../components/ProductDescriptions";
 import {
   SAddToFavorites,
@@ -31,6 +31,13 @@ export const ProductPage = ({ product }) => {
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 
+  const [isInWishlist, setIsInWishlist] = useState(false); 
+
+  useEffect(() => {
+    setIsInWishlist(wishlist.some((item) => item.productName === product.productName));
+  }, [wishlist, product.productName]);
+
+
   const { pathname } = useLocation();  
   
   const subcategoryPath = pathname + "/";
@@ -44,7 +51,7 @@ export const ProductPage = ({ product }) => {
       discountRate,
       isDiscount,
     } = product;
-    if (wishlist.some((item) => item.productName === productName)) {
+    if (isInWishlist) {
       console.log("product is already in the wishlist");
       return;
     }
@@ -55,9 +62,10 @@ export const ProductPage = ({ product }) => {
       productImage,
       discountRate,
       isDiscount,
-      subcategoryPath
+      subcategoryPath,
     });
     setShowWishlistPopup(true);
+    setIsInWishlist(true);
     setTimeout(() => {
       setShowWishlistPopup(false);
     }, 1500);
@@ -138,7 +146,7 @@ export const ProductPage = ({ product }) => {
               </SProductQuantityPlus>
             </SProductQuantity>
             <SProductBuyNow>შეძენა</SProductBuyNow>
-            <SAddToFavorites onClick={handleWishlistClick}>
+            <SAddToFavorites onClick={handleWishlistClick} isInWishlist={isInWishlist}>
               <img src="assets/svg/wishlist.svg" alt="wishlist" />
             </SAddToFavorites>
           </SProductQuantityBuyFavorites>
