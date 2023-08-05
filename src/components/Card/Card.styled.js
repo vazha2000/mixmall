@@ -54,7 +54,7 @@ export const SCardWishlist = styled.img`
   position: absolute;
   top: 12px;
   right: 12px;
-  background-color: #f2f2f2;
+  background-color: ${({isInWishlist}) => (isInWishlist ? "#df3d41" : "#f2f2f2")};
   border-radius: 50%;
   padding: 5px;
 `
