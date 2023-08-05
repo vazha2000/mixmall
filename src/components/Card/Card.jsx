@@ -109,9 +109,9 @@ export const Card = (props) => {
           </SCenteredContainer>
         )}
       </AnimatePresence>
-      <SCardImageContainer onClick={onClick}>
+      <SCardImageContainer >
         <SStyledLink to={path} center="true">
-          <SCardImage src={productImage} alt={alt}/>
+          <SCardImage src={productImage} alt={alt} onClick={onClick}/>
         </SStyledLink>
         <SCardWishlist
           src="../assets/svg/wishlist.svg"
