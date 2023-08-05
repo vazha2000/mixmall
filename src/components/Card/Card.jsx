@@ -40,6 +40,8 @@ export const Card = (props) => {
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 
+  const [isInWishlist, setIsInWishlist] = useState(false);
+
   const handleWishlistClick = () => {
     if (wishlist.some((item) => item.productName === productName)) {
       console.log("product is already in the wishlist");
@@ -56,6 +58,7 @@ export const Card = (props) => {
       path
     });
     setShowWishlistPopup(true);
+    setIsInWishlist(true)
     setTimeout(() => {
       setShowWishlistPopup(false);
     }, 1500);
@@ -88,6 +91,7 @@ export const Card = (props) => {
           src="../assets/svg/wishlist.svg"
           alt="favorites icon"
           onClick={handleWishlistClick}
+          isInWishlist={isInWishlist}
         />
         {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
         <AnimatePresence>
