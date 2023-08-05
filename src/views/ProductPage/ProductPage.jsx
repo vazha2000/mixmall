@@ -23,12 +23,17 @@ import {
   SProductAddedToWishlist,
 } from "../../components/Card/Card.styled";
 import { AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 export const ProductPage = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const { wishlist, addToWishlist } = useContext(WishlistContext);
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
+
+  const { pathname } = useLocation();  
+  
+  const subcategoryPath = pathname + "/";
 
   const handleWishlistClick = () => {
     const {
@@ -50,6 +55,7 @@ export const ProductPage = ({ product }) => {
       productImage,
       discountRate,
       isDiscount,
+      subcategoryPath
     });
     setShowWishlistPopup(true);
     setTimeout(() => {
