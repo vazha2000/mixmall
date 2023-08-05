@@ -36,7 +36,7 @@ export const Card = (props) => {
     onClick,
   } = props;
 
-  const { wishlist, addToWishlist } = useContext(WishlistContext);
+  const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
 
   const [isInWishlist, setIsInWishlist] = useState(false); 
 
@@ -48,7 +48,8 @@ export const Card = (props) => {
 
   const handleWishlistClick = () => {
     if (isInWishlist) {
-      console.log("product is already in the wishlist");
+      removeFromWishlist(productName)
+      setIsInWishlist(false)
       return;
     }
     addToWishlist({
