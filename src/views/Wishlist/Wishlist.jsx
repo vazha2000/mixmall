@@ -6,17 +6,17 @@ import { useNavigate } from "react-router-dom";
 
 export const Wishlist = () => {
   const { wishlist } = useContext(WishlistContext);
-
+  console.log(wishlist)
   const navigate = useNavigate();
 
-  const handleProductClick = (product) => {
-    if(product.path) {
-      const productPath = product.subcategoryPath + product.path;
-      navigate(productPath);
-    } else {
-      navigate(product.subcategoryPath)
-    }
-  };
+  // const handleProductClick = (product) => {
+  //   if(product.path) {
+  //     const productPath = product.subcategoryPath + product.path;
+  //     navigate(productPath);
+  //   } else {
+  //     navigate(product.subcategoryPath)
+  //   }
+  // };
 
   return (
     <SWishlist quantity={wishlist.length % 4 !== 2}>
@@ -33,7 +33,8 @@ export const Wishlist = () => {
           oldPrice={item.oldPrice}
           discountRate={item.discountRate}
           isDiscount={item.isDiscount}
-          onClick={() => handleProductClick(item)}
+          path={item.subcategoryPath + item.path}
+          // onClick={() => handleProductClick(item)}
           />
       ))}
     </SWishlist>
