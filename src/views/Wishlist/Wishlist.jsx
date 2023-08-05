@@ -28,6 +28,7 @@ export const Wishlist = () => {
           key={index}
           productImage={item.productImage}
           productName={item.productName}
+          id={item.id}
           currentPrice={item.currentPrice}
           oldPrice={item.oldPrice}
           discountRate={item.discountRate}
