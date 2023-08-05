@@ -28,8 +28,6 @@ import { useLocation } from "react-router-dom";
 export const ProductPage = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const { wishlist, addToWishlist } = useContext(WishlistContext);
-  console.log(product.id)
-  console.log(wishlist)
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 

@@ -38,7 +38,7 @@ export const Card = (props) => {
   } = props;
 
   const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
-  console.log(wishlist)
+
   const [isInWishlist, setIsInWishlist] = useState(false); 
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
