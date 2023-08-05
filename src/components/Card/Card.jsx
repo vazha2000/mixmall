@@ -34,22 +34,24 @@ export const Card = (props) => {
     path,
     subcategoryPath,
     onClick,
+    id
   } = props;
 
   const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
-
+  console.log(wishlist)
   const [isInWishlist, setIsInWishlist] = useState(false); 
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
+  // const [showRemovePopup, setShowRemovePopup] = useState(false);
+
   
   useEffect(() => {
-    setIsInWishlist(wishlist.some((item) => item.productName === productName));
-  }, [wishlist, productName]);
+    setIsInWishlist(wishlist.some((item) => item.id === id));
+  }, [wishlist, id]);
 
   const handleWishlistClick = () => {
     if (isInWishlist) {
-      removeFromWishlist(productName)
-      setIsInWishlist(false)
+      console.log("aodosakdosp")
       return;
     }
     addToWishlist({
@@ -61,6 +63,7 @@ export const Card = (props) => {
       isDiscount,
       subcategoryPath,
       path,
+      id
     });
     setIsInWishlist(true);
     setShowWishlistPopup(true);
@@ -88,6 +91,19 @@ export const Card = (props) => {
           </SCenteredContainer>
         )}
       </AnimatePresence>
+      {/* <AnimatePresence>
+        {showRemovePopup && (
+          <SCenteredContainer>
+            <SProductAddedToWishlist
+              initial={{ y: 0 }}
+              animate={{ y: 30 }}
+              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
+            >
+              პროდუქტი {productName} წაიშალა სურვილების სიიდან
+            </SProductAddedToWishlist>
+          </SCenteredContainer>
+        )}
+      </AnimatePresence> */}
       <SCardImageContainer onClick={onClick}>
         <SStyledLink to={path} center="true">
           <SCardImage src={productImage} alt={alt}/>

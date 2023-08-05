@@ -28,14 +28,16 @@ import { useLocation } from "react-router-dom";
 export const ProductPage = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const { wishlist, addToWishlist } = useContext(WishlistContext);
+  console.log(product.id)
+  console.log(wishlist)
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
 
   const [isInWishlist, setIsInWishlist] = useState(false); 
 
   useEffect(() => {
-    setIsInWishlist(wishlist.some((item) => item.productName === product.productName));
-  }, [wishlist, product.productName]);
+    setIsInWishlist(wishlist.some((item) => item.id === product.id));
+  }, [wishlist, product.id]);
 
 
   const { pathname } = useLocation();  
@@ -50,6 +52,7 @@ export const ProductPage = ({ product }) => {
       productImage,
       discountRate,
       isDiscount,
+      id
     } = product;
     if (isInWishlist) {
       console.log("product is already in the wishlist");
@@ -63,6 +66,7 @@ export const ProductPage = ({ product }) => {
       discountRate,
       isDiscount,
       subcategoryPath,
+      id
     });
     setShowWishlistPopup(true);
     setIsInWishlist(true);
