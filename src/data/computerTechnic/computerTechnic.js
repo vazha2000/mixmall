@@ -15,6 +15,7 @@ export const computerTechnic = [
         currentPrice: 500,
         oldPrice: 600,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "200g",
@@ -33,6 +34,7 @@ export const computerTechnic = [
         currentPrice: 700,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "200g",
@@ -50,6 +52,7 @@ export const computerTechnic = [
         currentPrice: 900,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "200g",
@@ -67,6 +70,7 @@ export const computerTechnic = [
         currentPrice: 1000,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -84,6 +88,7 @@ export const computerTechnic = [
         currentPrice: 800,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -101,6 +106,7 @@ export const computerTechnic = [
         currentPrice: 5000,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -118,6 +124,7 @@ export const computerTechnic = [
         currentPrice: 4890,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -135,6 +142,7 @@ export const computerTechnic = [
         currentPrice: 2390,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -152,6 +160,7 @@ export const computerTechnic = [
         currentPrice: 7390,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -169,6 +178,7 @@ export const computerTechnic = [
         currentPrice: 1660,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -186,6 +196,7 @@ export const computerTechnic = [
         currentPrice: 1990,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -203,6 +214,7 @@ export const computerTechnic = [
         currentPrice: 2250,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -227,6 +239,7 @@ export const computerTechnic = [
         currentPrice: 360,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -244,6 +257,7 @@ export const computerTechnic = [
         currentPrice: 460,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -261,6 +275,7 @@ export const computerTechnic = [
         currentPrice: 760,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -278,6 +293,7 @@ export const computerTechnic = [
         currentPrice: 550,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -302,6 +318,7 @@ export const computerTechnic = [
         currentPrice: 400,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -319,6 +336,7 @@ export const computerTechnic = [
         currentPrice: 1200,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -336,6 +354,7 @@ export const computerTechnic = [
         currentPrice: 790,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -353,6 +372,7 @@ export const computerTechnic = [
         currentPrice: 460,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -377,6 +397,7 @@ export const computerTechnic = [
         currentPrice: 900,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -394,6 +415,7 @@ export const computerTechnic = [
         currentPrice: 500,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -411,6 +433,7 @@ export const computerTechnic = [
         currentPrice: 300,
         oldPrice: 350,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -428,6 +451,7 @@ export const computerTechnic = [
         currentPrice: 1100,
         oldPrice: 1300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -452,6 +476,7 @@ export const computerTechnic = [
         currentPrice: 500,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -469,6 +494,7 @@ export const computerTechnic = [
         currentPrice: 800,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -486,6 +512,7 @@ export const computerTechnic = [
         currentPrice: 400,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",
@@ -503,6 +530,7 @@ export const computerTechnic = [
         currentPrice: 900,
         oldPrice: 300,
         alt: "test",
+        isInWishlist: false,
         descriptions: [
           {
             "weight": "400g",

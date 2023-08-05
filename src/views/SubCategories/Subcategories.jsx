@@ -12,12 +12,16 @@ import { Card } from "../../components/Card";
 import { testProducts } from "../../data/data";
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 import { ProductsFilter } from "../../components/ProductsFilter";
-import { SStyledLink } from "../../components/DropdownMenu/DropdownMenu.styled";
 import { SubcategoryPagination } from "../../components/SubcategoryPagination";
+import { useLocation } from "react-router-dom";
 
 export const Subcategories = ({ item }) => {
+
   const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
   const [isClicked, setIsClicked] = useState(false);
+
+  const { pathname } = useLocation();  
+  const subcategoryPath = pathname + "/";
 
   const handleHover = (index) => {
     setHoverStates((prevStates) => {
@@ -42,16 +46,16 @@ export const Subcategories = ({ item }) => {
   }, [isClicked]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4
+  const itemsPerPage = 4;
 
   const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber)
-  }
+    setCurrentPage(pageNumber);
+  };
 
   const lastIndex = currentPage * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
 
-  const paginatedList = item.products.slice(firstIndex, lastIndex)
+  const paginatedList = item.products.slice(firstIndex, lastIndex);
   return (
     <SSubcategories>
       <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs>
@@ -74,30 +78,33 @@ export const Subcategories = ({ item }) => {
         <SSubcategoriesProducts>
           {paginatedList.map((card, index) => {
             return (
-              <SStyledLink
+              <Card
                 key={index}
-                to={`${card.productName}`}
-              >
-                <Card
-                  width={"200px"}
-                  key={index}
-                  productImage={card.productImage}
-                  discountRate={card.discountRate}
-                  isDiscount={card.isDiscount}
-                  productName={card.productName}
-                  currentPrice={card.currentPrice}
-                  oldPrice={card.oldPrice}
-                  alt={card.alt}
-                  handleHover={() => handleHover(index)}
-                  isHovered={hoverStates[index]}
-                />
-              </SStyledLink>
+                index={index}
+                width={"200px"}
+                productImage={card.productImage}
+                discountRate={card.discountRate}
+                isDiscount={card.isDiscount}
+                productName={card.productName}
+                currentPrice={card.currentPrice}
+                oldPrice={card.oldPrice}
+                alt={card.alt}
+                handleHover={() => handleHover(index)}
+                isHovered={hoverStates[index]}
+                path={card.productName}
+                subcategoryPath={subcategoryPath}
+              />
             );
           })}
         </SSubcategoriesProducts>
       </div>
-      <SubcategoryPagination item={item} onPageChange={handlePageChange}
-        currentPage={currentPage} setCurrentPage={setCurrentPage} itemsPerPage={itemsPerPage}/>
+      <SubcategoryPagination
+        item={item}
+        onPageChange={handlePageChange}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        itemsPerPage={itemsPerPage}
+      />
     </SSubcategories>
   );
 };

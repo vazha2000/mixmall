@@ -19,7 +19,6 @@ export const SCardImageContainer = styled.div`
   background-color: #e8e8e8;
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -44,7 +43,6 @@ export const SAddToCardButton = styled(motion.div)`
 
 export const SCardImage = styled.img`
   width: 70%;
-  /* scale: ${({isHovered}) => (isHovered ? 1.05 : 1)}; */
   transition: 0.1s ease-in;
 
   &:hover {
@@ -56,7 +54,7 @@ export const SCardWishlist = styled.img`
   position: absolute;
   top: 12px;
   right: 12px;
-  background-color: #f2f2f2;
+  background-color: ${({isInWishlist}) => (isInWishlist ? "#df3d41" : "#f2f2f2")};
   border-radius: 50%;
   padding: 5px;
 `
@@ -103,4 +101,32 @@ export const SCardPrice = styled.span`
 
 export const SCardOldPrice = styled.span`
   text-decoration: line-through;
+`
+export const SCenteredContainer = styled.div`
+position: fixed;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 90%;
+z-index: 5;
+@media screen and (max-width: 600px){
+  width: 80%;
+}
+`;
+
+export const SProductAddedToWishlist = styled(motion.div)`
+  width: 100%;
+  height: 80px;
+  white-space: nowrap;
+  background-color: #df3d41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  
+  @media screen and (max-width: 600px){
+  white-space: normal;
+}
 `
