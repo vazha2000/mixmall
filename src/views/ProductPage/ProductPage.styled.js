@@ -160,10 +160,11 @@ export const SAddToFavorites = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${({isInWishlist}) => (isInWishlist ? "#df3d41" : "white")};
 
   &:hover {
     border: 1px solid rgba(0,0,0, 0.9);
-    background-color: #df3d41;
+    filter: ${({isInWishlist}) => (isInWishlist ? "brightness(120%)" : "brightness(90%)")};
     cursor: pointer;
   }
 `
