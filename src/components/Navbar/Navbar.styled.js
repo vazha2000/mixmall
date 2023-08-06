@@ -110,6 +110,32 @@ export const SWishlistIcon = styled.img`
   cursor: pointer;
 `;
 
+export const SCartIconContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+`
+
+export const SCartQuantity = styled.div`
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: #df3d41;
+  color: #fff;
+
+  &:hover {
+    filter: brightness(120%);
+    transition: .2s ease-in;
+  }
+`
+
 export const SCartIcon = styled.img`
   cursor: pointer;
 `;
