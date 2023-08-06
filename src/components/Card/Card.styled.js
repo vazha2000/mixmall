@@ -30,10 +30,14 @@ export const SAddToCardButton = styled(motion.div)`
   bottom: 0;
   height: 15%;
   width: 100%;
-  background-color: #1f1f1f;
+  background-color: #df3d41;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    filter: brightness(90%);
+  }
 
   > span {
     color: #f2f2f2;
@@ -105,32 +109,4 @@ export const SCardPrice = styled.span`
 
 export const SCardOldPrice = styled.span`
   text-decoration: line-through;
-`
-export const SCenteredContainer = styled.div`
-position: fixed;
-top: 0;
-left: 50%;
-transform: translateX(-50%);
-width: 90%;
-z-index: 5;
-@media screen and (max-width: 600px){
-  width: 80%;
-}
-`;
-
-export const SProductAddedToWishlist = styled(motion.div)`
-  width: 100%;
-  height: 80px;
-  white-space: nowrap;
-  background-color: #df3d41;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  color: #fff;
-  text-align: center;
-  
-  @media screen and (max-width: 600px){
-  white-space: normal;
-}
 `
