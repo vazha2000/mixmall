@@ -187,7 +187,7 @@ export const ProductPage = ({ product }) => {
                 <img src="assets/svg/plus.svg" alt="plus" />
               </SProductQuantityPlus>
             </SProductQuantity>
-            <SProductBuyNow onClick={handleCartClick}>შეძენა</SProductBuyNow>
+            <SProductBuyNow onClick={handleCartClick} isInCart={isInCart}>შეძენა</SProductBuyNow>
             <SAddToFavorites
               onClick={handleWishlistClick}
               isInWishlist={isInWishlist}

@@ -139,16 +139,16 @@ export const SProductBuyNow = styled.button`
   width: 120px;
   border: 1px solid rgba(0,0,0, 0.5);
   background-color: inherit;
+  background-color: ${({isInCart}) => (isInCart ? "#df3d41" : "white")};
   border-radius: 5px;
   font-size: 16px;
-  color: #1f1f1f;
+  color: ${({isInCart}) => (isInCart ? "#fff" : "#1f1f1f")};
   font-weight: 600;
 
   &:hover {
-    background-color: #df3d41;
     cursor: pointer;
     border: 1px solid rgba(0,0,0, 0.9);
-    color: #fff;
+    filter: ${({isInCart}) => (isInCart ? "brightness(120%)" : "brightness(90%)")};
     transition: all .2s ease;
   }
 `
