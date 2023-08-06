@@ -40,8 +40,8 @@ export const ProductPage = ({ product }) => {
   const [showCartRemovePopup, setShowCartRemovePopup] = useState(false);
 
   useEffect(() => {
-    setIsInWishlist(wishlist.some((item) => item.id === id));
-    setIsInCart(cart.some((item) => item.id === id))
+    setIsInWishlist(wishlist.some((item) => item.id === product.id));
+    setIsInCart(cart.some((item) => item.id === product.id))
   }, [wishlist, product.id, cart]);
 
   const { pathname } = useLocation();
