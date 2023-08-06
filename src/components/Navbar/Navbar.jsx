@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import {
   SCartIcon,
+  SCartIconContainer,
+  SCartQuantity,
   SLogo,
   SNavActions,
   SNavInputContainer,
@@ -16,9 +18,11 @@ import { SearchInput } from "../SearchInput";
 import { Link } from "react-router-dom";
 import { WishlistContext } from "../../context/WishlistContext";
 import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
+import { CheckoutContext } from "../../context/CheckoutContext";
 
 export const Navbar = () => {
   const { wishlist } = useContext(WishlistContext);
+  const { cart } = useContext(CheckoutContext)
 
   return (
     <SNavbar>
@@ -48,7 +52,10 @@ export const Navbar = () => {
               <SWishlistQuantity>{wishlist.length}</SWishlistQuantity>
             </SWishlistContainer>
           </SStyledLink>
-          <SCartIcon src="../assets/svg/cart.svg" alt="cart icon" />
+          <SCartIconContainer>
+            <SCartIcon src="../assets/svg/cart.svg" alt="cart icon" />
+            <SCartQuantity>{cart.length}</SCartQuantity>
+          </SCartIconContainer>
         </SWishlistCartContainer>
       </SNavActions>
     </SNavbar>
