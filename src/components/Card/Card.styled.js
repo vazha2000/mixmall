@@ -30,10 +30,14 @@ export const SAddToCardButton = styled(motion.div)`
   bottom: 0;
   height: 15%;
   width: 100%;
-  background-color: #1f1f1f;
+  background-color: #df3d41;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    filter: brightness(90%);
+  }
 
   > span {
     color: #f2f2f2;
