@@ -18,29 +18,34 @@ import {
   SProductQuantityPlus,
 } from "./ProductPage.styled";
 import { WishlistContext } from "../../context/WishlistContext";
-import {
-  SCenteredContainer,
-  SProductAddedToWishlist,
-} from "../../components/Card/Card.styled";
-import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { NotificationPopup } from "../../components/NotificationPopup";
+import { CheckoutContext } from "../../context/CheckoutContext";
 
 export const ProductPage = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
-  const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
+  const { wishlist, addToWishlist, removeFromWishlist } =
+    useContext(WishlistContext);
+    const { cart, addToCart, removeFromCart } = useContext(CheckoutContext)
+
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
+  const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
 
-  const [isInWishlist, setIsInWishlist] = useState(false); 
-  const [showRemovePopup, setShowRemovePopup] = useState(false);
+  const [isInWishlist, setIsInWishlist] = useState(false);
+  const [isInCart, setIsInCart] = useState(false);
+
+
+  const [showCartPopup, setShowCartPopup] = useState(false);
+  const [showCartRemovePopup, setShowCartRemovePopup] = useState(false);
 
   useEffect(() => {
-    setIsInWishlist(wishlist.some((item) => item.id === product.id));
-  }, [wishlist, product.id]);
+    setIsInWishlist(wishlist.some((item) => item.id === id));
+    setIsInCart(cart.some((item) => item.id === id))
+  }, [wishlist, product.id, cart]);
 
+  const { pathname } = useLocation();
 
-  const { pathname } = useLocation();  
-  
   const path = pathname;
 
   const handleWishlistClick = () => {
@@ -51,14 +56,14 @@ export const ProductPage = ({ product }) => {
       productImage,
       discountRate,
       isDiscount,
-      id
+      id,
     } = product;
     if (isInWishlist) {
       removeFromWishlist({ id });
       setIsInWishlist(false);
-      setShowRemovePopup(true);
+      setShowWishlistRemovePopup(true);
       setTimeout(() => {
-        setShowRemovePopup(false);
+        setShowWishlistRemovePopup(false);
       }, 1500);
       return;
     }
@@ -70,7 +75,7 @@ export const ProductPage = ({ product }) => {
       discountRate,
       isDiscount,
       path,
-      id
+      id,
     });
     setShowWishlistPopup(true);
     setIsInWishlist(true);
@@ -105,35 +110,52 @@ export const ProductPage = ({ product }) => {
     }
   };
 
+  const handleCartClick = () => {
+    const {
+      productName,
+      currentPrice,
+      oldPrice,
+      productImage,
+      discountRate,
+      isDiscount,
+      id,
+    } = product;
+    if(isInCart) {
+      removeFromCart({id});
+      setIsInCart(false);
+      setShowCartRemovePopup(true);
+      setTimeout(() => {
+        setShowCartRemovePopup(false)
+      }, 1500);
+      return
+    }
+    addToCart({
+      productName,
+      currentPrice,
+      oldPrice,
+      productImage,
+      discountRate,
+      isDiscount,
+      path,
+      id
+    });
+    setIsInCart(true);
+    setShowCartPopup(true);
+    setTimeout(() => {
+      setShowCartPopup(false)
+    }, 1500);
+  }
+
   return (
     <>
       <SProductPage>
-        <AnimatePresence>
-          {showWishlistPopup && (
-            <SCenteredContainer>
-              <SProductAddedToWishlist
-                initial={{ y: 0 }}
-                animate={{ y: 30 }}
-                exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
-              >
-                პროდუქტი {product.productName} დაემატა სურვილების სიას
-              </SProductAddedToWishlist>
-            </SCenteredContainer>
-          )}
-        </AnimatePresence>
-        <AnimatePresence>
-        {showRemovePopup && (
-          <SCenteredContainer>
-            <SProductAddedToWishlist
-              initial={{ y: 0 }}
-              animate={{ y: 30 }}
-              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
-            >
-              პროდუქტი {product.productName} წაიშალა სურვილების სიიდან
-            </SProductAddedToWishlist>
-          </SCenteredContainer>
-        )}
-      </AnimatePresence>
+        <NotificationPopup
+          showWishlistPopup={showWishlistPopup}
+          showWishlistRemovePopup={showWishlistRemovePopup}
+          showCartPopup={showCartPopup}
+          showCartRemovePopup={showCartRemovePopup}
+          productName={product.productName}
+        />
         <SProductPageImages>
           <SProductPageSmallImages>
             <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
@@ -165,8 +187,11 @@ export const ProductPage = ({ product }) => {
                 <img src="assets/svg/plus.svg" alt="plus" />
               </SProductQuantityPlus>
             </SProductQuantity>
-            <SProductBuyNow>შეძენა</SProductBuyNow>
-            <SAddToFavorites onClick={handleWishlistClick} isInWishlist={isInWishlist}>
+            <SProductBuyNow onClick={handleCartClick}>შეძენა</SProductBuyNow>
+            <SAddToFavorites
+              onClick={handleWishlistClick}
+              isInWishlist={isInWishlist}
+            >
               <img src="assets/svg/wishlist.svg" alt="wishlist" />
             </SAddToFavorites>
           </SProductQuantityBuyFavorites>
