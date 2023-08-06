@@ -37,7 +37,7 @@ export const Card = (props) => {
 
   const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
   const { cart, addToCart, removeFromCart } = useContext(CheckoutContext)
-  console.log(cart)
+
   const [isInWishlist, setIsInWishlist] = useState(false); 
   const [isInCart, setIsInCart] = useState(false);
 
