@@ -11,12 +11,12 @@ import {
   SCardProductName,
   SCardSaleDiscount,
   SCardWishlist,
-  SCenteredContainer,
-  SProductAddedToWishlist,
 } from "./Card.styled";
 import { AnimatePresence } from "framer-motion";
 import { WishlistContext } from "../../context/WishlistContext";
 import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
+import { CheckoutContext } from "../../context/CheckoutContext";
+import { NotificationPopup } from "../NotificationPopup";
 
 export const Card = (props) => {
   const {
@@ -36,24 +36,30 @@ export const Card = (props) => {
   } = props;
 
   const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
-
+  const { cart, addToCart, removeFromCart } = useContext(CheckoutContext)
+  console.log(cart)
   const [isInWishlist, setIsInWishlist] = useState(false); 
+  const [isInCart, setIsInCart] = useState(false);
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
-  const [showRemovePopup, setShowRemovePopup] = useState(false);
+  const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
+
+  const [showCartPopup, setShowCartPopup] = useState(false);
+  const [showCartRemovePopup, setShowCartRemovePopup] = useState(false)
 
   
   useEffect(() => {
     setIsInWishlist(wishlist.some((item) => item.id === id));
-  }, [wishlist, id]);
+    setIsInCart(cart.some((item) => item.id === id))
+  }, [wishlist, id, cart]);
 
   const handleWishlistClick = () => {
     if (isInWishlist) {
       removeFromWishlist({ id });
       setIsInWishlist(false);
-      setShowRemovePopup(true);
+      setShowWishlistRemovePopup(true);
       setTimeout(() => {
-        setShowRemovePopup(false);
+        setShowWishlistRemovePopup(false);
       }, 1500);
       return;
     }
@@ -73,6 +79,34 @@ export const Card = (props) => {
       setShowWishlistPopup(false);
     }, 1500);
   };
+
+  const handleCartClick = () => {
+    if(isInCart) {
+      removeFromCart({id});
+      setIsInCart(false);
+      setShowCartRemovePopup(true);
+      setTimeout(() => {
+        setShowCartRemovePopup(false)
+      }, 1500);
+      return
+    }
+    addToCart({
+      productName,
+      currentPrice,
+      oldPrice,
+      productImage,
+      discountRate,
+      isDiscount,
+      path,
+      id
+    });
+    setIsInCart(true);
+    setShowCartPopup(true);
+    setTimeout(() => {
+      setShowCartPopup(false)
+    }, 1500);
+    
+  }
   return (
     <SCard
       onMouseEnter={handleHover}
@@ -80,32 +114,13 @@ export const Card = (props) => {
       isHovered={isHovered}
       width={width}
     >
-      <AnimatePresence>
-        {showWishlistPopup && (
-          <SCenteredContainer>
-            <SProductAddedToWishlist
-              initial={{ y: 0 }}
-              animate={{ y: 30 }}
-              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
-            >
-              პროდუქტი {productName} დაემატა სურვილების სიას
-            </SProductAddedToWishlist>
-          </SCenteredContainer>
-        )}
-      </AnimatePresence>
-      <AnimatePresence>
-        {showRemovePopup && (
-          <SCenteredContainer>
-            <SProductAddedToWishlist
-              initial={{ y: 0 }}
-              animate={{ y: 30 }}
-              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
-            >
-              პროდუქტი {productName} წაიშალა სურვილების სიიდან
-            </SProductAddedToWishlist>
-          </SCenteredContainer>
-        )}
-      </AnimatePresence>
+      <NotificationPopup 
+      showWishlistPopup={showWishlistPopup} 
+      showWishlistRemovePopup={showWishlistRemovePopup}
+      showCartPopup={showCartPopup}
+      showCartRemovePopup={showCartRemovePopup}
+      productName={productName}/>
+      
       <SCardImageContainer >
         <SStyledLink to={path} center="true">
           <SCardImage src={productImage} alt={alt}/>
@@ -119,6 +134,7 @@ export const Card = (props) => {
         {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
         <AnimatePresence>
           <SAddToCardButton
+            onClick={handleCartClick}
             initial={{ y: "100%", opacity: 1 }}
             animate={
               isHovered
