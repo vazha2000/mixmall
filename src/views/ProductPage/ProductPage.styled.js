@@ -139,7 +139,7 @@ export const SProductBuyNow = styled.button`
   width: 120px;
   border: 1px solid rgba(0,0,0, 0.5);
   background-color: inherit;
-  background-color: ${({isInCart}) => (isInCart ? "#df3d41" : "inherit")};
+  background-color: ${({isInCart}) => (isInCart ? "#df3d41" : "white")};
   border-radius: 5px;
   font-size: 16px;
   color: ${({isInCart}) => (isInCart ? "#fff" : "#1f1f1f")};
@@ -148,7 +148,7 @@ export const SProductBuyNow = styled.button`
   &:hover {
     cursor: pointer;
     border: 1px solid rgba(0,0,0, 0.9);
-    filter: brightness(120%);
+    filter: ${({isInCart}) => (isInCart ? "brightness(120%)" : "brightness(90%)")};
     transition: all .2s ease;
   }
 `
