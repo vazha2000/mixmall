@@ -27,10 +27,14 @@ export const ProductPage = ({ product }) => {
 
   const { wishlist, addToWishlist, removeFromWishlist } =
     useContext(WishlistContext);
-  const { cart, addToCart, removeFromCart, productQuantity, setProductQuantity } = useContext(CheckoutContext);
+  const { cart, addToCart, removeFromCart, productQuantities, updateProductQuantity } = useContext(CheckoutContext);
 
+  const productId = product.id
+  const productQuantity = productQuantities[productId] || 1;
+  
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
   const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
+  console.log(cart)
 
   const [isInWishlist, setIsInWishlist] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
@@ -84,13 +88,13 @@ export const ProductPage = ({ product }) => {
   };
   const handleIncrement = () => {
     if (productQuantity < 99) {
-      setProductQuantity((prev) => prev + 1);
+      updateProductQuantity(productId, productQuantity + 1);
     }
   };
 
   const handleDecrement = () => {
     if (productQuantity > 1) {
-      setProductQuantity((prev) => prev - 1);
+      updateProductQuantity(productId, productQuantity - 1);
     }
   };
 
@@ -101,11 +105,11 @@ export const ProductPage = ({ product }) => {
       isNaN(inputQuantity) ||
       inputQuantity < 1
     ) {
-      setProductQuantity(0);
+      updateProductQuantity(productId, 1);
     } else if (inputQuantity > 99) {
-      setProductQuantity(99);
+      updateProductQuantity(productId, 99);
     } else {
-      setProductQuantity(inputQuantity);
+      updateProductQuantity(productId, inputQuantity);
     }
   };
 
