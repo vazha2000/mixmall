@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ProductDescriptions } from "../../components/ProductDescriptions";
 import {
   SAddToFavorites,
+  SProductButtonsWrapper,
   SProductBuyNow,
   SProductCurrentQuantity,
   SProductPage,
@@ -26,8 +27,7 @@ export const ProductPage = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const { wishlist, addToWishlist, removeFromWishlist } =
     useContext(WishlistContext);
-    const { cart, addToCart, removeFromCart } = useContext(CheckoutContext)
-
+  const { cart, addToCart, removeFromCart } = useContext(CheckoutContext);
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
   const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
@@ -35,13 +35,12 @@ export const ProductPage = ({ product }) => {
   const [isInWishlist, setIsInWishlist] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
 
-
   const [showCartPopup, setShowCartPopup] = useState(false);
   const [showCartRemovePopup, setShowCartRemovePopup] = useState(false);
 
   useEffect(() => {
     setIsInWishlist(wishlist.some((item) => item.id === product.id));
-    setIsInCart(cart.some((item) => item.id === product.id))
+    setIsInCart(cart.some((item) => item.id === product.id));
   }, [wishlist, product.id, cart]);
 
   const { pathname } = useLocation();
@@ -119,15 +118,16 @@ export const ProductPage = ({ product }) => {
       discountRate,
       isDiscount,
       id,
+      alt
     } = product;
-    if(isInCart) {
-      removeFromCart({id});
+    if (isInCart) {
+      removeFromCart({ id });
       setIsInCart(false);
       setShowCartRemovePopup(true);
       setTimeout(() => {
-        setShowCartRemovePopup(false)
+        setShowCartRemovePopup(false);
       }, 1500);
-      return
+      return;
     }
     addToCart({
       productName,
@@ -137,14 +137,15 @@ export const ProductPage = ({ product }) => {
       discountRate,
       isDiscount,
       path,
-      id
+      id,
+      alt
     });
     setIsInCart(true);
     setShowCartPopup(true);
     setTimeout(() => {
-      setShowCartPopup(false)
+      setShowCartPopup(false);
     }, 1500);
-  }
+  };
 
   return (
     <>
@@ -187,13 +188,17 @@ export const ProductPage = ({ product }) => {
                 <img src="assets/svg/plus.svg" alt="plus" />
               </SProductQuantityPlus>
             </SProductQuantity>
-            <SProductBuyNow onClick={handleCartClick} isInCart={isInCart}>შეძენა</SProductBuyNow>
-            <SAddToFavorites
-              onClick={handleWishlistClick}
-              isInWishlist={isInWishlist}
-            >
-              <img src="assets/svg/wishlist.svg" alt="wishlist" />
-            </SAddToFavorites>
+            <SProductButtonsWrapper>
+              <SProductBuyNow onClick={handleCartClick} isInCart={isInCart}>
+                {isInCart ? "დამატებულია კალათაში" : "კალათაში დამატება"}
+              </SProductBuyNow>
+              <SAddToFavorites
+                onClick={handleWishlistClick}
+                isInWishlist={isInWishlist}
+              >
+                <img src="assets/svg/wishlist.svg" alt="wishlist" />
+              </SAddToFavorites>
+            </SProductButtonsWrapper>
           </SProductQuantityBuyFavorites>
         </SProductPageOptions>
       </SProductPage>

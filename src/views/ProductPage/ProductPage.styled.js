@@ -84,7 +84,13 @@ export const SProductPrices = styled.div`
 export const SProductQuantityBuyFavorites = styled.div`
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 `;
+
+export const SProductButtonsWrapper = styled.div`
+  display: flex;
+  gap: inherit;
+`
 
 export const SProductQuantity = styled.div`
   display: flex;
@@ -136,7 +142,7 @@ export const SProductQuantityPlus = styled.button`
 `;
 
 export const SProductBuyNow = styled.button`
-  width: 120px;
+  width: auto;
   border: 1px solid rgba(0,0,0, 0.5);
   background-color: inherit;
   background-color: ${({isInCart}) => (isInCart ? "#df3d41" : "white")};
@@ -144,6 +150,8 @@ export const SProductBuyNow = styled.button`
   font-size: 16px;
   color: ${({isInCart}) => (isInCart ? "#fff" : "#1f1f1f")};
   font-weight: 600;
+  padding: 0 10px;
+  white-space: nowrap;
 
   &:hover {
     cursor: pointer;
