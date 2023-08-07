@@ -37,7 +37,7 @@ export const Card = (props) => {
 
   const { wishlist, addToWishlist, removeFromWishlist } =
     useContext(WishlistContext);
-  const { cart, addToCart, removeFromCart } = useContext(CheckoutContext);
+  const { cart, addToCart, removeFromCart, productQuantity, setProductQuantity } = useContext(CheckoutContext);
 
   const [isInWishlist, setIsInWishlist] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
@@ -100,6 +100,7 @@ export const Card = (props) => {
       path,
       id,
       alt,
+      productQuantity
     });
     setIsInCart(true);
     setShowCartPopup(true);
