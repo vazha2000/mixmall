@@ -10,6 +10,10 @@ export const SCartInfo = styled(motion.div)`
   padding: 8px 10px;
 `
 
+export const SCartEmpty = styled.div`
+  white-space: nowrap;
+`
+
 export const SCartCardTable = styled.table`
   height: auto;
   border-spacing: 0;
