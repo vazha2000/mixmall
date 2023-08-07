@@ -50,7 +50,7 @@ export const CartInfo = ({ cart, removeFromCart }) => {
                     {item.productName}
                   </SCartCardTableBoxNameContent>
                   <SCartCardTableBoxQuantityContent>
-                    22 ცალი
+                    {item.productQuantity} ცალი
                   </SCartCardTableBoxQuantityContent>
                   <SCartCardTableBoxTotalContent>
                     {item.currentPrice}00 ლარი
