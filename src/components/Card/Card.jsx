@@ -98,7 +98,8 @@ export const Card = (props) => {
       discountRate,
       isDiscount,
       path,
-      id
+      id,
+      alt
     });
     setIsInCart(true);
     setShowCartPopup(true);
