@@ -118,6 +118,7 @@ export const ProductPage = ({ product }) => {
       discountRate,
       isDiscount,
       id,
+      alt
     } = product;
     if (isInCart) {
       removeFromCart({ id });
@@ -137,6 +138,7 @@ export const ProductPage = ({ product }) => {
       isDiscount,
       path,
       id,
+      alt
     });
     setIsInCart(true);
     setShowCartPopup(true);
