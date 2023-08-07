@@ -40,7 +40,7 @@ export const CartInfo = ({ cart, removeFromCart }) => {
             {cart.map((item, index) => (
               <SCartCardTableBox key={index}>
                 <SCartCardTableBoxImageContent>
-                  <img src={item.productImage} height={"100%"} alt="" />
+                  <img src={item.productImage} height={"100%"} alt={item.alt} />
                 </SCartCardTableBoxImageContent>
                 <SCartCardTableBoxNameContent>
                   {item.productName}
@@ -51,7 +51,9 @@ export const CartInfo = ({ cart, removeFromCart }) => {
                 <SCartCardTableBoxTotalContent>
                   {item.currentPrice}00 ლარი
                 </SCartCardTableBoxTotalContent>
-                <SCartCardTablleRemove onClick={() => handleRemoveClick(item)}>X</SCartCardTablleRemove>
+                <SCartCardTablleRemove onClick={() => handleRemoveClick(item)}>
+                  <img src="assets/svg/trash.svg"  alt="remove" />
+                </SCartCardTablleRemove>
               </SCartCardTableBox>
             ))}
           </SCartCardTableBody>
