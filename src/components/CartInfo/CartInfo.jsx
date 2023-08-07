@@ -11,7 +11,12 @@ import {
   SCartInfo,
 } from "./CartInfo.styled";
 
-export const CartInfo = ({ cart }) => {
+export const CartInfo = ({ cart, removeFromCart }) => {
+  console.log(cart)
+
+  const handleRemoveClick = (item) => {
+    removeFromCart(item);
+  };
   return (
     <SCartInfo
       initial={{ clipPath: "inset(0% 0% 100% 0%)", opacity: 1 }}
@@ -46,7 +51,7 @@ export const CartInfo = ({ cart }) => {
                 <SCartCardTableBoxTotalContent>
                   {item.currentPrice}00 ლარი
                 </SCartCardTableBoxTotalContent>
-                <SCartCardTablleRemove>X</SCartCardTablleRemove>
+                <SCartCardTablleRemove onClick={() => handleRemoveClick(item)}>X</SCartCardTablleRemove>
               </SCartCardTableBox>
             ))}
           </SCartCardTableBody>
