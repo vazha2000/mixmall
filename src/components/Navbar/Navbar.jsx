@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   SCartIcon,
   SCartIconContainer,
@@ -19,10 +19,14 @@ import { Link } from "react-router-dom";
 import { WishlistContext } from "../../context/WishlistContext";
 import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 import { CheckoutContext } from "../../context/CheckoutContext";
+import { CartInfo } from "../CartInfo";
+import { AnimatePresence } from "framer-motion";
 
 export const Navbar = () => {
+  const [isCartClicked, setIsCartClicked] = useState(false);
+
   const { wishlist } = useContext(WishlistContext);
-  const { cart } = useContext(CheckoutContext)
+  const { cart } = useContext(CheckoutContext);
 
   return (
     <SNavbar>
@@ -53,8 +57,15 @@ export const Navbar = () => {
             </SWishlistContainer>
           </SStyledLink>
           <SCartIconContainer>
-            <SCartIcon src="../assets/svg/cart.svg" alt="cart icon" />
+            <SCartIcon
+              onClick={() => setIsCartClicked(!isCartClicked)}
+              src="../assets/svg/cart.svg"
+              alt="cart icon"
+            />
             <SCartQuantity>{cart.length}</SCartQuantity>
+            <AnimatePresence>
+              {isCartClicked && <CartInfo cart={cart} />}
+            </AnimatePresence>
           </SCartIconContainer>
         </SWishlistCartContainer>
       </SNavActions>
