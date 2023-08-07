@@ -1,11 +1,11 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const SCartInfo = styled.div`
+export const SCartInfo = styled(motion.div)`
   position: absolute;
   top: 40px;
   right: 0;
   background-color: #fff;
-  /* width: 500px; */
   padding: 8px 0;
   z-index: 5;
   padding: 8px 10px;
@@ -13,8 +13,6 @@ export const SCartInfo = styled.div`
 
 export const SCartCardTable = styled.table`
   height: auto;
-  /* width: 400px; */
-  /* border: 1px solid black; */
   border-spacing: 0;
 `
 
