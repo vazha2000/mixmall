@@ -53,7 +53,7 @@ export const CartInfo = ({ cart, removeFromCart }) => {
                     {item.productQuantity} ცალი
                   </SCartCardTableBoxQuantityContent>
                   <SCartCardTableBoxTotalContent>
-                    {item.currentPrice}00 ლარი
+                    {item.currentPrice * item.productQuantity}
                   </SCartCardTableBoxTotalContent>
                   <SCartCardTablleRemove
                     onClick={() => handleRemoveClick(item)}
