@@ -13,7 +13,6 @@ import {
 } from "./CartInfo.styled";
 
 export const CartInfo = ({ cart, removeFromCart }) => {
-
   const handleRemoveClick = (item) => {
     removeFromCart(item);
   };
@@ -35,29 +34,40 @@ export const CartInfo = ({ cart, removeFromCart }) => {
       {cart.length === 0 ? (
         <SCartEmpty>კალათა ცარიელია</SCartEmpty>
       ) : (
-        <SCartCardTable>
-          <SCartCardTableBody>
-            {cart.map((item, index) => (
-              <SCartCardTableBox key={index}>
-                <SCartCardTableBoxImageContent>
-                  <img src={item.productImage} height={"100%"} alt={item.alt} />
-                </SCartCardTableBoxImageContent>
-                <SCartCardTableBoxNameContent>
-                  {item.productName}
-                </SCartCardTableBoxNameContent>
-                <SCartCardTableBoxQuantityContent>
-                  22 ცალი
-                </SCartCardTableBoxQuantityContent>
-                <SCartCardTableBoxTotalContent>
-                  {item.currentPrice}00 ლარი
-                </SCartCardTableBoxTotalContent>
-                <SCartCardTablleRemove onClick={() => handleRemoveClick(item)}>
-                  <img src="assets/svg/trash.svg"  alt="remove" />
-                </SCartCardTablleRemove>
-              </SCartCardTableBox>
-            ))}
-          </SCartCardTableBody>
-        </SCartCardTable>
+        <>
+          <SCartCardTable>
+            <SCartCardTableBody>
+              {cart.map((item, index) => (
+                <SCartCardTableBox key={index}>
+                  <SCartCardTableBoxImageContent>
+                    <img
+                      src={item.productImage}
+                      height={"100%"}
+                      alt={item.alt}
+                    />
+                  </SCartCardTableBoxImageContent>
+                  <SCartCardTableBoxNameContent>
+                    {item.productName}
+                  </SCartCardTableBoxNameContent>
+                  <SCartCardTableBoxQuantityContent>
+                    22 ცალი
+                  </SCartCardTableBoxQuantityContent>
+                  <SCartCardTableBoxTotalContent>
+                    {item.currentPrice}00 ლარი
+                  </SCartCardTableBoxTotalContent>
+                  <SCartCardTablleRemove
+                    onClick={() => handleRemoveClick(item)}
+                  >
+                    <img src="assets/svg/trash.svg" alt="remove" />
+                  </SCartCardTablleRemove>
+                </SCartCardTableBox>
+              ))}
+            </SCartCardTableBody>
+          </SCartCardTable>
+          <div style={{ padding: "10px 0 0", textAlign: "end" }}>
+            <strong style={{ cursor: "pointer" }}>გაგრძელება</strong>
+          </div>
+        </>
       )}
     </SCartInfo>
   );
