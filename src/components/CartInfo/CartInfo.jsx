@@ -8,11 +8,11 @@ import {
   SCartCardTableBoxQuantityContent,
   SCartCardTableBoxTotalContent,
   SCartCardTablleRemove,
+  SCartEmpty,
   SCartInfo,
 } from "./CartInfo.styled";
 
 export const CartInfo = ({ cart, removeFromCart }) => {
-  console.log(cart)
 
   const handleRemoveClick = (item) => {
     removeFromCart(item);
@@ -33,7 +33,7 @@ export const CartInfo = ({ cart, removeFromCart }) => {
       transition={{ type: "tween", duration: 0.4, delay: 0.1 }}
     >
       {cart.length === 0 ? (
-        <div>კალათა ცარიელია</div>
+        <SCartEmpty>კალათა ცარიელია</SCartEmpty>
       ) : (
         <SCartCardTable>
           <SCartCardTableBody>
