@@ -190,7 +190,7 @@ export const ProductPage = ({ product }) => {
             </SProductQuantity>
             <SProductButtonsWrapper>
               <SProductBuyNow onClick={handleCartClick} isInCart={isInCart}>
-                {isInCart ? "დამატებულია კალათაში" : "კალათაში დამატება"}
+                {isInCart ? "კალათიდან წაშლა" : "კალათაში დამატება"}
               </SProductBuyNow>
               <SAddToFavorites
                 onClick={handleWishlistClick}
