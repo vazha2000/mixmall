@@ -49,7 +49,9 @@ export const SCartCardTableBoxImageContent = styled(BaseTableCell)``;
 export const SCartCardTableBoxNameContent = styled(BaseTableCell)`
   min-width: 200px;
 `;
-export const SCartCardTableBoxQuantityContent = styled(BaseTableCell)``;
+export const SCartCardTableBoxQuantityContent = styled(BaseTableCell)`
+  min-width: 90px;
+`;
 export const SCartCardTableBoxTotalContent = styled(BaseTableCell)`
   min-width: 140px;
 `;
