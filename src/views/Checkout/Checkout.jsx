@@ -43,6 +43,7 @@ export const Checkout = () => {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -73,6 +74,7 @@ export const Checkout = () => {
         <SCheckoutForm
           onSubmit={handleSubmit((data) => {
             console.log(data);
+            reset()
           })}
         >
           <SCheckoutInputsLabel>გადახდის დეტალები</SCheckoutInputsLabel>
