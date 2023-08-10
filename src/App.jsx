@@ -8,6 +8,7 @@ import { ProductPage } from "./views/ProductPage/ProductPage";
 import { WishlistProvider } from "./context/WishlistContext";
 import { Wishlist } from "./views/Wishlist";
 import { CheckoutProvider } from "./context/CheckoutContext";
+import { Checkout } from "./views/Checkout";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
               );
             })}
             <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/checkout" element={<Checkout />}/>
           </Routes>
         </Layout>
       </CheckoutProvider>
