@@ -6,9 +6,13 @@ export const SCartInfo = styled(motion.div)`
   top: 40px;
   right: 0;
   background-color: #fff;
-  padding: 8px 0;
   z-index: 5;
+  border: 1px solid rgba(0,0,0, 0.3);
   padding: 8px 10px;
+`
+
+export const SCartEmpty = styled.div`
+  white-space: nowrap;
 `
 
 export const SCartCardTable = styled.table`
@@ -37,7 +41,6 @@ export const SCartCardTableBox = styled.tr`
   height: 70px;
   display: flex;
   align-items: center;
-  padding: 0 5px;
   border: 1px solid black;
   font-size: 15px;
 `;
@@ -46,13 +49,22 @@ export const SCartCardTableBoxContent = styled(BaseTableCell)``;
 export const SCartCardTableBoxImageContent = styled(BaseTableCell)``;
 export const SCartCardTableBoxNameContent = styled(BaseTableCell)`
   min-width: 200px;
-  padding-left: 5px;
 `;
-export const SCartCardTableBoxQuantityContent = styled(BaseTableCell)``;
+export const SCartCardTableBoxQuantityContent = styled(BaseTableCell)`
+  min-width: 90px;
+`;
 export const SCartCardTableBoxTotalContent = styled(BaseTableCell)`
   min-width: 140px;
 `;
 
-export const SCartCardTablleRemove = styled.td`
-  padding: 0 10px;
+export const SCartCardTablleRemove = styled(BaseTableCell)`
+  border: none;
+  padding: 0;
+  justify-content: center;
+  width: 50px;
+
+  > img {
+    width: 20px;
+    cursor: pointer;
+  }
 `

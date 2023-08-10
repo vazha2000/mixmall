@@ -26,7 +26,7 @@ export const Navbar = () => {
   const [isCartClicked, setIsCartClicked] = useState(false);
 
   const { wishlist } = useContext(WishlistContext);
-  const { cart } = useContext(CheckoutContext);
+  const { cart, removeFromCart } = useContext(CheckoutContext);
 
   return (
     <SNavbar>
@@ -64,7 +64,7 @@ export const Navbar = () => {
             />
             <SCartQuantity>{cart.length}</SCartQuantity>
             <AnimatePresence>
-              {isCartClicked && <CartInfo cart={cart} />}
+              {isCartClicked && <CartInfo cart={cart} removeFromCart={removeFromCart}/>}
             </AnimatePresence>
           </SCartIconContainer>
         </SWishlistCartContainer>

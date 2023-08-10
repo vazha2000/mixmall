@@ -24,13 +24,17 @@ import { NotificationPopup } from "../../components/NotificationPopup";
 import { CheckoutContext } from "../../context/CheckoutContext";
 
 export const ProductPage = ({ product }) => {
-  const [quantity, setQuantity] = useState(1);
+
   const { wishlist, addToWishlist, removeFromWishlist } =
     useContext(WishlistContext);
-  const { cart, addToCart, removeFromCart } = useContext(CheckoutContext);
+  const { cart, addToCart, removeFromCart, productQuantities, updateProductQuantity } = useContext(CheckoutContext);
 
+  const productId = product.id
+  const productQuantity = productQuantities[productId] || 1;
+  
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
   const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
+
 
   const [isInWishlist, setIsInWishlist] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
@@ -83,14 +87,14 @@ export const ProductPage = ({ product }) => {
     }, 1500);
   };
   const handleIncrement = () => {
-    if (quantity < 99) {
-      setQuantity((prev) => prev + 1);
+    if (productQuantity < 99) {
+      updateProductQuantity(productId, productQuantity + 1);
     }
   };
 
   const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity((prev) => prev - 1);
+    if (productQuantity > 1) {
+      updateProductQuantity(productId, productQuantity - 1);
     }
   };
 
@@ -101,11 +105,11 @@ export const ProductPage = ({ product }) => {
       isNaN(inputQuantity) ||
       inputQuantity < 1
     ) {
-      setQuantity(0);
+      updateProductQuantity(productId, 1);
     } else if (inputQuantity > 99) {
-      setQuantity(99);
+      updateProductQuantity(productId, 99);
     } else {
-      setQuantity(inputQuantity);
+      updateProductQuantity(productId, inputQuantity);
     }
   };
 
@@ -138,7 +142,8 @@ export const ProductPage = ({ product }) => {
       isDiscount,
       path,
       id,
-      alt
+      alt,
+      productQuantity
     });
     setIsInCart(true);
     setShowCartPopup(true);
@@ -180,7 +185,7 @@ export const ProductPage = ({ product }) => {
                 <img src="assets/svg/minus.svg" alt="minus" />
               </SProductQuantityMinus>
               <SProductCurrentQuantity
-                value={quantity}
+                value={productQuantity}
                 onChange={handleQuantityChange}
                 maxLength="2"
               />
@@ -190,7 +195,7 @@ export const ProductPage = ({ product }) => {
             </SProductQuantity>
             <SProductButtonsWrapper>
               <SProductBuyNow onClick={handleCartClick} isInCart={isInCart}>
-                {isInCart ? "დამატებულია კალათაში" : "კალათაში დამატება"}
+                {isInCart ? "კალათიდან წაშლა" : "კალათაში დამატება"}
               </SProductBuyNow>
               <SAddToFavorites
                 onClick={handleWishlistClick}

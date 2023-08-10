@@ -32,25 +32,26 @@ export const Card = (props) => {
     width,
     index,
     path,
-    id
+    id,
   } = props;
 
-  const { wishlist, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
-  const { cart, addToCart, removeFromCart } = useContext(CheckoutContext)
+  const { wishlist, addToWishlist, removeFromWishlist } =
+    useContext(WishlistContext);
+  const { cart, addToCart, removeFromCart } = useContext(CheckoutContext);
+  const productQuantity = 1;
 
-  const [isInWishlist, setIsInWishlist] = useState(false); 
+  const [isInWishlist, setIsInWishlist] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
   const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
 
   const [showCartPopup, setShowCartPopup] = useState(false);
-  const [showCartRemovePopup, setShowCartRemovePopup] = useState(false)
+  const [showCartRemovePopup, setShowCartRemovePopup] = useState(false);
 
-  
   useEffect(() => {
     setIsInWishlist(wishlist.some((item) => item.id === id));
-    setIsInCart(cart.some((item) => item.id === id))
+    setIsInCart(cart.some((item) => item.id === id));
   }, [wishlist, id, cart]);
 
   const handleWishlistClick = () => {
@@ -71,7 +72,7 @@ export const Card = (props) => {
       discountRate,
       isDiscount,
       path,
-      id
+      id,
     });
     setIsInWishlist(true);
     setShowWishlistPopup(true);
@@ -81,14 +82,14 @@ export const Card = (props) => {
   };
 
   const handleCartClick = () => {
-    if(isInCart) {
-      removeFromCart({id});
+    if (isInCart) {
+      removeFromCart({ id });
       setIsInCart(false);
       setShowCartRemovePopup(true);
       setTimeout(() => {
-        setShowCartRemovePopup(false)
+        setShowCartRemovePopup(false);
       }, 1500);
-      return
+      return;
     }
     addToCart({
       productName,
@@ -99,15 +100,15 @@ export const Card = (props) => {
       isDiscount,
       path,
       id,
-      alt
+      alt,
+      productQuantity
     });
     setIsInCart(true);
     setShowCartPopup(true);
     setTimeout(() => {
-      setShowCartPopup(false)
+      setShowCartPopup(false);
     }, 1500);
-    
-  }
+  };
   return (
     <SCard
       onMouseEnter={handleHover}
@@ -115,16 +116,17 @@ export const Card = (props) => {
       isHovered={isHovered}
       width={width}
     >
-      <NotificationPopup 
-      showWishlistPopup={showWishlistPopup} 
-      showWishlistRemovePopup={showWishlistRemovePopup}
-      showCartPopup={showCartPopup}
-      showCartRemovePopup={showCartRemovePopup}
-      productName={productName}/>
-      
-      <SCardImageContainer >
+      <NotificationPopup
+        showWishlistPopup={showWishlistPopup}
+        showWishlistRemovePopup={showWishlistRemovePopup}
+        showCartPopup={showCartPopup}
+        showCartRemovePopup={showCartRemovePopup}
+        productName={productName}
+      />
+
+      <SCardImageContainer>
         <SStyledLink to={path} center="true">
-          <SCardImage src={productImage} alt={alt}/>
+          <SCardImage src={productImage} alt={alt} />
         </SStyledLink>
         <SCardWishlist
           src="../assets/svg/wishlist.svg"
@@ -151,7 +153,11 @@ export const Card = (props) => {
                   }
             }
           >
-            <span>კალათაში დამატება</span>
+            {isInCart ? (
+              <span>კალათიდან წაშლა</span>
+            ) : (
+              <span>კალათაში დამატება</span>
+            )}
           </SAddToCardButton>
         </AnimatePresence>
       </SCardImageContainer>
