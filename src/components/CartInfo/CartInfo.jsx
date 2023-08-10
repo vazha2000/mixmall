@@ -11,6 +11,7 @@ import {
   SCartEmpty,
   SCartInfo,
 } from "./CartInfo.styled";
+import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 
 export const CartInfo = ({ cart, removeFromCart }) => {
   const handleRemoveClick = (item) => {
@@ -65,7 +66,9 @@ export const CartInfo = ({ cart, removeFromCart }) => {
             </SCartCardTableBody>
           </SCartCardTable>
           <div style={{ padding: "10px 0 0", textAlign: "end" }}>
-            <strong style={{ cursor: "pointer" }}>გაგრძელება</strong>
+            <SStyledLink to="/checkout">
+              <strong style={{ cursor: "pointer" }}>გაგრძელება</strong>
+            </SStyledLink>
           </div>
         </>
       )}
