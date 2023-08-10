@@ -24,7 +24,8 @@ const InputBase = styled.input`
   font-size: 13px;
   outline: none;
   border-radius: 4px;
-  border: 1px solid #d3d3d3;
+  /* border: 1px solid #d3d3d3; */
+  border: ${({isError}) => (isError ? "1px solid red" : "1px solid #d3d3d3")};
   height: 40px;
 
   &:focus {
@@ -58,6 +59,7 @@ export const SCountrySelect = styled.select`
   height: 40px;
   font-family: inherit;
   padding: 0 18px;
+  border: ${({isError}) => (isError ? "1px solid red" : "1px solid #d3d3d3")};
 `
 
 export const SRegionSelect = styled(SCountrySelect)`
