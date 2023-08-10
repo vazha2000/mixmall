@@ -32,15 +32,15 @@ import { CheckoutContext } from "../../context/CheckoutContext";
 
 export const Checkout = () => {
   const { cart, removeFromCart } = useContext(CheckoutContext);
-  console.log(cart)
+  console.log(cart);
   const totalPrice = cart.reduce((sum, item) => {
     const productPrice = item.productQuantity * item.currentPrice;
-    return sum + productPrice
-  }, 0)
+    return sum + productPrice;
+  }, 0);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   return (
     <SCheckout>
@@ -88,47 +88,50 @@ export const Checkout = () => {
           <SPhoneInput type="text" placeholder="ტელეფონის ნომერი" />
           <SMailInput type="text" placeholder="ელფოსტის მისამართი" />
           <SFormSubmitButtonContainer>
-            <SFormSubmitButton type="submit" >შეკვეთის განთავსება</SFormSubmitButton>
+            <SFormSubmitButton type="submit">
+              შეკვეთის განთავსება
+            </SFormSubmitButton>
           </SFormSubmitButtonContainer>
         </SCheckoutForm>
       </SCheckoutInputs>
       <SCheckoutInfo>
-        <label htmlFor="">თქვენი შეკვეთა</label>
-        {cart.map((item) => (
-          <SCheckoutProduct>
-            <SCheckoutProductImg src={item.productImage} alt="" />
-            <SCheckoutProductNameQuantity>
-              <span>{item.productName}</span>
-              <span>რაოდენობა: {item.productQuantity}</span>
-            </SCheckoutProductNameQuantity>
-            <SCheckoutProductTotal>
-              {item.productQuantity * item.currentPrice}
-            </SCheckoutProductTotal>
-        </SCheckoutProduct>
-        ))}
-        <SCheckoutPricing>
-          <SCheckoutPricingTable>
-            <SCheckoutPricingTableBody>
-              <SCheckoutPricingTableRow>
-                <td>
-                  სულ ფასი:
-                </td>
-                <td>
-                  {totalPrice} ლარი
-                </td>
-              </SCheckoutPricingTableRow>
-              <SCheckoutPricingTableRow>
-                <td>მიწოდების საფასური:</td>
-                <td>15 ლარი</td>
-              </SCheckoutPricingTableRow>
-              <SCheckoutPricingTableRow>
-                <td>გადასახდელი თანხა:</td>
-                <td>{totalPrice + 15} ლარი</td>
-              </SCheckoutPricingTableRow>              
-            </SCheckoutPricingTableBody>
-          </SCheckoutPricingTable>
-        </SCheckoutPricing>
-        
+        {cart.length === 0 ? (
+          <div>კალათა ცარიელია</div>
+        ) : (
+          <>
+            <label htmlFor="">თქვენი შეკვეთა</label>
+            {cart.map((item) => (
+              <SCheckoutProduct>
+                <SCheckoutProductImg src={item.productImage} alt="" />
+                <SCheckoutProductNameQuantity>
+                  <span>{item.productName}</span>
+                  <span>რაოდენობა: {item.productQuantity}</span>
+                </SCheckoutProductNameQuantity>
+                <SCheckoutProductTotal>
+                  {item.productQuantity * item.currentPrice}
+                </SCheckoutProductTotal>
+              </SCheckoutProduct>
+            ))}
+            <SCheckoutPricing>
+              <SCheckoutPricingTable>
+                <SCheckoutPricingTableBody>
+                  <SCheckoutPricingTableRow>
+                    <td>სულ ფასი:</td>
+                    <td>{totalPrice} ლარი</td>
+                  </SCheckoutPricingTableRow>
+                  <SCheckoutPricingTableRow>
+                    <td>მიწოდების საფასური:</td>
+                    <td>15 ლარი</td>
+                  </SCheckoutPricingTableRow>
+                  <SCheckoutPricingTableRow>
+                    <td>გადასახდელი თანხა:</td>
+                    <td>{totalPrice + 15} ლარი</td>
+                  </SCheckoutPricingTableRow>
+                </SCheckoutPricingTableBody>
+              </SCheckoutPricingTable>
+            </SCheckoutPricing>
+          </>
+        )}
       </SCheckoutInfo>
     </SCheckout>
   );
