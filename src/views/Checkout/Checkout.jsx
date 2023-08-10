@@ -78,6 +78,7 @@ export const Checkout = () => {
           <SCheckoutInputsLabel>გადახდის დეტალები</SCheckoutInputsLabel>
           <SFirstLastnameContainer>
             <SFirstnameInput
+              isError={!!errors.firstname}
               {...register("firstname", {
                 required: "firstname is required",
                 validate: validateOnlyLetters,
@@ -89,6 +90,7 @@ export const Checkout = () => {
                 required: "lastname is required",
                 validate: validateOnlyLetters,
               })}
+              isError={!!errors.lastname}
               placeholder="გვარი"
             />
           </SFirstLastnameContainer>
@@ -106,6 +108,7 @@ export const Checkout = () => {
             name="regions"
             {...register("region", { required: "region is required" })}
             defaultValue=""
+            isError={!!errors.region}
           >
             <option value="" disabled hidden>
               აირჩიე რეგიონი
@@ -133,6 +136,7 @@ export const Checkout = () => {
               validate: validateOnlyLetters,
             })}
             placeholder="რაიონი"
+            isError={!!errors.district}
           />
           {errors.district && <div>{errors.district?.message}</div>}
           <SPopulatedAreaInput
@@ -140,6 +144,7 @@ export const Checkout = () => {
               required: "populated area is required",
               validate: validateOnlyLetters,
             })}
+            isError={!!errors.populatedArea}
             placeholder="დასახლებული პუნქტი(ქალაქი, სოფელი, დაბა...)"
           />
           {errors.populatedArea && <div>{errors.populatedArea?.message}</div>}
@@ -147,11 +152,13 @@ export const Checkout = () => {
             {...register("streetAddress", {
               required: "street address is required",
             })}
+            isError={!!errors.streetAddress}
             placeholder="ქუჩის მისამართი"
           />
           {errors.streetAddress && <div>{errors.streetAddress?.message}</div>}
           <SPostalCodeInput
             {...register("postalCode")}
+            isError={!!errors.postalCode}
             placeholder="საფოსტო ინდექსი"
           />
           <SPhoneInput
@@ -159,6 +166,7 @@ export const Checkout = () => {
               required: "phone number is required",
               validate: validatePhoneNumber,
             })}
+            isError={!!errors.phoneNumber}
             placeholder="ტელეფონის ნომერი"
           />
           {errors.phoneNumber && <div>{errors.phoneNumber?.message}</div>}
@@ -167,6 +175,7 @@ export const Checkout = () => {
               required: "email field is required",
               validate: validateEmail,
             })}
+            isError={!!errors.email}
             placeholder="ელფოსტის მისამართი"
           />
           {errors.email && <div>{errors.email?.message}</div>}
