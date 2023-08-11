@@ -73,7 +73,6 @@ export const Checkout = () => {
       <SCheckoutInputs>
         <SCheckoutForm
           onSubmit={handleSubmit((data) => {
-            console.log(data);
             reset()
           })}
         >
