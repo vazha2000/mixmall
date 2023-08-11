@@ -13,7 +13,9 @@ export const GlobalStyle = createGlobalStyle`
   ul, ol {
     list-style: none;
   }
-
+  input {
+    font-family: "BPG Mrgvlovani Caps 2010";
+  }
   body {
     background-color: #f2f2f2;
     color: #1f1f1f;
