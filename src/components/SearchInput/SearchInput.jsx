@@ -3,23 +3,19 @@ import {
   SSearchIcon,
   SSearchInput,
   SSearchInputContainer,
+  SSearchProduct,
+  SSearchProductImage,
+  SSearchProductNameQuantity,
+  SSearchProductPrice,
   SSearchedProducts,
 } from "./SearchInput.styled";
-import {
-  SCheckoutProduct,
-  SCheckoutProductImg,
-  SCheckoutProductNameQuantity,
-  SCheckoutProductTotal,
-} from "../../views/Checkout/Checkout.styled";
 import { categoriesListItems } from "../../data/data";
 
 export const SearchInput = () => {
-  
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
-
 
   const allProducts = categoriesListItems
     .map((category) =>
@@ -47,8 +43,11 @@ export const SearchInput = () => {
     const query = event.target.value;
     setSearchQuery(query);
 
-    const filtered = allProducts.filter(([productName, categoryName, id, oldPrice, currentPrice, productImage]) =>
-      productName.toLowerCase().includes(query.toLowerCase())
+    const queryWords = query.toLowerCase().split(" ");
+
+    const filtered = allProducts.filter(
+      ([productName, categoryName, id, oldPrice, currentPrice, productImage]) =>
+        queryWords.every((word) => productName.toLowerCase().includes(word))
     );
     setFilteredProducts(filtered);
   };
@@ -63,19 +62,28 @@ export const SearchInput = () => {
       />
       <SSearchIcon src="../assets/svg/search.svg" alt="search icon" />
       <SSearchedProducts>
-        {filteredProducts.map(([productName, categoryName, productId, oldPrice, currentPrice, productImage], index) => (
-          <SCheckoutProduct key={index}>
-          <SCheckoutProductImg src={productImage} alt={productName} />
-          <SCheckoutProductNameQuantity>
-            <span>{productName}</span>
-            <span>Category: {categoryName}</span>
-          </SCheckoutProductNameQuantity>
-          <SCheckoutProductTotal>
-            {currentPrice}
-          </SCheckoutProductTotal>
-        </SCheckoutProduct>
-        ))}
-        
+        {filteredProducts.map(
+          (
+            [
+              productName,
+              categoryName,
+              productId,
+              oldPrice,
+              currentPrice,
+              productImage,
+            ],
+            index
+          ) => (
+            <SSearchProduct key={index}>
+              <SSearchProductImage src={productImage} alt={productName} />
+              <SSearchProductNameQuantity>
+                <span>{productName}</span>
+                <span>Category: {categoryName}</span>
+              </SSearchProductNameQuantity>
+              <SSearchProductPrice>{currentPrice}</SSearchProductPrice>
+            </SSearchProduct>
+          )
+        )}
       </SSearchedProducts>
     </SSearchInputContainer>
   );
