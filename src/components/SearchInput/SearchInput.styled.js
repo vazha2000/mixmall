@@ -7,6 +7,7 @@ export const SSearchInputContainer = styled.div`
   height: 2.375rem;
   width: 100%;
   display: flex;
+  border-radius: 0.5rem;
   
   @media screen and (max-width: 1024px) {
   border-radius: .25rem;
@@ -23,6 +24,7 @@ export const SSearchInput = styled.input`
   color: rgba(0,0,0, 0.8);
   padding-left: 1.25rem;
   width: 90%;
+  border-radius: 0.5rem;
   &:focus {
     outline: none;
   }
@@ -36,4 +38,14 @@ export const SSearchIcon = styled.img`
   top: .5rem;
   right: .75rem;
   cursor: pointer;
+`
+
+export const SSearchedProducts = styled.div`
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  background-color: red;
+  z-index: 5;
 `
