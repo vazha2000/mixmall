@@ -64,7 +64,7 @@ export const SearchInput = () => {
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
       searchProducts();
-    }, 300); // Adjust the debounce delay as needed (in milliseconds)
+    }, 500);
 
     return () => clearTimeout(delayDebounce);
   }, [searchQuery]);
