@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SCheckoutProduct, SCheckoutProductImg, SCheckoutProductNameQuantity, SCheckoutProductTotal } from "../../views/Checkout/Checkout.styled";
 
 export const SSearchInputContainer = styled.div`
   background-color: red;
@@ -46,6 +47,15 @@ export const SSearchedProducts = styled.div`
   right: 0;
   width: 100%;
   height: 80px;
-  background-color: red;
   z-index: 5;
 `
+
+export const SSearchProduct = styled(SCheckoutProduct)`
+
+`
+
+export const SSearchProductImage = styled(SCheckoutProductImg)``
+
+export const SSearchProductNameQuantity = styled(SCheckoutProductNameQuantity)``
+
+export const SSearchProductPrice = styled(SCheckoutProductTotal)``
