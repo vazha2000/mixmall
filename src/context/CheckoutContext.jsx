@@ -1,10 +1,13 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 
 const CheckoutContext = createContext();
 
 const CheckoutProvider = ({children}) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    return storedCart
+  });
   const [productQuantities, setProductQuantities] = useState({});
 
   const addToCart = (product) => {
@@ -20,6 +23,10 @@ const CheckoutProvider = ({children}) => {
       ...prev, [productId]: quantity
     }))
   }
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart])
 
   return (
     <CheckoutContext.Provider value={{cart, addToCart, removeFromCart, productQuantities, updateProductQuantity}}>

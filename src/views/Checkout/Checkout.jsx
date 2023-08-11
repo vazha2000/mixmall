@@ -29,36 +29,88 @@ import {
   SStreetAddress,
 } from "./Checkout.styled";
 import { CheckoutContext } from "../../context/CheckoutContext";
+import { useForm } from "react-hook-form";
 
 export const Checkout = () => {
   const { cart, removeFromCart } = useContext(CheckoutContext);
-  console.log(cart);
+
   const totalPrice = cart.reduce((sum, item) => {
     const productPrice = item.productQuantity * item.currentPrice;
     return sum + productPrice;
   }, 0);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const validateOnlyLetters = (value) => {
+    const onlyLetters = /^[A-Za-z]+$/;
+    return (
+      onlyLetters.test(value) || "Please enter a valid input with only letters"
+    );
+  };
+
+  const validatePhoneNumber = (value) => {
+    const phoneNumberPattern = /^[0-9\s\-()+]+$/;
+
+    return (
+      phoneNumberPattern.test(value) || "Please enter a valid phone number"
+    );
+  };
+
+  const validateEmail = (value) => {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    return emailPattern.test(value) || "Please enter a valid email address";
   };
 
   return (
     <SCheckout>
       <SCheckoutInputs>
-        <SCheckoutForm onSubmit={handleSubmit}>
+        <SCheckoutForm
+          onSubmit={handleSubmit((data) => {
+            reset()
+          })}
+        >
           <SCheckoutInputsLabel>გადახდის დეტალები</SCheckoutInputsLabel>
           <SFirstLastnameContainer>
-            <SFirstnameInput type="text" placeholder="სახელი" />
-            <SLastnameInput type="text" placeholder="გვარი" />
+            <SFirstnameInput
+              isError={!!errors.firstname}
+              {...register("firstname", {
+                required: "firstname is required",
+                validate: validateOnlyLetters,
+              })}
+              placeholder="სახელი"
+            />
+            <SLastnameInput
+              {...register("lastname", {
+                required: "lastname is required",
+                validate: validateOnlyLetters,
+              })}
+              isError={!!errors.lastname}
+              placeholder="გვარი"
+            />
           </SFirstLastnameContainer>
+          {/* {errors.firstname && <div>{errors.firstname?.message}</div>} */}
+          {/* {errors.lastname && <div>{errors.lastname?.message}</div>} */}
+
           <SCompanyNameInput
-            type="text"
             placeholder="კომპანიის სახელი (არასავალდებულო)"
+            {...register("companyName")}
           />
-          <SCountrySelect name="" id="" disabled>
+          <SCountrySelect disabled>
             <option value="">საქართველო</option>
           </SCountrySelect>
-          <SRegionSelect name="regions" id="" defaultValue="">
+          <SRegionSelect
+            name="regions"
+            {...register("region", { required: "region is required" })}
+            defaultValue=""
+            isError={!!errors.region}
+          >
             <option value="" disabled hidden>
               აირჩიე რეგიონი
             </option>
@@ -78,17 +130,58 @@ export const Checkout = () => {
             <option value="kvemo kartli">ქვემო ქართლი</option>
             <option value="shida kartli">შიდა ქართლი</option>
           </SRegionSelect>
-          <SDistrictInput type="text" placeholder="რაიონი" />
+          {/* {errors.region && <div>{errors.region?.message}</div>} */}
+          <SDistrictInput
+            {...register("district", {
+              required: "district is required",
+              validate: validateOnlyLetters,
+            })}
+            placeholder="რაიონი"
+            isError={!!errors.district}
+          />
+          {/* {errors.district && <div>{errors.district?.message}</div>} */}
           <SPopulatedAreaInput
-            type="text"
+            {...register("populatedArea", {
+              required: "populated area is required",
+              validate: validateOnlyLetters,
+            })}
+            isError={!!errors.populatedArea}
             placeholder="დასახლებული პუნქტი(ქალაქი, სოფელი, დაბა...)"
           />
-          <SStreetAddress type="text" placeholder="ქუჩის მისამართი" />
-          <SPostalCodeInput type="text" placeholder="საფოსტო ინდექსი" />
-          <SPhoneInput type="text" placeholder="ტელეფონის ნომერი" />
-          <SMailInput type="text" placeholder="ელფოსტის მისამართი" />
+          {/* {errors.populatedArea && <div>{errors.populatedArea?.message}</div>} */}
+          <SStreetAddress
+            {...register("streetAddress", {
+              required: "street address is required",
+            })}
+            isError={!!errors.streetAddress}
+            placeholder="ქუჩის მისამართი"
+          />
+          {/* {errors.streetAddress && <div>{errors.streetAddress?.message}</div>} */}
+          <SPostalCodeInput
+            {...register("postalCode")}
+            isError={!!errors.postalCode}
+            placeholder="საფოსტო ინდექსი"
+          />
+          <SPhoneInput
+            {...register("phoneNumber", {
+              required: "phone number is required",
+              validate: validatePhoneNumber,
+            })}
+            isError={!!errors.phoneNumber}
+            placeholder="ტელეფონის ნომერი"
+          />
+          {/* {errors.phoneNumber && <div>{errors.phoneNumber?.message}</div>} */}
+          <SMailInput
+            {...register("email", {
+              required: "email field is required",
+              validate: validateEmail,
+            })}
+            isError={!!errors.email}
+            placeholder="ელფოსტის მისამართი"
+          />
+          {/* {errors.email && <div>{errors.email?.message}</div>} */}
           <SFormSubmitButtonContainer>
-            <SFormSubmitButton type="submit">
+            <SFormSubmitButton type="submit" disabled={cart.length === 0}>
               შეკვეთის განთავსება
             </SFormSubmitButton>
           </SFormSubmitButtonContainer>
@@ -100,9 +193,9 @@ export const Checkout = () => {
         ) : (
           <>
             <label htmlFor="">თქვენი შეკვეთა</label>
-            {cart.map((item) => (
-              <SCheckoutProduct>
-                <SCheckoutProductImg src={item.productImage} alt="" />
+            {cart.map((item, index) => (
+              <SCheckoutProduct key={index}>
+                <SCheckoutProductImg src={item.productImage} alt={item.alt} />
                 <SCheckoutProductNameQuantity>
                   <span>{item.productName}</span>
                   <span>რაოდენობა: {item.productQuantity}</span>
