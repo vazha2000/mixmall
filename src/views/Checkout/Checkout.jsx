@@ -182,7 +182,7 @@ export const Checkout = () => {
           />
           {errors.email && <div>{errors.email?.message}</div>}
           <SFormSubmitButtonContainer>
-            <SFormSubmitButton type="submit">
+            <SFormSubmitButton type="submit" disabled={cart.length === 0}>
               შეკვეთის განთავსება
             </SFormSubmitButton>
           </SFormSubmitButtonContainer>
@@ -194,8 +194,8 @@ export const Checkout = () => {
         ) : (
           <>
             <label htmlFor="">თქვენი შეკვეთა</label>
-            {cart.map((item) => (
-              <SCheckoutProduct>
+            {cart.map((item, index) => (
+              <SCheckoutProduct key={index}>
                 <SCheckoutProductImg src={item.productImage} alt="" />
                 <SCheckoutProductNameQuantity>
                   <span>{item.productName}</span>
