@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   SSearchIcon,
   SSearchInput,
@@ -16,7 +16,6 @@ export const SearchInput = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const searchRef = useRef(null);
 
   const allProducts = categoriesListItems
     .map((category) =>
@@ -38,6 +37,7 @@ export const SearchInput = () => {
     setIsFocused(true);
   };
   const handleBlur = () => {
+    setFilteredProducts([])
     setIsFocused(false);
   };
   
@@ -66,20 +66,6 @@ export const SearchInput = () => {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (searchRef.current && !searchRef.current.contains(event.target)) {
-        setFilteredProducts([]);
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
-
-  useEffect(() => {
     const delayDebounce = setTimeout(() => {
       searchProducts();
     }, 500);
@@ -92,7 +78,7 @@ export const SearchInput = () => {
   };
 
   return (
-    <SSearchInputContainer ref={searchRef} isFocused={isFocused}>
+    <SSearchInputContainer isFocused={isFocused}>
       <SSearchInput
         onFocus={handleFocus}
         onBlur={handleBlur}
