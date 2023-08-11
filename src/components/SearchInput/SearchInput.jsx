@@ -34,6 +34,7 @@ export const SearchInput = () => {
     .flat();
 
   const handleFocus = () => {
+    searchProducts();
     setIsFocused(true);
   };
   const handleBlur = () => {
