@@ -45,14 +45,21 @@ export const SSearchedProducts = styled.div`
   position: absolute;
   top: 50px;
   right: 0;
-  width: 100%;
-  height: 80px;
+  width: 600px;
+  max-height: 500px;
+  overflow-y: auto;
   z-index: 5;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 22px 47px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 22px 47px 2px rgba(0,0,0,0.75);
+box-shadow: -1px 22px 47px 2px rgba(0,0,0,0.75);
+display: ${({filteredProducts}) => (filteredProducts ? "none" : "flex")};
+flex-direction: column;
 `
 
-export const SSearchProduct = styled(SCheckoutProduct)`
-
-`
+export const SSearchProduct = styled(SCheckoutProduct)``
 
 export const SSearchProductImage = styled(SCheckoutProductImg)``
 
