@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   SSearchIcon,
   SSearchInput,
@@ -16,6 +16,7 @@ export const SearchInput = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const searchRef = useRef(null);
 
   const allProducts = categoriesListItems
     .map((category) =>
@@ -58,8 +59,24 @@ export const SearchInput = () => {
       setIsLoading(false);
       console.log(filtered.length)
     }, 500);
-    setFilteredProducts(filtered);
+
+    const renderTenProducts = filtered.slice(0, 10);
+    setFilteredProducts(renderTenProducts);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setFilteredProducts([]);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
@@ -74,7 +91,7 @@ export const SearchInput = () => {
   };
 
   return (
-    <SSearchInputContainer isFocused={isFocused}>
+    <SSearchInputContainer ref={searchRef} isFocused={isFocused}>
       <SSearchInput
         onFocus={handleFocus}
         onBlur={handleBlur}
@@ -82,7 +99,7 @@ export const SearchInput = () => {
         value={searchQuery}
       />
       <SSearchIcon src="../assets/svg/search.svg" alt="search icon" />
-      <SSearchedProducts>
+      <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
         {isLoading ? (
           <div>loadinggg</div>
         ) : (
