@@ -10,6 +10,7 @@ import {
   SSearchedProducts,
 } from "./SearchInput.styled";
 import { categoriesListItems } from "../../data/data";
+import { Link } from "react-router-dom";
 
 export const SearchInput = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -23,7 +24,7 @@ export const SearchInput = () => {
         subcategory.products.map((product) => [
           product.productName,
           category.categoryName,
-          product.id,
+          subcategory.subcategoryName,
           product.oldPrice,
           product.currentPrice,
           product.productImage,
@@ -37,10 +38,10 @@ export const SearchInput = () => {
     setIsFocused(true);
   };
   const handleBlur = () => {
-    setFilteredProducts([])
+    // setFilteredProducts([]);
     setIsFocused(false);
   };
-  
+
   const searchProducts = () => {
     if (searchQuery.trim() === "") {
       setFilteredProducts([]);
@@ -58,7 +59,6 @@ export const SearchInput = () => {
 
     setTimeout(() => {
       setIsLoading(false);
-      console.log(filtered.length)
     }, 500);
 
     const renderTenProducts = filtered.slice(0, 10);
@@ -105,7 +105,9 @@ export const SearchInput = () => {
               <SSearchProduct key={index}>
                 <SSearchProductImage src={productImage} alt={productName} />
                 <SSearchProductNameQuantity>
-                  <span>{productName}</span>
+                  <Link to={`/${categoryName}/${productId}/${productName}`}>
+                    <span>{productName}</span>
+                  </Link>
                   <span>Category: {categoryName}</span>
                 </SSearchProductNameQuantity>
                 <SSearchProductPrice>{currentPrice}</SSearchProductPrice>
