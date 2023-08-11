@@ -96,8 +96,8 @@ export const Checkout = () => {
               placeholder="გვარი"
             />
           </SFirstLastnameContainer>
-          {errors.firstname && <div>{errors.firstname?.message}</div>}
-          {errors.lastname && <div>{errors.lastname?.message}</div>}
+          {/* {errors.firstname && <div>{errors.firstname?.message}</div>} */}
+          {/* {errors.lastname && <div>{errors.lastname?.message}</div>} */}
 
           <SCompanyNameInput
             placeholder="კომპანიის სახელი (არასავალდებულო)"
@@ -131,7 +131,7 @@ export const Checkout = () => {
             <option value="kvemo kartli">ქვემო ქართლი</option>
             <option value="shida kartli">შიდა ქართლი</option>
           </SRegionSelect>
-          {errors.region && <div>{errors.region?.message}</div>}
+          {/* {errors.region && <div>{errors.region?.message}</div>} */}
           <SDistrictInput
             {...register("district", {
               required: "district is required",
@@ -140,7 +140,7 @@ export const Checkout = () => {
             placeholder="რაიონი"
             isError={!!errors.district}
           />
-          {errors.district && <div>{errors.district?.message}</div>}
+          {/* {errors.district && <div>{errors.district?.message}</div>} */}
           <SPopulatedAreaInput
             {...register("populatedArea", {
               required: "populated area is required",
@@ -149,7 +149,7 @@ export const Checkout = () => {
             isError={!!errors.populatedArea}
             placeholder="დასახლებული პუნქტი(ქალაქი, სოფელი, დაბა...)"
           />
-          {errors.populatedArea && <div>{errors.populatedArea?.message}</div>}
+          {/* {errors.populatedArea && <div>{errors.populatedArea?.message}</div>} */}
           <SStreetAddress
             {...register("streetAddress", {
               required: "street address is required",
@@ -157,7 +157,7 @@ export const Checkout = () => {
             isError={!!errors.streetAddress}
             placeholder="ქუჩის მისამართი"
           />
-          {errors.streetAddress && <div>{errors.streetAddress?.message}</div>}
+          {/* {errors.streetAddress && <div>{errors.streetAddress?.message}</div>} */}
           <SPostalCodeInput
             {...register("postalCode")}
             isError={!!errors.postalCode}
@@ -171,7 +171,7 @@ export const Checkout = () => {
             isError={!!errors.phoneNumber}
             placeholder="ტელეფონის ნომერი"
           />
-          {errors.phoneNumber && <div>{errors.phoneNumber?.message}</div>}
+          {/* {errors.phoneNumber && <div>{errors.phoneNumber?.message}</div>} */}
           <SMailInput
             {...register("email", {
               required: "email field is required",
@@ -180,7 +180,7 @@ export const Checkout = () => {
             isError={!!errors.email}
             placeholder="ელფოსტის მისამართი"
           />
-          {errors.email && <div>{errors.email?.message}</div>}
+          {/* {errors.email && <div>{errors.email?.message}</div>} */}
           <SFormSubmitButtonContainer>
             <SFormSubmitButton type="submit" disabled={cart.length === 0}>
               შეკვეთის განთავსება
@@ -196,7 +196,7 @@ export const Checkout = () => {
             <label htmlFor="">თქვენი შეკვეთა</label>
             {cart.map((item, index) => (
               <SCheckoutProduct key={index}>
-                <SCheckoutProductImg src={item.productImage} alt="" />
+                <SCheckoutProductImg src={item.productImage} alt={item.alt} />
                 <SCheckoutProductNameQuantity>
                   <span>{item.productName}</span>
                   <span>რაოდენობა: {item.productQuantity}</span>
