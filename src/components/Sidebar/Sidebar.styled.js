@@ -17,6 +17,7 @@ export const SSideBarCategories = styled.ul`
   -webkit-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
   -moz-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
   box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.1);
+  overflow: hidden;
 `;
 
 export const SSideBarCategoriesListWrapper = styled.div`
@@ -34,14 +35,16 @@ export const SSideBarCategoriesList = styled.li`
   white-space: nowrap;
   cursor: pointer;
   font-weight: normal;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 0.2);
 
   &:hover {
-    color: #df3d41;
+    color: #ffffff;
+    background: linear-gradient(45deg, #df3d41, #e66366);
     font-weight: bold;
-    transition: all 0.2s ease;
   }
 
   &:hover > img {
-    filter: invert(38%) sepia(90%) saturate(4338%) hue-rotate(349deg) brightness(92%) contrast(100%);
+    filter:  brightness(0) invert(1);
   }
 `;
