@@ -18,6 +18,7 @@ export const SSideBarCategories = styled.ul`
   -moz-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
   box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.1);
   overflow: hidden;
+  border-radius: 15px;
 `;
 
 export const SSideBarCategoriesListWrapper = styled.div`
@@ -31,7 +32,7 @@ export const SSideBarCategoriesList = styled.li`
   padding: .625rem .5rem;
   font-size: 14px;
   font-weight: 500;
-  border-bottom: 1px solid rgba(0,0,0, 0.3);
+  border-bottom: ${({isLast}) => (isLast ? "none" : "1px solid rgba(0,0,0, 0.3)")};
   white-space: nowrap;
   cursor: pointer;
   font-weight: normal;
