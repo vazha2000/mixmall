@@ -1,28 +1,36 @@
 import styled from "styled-components";
-import { SCheckoutProduct, SCheckoutProductImg, SCheckoutProductNameQuantity, SCheckoutProductTotal } from "../../views/Checkout/Checkout.styled";
+import {
+  SCheckoutProduct,
+  SCheckoutProductImg,
+  SCheckoutProductNameQuantity,
+  SCheckoutProductTotal,
+} from "../../views/Checkout/Checkout.styled";
 
 export const SSearchInputContainer = styled.div`
   background-color: red;
   position: relative;
-  background-color: #ffffff;
-  height: 2.375rem;
+  background-color: transparent;
+  height: 3rem;
   width: 100%;
   display: flex;
   border-radius: 0.5rem;
-  
-  @media screen and (max-width: 1024px) {
-  border-radius: .25rem;
+  border: ${({ isFocused }) =>
+  isFocused ? "1px solid rgba(0,0,0, 0.7)" : "1px solid rgba(0,0,0, 0.2)"};
+  transition: all 0.2s ease;
   display: flex;
-  overflow: hidden;
-  box-shadow: ${({isFocused}) => isFocused ? ("1px 1px 11px 1px rgba(0,0,0,0.15)") : "none"};
+  align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    border-radius: 0.25rem;
+    display: flex;
+    overflow: hidden;
   }
-  
-`
+`;
 
 export const SSearchInput = styled.input`
   border: none;
   background-color: inherit;
-  color: rgba(0,0,0, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   padding-left: 1.25rem;
   width: 90%;
   border-radius: 0.5rem;
@@ -30,16 +38,31 @@ export const SSearchInput = styled.input`
     outline: none;
   }
   &::placeholder {
-    color: rgba(0,0,0, 0.3);
+    color: rgba(0, 0, 0, 0.5);
   }
-`
+`;
+
+export const SSearchIconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 85%;
+  background-color: #df3d41;
+  margin-right: 4px;
+  border-radius: inherit;
+  cursor: pointer;
+  transition: all 0.1s ease;
+
+  &:hover {
+    filter: brightness(110%);
+
+  }
+`;
 
 export const SSearchIcon = styled.img`
-  position: absolute;
-  top: .5rem;
-  right: .75rem;
-  cursor: pointer;
-`
+
+`;
 
 export const SSearchedProducts = styled.div`
   position: absolute;
@@ -52,17 +75,19 @@ export const SSearchedProducts = styled.div`
   background-color: white;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: -1px 22px 47px 2px rgba(0,0,0,0.75);
--moz-box-shadow: -1px 22px 47px 2px rgba(0,0,0,0.75);
-box-shadow: -1px 22px 47px 2px rgba(0,0,0,0.75);
-display: ${({filteredProducts}) => (filteredProducts ? "none" : "flex")};
-flex-direction: column;
-`
+  -webkit-box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
+  display: ${({ filteredProducts }) => (filteredProducts ? "none" : "flex")};
+  flex-direction: column;
+`;
 
-export const SSearchProduct = styled(SCheckoutProduct)``
+export const SSearchProduct = styled(SCheckoutProduct)``;
 
-export const SSearchProductImage = styled(SCheckoutProductImg)``
+export const SSearchProductImage = styled(SCheckoutProductImg)``;
 
-export const SSearchProductNameQuantity = styled(SCheckoutProductNameQuantity)``
+export const SSearchProductNameQuantity = styled(
+  SCheckoutProductNameQuantity
+)``;
 
-export const SSearchProductPrice = styled(SCheckoutProductTotal)``
+export const SSearchProductPrice = styled(SCheckoutProductTotal)``;

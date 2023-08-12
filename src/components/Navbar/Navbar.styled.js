@@ -15,7 +15,7 @@ export const SLogo = styled.img`
 
 export const SNavMenu = styled.ul`
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   padding: 0 1rem;
   @media screen and (max-width: 768px) {
     display: none;
@@ -43,7 +43,7 @@ export const SNavItem = styled.li`
     position: absolute;
     top: 0;
     bottom: 0;
-    right: calc(-1.5rem + 1px);
+    right: calc(-1.2rem + 1px);
     width: 1px;
     height: 50%;
     transform: translateY(50%);
@@ -54,8 +54,8 @@ export const SNavItem = styled.li`
 
 export const SNavActions = styled.div`
   display: flex;
-  width: 40%;
-  justify-content: flex-end;
+  width: 45%;
+  justify-content: space-between;
 
   @media screen and (max-width: 1024px) {
     width: auto;
@@ -82,62 +82,58 @@ export const SWishlistCartContainer = styled.div`
 export const SWishlistContainer = styled.div`
   position: relative;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  background-color: #f0f0f0;
+  width: 50px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: #df3d41;
+    cursor: pointer;
+
+  }
+  
+`;
+
+export const SWishlistIcon = styled.img`
+  transition: all 0.2s ease;
+  ${SWishlistContainer}:hover & {
+    filter: brightness(0) invert(1);
+  }
+  
 `;
 
 export const SWishlistQuantity = styled.div`
   position: absolute;
-  top: -6px;
-  right: -5px;
+  top: -12px;
+  right: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
   border-radius: 50%;
-  background-color: #df3d41;
+  background-color: #f2b818;
   color: #fff;
+  border: 1px solid #fff;
 
-  &:hover {
-    filter: brightness(120%);
-    transition: .2s ease-in;
-  }
 `;
 
-export const SWishlistIcon = styled.img`
-  cursor: pointer;
+
+
+export const SCartIconContainer = styled(SWishlistContainer)``
+
+export const SCartIcon = styled(SWishlistIcon)`
 `;
 
-export const SCartIconContainer = styled.div`
-  position: relative;
-  display: flex;
-  align-items: flex-end;
+export const SCartQuantity = styled(SWishlistQuantity)`
+  background: linear-gradient(#3af0ce, #46db73);
 `
 
-export const SCartQuantity = styled.div`
-  position: absolute;
-  top: -3px;
-  right: -5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  border-radius: 50%;
-  background-color: #df3d41;
-  color: #fff;
-
-  &:hover {
-    filter: brightness(120%);
-    transition: .2s ease-in;
-  }
-`
-
-export const SCartIcon = styled.img`
-  cursor: pointer;
-`;
 
 export const SBurgerMenuIcon = styled.img`
   cursor: pointer;

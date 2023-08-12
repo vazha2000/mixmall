@@ -19,7 +19,7 @@ export const MainPage = () => {
         <Sidebar />
         <AdSlider />
       </SSidebarAndSlider>
-      <BrowseByCategory />
+      {/* <BrowseByCategory /> */}
       <SaleOfMonth />
       <BestSellingProducts />
     </SMainPage>
