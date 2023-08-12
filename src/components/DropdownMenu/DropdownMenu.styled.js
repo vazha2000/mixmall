@@ -10,12 +10,18 @@ export const SDropDownMenu = styled(motion.div)`
   padding: 20px;
   border-radius: ${({isOverflowing}) => (isOverflowing ? "15px 8px 8px 15px " : "15px")};
   border: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: ${({isOverflowing}) => (isOverflowing ? "none" : "1px solid rgba(0,0,0, 0.2)")};
   z-index: 2;
   height: 100%;
   width: 390px;
   transition: 0.1s ease;
   overflow-y: auto;
   box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-right: ${({isOverflowing}) => (isOverflowing ? "none" : "1px solid rgba(0,0,0, 0.6)")};
+  }
 
   ::-webkit-scrollbar {
     width: 12px;
@@ -35,9 +41,7 @@ export const SDropDownMenu = styled(motion.div)`
     background: #5e5e5e;
   }
 
-  &:hover {
-    border: 1px solid rgba(0, 0, 0, 0.6);
-  }
+  
 `;
 
 export const SMenuGridContainer = styled.ul`
