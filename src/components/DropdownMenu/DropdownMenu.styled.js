@@ -23,15 +23,13 @@ export const SDropDownMenu = styled(motion.div)`
 export const SMenuGridContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 10px 20px;
+  gap: 15px;
   white-space: nowrap;
 `;
 
 export const SMenuItemsDot = styled.div`
   display: flex;
   align-items: center;
-  gap: 5px;
-  height: 30px;
   color: #303030;
 
   &:hover {
