@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   SSearchIcon,
+  SSearchIconContainer,
   SSearchInput,
   SSearchInputContainer,
   SSearchProduct,
@@ -84,8 +85,11 @@ export const SearchInput = () => {
         onBlur={handleBlur}
         onChange={handleSearch}
         value={searchQuery}
+        placeholder="პროდუქტების ძიება"
       />
-      <SSearchIcon src="../assets/svg/search.svg" alt="search icon" />
+      <SSearchIconContainer>
+        <SSearchIcon src="../assets/svg/search.svg" alt="search icon" />
+      </SSearchIconContainer>
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
         {isLoading ? (
           <div>loadinggg</div>
