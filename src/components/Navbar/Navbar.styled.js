@@ -108,22 +108,19 @@ export const SWishlistIcon = styled.img`
 
 export const SWishlistQuantity = styled.div`
   position: absolute;
-  top: -6px;
-  right: -5px;
+  top: -12px;
+  right: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
   border-radius: 50%;
-  background-color: #df3d41;
+  background-color: #f2b818;
   color: #fff;
+  border: 1px solid #fff;
 
-  &:hover {
-    filter: brightness(120%);
-    transition: .2s ease-in;
-  }
 `;
 
 
@@ -133,24 +130,8 @@ export const SCartIconContainer = styled(SWishlistContainer)``
 export const SCartIcon = styled(SWishlistIcon)`
 `;
 
-export const SCartQuantity = styled.div`
-  position: absolute;
-  top: -3px;
-  right: -5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  border-radius: 50%;
-  background-color: #df3d41;
-  color: #fff;
-
-  &:hover {
-    filter: brightness(120%);
-    transition: .2s ease-in;
-  }
+export const SCartQuantity = styled(SWishlistQuantity)`
+  background: linear-gradient(#3af0ce, #46db73);
 `
 
 
