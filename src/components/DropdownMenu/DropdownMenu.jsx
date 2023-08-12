@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   SDropDownMenu,
   SMenuGridContainer,
@@ -8,13 +8,21 @@ import {
 } from "./DropdownMenu.styled";
 import { useState } from "react";
 import { useRef } from "react";
-import { useEffect } from "react";
 
 export const DropdownMenu = ({ item }) => {
   const menuRef = useRef(null);
+  const [shouldApplyOverflowY, setShouldApplyOverflowY] = useState(false);
+
+  useEffect(() => {
+    if (menuRef.current) {
+      const isOverflowing =
+        menuRef.current.scrollHeight > menuRef.current.clientHeight;
+      setShouldApplyOverflowY(isOverflowing);
+    }
+  }, []);
 
   return (
-    <SDropDownMenu
+    <SDropDownMenu isOverflowing={shouldApplyOverflowY}
       initial={{ clipPath: "inset(0% 100% 0% 0%)", opacity: 1 }}
       animate={{
         clipPath: "inset(0% 0% 0% 0%)",
