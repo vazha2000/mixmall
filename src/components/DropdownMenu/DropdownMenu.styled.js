@@ -31,6 +31,7 @@ export const SMenuItemsDot = styled.div`
   display: flex;
   align-items: center;
   color: #303030;
+  gap: 10px;
 
   &:hover {
     color: black;
