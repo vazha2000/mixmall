@@ -35,7 +35,7 @@ export const SSideBarCategoriesList = styled.li`
   white-space: nowrap;
   cursor: pointer;
   font-weight: normal;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   text-shadow: 1px 1px 1px rgba(0,0,0, 0.2);
 
   &:hover {
