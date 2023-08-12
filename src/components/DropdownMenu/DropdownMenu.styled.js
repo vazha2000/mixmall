@@ -13,6 +13,11 @@ export const SDropDownMenu = styled(motion.div)`
   z-index: 2;
   height: 100%;
   width: 360px;
+  transition: 0.1s ease;
+
+  &:hover {
+    border: 1px solid rgba(0,0,0, 0.6);
+  }
 `;
 
 export const SMenuGridContainer = styled.ul`
