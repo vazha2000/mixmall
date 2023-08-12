@@ -52,10 +52,16 @@ export const SSearchIconContainer = styled.div`
   margin-right: 4px;
   border-radius: inherit;
   cursor: pointer;
+  transition: all 0.1s ease;
+
+  &:hover {
+    filter: brightness(110%);
+
+  }
 `;
 
 export const SSearchIcon = styled.img`
-  
+
 `;
 
 export const SSearchedProducts = styled.div`
