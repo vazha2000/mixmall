@@ -12,24 +12,6 @@ import { useEffect } from "react";
 
 export const DropdownMenu = ({ item }) => {
   const menuRef = useRef(null);
-  const [isOverflowing, setIsOverflowing] = useState(false);
-
-  useEffect(() => {
-    function handleResize() {
-      if (menuRef.current) {
-        const { right } = menuRef.current.getBoundingClientRect();
-        const windowWidth = window.innerWidth;
-        setIsOverflowing(right > windowWidth);
-      }
-    }
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <SDropDownMenu
@@ -47,7 +29,7 @@ export const DropdownMenu = ({ item }) => {
       transition={{ type: "tween", duration: 0.4, delay: 0.1 }}
       ref={menuRef}
     >
-      <SMenuGridContainer isOverflowing={isOverflowing}>
+      <SMenuGridContainer>
         {item.subcategories.map((subcategory, index) => (
           <SStyledLink
             to={`/${item.categoryName}/${subcategory.subcategoryName}`}
