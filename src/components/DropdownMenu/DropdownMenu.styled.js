@@ -14,9 +14,29 @@ export const SDropDownMenu = styled(motion.div)`
   height: 100%;
   width: 390px;
   transition: 0.1s ease;
-  
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #c9c9c9;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5e5e5e;
+  }
+
   &:hover {
-    border: 1px solid rgba(0,0,0, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.6);
   }
 `;
 
@@ -38,7 +58,8 @@ export const SMenuItemsDot = styled.div`
     font-weight: bold;
 
     > img {
-      filter: invert(60%) sepia(100%) saturate(4500%) hue-rotate(349deg) brightness(92%) contrast(100%);
+      filter: invert(60%) sepia(100%) saturate(4500%) hue-rotate(349deg)
+        brightness(92%) contrast(100%);
     }
   }
 `;
