@@ -8,7 +8,7 @@ export const SDropDownMenu = styled(motion.div)`
   top: 0;
   left: calc(100% + 10px);
   padding: 20px;
-  border-radius: 15px;
+  border-radius: ${({isOverflowing}) => (isOverflowing ? "15px 8px 8px 15px " : "15px")};
   border: 1px solid rgba(0, 0, 0, 0.2);
   z-index: 2;
   height: 100%;
