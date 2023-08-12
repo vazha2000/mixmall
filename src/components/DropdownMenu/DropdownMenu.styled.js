@@ -12,9 +12,9 @@ export const SDropDownMenu = styled(motion.div)`
   border: 1px solid rgba(0, 0, 0, 0.2);
   z-index: 2;
   height: 100%;
-  width: 360px;
+  width: 390px;
   transition: 0.1s ease;
-
+  
   &:hover {
     border: 1px solid rgba(0,0,0, 0.6);
   }
