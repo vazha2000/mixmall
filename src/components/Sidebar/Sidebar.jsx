@@ -24,13 +24,14 @@ export const Sidebar = ({width}) => {
     <SSidebarContainer width={width} ref={sidebarRef}>
       <SSideBarCategories>
         {categoriesListItems.map((item, index) => {
+          const isLastItem = index === categoriesListItems.length - 1;
           return (
             <SSideBarCategoriesListWrapper
               key={index}
               onMouseLeave={handleCategoryUnhover}
               onMouseEnter={(event) => handleCategoryHover(item, event)}
             >
-              <SSideBarCategoriesList>
+              <SSideBarCategoriesList isLast={isLastItem}>
                 <span>{item.name}</span>
                 <img src="../assets/svg/vectorRight.svg" alt="vectorRight" />
               </SSideBarCategoriesList>
