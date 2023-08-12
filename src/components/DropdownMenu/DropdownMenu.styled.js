@@ -3,47 +3,51 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const SDropDownMenu = styled(motion.div)`
-  background-color: #fcfcfc;
+  background-color: #fff;
   position: absolute;
-  top: ${({ topPosition }) => topPosition -1}px;
-  left: calc(100% + 2px);
+  top: 0;
+  left: calc(100% + 10px);
   padding: 20px;
-  border-radius: .188rem;
-  border: 1px solid rgba(0,0,0, 0.8);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   z-index: 2;
-`
+  height: 100%;
+  width: 360px;
+`;
 
 export const SMenuGridContainer = styled.ul`
   display: grid;
-  grid-template-columns: ${({isOverflowing}) => (isOverflowing ? "repeat(2, 1fr)" : "repeat(3, 1fr)")};
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px 20px;
   white-space: nowrap;
-`
+`;
 
-export const SMenuItems = styled.li`
-  font-size: 14px;
-  cursor: pointer;
+export const SMenuItemsDot = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  color: #303030;
 
   &:hover {
-    color: #df3d41;
-  }
-  
-  &::before {
-    content: '•';
     color: black;
-    margin-right: 8px;
-    font-size: 20px;
-  }
+    font-weight: bold;
 
-  @media screen and (max-width: 1168px){
-    font-size: 13px;
+    > img {
+      filter: invert(60%) sepia(100%) saturate(4500%) hue-rotate(349deg) brightness(92%) contrast(100%);
+    }
   }
-`
+`;
+
+export const SMenuItems = styled.li`
+  font-size: 13px;
+  cursor: pointer;
+`;
 
 export const SStyledLink = styled(Link)`
   text-decoration: none;
   color: #1f1f1f;
   display: flex;
   align-items: center;
-  justify-content: ${({center}) => (center ? "center" : "flex-start")};
+  justify-content: ${({ center }) => (center ? "center" : "flex-start")};
 `;
