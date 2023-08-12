@@ -14,9 +14,9 @@ export const SSideBarCategories = styled.ul`
   flex-direction: column;
   background-color: #fcfcfc;
   border-radius: .313rem;
-  -webkit-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
-  -moz-box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.3);
-  box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.25);
+  -moz-box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.25);
+  box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.25);
   overflow: hidden;
   border-radius: 15px;
 `;
