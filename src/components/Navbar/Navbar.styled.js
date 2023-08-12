@@ -54,7 +54,7 @@ export const SNavItem = styled.li`
 
 export const SNavActions = styled.div`
   display: flex;
-  width: 40%;
+  width: 50%;
   justify-content: flex-end;
 
   @media screen and (max-width: 1024px) {
@@ -64,7 +64,7 @@ export const SNavActions = styled.div`
 
 export const SNavInputContainer = styled.div`
   display: flex;
-  width: 80%;
+  width: 70%;
   border-radius: 0.5rem;
 
   @media screen and (max-width: 1024px) {
