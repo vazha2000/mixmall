@@ -15,7 +15,7 @@ export const SLogo = styled.img`
 
 export const SNavMenu = styled.ul`
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   padding: 0 1rem;
   @media screen and (max-width: 768px) {
     display: none;
@@ -43,7 +43,7 @@ export const SNavItem = styled.li`
     position: absolute;
     top: 0;
     bottom: 0;
-    right: calc(-1.5rem + 1px);
+    right: calc(-1.2rem + 1px);
     width: 1px;
     height: 50%;
     transform: translateY(50%);
