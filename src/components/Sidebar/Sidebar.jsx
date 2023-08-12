@@ -11,16 +11,10 @@ import { categoriesListItems } from "../../data/data";
 
 export const Sidebar = ({width}) => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
-  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const sidebarRef = useRef(null);
 
-  const handleCategoryHover = (category, event) => {
-    const sidebarRect = sidebarRef.current.getBoundingClientRect();
-    const { top, left } = event.target.getBoundingClientRect();
-    const topRelativeToSidebar = top - sidebarRect.top;
-    const leftRelativeToSidebar = left - sidebarRect.left;
+  const handleCategoryHover = (category) => {
     setHoveredCategory(category);
-    setDropdownPosition({ top: topRelativeToSidebar, left: leftRelativeToSidebar });
   };
 
   const handleCategoryUnhover = () => {
@@ -44,7 +38,6 @@ export const Sidebar = ({width}) => {
                 {hoveredCategory === item && (
                   <DropdownMenu
                     item={item}
-                    topPosition={dropdownPosition.top}
                   />
                 )}
               </AnimatePresence>
