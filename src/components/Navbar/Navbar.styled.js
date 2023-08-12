@@ -129,11 +129,10 @@ export const SWishlistQuantity = styled.div`
 
 
 
-export const SCartIconContainer = styled.div`
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-`
+export const SCartIconContainer = styled(SWishlistContainer)``
+
+export const SCartIcon = styled(SWishlistIcon)`
+`;
 
 export const SCartQuantity = styled.div`
   position: absolute;
@@ -155,9 +154,6 @@ export const SCartQuantity = styled.div`
   }
 `
 
-export const SCartIcon = styled.img`
-  cursor: pointer;
-`;
 
 export const SBurgerMenuIcon = styled.img`
   cursor: pointer;
