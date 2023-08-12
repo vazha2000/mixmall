@@ -15,7 +15,7 @@ export const SSearchInputContainer = styled.div`
   display: flex;
   border-radius: 0.5rem;
   border: ${({ isFocused }) =>
-  isFocused ? "1px solid rgba(0,0,0, 0.7)" : "1px solid rgba(0,0,0, 0.3)"};
+  isFocused ? "1px solid rgba(0,0,0, 0.7)" : "1px solid rgba(0,0,0, 0.2)"};
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@ export const SSearchInput = styled.input`
     outline: none;
   }
   &::placeholder {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.5);
   }
 `;
 
