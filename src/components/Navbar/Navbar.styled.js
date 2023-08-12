@@ -55,7 +55,7 @@ export const SNavItem = styled.li`
 export const SNavActions = styled.div`
   display: flex;
   width: 50%;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   @media screen and (max-width: 1024px) {
     width: auto;
@@ -66,6 +66,7 @@ export const SNavInputContainer = styled.div`
   display: flex;
   width: 70%;
   border-radius: 0.5rem;
+  /* background-color: yellow; */
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -82,7 +83,28 @@ export const SWishlistCartContainer = styled.div`
 export const SWishlistContainer = styled.div`
   position: relative;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  background-color: #f0f0f0;
+  width: 50px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: #df3d41;
+    cursor: pointer;
+
+  }
+  
+`;
+
+export const SWishlistIcon = styled.img`
+  transition: all 0.2s ease;
+  ${SWishlistContainer}:hover & {
+    filter: brightness(0) invert(1);
+  }
+  
 `;
 
 export const SWishlistQuantity = styled.div`
@@ -105,9 +127,7 @@ export const SWishlistQuantity = styled.div`
   }
 `;
 
-export const SWishlistIcon = styled.img`
-  cursor: pointer;
-`;
+
 
 export const SCartIconContainer = styled.div`
   position: relative;
