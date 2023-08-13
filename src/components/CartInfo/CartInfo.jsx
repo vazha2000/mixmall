@@ -5,6 +5,7 @@ import {
   SCartCardTableBox,
   SCartCardTableBoxImageContent,
   SCartCardTableBoxNameContent,
+  SCartCardTableContainer,
   SCartCardTablleRemove,
   SCartEmpty,
   SCartInfo,
@@ -60,6 +61,7 @@ export const CartInfo = ({
           />
         </SCartInfoHeaderClose>
       </SCartInfoHeaderContainer>
+      <SCartCardTableContainer>
       <SCartCardTable>
         <SCartCardTableBody>
           {cart.map((item, index) => (
@@ -84,6 +86,8 @@ export const CartInfo = ({
           ))}
         </SCartCardTableBody>
       </SCartCardTable>
+      </SCartCardTableContainer>
+      
       
     </SCartInfo>
     {isCartClicked && (
