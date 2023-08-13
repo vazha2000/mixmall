@@ -70,9 +70,8 @@ export const SCartEmpty = styled.div`
 `;
 
 export const SCartCardTableContainer = styled.div`
-  height: 56%;
+  height: ${({quantity}) => (quantity ? "56%" : "auto")};
   overflow-y: auto;
-
   ::-webkit-scrollbar {
     width: 12px;
   }
@@ -93,7 +92,6 @@ export const SCartCardTableContainer = styled.div`
 `;
 
 export const SCartCardTable = styled.table`
-  height: 125px;
   border-spacing: 0;
   width: 100%;
   margin-top: 8px;
@@ -122,6 +120,7 @@ export const SCartCardTableBox = styled.tr`
   background-color: #fff;
   padding: 5px;
   border-radius: 10px;
+  height: 125px;
 
   &:hover {
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
@@ -140,7 +139,6 @@ export const SCartCardTableBoxImageContent = styled(BaseTableCell)`
   margin-left: 5px;
 `;
 export const SCartCardTableBoxNameContent = styled(BaseTableCell)`
-  /* min-width: 200px; */
   align-items: flex-start;
   padding: 8px 15px;
   font-weight: bold;
@@ -188,7 +186,7 @@ const buttonAnimation = keyframes`
 export const SCartCardTableTotal = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding: 0 30px;
+  padding: 0 20px;
   color: #fff;
   box-sizing: border-box;
   margin-top: 10px;
