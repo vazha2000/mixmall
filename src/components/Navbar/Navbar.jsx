@@ -68,7 +68,7 @@ export const Navbar = () => {
       </SNavActions>
       <AnimatePresence>
         {isCartClicked && (
-          <CartInfo cart={cart} removeFromCart={removeFromCart} />
+          <CartInfo isCartClicked={isCartClicked} setIsCartClicked={setIsCartClicked} cart={cart} removeFromCart={removeFromCart} />
         )}
       </AnimatePresence>
     </SNavbar>
