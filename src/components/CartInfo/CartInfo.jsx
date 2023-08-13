@@ -6,6 +6,7 @@ import {
   SCartCardTableBoxImageContent,
   SCartCardTableBoxNameContent,
   SCartCardTableContainer,
+  SCartCardTableTotal,
   SCartCardTablleRemove,
   SCartEmpty,
   SCartInfo,
@@ -23,6 +24,12 @@ export const CartInfo = ({
   isCartClicked,
 }) => {
   console.log(cart);
+
+  const totalPrice = cart.reduce((sum, item) => {
+    const productPrice = item.productQuantity * item.currentPrice;
+    return sum + productPrice;
+  }, 0);
+
   const handleRemoveClick = (item) => {
     removeFromCart(item);
   };
@@ -87,7 +94,9 @@ export const CartInfo = ({
         </SCartCardTableBody>
       </SCartCardTable>
       </SCartCardTableContainer>
-      
+      <SCartCardTableTotal>
+        <span>ჯამი: {totalPrice}</span>
+      </SCartCardTableTotal>
       
     </SCartInfo>
     {isCartClicked && (
