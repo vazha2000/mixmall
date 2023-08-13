@@ -70,7 +70,7 @@ export const SCartEmpty = styled.div`
 `;
 
 export const SCartCardTableContainer = styled.div`
-  height: 55%;
+  height: 56%;
   overflow-y: auto;
 
   ::-webkit-scrollbar {
