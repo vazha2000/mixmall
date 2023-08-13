@@ -11,10 +11,18 @@ export const SCartInfo = styled(motion.div)`
   width: 675px;
   height: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
 
   @media screen and (max-width: 1150px) {
     width: 100%;
   }
+`;
+
+export const SCartInfoWrapper = styled.div`
+  height: inherit;
 `;
 
 export const SCartInfoHeaderContainer = styled.div`
@@ -88,7 +96,7 @@ export const SCartCardTable = styled.table`
   height: 125px;
   border-spacing: 0;
   width: 100%;
-  margin-top: 18px;
+  margin-top: 8px;
 `;
 
 export const SCartCardTableBody = styled.tbody`
@@ -119,13 +127,11 @@ export const SCartCardTableBox = styled.tr`
 
   &:hover {
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  transition: 50ms ease;
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: 50ms ease;
   }
-
-  
 `;
 
 export const SCartCardTableBoxContent = styled(BaseTableCell)``;
@@ -171,7 +177,7 @@ export const SCartCardTablleRemove = styled(BaseTableCell)`
     cursor: pointer;
   }
 `;
-const colorAnimation = keyframes`
+const backgroundAnimation = keyframes`
   0% { background-color: #df3d41; }
   25% { background-color: #9227d9; }
   50% { background-color: #3dd4df; }
@@ -179,33 +185,42 @@ const colorAnimation = keyframes`
   100% { background-color: #eb5234; }
 `;
 
-/* const colorAnimation = keyframes`
-  0% { background-color: blue; }
-  25% { background-color: yellow; }
-  50% { background-color: green; }
-  75% { background-color: orange; }
-  100% { background-color: red; }
-`; */
 
 export const SCartCardTableTotal = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding: 0 25px;
+  padding: 0 30px;
   color: #fff;
   box-sizing: border-box;
-
+  margin-top: 10px;
 
   > span {
     padding: 10px 40px;
     border-radius: 10px;
-    /* pointer-events: none; */
-    /* background-color: yellow; */
-    /* border: 1px solid black; */
-    animation: ${colorAnimation} 3s linear infinite;
+    animation: ${backgroundAnimation} 3s linear infinite;
     cursor: default;
 
     &:hover {
-      animation-play-state: paused; /* Pause the animation on hover */
+      animation-play-state: paused; 
+    }
+
+    > img {
+      filter: brightness(0) invert(1);
     }
   }
 `;
+
+export const SCartinfoCheckoutButton = styled.button`
+  background-color: #df3d41;
+  width: calc(100% - 70px);
+  margin: 0 auto;
+  padding: 15px 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    animation: ${backgroundAnimation} 1.5s linear  infinite;
+  }
+`
