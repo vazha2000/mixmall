@@ -110,9 +110,11 @@ export const CartInfo = ({
             </span>
           </SCartCardTableTotal>
         </SCartInfoWrapper>
-        <SCartinfoCheckoutButton>
-          <span>კალათის ნახვა</span>
-        </SCartinfoCheckoutButton>
+        <SStyledLink to="/checkout">
+          <SCartinfoCheckoutButton onClick={() => {setIsCartClicked(false)}}>
+            <span>კალათის ნახვა</span>
+          </SCartinfoCheckoutButton>
+        </SStyledLink>
       </SCartInfo>
       {isCartClicked && (
         <>
