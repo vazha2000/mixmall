@@ -76,7 +76,7 @@ export const SMenuItems = styled.li`
 export const SStyledLink = styled(Link)`
   text-decoration: none;
   color: #1f1f1f;
-  display: flex;
+  display: ${({quantity}) => (quantity ? "none" : "flex")};
   align-items: center;
   justify-content: ${({ center }) => (center ? "center" : "flex-start")};
 `;

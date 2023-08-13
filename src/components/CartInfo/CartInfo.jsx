@@ -70,47 +70,60 @@ export const CartInfo = ({
               />
             </SCartInfoHeaderClose>
           </SCartInfoHeaderContainer>
-          <SCartCardTableContainer>
-            <SCartCardTable>
-              <SCartCardTableBody>
-                {cart.map((item, index) => (
-                  <SCartCardTableBox key={index}>
-                    <SCartCardTableBoxImageContent>
-                      <img
-                        src={item.productImage}
-                        height={"100%"}
-                        alt={item.alt}
-                      />
-                    </SCartCardTableBoxImageContent>
-                    <SCartCardTableBoxNameContent>
-                      <div>{item.productName}</div>
-                      <div>
-                        {item.productQuantity} x{" "}
-                        <span>
-                          {item.currentPrice}
-                          <img src="assets/svg/lari.svg" alt="lari icon" />
-                        </span>
-                      </div>
-                    </SCartCardTableBoxNameContent>
-                    <SCartCardTablleRemove
-                      onClick={() => handleRemoveClick(item)}
-                    >
-                      <img src="assets/svg/trash.svg" alt="remove" />
-                    </SCartCardTablleRemove>
-                  </SCartCardTableBox>
-                ))}
-              </SCartCardTableBody>
-            </SCartCardTable>
-          </SCartCardTableContainer>
-          <SCartCardTableTotal>
-            <span>
-              ჯამი: {totalPrice}
-              <img src="assets/svg/lari.svg" alt="lari icon" />
-            </span>
-          </SCartCardTableTotal>
+          {cart.length === 0 ? (
+            <SCartEmpty>
+              <img src="assets/svg/cart.svg" alt="" />
+              <h1>თქვენი კალათა ცარიელია</h1>
+            </SCartEmpty>
+          ) : (
+            <>
+              <SCartCardTableContainer quantity={cart.length > 3}>
+                <SCartCardTable>
+                  <SCartCardTableBody>
+                    {cart.map((item, index) => (
+                      <SCartCardTableBox key={index}>
+                        <SCartCardTableBoxImageContent>
+                          <img
+                            src={item.productImage}
+                            height={"100%"}
+                            alt={item.alt}
+                          />
+                        </SCartCardTableBoxImageContent>
+                        <SCartCardTableBoxNameContent>
+                          <div>{item.productName}</div>
+                          <div>
+                            {item.productQuantity} x{" "}
+                            <span>
+                              {item.currentPrice}
+                              <img src="assets/svg/lari.svg" alt="lari icon" />
+                            </span>
+                          </div>
+                        </SCartCardTableBoxNameContent>
+                        <SCartCardTablleRemove
+                          onClick={() => handleRemoveClick(item)}
+                        >
+                          <img src="assets/svg/trash.svg" alt="remove" />
+                        </SCartCardTablleRemove>
+                      </SCartCardTableBox>
+                    ))}
+                  </SCartCardTableBody>
+                </SCartCardTable>
+              </SCartCardTableContainer>
+              <SCartCardTableTotal>
+                <span>
+                  ჯამი: {totalPrice}
+                  <img src="assets/svg/lari.svg" alt="lari icon" />
+                </span>
+              </SCartCardTableTotal>
+            </>
+          )}
         </SCartInfoWrapper>
-        <SStyledLink to="/checkout">
-          <SCartinfoCheckoutButton onClick={() => {setIsCartClicked(false)}}>
+        <SStyledLink to="/checkout" quantity={cart.length === 0}>
+          <SCartinfoCheckoutButton
+            onClick={() => {
+              setIsCartClicked(false);
+            }}
+          >
             <span>კალათის ნახვა</span>
           </SCartinfoCheckoutButton>
         </SStyledLink>
