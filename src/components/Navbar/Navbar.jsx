@@ -63,12 +63,14 @@ export const Navbar = () => {
               alt="cart icon"
             />
             <SCartQuantity>{cart.length}</SCartQuantity>
-            <AnimatePresence>
-              {isCartClicked && <CartInfo cart={cart} removeFromCart={removeFromCart}/>}
-            </AnimatePresence>
           </SCartIconContainer>
         </SWishlistCartContainer>
       </SNavActions>
+      <AnimatePresence>
+        {isCartClicked && (
+          <CartInfo cart={cart} removeFromCart={removeFromCart} />
+        )}
+      </AnimatePresence>
     </SNavbar>
   );
 };
