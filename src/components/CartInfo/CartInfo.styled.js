@@ -43,7 +43,7 @@ export const SCartInfoHeaderIconContent = styled.div`
   gap: 10px;
 
   > h3 {
-    pointer-events: none;
+    user-select: none;
   }
 
   > img {
@@ -66,12 +66,29 @@ export const SCartInfoHeaderClose = styled.div`
 `;
 
 export const SCartEmpty = styled.div`
-  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: default;
+  user-select: none;
+  height: calc(100vh - 120px);
+  align-items: center;
+  justify-content: center;
+  
+  > img {
+    width: 120px; 
+  }
+
+  > h1 {
+    font-size: 140%;
+    text-align: center;
+  }
 `;
 
 export const SCartCardTableContainer = styled.div`
   height: ${({quantity}) => (quantity ? "56%" : "auto")};
   overflow-y: auto;
+  padding-bottom: 10px;
   ::-webkit-scrollbar {
     width: 12px;
   }
