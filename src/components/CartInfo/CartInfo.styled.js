@@ -108,12 +108,10 @@ export const SCartCardTableBody = styled.tbody`
 `;
 
 const BaseTableCell = styled.td`
-  /* border-right: 1px solid black; */
   height: 100%;
   display: flex;
   align-items: center;
   padding: 0 5px;
-  /* white-space: nowrap; */
 `;
 
 export const SCartCardTableBox = styled.tr`
@@ -159,12 +157,6 @@ export const SCartCardTableBoxNameContent = styled(BaseTableCell)`
     }
   }
 `;
-// export const SCartCardTableBoxQuantityContent = styled(BaseTableCell)`
-//   min-width: 90px;
-// `;
-// export const SCartCardTableBoxTotalContent = styled(BaseTableCell)`
-//   min-width: 140px;
-// `;
 
 export const SCartCardTablleRemove = styled(BaseTableCell)`
   border: none;
