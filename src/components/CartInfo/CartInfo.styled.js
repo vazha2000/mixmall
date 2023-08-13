@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const SCartInfo = styled(motion.div)`
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #f8f8f8;
+  background-color: #faf2f2;
   z-index: 5;
   border: 1px solid rgba(0, 0, 0, 0.3);
   width: 675px;
@@ -24,7 +24,7 @@ export const SCartInfoHeaderContainer = styled.div`
   padding: 0 25px;
   height: 120px;
   width: 100%;
-  background: linear-gradient(45deg,#df3d41, #e67a7c);
+  background: linear-gradient(45deg, #df3d41, #e67a7c);
   color: #fff;
   letter-spacing: 2px;
 `;
@@ -64,7 +64,6 @@ export const SCartEmpty = styled.div`
 export const SCartCardTableContainer = styled.div`
   height: 55%;
   overflow-y: auto;
-  
 
   ::-webkit-scrollbar {
     width: 12px;
@@ -83,7 +82,7 @@ export const SCartCardTableContainer = styled.div`
   ::-webkit-scrollbar-thumb:hover {
     background: #5e5e5e;
   }
-`
+`;
 
 export const SCartCardTable = styled.table`
   height: 125px;
@@ -118,9 +117,15 @@ export const SCartCardTableBox = styled.tr`
   padding: 5px;
   border-radius: 10px;
 
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
--moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+  &:hover {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: 50ms ease;
+  }
+
+  
 `;
 
 export const SCartCardTableBoxContent = styled(BaseTableCell)``;
@@ -164,5 +169,43 @@ export const SCartCardTablleRemove = styled(BaseTableCell)`
   > img {
     width: 20px;
     cursor: pointer;
+  }
+`;
+const colorAnimation = keyframes`
+  0% { background-color: #df3d41; }
+  25% { background-color: #9227d9; }
+  50% { background-color: #3dd4df; }
+  75% { background-color: #4adf3d; }
+  100% { background-color: #eb5234; }
+`;
+
+/* const colorAnimation = keyframes`
+  0% { background-color: blue; }
+  25% { background-color: yellow; }
+  50% { background-color: green; }
+  75% { background-color: orange; }
+  100% { background-color: red; }
+`; */
+
+export const SCartCardTableTotal = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px;
+  color: #fff;
+  box-sizing: border-box;
+
+
+  > span {
+    padding: 10px 40px;
+    border-radius: 10px;
+    /* pointer-events: none; */
+    /* background-color: yellow; */
+    /* border: 1px solid black; */
+    animation: ${colorAnimation} 3s linear infinite;
+    cursor: default;
+
+    &:hover {
+      animation-play-state: paused; /* Pause the animation on hover */
+    }
   }
 `;
