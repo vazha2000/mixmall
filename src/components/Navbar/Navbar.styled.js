@@ -89,13 +89,11 @@ export const SWishlistContainer = styled.div`
   width: 50px;
   border-radius: 12px;
   transition: all 0.2s ease;
-  
+
   &:hover {
     background-color: #df3d41;
     cursor: pointer;
-
   }
-  
 `;
 
 export const SWishlistIcon = styled.img`
@@ -103,7 +101,6 @@ export const SWishlistIcon = styled.img`
   ${SWishlistContainer}:hover & {
     filter: brightness(0) invert(1);
   }
-  
 `;
 
 export const SWishlistQuantity = styled.div`
@@ -120,20 +117,17 @@ export const SWishlistQuantity = styled.div`
   background-color: #f2b818;
   color: #fff;
   border: 1px solid #fff;
-
 `;
 
-
-
-export const SCartIconContainer = styled(SWishlistContainer)``
+export const SCartIconContainer = styled(SWishlistContainer)``;
 
 export const SCartIcon = styled(SWishlistIcon)`
+  width: 32px;
 `;
 
 export const SCartQuantity = styled(SWishlistQuantity)`
   background: linear-gradient(#3af0ce, #46db73);
-`
-
+`;
 
 export const SBurgerMenuIcon = styled.img`
   cursor: pointer;
