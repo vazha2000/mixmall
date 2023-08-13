@@ -10,6 +10,7 @@ export const SCartInfo = styled(motion.div)`
   border: 1px solid rgba(0, 0, 0, 0.3);
   width: 675px;
   height: 100%;
+  box-sizing: border-box;
 
   @media screen and (max-width: 1150px) {
     width: 100%;
@@ -60,11 +61,35 @@ export const SCartEmpty = styled.div`
   white-space: nowrap;
 `;
 
+export const SCartCardTableContainer = styled.div`
+  height: 55%;
+  overflow-y: auto;
+  
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #c9c9c9;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5e5e5e;
+  }
+`
+
 export const SCartCardTable = styled.table`
   height: 125px;
   border-spacing: 0;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 18px;
 `;
 
 export const SCartCardTableBody = styled.tbody`
@@ -81,7 +106,7 @@ const BaseTableCell = styled.td`
   display: flex;
   align-items: center;
   padding: 0 5px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 `;
 
 export const SCartCardTableBox = styled.tr`
@@ -92,6 +117,10 @@ export const SCartCardTableBox = styled.tr`
   background-color: #fff;
   padding: 5px;
   border-radius: 10px;
+
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
 `;
 
 export const SCartCardTableBoxContent = styled(BaseTableCell)``;
@@ -102,7 +131,7 @@ export const SCartCardTableBoxImageContent = styled(BaseTableCell)`
   margin-left: 5px;
 `;
 export const SCartCardTableBoxNameContent = styled(BaseTableCell)`
-  min-width: 200px;
+  /* min-width: 200px; */
   align-items: flex-start;
   padding: 8px 15px;
   font-weight: bold;
@@ -130,7 +159,7 @@ export const SCartCardTablleRemove = styled(BaseTableCell)`
   border: none;
   padding: 0;
   justify-content: center;
-  width: 50px;
+  width: 20px;
 
   > img {
     width: 20px;
