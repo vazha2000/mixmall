@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   SCartCardTable,
   SCartCardTableBody,
@@ -28,6 +28,17 @@ export const CartInfo = ({
   const handleCartClick = () => {
     setIsCartClicked(!isCartClicked);
   };
+  useEffect(() => {
+    if (isCartClicked) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isCartClicked]);
   return (
     <>
     <SCartInfo
