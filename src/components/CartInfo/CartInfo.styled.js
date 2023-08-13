@@ -177,6 +177,13 @@ const backgroundAnimation = keyframes`
   100% { background-color: #eb5234; }
 `;
 
+const buttonAnimation = keyframes`
+  0% { background-color: #df3d41; color: #fff }
+  50% { background-color: #a5acb8; color: black }
+  100% { background-color: #df3d41; color: #fff }
+`;
+
+
 
 export const SCartCardTableTotal = styled.div`
   display: flex;
@@ -213,6 +220,7 @@ export const SCartinfoCheckoutButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    animation: ${backgroundAnimation} 1.5s linear  infinite;
+    animation: ${buttonAnimation} 1.5s linear  infinite;
+    font-weight: bold;
   }
 `

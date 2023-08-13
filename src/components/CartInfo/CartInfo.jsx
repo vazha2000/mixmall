@@ -25,7 +25,6 @@ export const CartInfo = ({
   setIsCartClicked,
   isCartClicked,
 }) => {
-  console.log(cart);
 
   const totalPrice = cart.reduce((sum, item) => {
     const productPrice = item.productQuantity * item.currentPrice;
