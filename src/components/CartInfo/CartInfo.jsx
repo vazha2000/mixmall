@@ -71,7 +71,10 @@ export const CartInfo = ({
             </SCartInfoHeaderClose>
           </SCartInfoHeaderContainer>
           {cart.length === 0 ? (
-            <div>carielie</div>
+            <SCartEmpty>
+              <img src="assets/svg/cart.svg" alt="" />
+              <h1>თქვენი კალათა ცარიელია</h1>
+            </SCartEmpty>
           ) : (
             <>
               <SCartCardTableContainer quantity={cart.length > 3}>
@@ -115,7 +118,7 @@ export const CartInfo = ({
             </>
           )}
         </SCartInfoWrapper>
-        <SStyledLink to="/checkout">
+        <SStyledLink to="/checkout" quantity={cart.length === 0}>
           <SCartinfoCheckoutButton
             onClick={() => {
               setIsCartClicked(false);
