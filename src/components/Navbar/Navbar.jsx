@@ -56,19 +56,22 @@ export const Navbar = () => {
               <SWishlistQuantity>{wishlist.length}</SWishlistQuantity>
             </SWishlistContainer>
           </SStyledLink>
-          <SCartIconContainer>
-            <SCartIcon
-              onClick={() => setIsCartClicked(!isCartClicked)}
-              src="../assets/svg/cart.svg"
-              alt="cart icon"
-            />
+          <SCartIconContainer onClick={() => setIsCartClicked(!isCartClicked)}>
+            <SCartIcon src="../assets/svg/cart.svg" alt="cart icon" />
             <SCartQuantity>{cart.length}</SCartQuantity>
-            <AnimatePresence>
-              {isCartClicked && <CartInfo cart={cart} removeFromCart={removeFromCart}/>}
-            </AnimatePresence>
           </SCartIconContainer>
         </SWishlistCartContainer>
       </SNavActions>
+      <AnimatePresence>
+        {isCartClicked && (
+          <CartInfo
+            isCartClicked={isCartClicked}
+            setIsCartClicked={setIsCartClicked}
+            cart={cart}
+            removeFromCart={removeFromCart}
+          />
+        )}
+      </AnimatePresence>
     </SNavbar>
   );
 };

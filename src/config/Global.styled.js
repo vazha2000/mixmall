@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #ffffff;
     color: #1f1f1f;
     font-family: "BPG Mrgvlovani Caps 2010";
+    overflow-x: hidden;
   }
 
   button {
