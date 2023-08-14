@@ -3,9 +3,6 @@ import styled from "styled-components";
 import { SWishlistContainer } from "../Navbar/Navbar.styled";
 
 export const SCard = styled.div`
-  width: ${({ width }) => (width ? "calc(25% - 10px)" : "calc(25% - 10px)")};
-  /* min-width: 15.625rem; */
-  /* height: auto; */
   height: max-content;
   padding-bottom: 20px;
   border: ${({ isHovered }) =>
@@ -18,7 +15,6 @@ export const SCard = styled.div`
 export const SCardImageContainer = styled.div`
   width: 90%;
   height: 70%;
-  /* background-color: red; */
   margin: 10px auto;
   display: flex;
   align-items: flex-end;
@@ -44,7 +40,6 @@ export const SAddToCardButton = styled(motion.div)`
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s ease;
-  /* transform: translateY(-10%); */
 
   &:hover {
     background-color: #df3d41;
@@ -146,7 +141,6 @@ export const SCardPrice = styled.span`
 `;
 
 export const SCardContentWrapper = styled.div`
-  /* transform: translateY(-10%); */
   transform: ${({ isHovered }) =>
     isHovered ? "translateY(-3%)" : "translateY(0)"};
   transition: 0.2s ease;
@@ -156,10 +150,10 @@ export const SCardWishlist = styled(SWishlistContainer)`
   position: absolute;
   top: 20px;
   right: 20px;
-
+  background-color: ${({isInWishlist}) => (isInWishlist ? "#df3d41" : "#f0f0f0")};
 
   &:hover {
-    background-color: #df3d41;
+    background-color: ${({isInWishlist}) => (isInWishlist ? "#f02227" : "#df3d41")};
     cursor: pointer;
   }
 `
