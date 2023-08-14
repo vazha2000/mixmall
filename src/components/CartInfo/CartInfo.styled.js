@@ -86,7 +86,7 @@ export const SCartEmpty = styled.div`
 `;
 
 export const SCartCardTableContainer = styled.div`
-  height: ${({quantity}) => (quantity ? "52vh" : "auto")};
+  height: ${({quantity}) => (quantity ? "55vh" : "auto")};
   overflow-y: auto;
   padding-bottom: 10px;
   ::-webkit-scrollbar {
