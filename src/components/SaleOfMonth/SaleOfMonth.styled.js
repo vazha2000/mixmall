@@ -67,7 +67,7 @@ export const SSaleOfMonthItems = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 
-  /* @media screen and (max-width: 530px){
-    justify-content: center;
-  } */
+  @media screen and (max-width: 1280px){
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
