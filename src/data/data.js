@@ -120,7 +120,7 @@ export const testProducts = [
     productImage: "assets/images/computerTechnic/orange.png",
     discountRate: "20%",
     isDiscount: false,
-    productName: "მანქანის კატალიზატორი",
+    productName: "მანქანის კატალიზატორი და კიდევ მრავალი სხვა",
     currentPrice: "$260",
     oldPrice: "$300",
     alt: "test",
