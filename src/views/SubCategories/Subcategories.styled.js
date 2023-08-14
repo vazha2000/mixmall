@@ -50,4 +50,8 @@ export const SSubcategoriesProducts = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+
+  @media screen and (max-width: 831px){
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
