@@ -20,13 +20,12 @@ export const SBestSellingProductsHeader = styled.h2`
 
 export const SBestSellingProductsItems = styled.div`
   margin-top: 60px;
-  row-gap: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 
-  @media screen and (max-width: 530px){
-    justify-content: center;
+  @media screen and (max-width: 1280px){
+    grid-template-columns: repeat(2, 1fr);
   }
 `
 

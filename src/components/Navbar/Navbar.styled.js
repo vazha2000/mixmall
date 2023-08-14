@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const SNavbar = styled.nav`
@@ -79,7 +80,7 @@ export const SWishlistCartContainer = styled.div`
   position: relative;
 `;
 
-export const SWishlistContainer = styled.div`
+export const SWishlistContainer = styled(motion.div)`
   position: relative;
   display: flex;
   justify-content: center;
@@ -98,6 +99,8 @@ export const SWishlistContainer = styled.div`
 
 export const SWishlistIcon = styled.img`
   transition: all 0.2s ease;
+  filter: ${({isInWishlist}) => (isInWishlist ? "brightness(0) invert(1)" : "brightness(0)")};
+
   ${SWishlistContainer}:hover & {
     filter: brightness(0) invert(1);
   }
