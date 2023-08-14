@@ -136,13 +136,15 @@ export const Card = (props) => {
           </SStyledLink>
         </SCardInfo>
         <SCardPriceContainer isHovered={isHovered}>
-          <SCardOldPriceWrapper>
-            <SCardOldPrice>{oldPrice}.</SCardOldPrice>
-            <hr />
-            <div>
-              <img src="assets/svg/lari.svg" alt="lari icon" />
-            </div>
-          </SCardOldPriceWrapper>
+          {isDiscount && (
+            <SCardOldPriceWrapper>
+              <SCardOldPrice>{oldPrice}.</SCardOldPrice>
+              <hr />
+              <div>
+                <img src="assets/svg/lari.svg" alt="lari icon" />
+              </div>
+            </SCardOldPriceWrapper>
+          )}
           <SCartPriceWrapper>
             <SCardPrice>{currentPrice}.</SCardPrice>
             <div>
