@@ -40,7 +40,8 @@ export const SAddToCardButton = styled(motion.div)`
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s ease;
-
+  background-color: ${({isInCart}) => (isInCart ? "#df3d41" : "fff")};
+  color: ${({isInCart}) => (isInCart ? "#fff" : "#1f1f1f")};
   &:hover {
     background-color: #df3d41;
     color: #fff;
