@@ -89,6 +89,7 @@ export const SCardProductName = styled.h4`
   padding-left: 4px;
   cursor: pointer;
   width: max-content;
+  height: 35px;
 
   &:hover {
     text-decoration-line: underline;
@@ -99,13 +100,15 @@ export const SCardProductName = styled.h4`
 
 export const SCardPriceContainer = styled.div`
   width: 90%;
-  margin: 20px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   font-size: 14px;
   gap: 8px;
   cursor: default;
   user-select: none;
+  height: 50px;
+  justify-content: center;
 `;
 
 export const SCartPriceWrapper = styled.div`
@@ -120,11 +123,11 @@ export const SCartPriceWrapper = styled.div`
 
 export const SCardOldPriceWrapper = styled(SCartPriceWrapper)`
   > hr {
-    width: 110%;
+    width: 80%;
     height: 2px;
     background-color: #df3d41;
     border: none;
-    transform: rotate(160deg);
+    transform: rotate(165deg);
     position: absolute;
     top: 7px;
   }
