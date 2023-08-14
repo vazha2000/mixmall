@@ -22,7 +22,7 @@ export const SCartInfo = styled(motion.div)`
 `;
 
 export const SCartInfoWrapper = styled.div`
-  height: inherit;
+  /* height: inherit; */
 `;
 
 export const SCartInfoHeaderContainer = styled.div`
@@ -86,7 +86,7 @@ export const SCartEmpty = styled.div`
 `;
 
 export const SCartCardTableContainer = styled.div`
-  height: ${({quantity}) => (quantity ? "56%" : "auto")};
+  height: ${({quantity}) => (quantity ? "52vh" : "auto")};
   overflow-y: auto;
   padding-bottom: 10px;
   ::-webkit-scrollbar {
