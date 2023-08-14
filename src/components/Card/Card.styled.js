@@ -50,6 +50,14 @@ export const SAddToCardButton = styled(motion.div)`
   > span {
     font-size: 14px;
   }
+
+  @media screen and (max-width: 480px) {
+    padding: 15px 0;
+
+    > span {
+      font-size: 12px;
+    }
+  }
 `;
 ;
 
