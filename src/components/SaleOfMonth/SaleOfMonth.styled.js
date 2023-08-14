@@ -63,12 +63,11 @@ export const SSaleOfMonthButton = styled.button`
 
 export const SSaleOfMonthItems = styled.div`
   margin-top: 60px;
-  row-gap: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 
-  @media screen and (max-width: 530px){
+  /* @media screen and (max-width: 530px){
     justify-content: center;
-  }
+  } */
 `;
