@@ -159,9 +159,7 @@ export const Card = (props) => {
       <SCardWishlist
         isInWishlist={isInWishlist}
         onClick={handleWishlistClick}
-        initial={{ x: 100 }}
-        animate={isHovered ? { x: 0 } : { x: 100 }}
-        transition={{ duration: 0.1 }}
+        isHovered={isHovered}
       >
         <SWishlistIcon
           isInWishlist={isInWishlist}
