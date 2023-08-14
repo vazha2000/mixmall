@@ -65,7 +65,7 @@ export const SSaleOfMonthItems = styled.div`
   margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 30px;
 
   /* @media screen and (max-width: 530px){
     justify-content: center;
