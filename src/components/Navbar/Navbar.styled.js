@@ -99,6 +99,8 @@ export const SWishlistContainer = styled(motion.div)`
 
 export const SWishlistIcon = styled.img`
   transition: all 0.2s ease;
+  filter: ${({isInWishlist}) => (isInWishlist ? "brightness(0) invert(1)" : "brightness(0)")};
+
   ${SWishlistContainer}:hover & {
     filter: brightness(0) invert(1);
   }
