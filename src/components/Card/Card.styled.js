@@ -163,7 +163,12 @@ export const SCardWishlist = styled(SWishlistContainer)`
   top: 20px;
   right: 20px;
   background-color: ${({isInWishlist}) => (isInWishlist ? "#df3d41" : "#f0f0f0")};
+  transform: ${({isHovered}) => (isHovered ? "translateX(0)" : "translateX(200%)")};
+  transition: 0.5 ease;
 
+  @media screen and (max-width: 768px){
+    transform: translateX(0);
+  }
   &:hover {
     background-color: ${({isInWishlist}) => (isInWishlist ? "#f02227" : "#df3d41")};
     cursor: pointer;
