@@ -47,8 +47,7 @@ export const SSubcategoriesSidebarWrapper = styled.div`
 
 export const SSubcategoriesProducts = styled.ul`
   flex: 3;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 `
