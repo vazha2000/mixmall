@@ -184,20 +184,6 @@ export const SCartCardTablleRemove = styled(BaseTableCell)`
     cursor: pointer;
   }
 `;
-const backgroundAnimation = keyframes`
-  0% { background-color: #df3d41; }
-  25% { background-color: #9227d9; }
-  50% { background-color: #3dd4df; }
-  75% { background-color: #4adf3d; }
-  100% { background-color: #eb5234; }
-`;
-
-const buttonAnimation = keyframes`
-  0% { background-color: #df3d41; color: #fff }
-  50% { background-color: #a5acb8; color: black }
-  100% { background-color: #df3d41; color: #fff }
-`;
-
 
 
 export const SCartCardTableTotal = styled.div`
@@ -211,11 +197,11 @@ export const SCartCardTableTotal = styled.div`
   > span {
     padding: 10px 40px;
     border-radius: 10px;
-    animation: ${backgroundAnimation} 3s linear infinite;
+    background-color: #df3d41;
     cursor: default;
 
     &:hover {
-      animation-play-state: paused; 
+      filter: brightness(120%);
     }
 
     > img {
@@ -233,9 +219,10 @@ export const SCartinfoCheckoutButton = styled.button`
   color: #fff;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.3s ease;
 
   &:hover {
-    animation: ${buttonAnimation} 1.5s linear  infinite;
     font-weight: bold;
+    filter: brightness(120%);
   }
 `
