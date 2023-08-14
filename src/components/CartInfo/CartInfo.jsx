@@ -25,7 +25,6 @@ export const CartInfo = ({
   setIsCartClicked,
   isCartClicked,
 }) => {
-
   const totalPrice = cart.reduce((sum, item) => {
     const productPrice = item.productQuantity * item.currentPrice;
     return sum + productPrice;
@@ -72,7 +71,7 @@ export const CartInfo = ({
           </SCartInfoHeaderContainer>
           {cart.length === 0 ? (
             <SCartEmpty>
-              <img src="assets/svg/cart.svg" alt="" />
+              <img src="assets/svg/cart.svg" alt="cart icon" />
               <h1>თქვენი კალათა ცარიელია</h1>
             </SCartEmpty>
           ) : (
