@@ -1,71 +1,62 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { SWishlistContainer } from "../Navbar/Navbar.styled";
 
 export const SCard = styled.div`
-  width: ${({width}) => (width ? "200px" : "calc(25% - 50px)") };
-  min-width: 15.625rem;
-  height: auto;
-  max-height: 21.563rem;
-  border: ${({isHovered}) => (isHovered ? "1px solid rgba(0,0,0, 0.6);" : "1px solid rgba(0,0,0, 0.3);")};
-  border-radius: 4px;
+  width: ${({ width }) => (width ? "calc(25% - 10px)" : "calc(25% - 10px)")};
+  /* min-width: 15.625rem; */
+  /* height: auto; */
+  height: max-content;
   padding-bottom: 20px;
+  border: ${({ isHovered }) =>
+    isHovered ? "1px solid rgba(0,0,0, 0.4);" : "1px solid rgba(0,0,0, 0.15);"};
+  border-radius: 10px;
+  position: relative;
   overflow: hidden;
-  transition: 100ms ease-in;
-`
+`;
 
 export const SCardImageContainer = styled.div`
-  width: 100%;
-  height: 250px;
-  background-color: #e8e8e8;
-  position: relative;
+  width: 90%;
+  height: 70%;
+  /* background-color: red; */
+  margin: 10px auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  overflow: hidden;
-`
+  align-items: flex-end;
+  text-align: center;
+`;
+
+export const SCardImageWrapper = styled.div`
+  width: 100%;
+`;
+
+export const SCardImage = styled.img`
+  width: 90%;
+`;
 
 export const SAddToCardButton = styled(motion.div)`
-  position: absolute;
-  bottom: 0;
-  height: 15%;
-  width: 100%;
-  background-color: #df3d41;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 25px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  /* transform: translateY(-10%); */
 
   &:hover {
-    filter: brightness(90%);
+    background-color: #df3d41;
+    color: #fff;
+    border: none;
   }
 
   > span {
-    color: #f2f2f2;
     font-size: 14px;
   }
-`
-
-export const SCardImage = styled.img`
-  width: 70%;
-  transition: 0.1s ease-in;
-
-  &:hover {
-    scale: 1.05;
-  }
-`
-
-export const SCardWishlist = styled.img`
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background-color: ${({isInWishlist}) => (isInWishlist ? "#df3d41" : "#f2f2f2")};
-  border-radius: 50%;
-  padding: 5px;
-
-  &:hover {
-    filter: brightness(120%);
-  }
-`
+`;
+;
 
 export const SCardSaleDiscount = styled.span`
   position: absolute;
@@ -76,37 +67,99 @@ export const SCardSaleDiscount = styled.span`
   padding: 4px 10px;
   border-radius: 4px;
   color: #f2f2f2;
-`
+`;
 
 export const SCardInfo = styled.div`
   display: flex;
+  width: 90%;
+  margin: 0 auto;
   flex-direction: column;
-`
+`;
 
 export const SCardProductName = styled.h4`
-  margin: 1rem 0;
-  font-size: 14px;
-  text-shadow: 0px 0px 0px black;
+  font-size: 13px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   padding-left: 4px;
-`
+  cursor: pointer;
+  width: max-content;
+
+  &:hover {
+    text-decoration-line: underline;
+    text-decoration-color: #1f1f1f;
+    text-decoration-thickness: 2px;
+  }
+`;
 
 export const SCardPriceContainer = styled.div`
-  > span {
-    pointer-events: none;
-  }
+  width: 90%;
+  margin: 20px auto;
   display: flex;
-  gap: 20px;
-`
+  flex-direction: column;
+  font-size: 14px;
+  gap: 8px;
+  cursor: default;
+  user-select: none;
+`;
 
-export const SCardPrice = styled.span`
-  color: #df3d41;
-  padding-left: 4px;
-`
+export const SCartPriceWrapper = styled.div`
+  position: relative;
+  width: max-content;
+  display: flex;
+
+  > div {
+    margin-left: 20px;
+  }
+`;
+
+export const SCardOldPriceWrapper = styled(SCartPriceWrapper)`
+  > hr {
+    width: 110%;
+    height: 2px;
+    background-color: #df3d41;
+    border: none;
+    transform: rotate(160deg);
+    position: absolute;
+    top: 7px;
+  }
+`;
 
 export const SCardOldPrice = styled.span`
-  text-decoration: line-through;
+  &::after {
+    content: "99";
+    position: absolute;
+    top: -25%;
+    font-size: 13px;
+  }
+`;
+export const SCardPrice = styled.span`
+  color: #df3d41;
+
+  &::after {
+    content: "99";
+    position: absolute;
+    top: -25%;
+    font-size: 13px;
+  }
+`;
+
+export const SCardContentWrapper = styled.div`
+  /* transform: translateY(-10%); */
+  transform: ${({ isHovered }) =>
+    isHovered ? "translateY(-3%)" : "translateY(0)"};
+  transition: 0.2s ease;
+`;
+
+export const SCardWishlist = styled(SWishlistContainer)`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+
+  &:hover {
+    background-color: #df3d41;
+    cursor: pointer;
+  }
 `
