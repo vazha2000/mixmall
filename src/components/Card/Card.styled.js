@@ -84,7 +84,7 @@ export const SCardSaleDiscount = styled.span`
   }
 
   @media screen and (max-width: 400px) {
-    left: 15px;
+    left: 8px;
     font-size: 10px;
     padding: 10px 8px;
   }
@@ -191,6 +191,7 @@ export const SCardWishlist = styled(SWishlistContainer)`
   @media screen and (max-width: 400px) {
     transform: scale(0.8);
     top: 15px;
+    right: 5px;
   }
   &:hover {
     background-color: ${({ isInWishlist }) =>
