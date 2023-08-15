@@ -71,6 +71,7 @@ export const SCardSaleDiscount = styled.span`
   color: #f2f2f2;
   z-index: 5;
   padding: ${({ isHovered }) => isHovered && "10px 15px"};
+  transition: 0.3s ease;
 
   &::before {
     content: "ფასდაკლება";
