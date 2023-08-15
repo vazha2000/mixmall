@@ -14,6 +14,10 @@ z-index: 5;
 `;
 
 export const SProductAddedToWishlist = styled(motion.div)`
+  > img {
+    height: 40%;
+    filter: brightness(0) invert(1);
+  }
   width: 100%;
   height: 80px;
   white-space: nowrap;
@@ -24,8 +28,9 @@ export const SProductAddedToWishlist = styled(motion.div)`
   border-radius: 5px;
   color: #fff;
   text-align: center;
+  gap: 1%;
   
   @media screen and (max-width: 600px){
-  white-space: normal;
+  white-space: normal; 
 }
 `

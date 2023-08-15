@@ -40,8 +40,8 @@ export const SAddToCardButton = styled(motion.div)`
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s ease;
-  background-color: ${({isInCart}) => (isInCart ? "#df3d41" : "fff")};
-  color: ${({isInCart}) => (isInCart ? "#fff" : "#1f1f1f")};
+  background-color: ${({ isInCart }) => (isInCart ? "#df3d41" : "fff")};
+  color: ${({ isInCart }) => (isInCart ? "#fff" : "#1f1f1f")};
   &:hover {
     background-color: #df3d41;
     color: #fff;
@@ -60,17 +60,34 @@ export const SAddToCardButton = styled(motion.div)`
     }
   }
 `;
-;
-
 export const SCardSaleDiscount = styled.span`
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 20px;
+  left: 20px;
   background-color: #df3d41;
-  font-size: 14px;
-  padding: 4px 10px;
+  font-size: 12px;
+  padding: 10px 10px;
   border-radius: 4px;
   color: #f2f2f2;
+  z-index: 5;
+  padding: ${({ isHovered }) => isHovered && "10px 15px"};
+  transition: 0.3s ease;
+
+  &::before {
+    content: "ფასდაკლება";
+  }
+
+  @media screen and (max-width: 768px) {
+    &::before {
+      content: ${({ discountRate }) => discountRate && `'${discountRate}'`};
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    left: 15px;
+    font-size: 10px;
+    padding: 10px 8px;
+  }
 `;
 
 export const SCardInfo = styled.div`
@@ -162,15 +179,22 @@ export const SCardWishlist = styled(SWishlistContainer)`
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: ${({isInWishlist}) => (isInWishlist ? "#df3d41" : "#f0f0f0")};
-  transform: ${({isHovered}) => (isHovered ? "translateX(0)" : "translateX(200%)")};
+  background-color: ${({ isInWishlist }) =>
+    isInWishlist ? "#df3d41" : "#f0f0f0"};
+  transform: ${({ isHovered }) =>
+    isHovered ? "translateX(0)" : "translateX(200%)"};
   transition: 0.5 ease;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     transform: translateX(0);
   }
+  @media screen and (max-width: 400px) {
+    transform: scale(0.8);
+    top: 15px;
+  }
   &:hover {
-    background-color: ${({isInWishlist}) => (isInWishlist ? "#f02227" : "#df3d41")};
+    background-color: ${({ isInWishlist }) =>
+      isInWishlist ? "#f02227" : "#df3d41"};
     cursor: pointer;
   }
-`
+`;

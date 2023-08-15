@@ -14,58 +14,62 @@ export const NotificationPopup = ({
 }) => {
   return (
     <>
-    <AnimatePresence>
-      {showCartPopup && (
-        <SCenteredContainer>
-          <SProductAddedToWishlist
-            initial={{ y: 0 }}
-            animate={{ y: 30 }}
-            exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
-          >
-            პროდუქტი {productName} დაემატა კალათაში
-          </SProductAddedToWishlist>
-        </SCenteredContainer>
-      )}
-    </AnimatePresence>
-    <AnimatePresence>
-      {showCartRemovePopup && (
-        <SCenteredContainer>
-          <SProductAddedToWishlist
-            initial={{ y: 0 }}
-            animate={{ y: 30 }}
-            exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
-          >
-            პროდუქტი {productName} წაიშალა კალათიდან
-          </SProductAddedToWishlist>
-        </SCenteredContainer>
-      )}
-    </AnimatePresence>
-    <AnimatePresence>
-      {showWishlistPopup && (
-        <SCenteredContainer>
-          <SProductAddedToWishlist
-            initial={{ y: 0 }}
-            animate={{ y: 30 }}
-            exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
-          >
-            პროდუქტი {productName} დაემატა სურვილების სიაში
-          </SProductAddedToWishlist>
-        </SCenteredContainer>
-      )}
-    </AnimatePresence>
-    <AnimatePresence>
-      {showWishlistRemovePopup && (
-        <SCenteredContainer>
-          <SProductAddedToWishlist
-            initial={{ y: 0 }}
-            animate={{ y: 30 }}
-            exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
-          >
-            პროდუქტი {productName} წაიშალა სურვილების სიიდან
-          </SProductAddedToWishlist>
-        </SCenteredContainer>
-      )}
-    </AnimatePresence>
+      <AnimatePresence>
+        {showCartPopup && (
+          <SCenteredContainer>
+            <SProductAddedToWishlist
+              initial={{ y: 0 }}
+              animate={{ y: 30 }}
+              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
+            >
+              <img src="assets/svg/cart.svg" alt="cart icon" />
+              <span>პროდუქტი {productName} დაემატა კალათაში</span>
+            </SProductAddedToWishlist>
+          </SCenteredContainer>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {showCartRemovePopup && (
+          <SCenteredContainer>
+            <SProductAddedToWishlist
+              initial={{ y: 0 }}
+              animate={{ y: 30 }}
+              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
+            >
+              <img src="assets/svg/cart.svg" alt="cart icon" />
+              <span>პროდუქტი {productName} წაიშალა კალათიდან</span>
+            </SProductAddedToWishlist>
+          </SCenteredContainer>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {showWishlistPopup && (
+          <SCenteredContainer>
+            <SProductAddedToWishlist
+              initial={{ y: 0 }}
+              animate={{ y: 30 }}
+              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
+            >
+              <img src="assets/svg/wishlist.svg" alt="wishlist icon" />
+              <span>პროდუქტი {productName} დაემატა სურვილების სიაში</span>
+            </SProductAddedToWishlist>
+          </SCenteredContainer>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {showWishlistRemovePopup && (
+          <SCenteredContainer>
+            <SProductAddedToWishlist
+              initial={{ y: 0 }}
+              animate={{ y: 30 }}
+              exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
+            >
+              <img src="assets/svg/wishlist.svg" alt="wishlist icon" />
+              <span>პროდუქტი {productName} წაიშალა სურვილების სიიდან</span>
+            </SProductAddedToWishlist>
+          </SCenteredContainer>
+        )}
+      </AnimatePresence>
     </>
   );
 };
