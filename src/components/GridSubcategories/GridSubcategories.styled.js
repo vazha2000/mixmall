@@ -6,6 +6,10 @@ export const SGridSubcategories = styled.div`
   grid-gap: 30px; 
   align-items: center;
   margin-bottom: 60px;
+
+  @media screen and (max-width: 650px){
+    gap: 10px;
+  }
 `
 
 export const SBigImageContainer = styled.div`
@@ -15,6 +19,10 @@ export const SBigImageContainer = styled.div`
   height: 100%;
   border-radius: 15px;
   overflow: hidden;
+
+  @media screen and (max-width: 650px){
+    border-radius: 10px;
+  }
 `
 
 export const SBigImgage = styled.img`
@@ -40,6 +48,10 @@ export const SSmallImagesContainer = styled.div`
   gap: 10px;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: 650px){
+    gap: 5px;
+  }
   
 `
 
@@ -48,6 +60,10 @@ export const SSmallImageWrapper = styled.div`
   height: 100%;
   border-radius: 15px;
   display: flex;
+
+  @media screen and (max-width: 650px){
+    border-radius: 10px;
+  }
 `
 
 export const SSmallImage = styled.img`
