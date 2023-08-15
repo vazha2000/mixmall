@@ -10,6 +10,7 @@ import { SaleOfMonth } from "../../components/SaleOfMonth";
 import { BestSellingProducts } from "../../components/BestSellingProducts"
 import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 import { GridSubcategories } from "../../components/GridSubcategories";
+import { Brands } from "../../components/Brands";
 
 export const MainPage = () => {
   
@@ -24,6 +25,7 @@ export const MainPage = () => {
       <SaleOfMonth />
       <GridSubcategories />
       <BestSellingProducts />
+      <Brands />
     </SMainPage>
   );
 };
