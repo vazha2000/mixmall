@@ -188,9 +188,6 @@ export const SCardWishlist = styled(SWishlistContainer)`
   @media screen and (max-width: 768px) {
     transform: translateX(0);
   }
-  /* @media screen and (max-width: 450px) {
-    right: 10px;
-  } */
   @media screen and (max-width: 400px) {
     transform: scale(0.8);
     top: 15px;
