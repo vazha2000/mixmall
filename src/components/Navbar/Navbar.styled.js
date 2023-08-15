@@ -61,6 +61,9 @@ export const SNavActions = styled.div`
   @media screen and (max-width: 1024px) {
     width: auto;
   }
+  @media screen and (max-width: 768px) {
+    padding-right: 9px;
+  }
 `;
 
 export const SNavInputContainer = styled.div`
