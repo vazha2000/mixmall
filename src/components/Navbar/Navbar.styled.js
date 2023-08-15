@@ -117,7 +117,7 @@ export const SWishlistQuantity = styled.div`
   height: 25px;
   font-size: 14px;
   border-radius: 50%;
-  background-color: #f2b818;
+  background-color: #df3d41;
   color: #fff;
   border: 1px solid #fff;
 `;
@@ -129,7 +129,6 @@ export const SCartIcon = styled(SWishlistIcon)`
 `;
 
 export const SCartQuantity = styled(SWishlistQuantity)`
-  background: linear-gradient(#3af0ce, #46db73);
 `;
 
 export const SBurgerMenuIcon = styled.img`
