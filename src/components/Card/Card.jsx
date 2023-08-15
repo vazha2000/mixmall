@@ -121,6 +121,14 @@ export const Card = (props) => {
       isHovered={isHovered}
       width={width}
     >
+      <NotificationPopup
+        showWishlistPopup={showWishlistPopup}
+        showWishlistRemovePopup={showWishlistRemovePopup}
+        showCartPopup={showCartPopup}
+        showCartRemovePopup={showCartRemovePopup}
+        productName={productName}
+      />
+      {isDiscount && <SCardSaleDiscount isHovered={isHovered} discountRate={discountRate}></SCardSaleDiscount>}
       <SCardContentWrapper isHovered={isHovered}>
         <SStyledLink to={path}>
           <SCardImageContainer>
