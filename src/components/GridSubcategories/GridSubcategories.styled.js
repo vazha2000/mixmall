@@ -6,6 +6,7 @@ export const SGridSubcategories = styled.div`
   grid-gap: 30px; 
   align-items: center;
   margin-bottom: 60px;
+  padding: 0 10px;
 
   @media screen and (max-width: 650px){
     gap: 10px;
