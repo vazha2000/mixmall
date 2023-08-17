@@ -9,6 +9,7 @@ export const SBrandsLabel = styled.label`
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 0 10px;
 `
 
 export const SBrandsLabelText = styled.span`
