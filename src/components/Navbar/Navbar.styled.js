@@ -144,3 +144,74 @@ export const SBurgerMenuIcon = styled.img`
     display: flex;
   }
 `;
+
+export const SNavMenu = styled.div`
+  display: flex;
+  height: 50px;
+`
+
+export const SNavMenuCategories = styled.div`
+  > span {
+    font-size: 13px;
+  }
+  flex: 1;
+  background-color: #1f1f1f;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #df3d41;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+`
+
+export const SNavMenuItemsContainer = styled.ul`
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ededed;
+  position: relative;
+  font-size: 13px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 20px solid #ededed;
+    overflow: hidden;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid #ededed;
+    border-right: 20px solid transparent;
+  }
+`
+
+export const SNavMenuItems = styled.li`
+  &:hover {
+    cursor: pointer;
+    color: #df3d41;
+
+  }
+`
+
+export const SNavMenuDiscount = styled.div`
+  flex: 1;
+  background-color: #df3d41;
+
+`
