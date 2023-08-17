@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "BPG Mrgvlovani Caps 2010";
   }
   body {
-    background-color: #ffffff;
+    background-color: #f6f6f6;
     color: #1f1f1f;
     font-family: "BPG Mrgvlovani Caps 2010";
     overflow-x: hidden;
@@ -28,6 +28,3 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
   }
 `
-
-// თვის აქციის ქვემოთ დაემატოს როგორც ვიდეოშია კომპიუტერის ნაწილების სექცია. ერთი დიდი ფოტო და 6 პატარა
-// ბრენდების დამატება ბოლოში
