@@ -12,8 +12,7 @@ export const SAdSlider = styled.div`
 `
 
 export const SSlider = styled.div`
-  width: 97%;
-  height: 100%;
+  width: 100%;
 
   @media screen and (max-width: 1024px) {
     width: 100%;
