@@ -5,9 +5,11 @@ import {
   SCartQuantity,
   SLogo,
   SNavActions,
+  SNavContactContainer,
+  SNavContactIconContainer,
   SNavInputContainer,
-  SNavItem,
-  SNavMenu,
+  // SNavItem,
+  // SNavMenu,
   SNavbar,
   SWishlistCartContainer,
   SWishlistContainer,
@@ -37,15 +39,22 @@ export const Navbar = () => {
           width={180}
         />
       </Link>
-      <SNavMenu>
+      {/* <SNavMenu>
         <SNavItem>მთავარი</SNavItem>
         <SNavItem>ONLINE განვადება</SNavItem>
         <SNavItem>კონტაქტი</SNavItem>
-      </SNavMenu>
+      </SNavMenu> */}
+
       <SNavActions>
         <SNavInputContainer>
           <SearchInput />
         </SNavInputContainer>
+        <SNavContactContainer>
+          <SNavContactIconContainer>
+            <img src="assets/svg/phone.svg" alt="phone icon" />
+          </SNavContactIconContainer>
+          <span>+995 579 33 33 11</span>
+        </SNavContactContainer>
         <SWishlistCartContainer>
           <SStyledLink to="/wishlist">
             <SWishlistContainer>
