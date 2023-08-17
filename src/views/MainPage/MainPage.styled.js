@@ -11,5 +11,4 @@ export const SMainPage = styled.div`
 
 export const SSidebarAndSlider = styled.div`
   display: flex;
-  margin-top: 1.875rem;
 `
