@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const SNavbar = styled.nav`
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
   height: 6rem;
   display: flex;
   align-items: center;
