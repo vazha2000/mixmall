@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SLayout = styled.div`
-  width: 80%;
+  width: 76%;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
