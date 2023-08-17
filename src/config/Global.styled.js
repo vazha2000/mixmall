@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     color: #1f1f1f;
     font-family: "BPG Mrgvlovani Caps 2010";
     overflow-x: hidden;
+    line-height: 1.2;
   }
 
   button {
