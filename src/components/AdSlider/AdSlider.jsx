@@ -22,8 +22,8 @@
       <SAdSlider>
         <SSlider>
           <Slider {...settings}>
-              <SSliderImage src='assets/images/bremen.png' alt="" />
-              <SSliderImage src='assets/images/bremen.png' alt="" />
+              <SSliderImage src='assets/images/ad1.png' alt="" />
+              <SSliderImage src='assets/images/ad1.png' alt="" />
               
           </Slider>
         </SSlider>
