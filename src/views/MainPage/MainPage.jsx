@@ -18,7 +18,7 @@ export const MainPage = () => {
     <SMainPage>
       <SearchInputHamburger />
       <SSidebarAndSlider>
-        <Sidebar />
+        {/* <Sidebar /> */}
         <AdSlider />
       </SSidebarAndSlider>
       {/* <BrowseByCategory /> */}
