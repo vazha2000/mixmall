@@ -2,19 +2,24 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const SDropDownMenu = styled(motion.div)`
-  background-color: #fff;
+export const SDropDownMenuWrapper = styled.div`
   position: absolute;
   top: 0;
-  left: calc(100% + 10px);
+  left: 100%;
+  padding-left: 20px;
+  height: calc(100% - 15px);
+  width: 400px;
+`
+export const SDropDownMenu = styled(motion.div)`
+  background-color: #fff;
   padding: 20px;
   border-radius: ${({isOverflowing}) => (isOverflowing ? "15px 8px 8px 15px " : "15px")};
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-right: ${({isOverflowing}) => (isOverflowing ? "none" : "1px solid rgba(0,0,0, 0.2)")};
   z-index: 2;
-  height: calc(100% - 15px);
+  height: 100%;
   margin-top: 15px;
-  width: 390px;
+  width: 100%;
   transition: 0.1s ease;
   overflow-y: auto;
   box-sizing: border-box;
