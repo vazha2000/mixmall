@@ -50,11 +50,6 @@ export const Navbar = () => {
             width={180}
           />
         </Link>
-        {/* <SNavMenu>
-        <SNavItem>მთავარი</SNavItem>
-        <SNavItem>ONLINE განვადება</SNavItem>
-        <SNavItem>კონტაქტი</SNavItem>
-      </SNavMenu> */}
 
         <SNavActions>
           <SNavInputContainer>
