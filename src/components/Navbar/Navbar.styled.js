@@ -8,6 +8,7 @@ export const SNavbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 10px;
 `;
 
 export const SLogo = styled.img`
