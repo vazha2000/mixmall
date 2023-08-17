@@ -7,6 +7,7 @@ export const SSidebarContainer = styled.div`
     display: none;
   }
   width: ${({width}) => (width ? width : "auto")};
+  z-index: 10;
 `;
 
 export const SSideBarCategories = styled.ul`
