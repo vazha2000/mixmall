@@ -8,6 +8,7 @@ export const SNavbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 10px;
 `;
 
 export const SLogo = styled.img`
@@ -148,13 +149,15 @@ export const SBurgerMenuIcon = styled.img`
 export const SNavMenu = styled.div`
   display: flex;
   height: 50px;
+  position: relative;
 `
-
+export const SNavMenuCategoriesWrapper = styled.div`
+  flex: 1;
+`
 export const SNavMenuCategories = styled.div`
   > span {
     font-size: 13px;
   }
-  flex: 1;
   background-color: #1f1f1f;
   color: #fff;
   height: 100%;
@@ -167,6 +170,12 @@ export const SNavMenuCategories = styled.div`
     cursor: pointer;
     transition: 0.3s ease;
   }
+`
+
+export const SNavSidebarWrapper = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
 `
 
 export const SNavMenuItemsContainer = styled.ul`

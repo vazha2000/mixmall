@@ -9,7 +9,7 @@ export const SMainPage = styled.div`
   } */
 `
 
-export const SSidebarAndSlider = styled.div`
+export const SAdSliderContainer = styled.div`
   display: flex;
   margin-top: 15px;
 `

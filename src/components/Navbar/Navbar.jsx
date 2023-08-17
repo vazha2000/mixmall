@@ -10,9 +10,11 @@ import {
   SNavInputContainer,
   SNavMenu,
   SNavMenuCategories,
+  SNavMenuCategoriesWrapper,
   SNavMenuDiscount,
   SNavMenuItems,
   SNavMenuItemsContainer,
+  SNavSidebarWrapper,
   // SNavItem,
   // SNavMenu,
   SNavbar,
@@ -28,77 +30,88 @@ import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 import { CheckoutContext } from "../../context/CheckoutContext";
 import { CartInfo } from "../CartInfo";
 import { AnimatePresence } from "framer-motion";
+import { SSubcategoriesSidebarWrapper } from "../../views/SubCategories/Subcategories.styled";
+import { Sidebar } from "../Sidebar";
 
 export const Navbar = () => {
   const [isCartClicked, setIsCartClicked] = useState(false);
+  const [isCategoriesActive, setIsCategoriesActive] = useState(false);
 
   const { wishlist } = useContext(WishlistContext);
   const { cart, removeFromCart } = useContext(CheckoutContext);
 
   return (
     <>
-    <SNavbar>
-      <Link to="/">
-        <SLogo
-          src="../assets/images/LogoNoBackground.png"
-          alt="logo"
-          width={180}
-        />
-      </Link>
-      {/* <SNavMenu>
-        <SNavItem>მთავარი</SNavItem>
-        <SNavItem>ONLINE განვადება</SNavItem>
-        <SNavItem>კონტაქტი</SNavItem>
-      </SNavMenu> */}
-
-      <SNavActions>
-        <SNavInputContainer>
-          <SearchInput />
-        </SNavInputContainer>
-        <SNavContactContainer>
-          <SNavContactIconContainer>
-            <img src="assets/svg/phone.svg" alt="phone icon" />
-          </SNavContactIconContainer>
-          <span>+995 579 33 33 11</span>
-        </SNavContactContainer>
-        <SWishlistCartContainer>
-          <SStyledLink to="/wishlist">
-            <SWishlistContainer>
-              <SWishlistIcon
-                src="../assets/svg/wishlist.svg"
-                alt="wishlist icon"
-              />
-              <SWishlistQuantity>{wishlist.length}</SWishlistQuantity>
-            </SWishlistContainer>
-          </SStyledLink>
-          <SCartIconContainer onClick={() => setIsCartClicked(!isCartClicked)}>
-            <SCartIcon src="../assets/svg/cart.svg" alt="cart icon" />
-            <SCartQuantity>{cart.length}</SCartQuantity>
-          </SCartIconContainer>
-        </SWishlistCartContainer>
-      </SNavActions>
-      <AnimatePresence>
-        {isCartClicked && (
-          <CartInfo
-            isCartClicked={isCartClicked}
-            setIsCartClicked={setIsCartClicked}
-            cart={cart}
-            removeFromCart={removeFromCart}
+      <SNavbar>
+        <Link to="/">
+          <SLogo
+            src="../assets/images/LogoNoBackground.png"
+            alt="logo"
+            width={180}
           />
-        )}
-      </AnimatePresence>
-    </SNavbar>
-    <SNavMenu>
-      <SNavMenuCategories>
-        <span>კატეგორიები</span>
-      </SNavMenuCategories>
-      <SNavMenuItemsContainer>
-        <SNavMenuItems>მთავარი</SNavMenuItems>
-        <SNavMenuItems>ONLINE განვადება</SNavMenuItems>
-        <SNavMenuItems>კონტაქტი</SNavMenuItems>
-      </SNavMenuItemsContainer>
-      <SNavMenuDiscount></SNavMenuDiscount>
-    </SNavMenu>
+        </Link>
+
+        <SNavActions>
+          <SNavInputContainer>
+            <SearchInput />
+          </SNavInputContainer>
+          <SNavContactContainer>
+            <SNavContactIconContainer>
+              <img src="assets/svg/phone.svg" alt="phone icon" />
+            </SNavContactIconContainer>
+            <span>+995 579 33 33 11</span>
+          </SNavContactContainer>
+          <SWishlistCartContainer>
+            <SStyledLink to="/wishlist">
+              <SWishlistContainer>
+                <SWishlistIcon
+                  src="../assets/svg/wishlist.svg"
+                  alt="wishlist icon"
+                />
+                <SWishlistQuantity>{wishlist.length}</SWishlistQuantity>
+              </SWishlistContainer>
+            </SStyledLink>
+            <SCartIconContainer
+              onClick={() => setIsCartClicked(!isCartClicked)}
+            >
+              <SCartIcon src="../assets/svg/cart.svg" alt="cart icon" />
+              <SCartQuantity>{cart.length}</SCartQuantity>
+            </SCartIconContainer>
+          </SWishlistCartContainer>
+        </SNavActions>
+        <AnimatePresence>
+          {isCartClicked && (
+            <CartInfo
+              isCartClicked={isCartClicked}
+              setIsCartClicked={setIsCartClicked}
+              cart={cart}
+              removeFromCart={removeFromCart}
+            />
+          )}
+        </AnimatePresence>
+      </SNavbar>
+      <SNavMenu>
+        <SNavMenuCategoriesWrapper
+          onMouseEnter={() => setIsCategoriesActive(true)}
+          onMouseLeave={() => setIsCategoriesActive(false)}
+        >
+          <SNavMenuCategories>
+            <span>კატეგორიები</span>
+          </SNavMenuCategories>
+          {isCategoriesActive && (
+            <SNavSidebarWrapper>
+              <Sidebar width={"400px"} />
+            </SNavSidebarWrapper>
+          )}
+        </SNavMenuCategoriesWrapper>
+
+        <SNavMenuItemsContainer>
+          <SNavMenuItems>მთავარი</SNavMenuItems>
+          <SNavMenuItems>ONLINE განვადება</SNavMenuItems>
+          <SNavMenuItems>კონტაქტი</SNavMenuItems>
+        </SNavMenuItemsContainer>
+        <SNavMenuDiscount></SNavMenuDiscount>
+      </SNavMenu>
     </>
   );
 };

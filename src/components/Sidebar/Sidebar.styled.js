@@ -7,18 +7,19 @@ export const SSidebarContainer = styled.div`
     display: none;
   }
   width: ${({width}) => (width ? width : "auto")};
+  z-index: 10;
+  padding-top: 15px;
 `;
 
 export const SSideBarCategories = styled.ul`
   display: flex;
   flex-direction: column;
   background-color: #fcfcfc;
-  border-radius: .313rem;
   -webkit-box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.25);
   -moz-box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.25);
   box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.25);
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 0 15px 15px 0;
 `;
 
 export const SSideBarCategoriesListWrapper = styled.div`
