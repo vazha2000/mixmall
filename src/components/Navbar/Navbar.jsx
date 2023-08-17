@@ -5,9 +5,16 @@ import {
   SCartQuantity,
   SLogo,
   SNavActions,
+  SNavContactContainer,
+  SNavContactIconContainer,
   SNavInputContainer,
-  SNavItem,
   SNavMenu,
+  SNavMenuCategories,
+  SNavMenuDiscount,
+  SNavMenuItems,
+  SNavMenuItemsContainer,
+  // SNavItem,
+  // SNavMenu,
   SNavbar,
   SWishlistCartContainer,
   SWishlistContainer,
@@ -29,6 +36,7 @@ export const Navbar = () => {
   const { cart, removeFromCart } = useContext(CheckoutContext);
 
   return (
+    <>
     <SNavbar>
       <Link to="/">
         <SLogo
@@ -37,15 +45,22 @@ export const Navbar = () => {
           width={180}
         />
       </Link>
-      <SNavMenu>
+      {/* <SNavMenu>
         <SNavItem>მთავარი</SNavItem>
         <SNavItem>ONLINE განვადება</SNavItem>
         <SNavItem>კონტაქტი</SNavItem>
-      </SNavMenu>
+      </SNavMenu> */}
+
       <SNavActions>
         <SNavInputContainer>
           <SearchInput />
         </SNavInputContainer>
+        <SNavContactContainer>
+          <SNavContactIconContainer>
+            <img src="assets/svg/phone.svg" alt="phone icon" />
+          </SNavContactIconContainer>
+          <span>+995 579 33 33 11</span>
+        </SNavContactContainer>
         <SWishlistCartContainer>
           <SStyledLink to="/wishlist">
             <SWishlistContainer>
@@ -73,5 +88,17 @@ export const Navbar = () => {
         )}
       </AnimatePresence>
     </SNavbar>
+    <SNavMenu>
+      <SNavMenuCategories>
+        <span>კატეგორიები</span>
+      </SNavMenuCategories>
+      <SNavMenuItemsContainer>
+        <SNavMenuItems>მთავარი</SNavMenuItems>
+        <SNavMenuItems>ONLINE განვადება</SNavMenuItems>
+        <SNavMenuItems>კონტაქტი</SNavMenuItems>
+      </SNavMenuItemsContainer>
+      <SNavMenuDiscount></SNavMenuDiscount>
+    </SNavMenu>
+    </>
   );
 };
