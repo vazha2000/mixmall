@@ -1,9 +1,8 @@
 import React from "react";
 import {
+  SAdSliderContainer,
   SMainPage,
-  SSidebarAndSlider,
 } from "./MainPage.styled";
-import { Sidebar } from "../../components/Sidebar";
 import { AdSlider } from "../../components/AdSlider";
 import { BrowseByCategory } from "../../components/BrowseByCategory";
 import { SaleOfMonth } from "../../components/SaleOfMonth";
@@ -17,10 +16,9 @@ export const MainPage = () => {
   return (
     <SMainPage>
       <SearchInputHamburger />
-      <SSidebarAndSlider>
-        {/* <Sidebar /> */}
+      <SAdSliderContainer>
         <AdSlider />
-      </SSidebarAndSlider>
+      </SAdSliderContainer>
       {/* <BrowseByCategory /> */}
       <SaleOfMonth />
       <GridSubcategories />
