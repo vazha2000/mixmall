@@ -25,7 +25,6 @@ export const SNavMenu = styled.ul`
 
 export const SNavItem = styled.li`
   position: relative;
-  font-size: 1rem;
   cursor: pointer;
   font-family: "BPG Mrgvlovani Caps 2010";
   padding: 0.5rem;
@@ -33,7 +32,7 @@ export const SNavItem = styled.li`
   text-align: center;
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 13px;
   white-space: nowrap;
   &:hover {
     background-color: #df3d41;
@@ -88,7 +87,7 @@ export const SWishlistContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
+  height: 2.8rem;
   background-color: #f0f0f0;
   width: 50px;
   border-radius: 12px;

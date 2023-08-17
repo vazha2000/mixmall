@@ -10,7 +10,7 @@ export const SSearchInputContainer = styled.div`
   background-color: red;
   position: relative;
   background-color: transparent;
-  height: 3rem;
+  height: 2.8rem;
   width: 100%;
   display: flex;
   border-radius: 0.5rem;
@@ -39,6 +39,7 @@ export const SSearchInput = styled.input`
   }
   &::placeholder {
     color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
   }
 `;
 

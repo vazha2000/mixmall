@@ -30,7 +30,7 @@ export const SSideBarCategoriesList = styled.li`
   justify-content: space-between;
   width: 100%;
   padding: .625rem .5rem;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   border-bottom: ${({isLast}) => (isLast ? "none" : "1px solid rgba(0,0,0, 0.3)")};
   white-space: nowrap;
