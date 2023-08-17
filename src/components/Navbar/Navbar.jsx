@@ -8,6 +8,11 @@ import {
   SNavContactContainer,
   SNavContactIconContainer,
   SNavInputContainer,
+  SNavMenu,
+  SNavMenuCategories,
+  SNavMenuDiscount,
+  SNavMenuItems,
+  SNavMenuItemsContainer,
   // SNavItem,
   // SNavMenu,
   SNavbar,
@@ -31,6 +36,7 @@ export const Navbar = () => {
   const { cart, removeFromCart } = useContext(CheckoutContext);
 
   return (
+    <>
     <SNavbar>
       <Link to="/">
         <SLogo
@@ -82,5 +88,17 @@ export const Navbar = () => {
         )}
       </AnimatePresence>
     </SNavbar>
+    <SNavMenu>
+      <SNavMenuCategories>
+        <span>კატეგორიები</span>
+      </SNavMenuCategories>
+      <SNavMenuItemsContainer>
+        <SNavMenuItems>მთავარი</SNavMenuItems>
+        <SNavMenuItems>ONLINE განვადება</SNavMenuItems>
+        <SNavMenuItems>კონტაქტი</SNavMenuItems>
+      </SNavMenuItemsContainer>
+      <SNavMenuDiscount></SNavMenuDiscount>
+    </SNavMenu>
+    </>
   );
 };
