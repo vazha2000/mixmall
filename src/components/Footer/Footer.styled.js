@@ -10,7 +10,7 @@ export const SFooter = styled.div`
   @media screen and (max-width: 1024px) {
     padding: 4% 5%;
   }
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px) {
     gap: 20px;
     padding: 3% 1%;
   }
@@ -55,12 +55,11 @@ export const SFooterInfo = styled(SFooterLogoSocial)`
     display: flex;
     gap: 30px;
 
+    @media screen and (max-width: 550px) {
+      gap: 12px;
+      font-size: 13px;
+    }
 
-    @media screen and (max-width: 550px){
-        gap: 12px;
-        font-size: 13px;
-      }
-    
     > span {
       color: #fff;
       font-size: 13px;
@@ -72,7 +71,7 @@ export const SFooterInfo = styled(SFooterLogoSocial)`
         transition: 0.3s ease;
       }
 
-      @media screen and (max-width: 550px){
+      @media screen and (max-width: 550px) {
         font-size: 10px;
       }
     }
@@ -83,7 +82,7 @@ export const SFooterInfo = styled(SFooterLogoSocial)`
   }
   display: flex;
   flex-direction: column;
-  gap:25px;
+  gap: 25px;
 `;
 
 export const SFooterContact = styled(SFooterInfo)``;
@@ -93,17 +92,23 @@ export const SFooterInfoContact = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px) {
     flex-direction: row;
   }
-`
+`;
 
 export const SFooterContactIcon = styled.div`
   > img {
     filter: invert(20%) sepia(90%) saturate(3000%) hue-rotate(349deg)
-        brightness(92%) contrast(100%);
+      brightness(92%) contrast(100%);
   }
   display: flex;
   align-items: center;
   gap: 10px;
-`
+
+  &:hover {
+    color: #df3d41;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+`;
