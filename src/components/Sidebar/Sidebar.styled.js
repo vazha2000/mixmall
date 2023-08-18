@@ -59,9 +59,14 @@ export const SSideBarCategoriesIconName = styled.div`
   width: 86%;
   border-bottom: ${({isLast}) => (isLast ? "none" : "1px solid rgba(0,0,0, 0.15)")};
   margin: 0 auto;
+  position: relative;
   
   > span {
-    line-height: 1.2;
     font-size: 12px;
+    display: flex;
+    position: absolute;
+    left: 50px;
+    top: 56%;
+    transform: translateY(-50%);
   }
 `
