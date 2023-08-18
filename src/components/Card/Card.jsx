@@ -149,14 +149,14 @@ export const Card = (props) => {
               <SCardOldPrice>{oldPrice}.</SCardOldPrice>
               <hr />
               <div>
-                <img src="assets/svg/lari.svg" alt="lari icon" />
+                <img src="assets/svg/lari.svg" alt="lari icon" width={15}/>
               </div>
             </SCardOldPriceWrapper>
           )}
           <SCartPriceWrapper>
             <SCardPrice>{currentPrice}.</SCardPrice>
             <div>
-              <img src="assets/svg/lari.svg" alt="lari icon" />
+              <img src="assets/svg/lari.svg" alt="lari icon" width={15}/>
             </div>
           </SCartPriceWrapper>
         </SCardPriceContainer>
@@ -176,66 +176,5 @@ export const Card = (props) => {
         />
       </SCardWishlist>
     </SCard>
-    // <SCard
-    //   onMouseEnter={handleHover}
-    //   onMouseLeave={handleHover}
-    //   isHovered={isHovered}
-    //   width={width}
-    // >
-    //   <NotificationPopup
-    //     showWishlistPopup={showWishlistPopup}
-    //     showWishlistRemovePopup={showWishlistRemovePopup}
-    //     showCartPopup={showCartPopup}
-    //     showCartRemovePopup={showCartRemovePopup}
-    //     productName={productName}
-    //   />
-
-    //   <SCardImageContainer>
-    //     <SStyledLink to={path} center="true">
-    //       <SCardImage src={productImage} alt={alt} />
-    //     </SStyledLink>
-    //     <SCardWishlist
-    //       src="../assets/svg/wishlist.svg"
-    //       alt="favorites icon"
-    //       isInWishlist={isInWishlist}
-    //       onClick={handleWishlistClick}
-    //     />
-    //     {isDiscount && <SCardSaleDiscount>{discountRate}</SCardSaleDiscount>}
-    //     <AnimatePresence>
-    //       <SAddToCardButton
-    //         onClick={handleCartClick}
-    //         initial={{ y: "100%", opacity: 1 }}
-    //         animate={
-    //           isHovered
-    //             ? {
-    //                 y: 0,
-    //                 opacity: 1,
-    //                 transition: { stiffness: 0, duration: 0.2 },
-    //               }
-    //             : {
-    //                 y: "100%",
-    //                 opacity: 1,
-    //                 transition: { stiffness: 0, duration: 0.2 },
-    //               }
-    //         }
-    //       >
-    //         {isInCart ? (
-    //           <span>კალათიდან წაშლა</span>
-    //         ) : (
-    //           <span>კალათაში დამატება</span>
-    //         )}
-    //       </SAddToCardButton>
-    //     </AnimatePresence>
-    //   </SCardImageContainer>
-    //   <SCardInfo>
-    //     <SStyledLink to={path}>
-    //       <SCardProductName>{productName}</SCardProductName>
-    //     </SStyledLink>
-    //     <SCardPriceContainer>
-    //       <SCardPrice>{currentPrice}</SCardPrice>
-    //       {isDiscount && <SCardOldPrice>{oldPrice}</SCardOldPrice>}
-    //     </SCardPriceContainer>
-    //   </SCardInfo>
-    // </SCard>
   );
 };
