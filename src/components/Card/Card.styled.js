@@ -116,16 +116,6 @@ export const SCardProductName = styled.h4`
 `;
 
 export const SCardPriceContainer = styled.div`
-  /* width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  gap: 8px;
-  cursor: default;
-  user-select: none;
-  height: 50px;
-  justify-content: center; */
   display: flex;
   width: 90%;
   margin: 15px auto;
