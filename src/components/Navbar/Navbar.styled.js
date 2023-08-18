@@ -21,6 +21,7 @@ export const SNavActions = styled.div`
   gap: 1rem;
   margin-left: 1rem;
   justify-content: space-between;
+  padding-right: 5px;
 
   @media screen and (max-width: 1024px) {
     width: auto;
@@ -32,7 +33,7 @@ export const SNavActions = styled.div`
 
 export const SNavInputContainer = styled.div`
   display: flex;
-  width: 100%;
+  width: 50%;
   border-radius: 0.5rem;
 
   @media screen and (max-width: 1024px) {
@@ -152,7 +153,7 @@ export const SNavMenu = styled.div`
   position: relative;
 `
 export const SNavMenuCategoriesWrapper = styled.div`
-  flex: 1;
+  flex: 1.3;
 `
 export const SNavMenuCategories = styled.div`
   > span {
@@ -179,48 +180,56 @@ export const SNavSidebarWrapper = styled.div`
 `
 
 export const SNavMenuItemsContainer = styled.ul`
-  flex: 2;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #ededed;
+  background-color: ${({isMenuHovered}) => (isMenuHovered ? "#b9b9b9" : "#ededed")};
   position: relative;
   font-size: 13px;
+  color: ${({isMenuHovered}) => (isMenuHovered ? "#fff" : "#1f1f1f")};
+  transition: 0.3s ease;
+  cursor: pointer;
 
+  
   &::before {
     content: '';
     position: absolute;
-    left: -20px;
+    left: -18px;
     top: 0;
     width: 0;
     height: 0;
     border-top: 50px solid transparent;
-    border-right: 20px solid #ededed;
+    border-right: 19px solid #ededed;
+    border-right: ${({isMenuHovered}) => (isMenuHovered ? "19px solid #b9b9b9" : "19px solid #ededed")};
     overflow: hidden;
+    transition: 0.3s ease;
   }
 
   &::after {
     content: '';
     position: absolute;
-    right: -20px;
+    right: -18px;
     top: 0;
     width: 0;
     height: 0;
-    border-top: 50px solid #ededed;
-    border-right: 20px solid transparent;
+    border-top: ${({isMenuHovered}) => (isMenuHovered ? "50px solid #b9b9b9" : "50px solid #ededed")};
+    border-right: 19px solid transparent;
+    transition: 0.3s ease;
   }
 `
 
 export const SNavMenuItems = styled.li`
-  &:hover {
+  /* &:hover {
     cursor: pointer;
     color: #df3d41;
 
-  }
+  } */
 `
 
 export const SNavMenuDiscount = styled.div`
-  flex: 1;
+  flex: 1.2;
   background-color: #df3d41;
 
 `

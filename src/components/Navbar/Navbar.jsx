@@ -36,6 +36,11 @@ import { Sidebar } from "../Sidebar";
 export const Navbar = () => {
   const [isCartClicked, setIsCartClicked] = useState(false);
   const [isCategoriesActive, setIsCategoriesActive] = useState(false);
+  const [menuItemsHover, setMenuItemsHover] = useState({
+    main: false,
+    onlineInstallment: false,
+    contact: false
+  });
 
   const { wishlist } = useContext(WishlistContext);
   const { cart, removeFromCart } = useContext(CheckoutContext);
@@ -105,9 +110,37 @@ export const Navbar = () => {
           )}
         </SNavMenuCategoriesWrapper>
 
-        <SNavMenuItemsContainer>
+        <SNavMenuItemsContainer
+          isMenuHovered={menuItemsHover.main}
+          onMouseEnter={() => setMenuItemsHover((prev) => ({
+            ...prev, main: true
+          }))}
+          onMouseLeave={() => setMenuItemsHover((prev) => ({
+            ...prev, main: false
+          }))}
+        >
           <SNavMenuItems>მთავარი</SNavMenuItems>
+        </SNavMenuItemsContainer>
+        <SNavMenuItemsContainer
+          isMenuHovered={menuItemsHover.onlineInstallment}
+          onMouseEnter={() => setMenuItemsHover((prev) => ({
+            ...prev, onlineInstallment: true
+          }))}
+          onMouseLeave={() => setMenuItemsHover((prev) => ({
+            ...prev, onlineInstallment: false
+          }))}
+          >
           <SNavMenuItems>ONLINE განვადება</SNavMenuItems>
+        </SNavMenuItemsContainer>
+        <SNavMenuItemsContainer
+         isMenuHovered={menuItemsHover.contact}
+         onMouseEnter={() => setMenuItemsHover((prev) => ({
+           ...prev, contact: true
+         }))}
+         onMouseLeave={() => setMenuItemsHover((prev) => ({
+           ...prev, contact: false
+         }))}
+          >
           <SNavMenuItems>კონტაქტი</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavMenuDiscount></SNavMenuDiscount>
