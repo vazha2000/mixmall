@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import {
   SSideBarCategories,
+  SSideBarCategoriesIconName,
   SSideBarCategoriesList,
   SSideBarCategoriesListWrapper,
   SSidebarContainer,
@@ -9,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { DropdownMenu } from "../DropdownMenu";
 import { categoriesListItems } from "../../data/data";
 
-export const Sidebar = ({width}) => {
+export const Sidebar = ({ width }) => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const sidebarRef = useRef(null);
 
@@ -32,15 +33,14 @@ export const Sidebar = ({width}) => {
               onMouseEnter={(event) => handleCategoryHover(item, event)}
             >
               <SSideBarCategoriesList isLast={isLastItem}>
-                <span>{item.name}</span>
+                <SSideBarCategoriesIconName>
+                  <img src={item.svg} alt={item.alt} width={20} />
+                  <span>{item.name}</span>
+                </SSideBarCategoriesIconName>
                 <img src="../assets/svg/vectorRight.svg" alt="vectorRight" />
               </SSideBarCategoriesList>
               <AnimatePresence>
-                {hoveredCategory === item && (
-                  <DropdownMenu
-                    item={item}
-                  />
-                )}
+                {hoveredCategory === item && <DropdownMenu item={item} />}
               </AnimatePresence>
             </SSideBarCategoriesListWrapper>
           );
