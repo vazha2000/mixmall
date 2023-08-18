@@ -45,7 +45,16 @@ export const SSideBarCategoriesList = styled.li`
     font-weight: bold;
   }
 
+  &:hover > div > img {
+    filter:  brightness(0) invert(1);
+  }
   &:hover > img {
     filter:  brightness(0) invert(1);
   }
 `;
+
+export const SSideBarCategoriesIconName = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`
