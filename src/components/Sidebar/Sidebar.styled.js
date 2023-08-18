@@ -36,7 +36,6 @@ export const SSideBarCategoriesList = styled.li`
   border-bottom: ${({isLast}) => (isLast ? "none" : "1px solid rgba(0,0,0, 0.3)")};
   white-space: nowrap;
   cursor: pointer;
-  font-weight: normal;
   transition: all 0.2s ease;
 
   &:hover {
