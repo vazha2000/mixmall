@@ -116,7 +116,7 @@ export const SCardProductName = styled.h4`
 `;
 
 export const SCardPriceContainer = styled.div`
-  width: 90%;
+  /* width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -125,7 +125,14 @@ export const SCardPriceContainer = styled.div`
   cursor: default;
   user-select: none;
   height: 50px;
-  justify-content: center;
+  justify-content: center; */
+  display: flex;
+  width: 90%;
+  margin: 15px auto;
+  gap: 8px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  font-size: 18px;
 `;
 
 export const SCartPriceWrapper = styled.div`
@@ -155,7 +162,7 @@ export const SCardOldPrice = styled.span`
     content: "99";
     position: absolute;
     top: -25%;
-    font-size: 13px;
+    font-size: 15px;
   }
 `;
 export const SCardPrice = styled.span`
@@ -165,7 +172,7 @@ export const SCardPrice = styled.span`
     content: "99";
     position: absolute;
     top: -25%;
-    font-size: 13px;
+    font-size: 15px;
   }
 `;
 
