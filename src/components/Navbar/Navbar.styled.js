@@ -214,7 +214,7 @@ export const SNavMenuItemsContainer = styled.ul`
     width: 0;
     height: 0;
     border-top: ${({isMenuHovered}) => (isMenuHovered ? "50px solid #b9b9b9" : "50px solid #ededed")};
-    border-right: 19px solid transparent;
+    border-right: 21px solid transparent;
     transition: 0.3s ease;
   }
 `
