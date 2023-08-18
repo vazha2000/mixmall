@@ -66,6 +66,10 @@ export const SNavContactContainer = styled.div`
       color: #fff;
     }
   }
+
+  @media screen and (max-width: 650px){
+    display: none;
+  }
 `
 
 export const SNavContactIconContainer = styled.div`
