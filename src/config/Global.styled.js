@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: #f6f6f6;
     color: #1f1f1f;
-    font-family: "BPG Mrgvlovani Caps 2010";
+    font-family: "BPG Mrgvlovani Caps", sans-serif;
     overflow-x: hidden;
     line-height: 1.2;
   }
