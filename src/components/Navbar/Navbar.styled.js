@@ -21,6 +21,7 @@ export const SNavActions = styled.div`
   gap: 1rem;
   margin-left: 1rem;
   justify-content: space-between;
+  padding-right: 5px;
 
   @media screen and (max-width: 1024px) {
     width: auto;
@@ -32,7 +33,7 @@ export const SNavActions = styled.div`
 
 export const SNavInputContainer = styled.div`
   display: flex;
-  width: 100%;
+  width: 50%;
   border-radius: 0.5rem;
 
   @media screen and (max-width: 1024px) {
