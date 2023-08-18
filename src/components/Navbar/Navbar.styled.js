@@ -201,7 +201,6 @@ export const SNavMenuItemsContainer = styled.ul`
     width: 0;
     height: 0;
     border-top: 50px solid transparent;
-    border-right: 19px solid #ededed;
     border-right: ${({isMenuHovered}) => (isMenuHovered ? "19px solid #b9b9b9" : "19px solid #ededed")};
     overflow: hidden;
     transition: 0.3s ease;
@@ -210,7 +209,7 @@ export const SNavMenuItemsContainer = styled.ul`
   &::after {
     content: '';
     position: absolute;
-    right: -18px;
+    right: -19px;
     top: 0;
     width: 0;
     height: 0;
