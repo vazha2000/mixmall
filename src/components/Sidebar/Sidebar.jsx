@@ -32,12 +32,12 @@ export const Sidebar = ({ width }) => {
               onMouseLeave={handleCategoryUnhover}
               onMouseEnter={(event) => handleCategoryHover(item, event)}
             >
-              <SSideBarCategoriesList isLast={isLastItem}>
-                <SSideBarCategoriesIconName>
+              <SSideBarCategoriesList>
+                <SSideBarCategoriesIconName isLast={isLastItem}>
                   <img src={item.svg} alt={item.alt} width={20} />
                   <span>{item.name}</span>
                 </SSideBarCategoriesIconName>
-                <img src="../assets/svg/vectorRight.svg" alt="vectorRight" />
+                {/* <img src="../assets/svg/vectorRight.svg" alt="vectorRight" /> */}
               </SSideBarCategoriesList>
               <AnimatePresence>
                 {hoveredCategory === item && <DropdownMenu item={item} />}
