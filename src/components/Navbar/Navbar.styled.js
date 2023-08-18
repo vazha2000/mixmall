@@ -180,7 +180,7 @@ export const SNavMenuCategories = styled.div`
 export const SNavSidebarWrapper = styled.div`
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 20px;
 `
 
 export const SNavMenuItemsContainer = styled.ul`
