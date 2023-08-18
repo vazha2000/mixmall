@@ -97,3 +97,13 @@ export const SFooterInfoContact = styled.div`
     flex-direction: row;
   }
 `
+
+export const SFooterContactIcon = styled.div`
+  > img {
+    filter: invert(20%) sepia(90%) saturate(3000%) hue-rotate(349deg)
+        brightness(92%) contrast(100%);
+  }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`
