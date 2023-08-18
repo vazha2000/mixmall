@@ -20,7 +20,7 @@ export const SNavActions = styled.div`
   width: 90%;
   gap: 1rem;
   margin-left: 1rem;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-right: 5px;
 
   @media screen and (max-width: 1024px) {

@@ -46,7 +46,7 @@ export const Navbar = () => {
   const { cart, removeFromCart } = useContext(CheckoutContext);
 
   return (
-    <>
+    <div>
       <SNavbar>
         <Link to="/">
           <SLogo
@@ -145,6 +145,6 @@ export const Navbar = () => {
         </SNavMenuItemsContainer>
         <SNavMenuDiscount></SNavMenuDiscount>
       </SNavMenu>
-    </>
+    </div>
   );
 };
