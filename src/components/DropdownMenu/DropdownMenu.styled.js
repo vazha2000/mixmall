@@ -11,7 +11,7 @@ export const SDropDownMenuWrapper = styled.div`
   width: 400px;
 `
 export const SDropDownMenu = styled(motion.div)`
-  background-color: #fff;
+  background-color: #ededed;
   padding: 20px;
   border-radius: ${({isOverflowing}) => (isOverflowing ? "15px 8px 8px 15px " : "15px")};
   border: 1px solid rgba(0, 0, 0, 0.2);
