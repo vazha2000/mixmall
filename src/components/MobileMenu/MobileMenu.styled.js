@@ -43,17 +43,17 @@ export const SMobileMenuCategoriesList = styled(SSideBarCategoriesList)`
   }
   @media screen and (max-width: 900px) {
     &:nth-last-child(2) {
-      display: block;
+      display: flex;
     }
   }
   @media screen and (max-width: 550px) {
     &:nth-last-child(1) {
-      display: block;
+      display: flex;
     }
   }
   @media screen and (max-width: 420px) {
     &:nth-last-child(3) {
-      display: block;
+      display: flex;
     }
   }
   
