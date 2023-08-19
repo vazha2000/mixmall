@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   SMobileMenu,
   SMobileMenuCategories,
@@ -49,6 +49,19 @@ export const MobileMenu = ({ handleMobileMenuClick, isOpen, setIsOpen }) => {
     hidden: { opacity: 1, height: 0 },
   };
 
+  useEffect(() => {
+    const body = document.body;
+    if (isOpen) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
+
+    return () => {
+      body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   return (
     <SMobileMenu
       variants={mobileMenuVariants}
@@ -66,17 +79,7 @@ export const MobileMenu = ({ handleMobileMenuClick, isOpen, setIsOpen }) => {
         />
       </STitleCloseButton>
       <SMobileMenuCategories>
-        {/* <SMobileMenuCategoriesList> */}
-
-        {/* <span>კატეგორიები</span> */}
-        {/* <motion.img animate={isCategoryClicked ? {rotateX: 180} : {rotateX: 0}} src="assets/svg/vectorDown.svg" alt="vector down" /> */}
-        {/* </SMobileMenuCategoriesList> */}
-        {/* triggered when isCategoryClicked state changes */}
-        <SMobileMenuCategoriesContainer
-        // variants={isCategoryClicked ? dropdownVariants : hiddenVariant}
-        // initial={isCategoryClicked ? "hidden" : "hidden"}
-        // animate="visible"
-        >
+        <SMobileMenuCategoriesContainer>
           {categoriesListItems.map((item, index) => {
             return (
               <motion.div key={index}>

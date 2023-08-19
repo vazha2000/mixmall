@@ -36,15 +36,17 @@ export const CartInfo = ({
   const handleCartClick = () => {
     setIsCartClicked(!isCartClicked);
   };
+  
   useEffect(() => {
+    const body = document.body;
     if (isCartClicked) {
-      document.body.style.overflow = "hidden";
+      body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      body.style.overflow = "auto";
     }
 
     return () => {
-      document.body.style.overflow = "auto";
+      body.style.overflow = "auto";
     };
   }, [isCartClicked]);
   return (
