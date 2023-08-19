@@ -138,6 +138,14 @@ export const SSmallImagesContainer = styled.div`
 `
 
 export const SSmallImageWrapper = styled.div`
+
+  > span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.8vw;
+    font-weight: bold;
+  }
   overflow: hidden;
   height: 100%;
   border-radius: 15px;
@@ -145,6 +153,19 @@ export const SSmallImageWrapper = styled.div`
   position: relative;
   cursor: pointer;
 
+  @media screen and (max-width: 1024px) {
+    > span {
+      font-size: 1vw;
+      bottom: 8px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    > span {
+      top: 2.5vw;
+      font-size: 1.3vw;
+    }
+  }
   @media screen and (max-width: 650px){
     border-radius: 10px;
   }
