@@ -32,14 +32,16 @@ import { CartInfo } from "../CartInfo";
 import { AnimatePresence } from "framer-motion";
 import { SSubcategoriesSidebarWrapper } from "../../views/SubCategories/Subcategories.styled";
 import { Sidebar } from "../Sidebar";
+import { MobileMenu } from "../MobileMenu";
 
 export const Navbar = () => {
   const [isCartClicked, setIsCartClicked] = useState(false);
   const [isCategoriesActive, setIsCategoriesActive] = useState(false);
+  const [isCategoriesClicked, setIsCategoriesClicked] = useState(false);
   const [menuItemsHover, setMenuItemsHover] = useState({
     main: false,
     onlineInstallment: false,
-    contact: false
+    contact: false,
   });
 
   const { wishlist } = useContext(WishlistContext);
@@ -100,7 +102,7 @@ export const Navbar = () => {
           onMouseEnter={() => setIsCategoriesActive(true)}
           onMouseLeave={() => setIsCategoriesActive(false)}
         >
-          <SNavMenuCategories>
+          <SNavMenuCategories onClick={() => setIsCategoriesClicked(true)}>
             <span>კატეგორიები</span>
           </SNavMenuCategories>
           {isCategoriesActive && (
@@ -112,39 +114,67 @@ export const Navbar = () => {
 
         <SNavMenuItemsContainer
           isMenuHovered={menuItemsHover.main}
-          onMouseEnter={() => setMenuItemsHover((prev) => ({
-            ...prev, main: true
-          }))}
-          onMouseLeave={() => setMenuItemsHover((prev) => ({
-            ...prev, main: false
-          }))}
+          onMouseEnter={() =>
+            setMenuItemsHover((prev) => ({
+              ...prev,
+              main: true,
+            }))
+          }
+          onMouseLeave={() =>
+            setMenuItemsHover((prev) => ({
+              ...prev,
+              main: false,
+            }))
+          }
         >
           <SNavMenuItems>მთავარი</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavMenuItemsContainer
           isMenuHovered={menuItemsHover.onlineInstallment}
-          onMouseEnter={() => setMenuItemsHover((prev) => ({
-            ...prev, onlineInstallment: true
-          }))}
-          onMouseLeave={() => setMenuItemsHover((prev) => ({
-            ...prev, onlineInstallment: false
-          }))}
-          >
+          onMouseEnter={() =>
+            setMenuItemsHover((prev) => ({
+              ...prev,
+              onlineInstallment: true,
+            }))
+          }
+          onMouseLeave={() =>
+            setMenuItemsHover((prev) => ({
+              ...prev,
+              onlineInstallment: false,
+            }))
+          }
+        >
           <SNavMenuItems>ONLINE განვადება</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavMenuItemsContainer
-         isMenuHovered={menuItemsHover.contact}
-         onMouseEnter={() => setMenuItemsHover((prev) => ({
-           ...prev, contact: true
-         }))}
-         onMouseLeave={() => setMenuItemsHover((prev) => ({
-           ...prev, contact: false
-         }))}
-          >
+          isMenuHovered={menuItemsHover.contact}
+          onMouseEnter={() =>
+            setMenuItemsHover((prev) => ({
+              ...prev,
+              contact: true,
+            }))
+          }
+          onMouseLeave={() =>
+            setMenuItemsHover((prev) => ({
+              ...prev,
+              contact: false,
+            }))
+          }
+        >
           <SNavMenuItems>კონტაქტი</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavMenuDiscount></SNavMenuDiscount>
       </SNavMenu>
+      <AnimatePresence>
+        {isCategoriesClicked && (
+          <div>
+            <MobileMenu
+              isOpen={isCategoriesClicked}
+              setIsOpen={setIsCategoriesClicked}
+            />
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
