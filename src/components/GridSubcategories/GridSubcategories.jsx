@@ -69,6 +69,7 @@ export const GridSubcategories = () => {
                   <span key={idx}>{text}</span>
                 ))}
               </SSMallImageText>
+              <span>22 ცალი</span>
             </SSmallImageWrapper>
           ))}
         </SSmallImagesContainer>
