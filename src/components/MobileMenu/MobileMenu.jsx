@@ -112,7 +112,7 @@ export const MobileMenu = ({ handleMobileMenuClick, isOpen, setIsOpen }) => {
                           key={uuidv4()}
                         >
                           <SMobileSubcategoriesListItems
-                            onClick={handleMobileMenuClick}
+                            onClick={() => setIsOpen(false)}
                             key={subIndex}
                           >
                             {subcategory.name}
