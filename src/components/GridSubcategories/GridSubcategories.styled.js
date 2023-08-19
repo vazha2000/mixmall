@@ -36,8 +36,12 @@ export const SBigImgage = styled.img`
 `
 
 export const SBigImageText = styled.div`
+  > h1 {
+    font-size: 2.4vw;
+  }
   > p {
     font-weight: bold;
+    font-size: 1.15vw;
   }
   > p {
     > span {
@@ -57,11 +61,13 @@ export const SBigImageButton = styled.button`
   bottom: 30px;
   left: 10px;
   background-color: #df3d41;
-  padding: 12px 20px;
+  padding: 0 5px;
   color: #fff;
   cursor: pointer;
   transition: 0.2s ease;
   border-radius: 10px;
+  height: 5vh;
+  width: 12vw;
 
   &:hover {
     filter: brightness(120%);
@@ -71,6 +77,7 @@ export const SBigImageButton = styled.button`
 export const SSMallImageText = styled(SBigImageText)`
   > span {
     font-weight: bold;
+    font-size: 1vw;
   }
   gap: 5px;
 `
