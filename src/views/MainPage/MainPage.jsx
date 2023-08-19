@@ -15,7 +15,7 @@ export const MainPage = () => {
   
   return (
     <SMainPage>
-      <SearchInputHamburger />
+      {/* <SearchInputHamburger /> */}
       <SAdSliderContainer>
         <AdSlider />
       </SAdSliderContainer>
