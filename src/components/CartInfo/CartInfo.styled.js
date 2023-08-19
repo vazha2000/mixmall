@@ -6,10 +6,11 @@ export const SCartInfo = styled(motion.div)`
   top: 0;
   right: 0;
   background-color: #faf2f2;
-  z-index: 5;
+  z-index: 6;
   border: 1px solid rgba(0, 0, 0, 0.3);
   width: 675px;
   height: 100%;
+  overflow-y: auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

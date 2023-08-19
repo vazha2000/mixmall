@@ -8,7 +8,8 @@ export const SMobileMenu = styled(motion.div)`
   top: 0;
   left: 0;
   background-color: #e3e2de;
-  height: 150vh;
+  height: 100vh;
+  overflow-y: auto;
   width: 100%;
   z-index: 6;
   -webkit-box-shadow: 2px 0px 12px 0px rgba(0,0,0,0.75);
