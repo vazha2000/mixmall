@@ -8,7 +8,8 @@ export const SMobileMenu = styled(motion.div)`
   top: 0;
   left: 0;
   background-color: #e3e2de;
-  height: 150vh;
+  height: 100vh;
+  overflow-y: auto;
   width: 100%;
   z-index: 6;
   -webkit-box-shadow: 2px 0px 12px 0px rgba(0,0,0,0.75);
@@ -43,17 +44,17 @@ export const SMobileMenuCategoriesList = styled(SSideBarCategoriesList)`
   }
   @media screen and (max-width: 900px) {
     &:nth-last-child(2) {
-      display: block;
+      display: flex;
     }
   }
   @media screen and (max-width: 550px) {
     &:nth-last-child(1) {
-      display: block;
+      display: flex;
     }
   }
   @media screen and (max-width: 420px) {
     &:nth-last-child(3) {
-      display: block;
+      display: flex;
     }
   }
   
