@@ -143,8 +143,8 @@ export const SSmallImageWrapper = styled.div`
     position: absolute;
     bottom: 10px;
     left: 10px;
-    font-size: 0.8vw;
-    font-weight: bold;
+    font-size: 0.7vw;
+    color: #8f8f8f;
   }
   overflow: hidden;
   height: 100%;
