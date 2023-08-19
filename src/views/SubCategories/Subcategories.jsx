@@ -59,7 +59,6 @@ export const Subcategories = ({ item }) => {
   return (
     <SSubcategories>
       <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs>
-      <SearchInputHamburger />
       <div style={{ display: "flex", marginTop: "30px" }}>
         <SSubcategoriesSidebarContainer>
           <SSubcategoriesCategories
