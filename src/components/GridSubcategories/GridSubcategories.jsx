@@ -57,7 +57,7 @@ export const GridSubcategories = () => {
               მხოლოდ <span>639 ლარიდან</span>
             </p>
           </SBigImageText>
-          <SBigImageButton>შეუკვეთე ახლავე</SBigImageButton>
+          <SBigImageButton>შეუკვეთე <span>ახლავე</span></SBigImageButton>
         </SBigImageContainer>
         <SSmallImagesContainer>
           {SmallImageInfo.map((info, index) => (

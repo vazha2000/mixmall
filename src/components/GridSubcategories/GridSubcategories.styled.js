@@ -48,6 +48,15 @@ export const SBigImageText = styled.div`
       color: #df3d41;
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    > h1 {
+      font-size: 3.4vw;
+    }
+    > p {
+      font-size: 1.6vw;
+    }
+  }
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -72,6 +81,22 @@ export const SBigImageButton = styled.button`
   &:hover {
     filter: brightness(120%);
   }
+
+  @media screen and (max-width: 1024px) {
+    width: 16vw;
+    bottom: 15px;
+  }
+  @media screen and (max-width: 980px) {
+    width: 16vw;
+    font-size: 1.7vw;
+    bottom: 5px;
+    > span {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `
 
 export const SSMallImageText = styled(SBigImageText)`
@@ -80,6 +105,17 @@ export const SSMallImageText = styled(SBigImageText)`
     font-size: 1vw;
   }
   gap: 5px;
+
+  @media screen and (max-width: 1024px) {
+    > span {
+      font-size: 1.3vw;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    > span {
+      display: none;
+    }
+  }
 `
 
 
