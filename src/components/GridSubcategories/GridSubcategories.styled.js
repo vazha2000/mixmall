@@ -36,12 +36,25 @@ export const SBigImgage = styled.img`
 `
 
 export const SBigImageText = styled.div`
+  > h1 {
+    font-size: 2.4vw;
+  }
   > p {
     font-weight: bold;
+    font-size: 1.15vw;
   }
   > p {
     > span {
       color: #df3d41;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    > h1 {
+      font-size: 3.4vw;
+    }
+    > p {
+      font-size: 1.6vw;
     }
   }
   display: flex;
@@ -57,22 +70,52 @@ export const SBigImageButton = styled.button`
   bottom: 30px;
   left: 10px;
   background-color: #df3d41;
-  padding: 12px 20px;
+  padding: 0 5px;
   color: #fff;
   cursor: pointer;
   transition: 0.2s ease;
   border-radius: 10px;
+  height: 5vh;
+  width: 12vw;
 
   &:hover {
     filter: brightness(120%);
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 16vw;
+    bottom: 15px;
+  }
+  @media screen and (max-width: 980px) {
+    width: 16vw;
+    font-size: 1.7vw;
+    bottom: 5px;
+    > span {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
   }
 `
 
 export const SSMallImageText = styled(SBigImageText)`
   > span {
     font-weight: bold;
+    font-size: 1vw;
   }
   gap: 5px;
+
+  @media screen and (max-width: 1024px) {
+    > span {
+      font-size: 1.3vw;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    > span {
+      display: none;
+    }
+  }
 `
 
 
