@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   SCartIcon,
   SCartIconContainer,
@@ -38,6 +38,7 @@ export const Navbar = () => {
   const [isCartClicked, setIsCartClicked] = useState(false);
   const [isCategoriesActive, setIsCategoriesActive] = useState(false);
   const [isCategoriesClicked, setIsCategoriesClicked] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [menuItemsHover, setMenuItemsHover] = useState({
     main: false,
     onlineInstallment: false,
@@ -46,6 +47,26 @@ export const Navbar = () => {
 
   const { wishlist } = useContext(WishlistContext);
   const { cart, removeFromCart } = useContext(CheckoutContext);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    setIsCategoriesActive(windowWidth < 1024);
+  }, [windowWidth]);
+
+  const handleCategoriesClick = () => {
+    if (windowWidth < 1024) {
+      setIsCategoriesClicked(true);
+    }
+  };
 
   return (
     <div>
@@ -102,7 +123,7 @@ export const Navbar = () => {
           onMouseEnter={() => setIsCategoriesActive(true)}
           onMouseLeave={() => setIsCategoriesActive(false)}
         >
-          <SNavMenuCategories onClick={() => setIsCategoriesClicked(true)}>
+          <SNavMenuCategories onClick={handleCategoriesClick}>
             <span>კატეგორიები</span>
           </SNavMenuCategories>
           {isCategoriesActive && (
