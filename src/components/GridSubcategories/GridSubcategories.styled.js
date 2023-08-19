@@ -20,6 +20,8 @@ export const SBigImageContainer = styled.div`
   height: 100%;
   border-radius: 15px;
   overflow: hidden;
+  position: relative;
+  cursor: pointer;
 
   @media screen and (max-width: 650px){
     border-radius: 10px;
@@ -30,11 +32,47 @@ export const SBigImgage = styled.img`
   width: 100%;
   height: 100%;
   transition: transform 0.3s;
+  transform: ${({isImageHovered}) => (isImageHovered ? "scale(1.1)" : "scale(1)")};
+`
+
+export const SBigImageText = styled.div`
+  > p {
+    font-weight: bold;
+  }
+  > p {
+    > span {
+      color: #df3d41;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  left: 10px;
+  gap: 15px;
+`
+
+export const SBigImageButton = styled.button`
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  background-color: #df3d41;
+  padding: 12px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-radius: 10px;
 
   &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+    filter: brightness(120%);
   }
+`
+
+export const SSMallImageText = styled(SBigImageText)`
+  > span {
+    font-weight: bold;
+  }
+  gap: 5px;
 `
 
 
@@ -61,6 +99,8 @@ export const SSmallImageWrapper = styled.div`
   height: 100%;
   border-radius: 15px;
   display: flex;
+  position: relative;
+  cursor: pointer;
 
   @media screen and (max-width: 650px){
     border-radius: 10px;
@@ -69,10 +109,6 @@ export const SSmallImageWrapper = styled.div`
 
 export const SSmallImage = styled.img`
   width: 100%;
-  transition: transform 0.3s;  
-
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
+  transition: transform 0.3s; 
+  transform: ${({isSmallImageHovered}) => (isSmallImageHovered ? "scale(1.1)" : "scale(1)")};
 `

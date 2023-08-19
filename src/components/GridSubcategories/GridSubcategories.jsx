@@ -31,6 +31,14 @@ const SmallImageInfo = [
 
 export const GridSubcategories = () => {
   const [isImageHovered, setIsImageHovered] = useState(false);
+  const [smallImageHovered, setSmallImageHovered] = useState({});
+
+  const handleSmallImageHover = (index, isHovered) => {
+    setSmallImageHovered(prevState => ({
+      ...prevState,
+      [index]: isHovered,
+    }));
+  };
 
   return (
     <>
@@ -53,8 +61,9 @@ export const GridSubcategories = () => {
         </SBigImageContainer>
         <SSmallImagesContainer>
           {SmallImageInfo.map((info, index) => (
-            <SSmallImageWrapper key={index}>
-              <SSmallImage src={info.src} />
+            <SSmallImageWrapper key={index} onMouseEnter={() => handleSmallImageHover(index, true)}
+            onMouseLeave={() => handleSmallImageHover(index, false)}>
+              <SSmallImage src={info.src} isSmallImageHovered={smallImageHovered[index]}/>
               <SSMallImageText>
                 {info.text.map((text, idx) => (
                   <span key={idx}>{text}</span>
