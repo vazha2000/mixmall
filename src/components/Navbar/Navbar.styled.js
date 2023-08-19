@@ -155,6 +155,22 @@ export const SNavMenu = styled.div`
   display: flex;
   height: 50px;
   position: relative;
+
+  @media screen and (max-width: 900px){
+    > ul:nth-child(3) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 550px){
+    > ul:nth-child(4) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 420px){
+    > ul:nth-child(2) {
+      display: none;
+    }
+  }
 `
 export const SNavMenuCategoriesWrapper = styled.div`
   flex: 1.3;
