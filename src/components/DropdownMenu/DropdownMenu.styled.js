@@ -3,31 +3,35 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const SDropDownMenuWrapper = styled.div`
+  > div:nth-child(1) {
+    height: 100%;
+    border-radius: 15px;
+    
+    &:hover {
+      -webkit-box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.7);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+  }
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 100%;
   padding-left: 20px;
   height: calc(100% - 15px);
   width: 400px;
-`
+`;
 export const SDropDownMenu = styled(motion.div)`
   background-color: #ededed;
   padding: 20px;
-  border-radius: ${({isOverflowing}) => (isOverflowing ? "15px 8px 8px 15px " : "15px")};
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-right: ${({isOverflowing}) => (isOverflowing ? "none" : "1px solid rgba(0,0,0, 0.2)")};
+  border-radius: ${({ isOverflowing }) =>
+    isOverflowing ? "15px 8px 8px 15px " : "15px"};
   z-index: 2;
   height: 100%;
-  margin-top: 15px;
   width: 100%;
   transition: 0.1s ease;
   overflow-y: auto;
   box-sizing: border-box;
-
-  &:hover {
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    border-right: ${({isOverflowing}) => (isOverflowing ? "none" : "1px solid rgba(0,0,0, 0.6)")};
-  }
 
   ::-webkit-scrollbar {
     width: 12px;
@@ -46,8 +50,6 @@ export const SDropDownMenu = styled(motion.div)`
   ::-webkit-scrollbar-thumb:hover {
     background: #5e5e5e;
   }
-
-  
 `;
 
 export const SMenuGridContainer = styled.ul`
@@ -82,7 +84,7 @@ export const SMenuItems = styled.li`
 export const SStyledLink = styled(Link)`
   text-decoration: none;
   color: #1f1f1f;
-  display: ${({quantity}) => (quantity ? "none" : "flex")};
+  display: ${({ quantity }) => (quantity ? "none" : "flex")};
   align-items: center;
   justify-content: ${({ center }) => (center ? "center" : "flex-start")};
 `;
