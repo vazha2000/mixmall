@@ -25,6 +25,7 @@ import { WishlistContext } from "../../context/WishlistContext";
 import { useLocation } from "react-router-dom";
 import { NotificationPopup } from "../../components/NotificationPopup";
 import { CheckoutContext } from "../../context/CheckoutContext";
+import { ProductImages } from "../../components/ProductImages";
 
 export const ProductPage = ({ product }) => {
   const { wishlist, addToWishlist, removeFromWishlist } =
@@ -249,6 +250,7 @@ export const ProductPage = ({ product }) => {
         </SProductPageOptions>
       </SProductPage>
       <ProductDescriptions product={product} />
+      <ProductImages productImage={product.productImage}/>
     </>
   );
 };
