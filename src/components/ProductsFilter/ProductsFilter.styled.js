@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const SProductsFilter = styled.div`
   width: 95%;
-  margin-top: .8rem;
+  /* margin-top: .8rem; */
   border: 1px solid rgba(0,0,0, 0.2);
   border-radius: 10px;
 `
