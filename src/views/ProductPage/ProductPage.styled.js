@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SProductPage = styled.div`
   display: flex;
   margin: 3rem 0;
+  padding: 0 15px;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -13,6 +14,14 @@ export const SProductPage = styled.div`
 export const SProductPageImages = styled.div`
   flex: 3;
   display: flex;
+  height: max-content;
+
+  @media screen and (max-width: 1400px){
+    flex-direction: column-reverse;
+  }
+  @media screen and (max-width: 1024px){
+    flex-direction: row;
+  }
 `;
 
 export const SProductPageSmallImages = styled.div`
@@ -20,15 +29,31 @@ export const SProductPageSmallImages = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  @media screen and (max-width: 1400px){
+    flex-direction: row;
+    justify-content: space-between;
+    width: 96%;
+  }
+  @media screen and (max-width: 1024px){
+    flex-direction: column;
+  }
 `;
 
 export const SProductPageSmallImage = styled.img`
-  width: 70%;
+  width: 80%;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 1400px){
+    width: 20%;
+  }
+  @media screen and (max-width: 1024px){
+    width: 80%;
+  }
 `;
 
 export const SProductPageMainImage = styled.div`
@@ -45,9 +70,13 @@ export const SProductPageBigImage = styled.img`
   -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
 
+  @media screen and (max-width: 1400px){
+    width: 96%;
+  }
+
   @media screen and (max-width: 1024px) {
     width: 100%;
-}
+  }
 `;
 
 export const SProductPageOptions = styled.div`
@@ -61,14 +90,15 @@ export const SProductPageOptions = styled.div`
 
   > h2 {
     color: #1f1f1f;
+    font-size: 18px;
   }
 `;
 
 export const SProductPrices = styled.div`
   display: flex;
   gap: 2rem;
-  margin: 3rem 0;
-  padding-bottom: 3rem;
+  margin: 2rem 0;
+  padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   > span {
     color: #1f1f1f;
@@ -79,21 +109,50 @@ export const SProductPrices = styled.div`
     text-decoration: line-through;
     text-decoration-thickness: 3px;
   }
+
+  @media screen and (max-width: 400px){
+    > span {
+      font-size: 8vw;
+    }
+  }
+  @media screen and (max-width: 320px){
+    > span {
+      font-size: 6vw;
+    }
+  }
 `;
 
 export const SProductQuantityBuyFavorites = styled.div`
+  > div:nth-child(2) {
+    display: none;
+  }
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 400px){
+    > div:nth-child(2) {
+      display: flex;
+    }
+    gap: 20px;
+  }
 `;
 
 export const SProductButtonsWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: inherit;
-`
+
+  @media screen and (max-width: 400px){
+    > div:nth-child(2) {
+      display: none;
+    }
+  }
+`;
 
 export const SProductQuantity = styled.div`
   display: flex;
+  height: 100%;
 `;
 
 export const SProductQuantityMinus = styled.button`
@@ -108,7 +167,7 @@ export const SProductQuantityMinus = styled.button`
 
   &:hover {
     cursor: pointer;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     background-color: #df3d41;
   }
 `;
@@ -119,60 +178,106 @@ export const SProductCurrentQuantity = styled.input`
   outline: none;
   box-sizing: border-box;
   border: none;
-  border-top: 1px solid rgba(0,0,0, 0.5);
-  border-bottom: 1px solid rgba(0,0,0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   text-align: center;
 `;
 
-export const SProductQuantityPlus = styled.button`
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  background-color: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const SProductQuantityPlus = styled(SProductQuantityMinus)`
   border-radius: 0 4px 4px 0;
-
-  &:hover {
-    cursor: pointer;
-    transition: all .2s ease;
-    background-color: #df3d41;
-  }
 `;
 
 export const SProductBuyNow = styled.button`
   width: auto;
-  border: 1px solid rgba(0,0,0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   background-color: inherit;
-  background-color: ${({isInCart}) => (isInCart ? "#df3d41" : "white")};
+  background-color: ${({ isInCart }) => (isInCart ? "#df3d41" : "white")};
   border-radius: 5px;
   font-size: 16px;
-  color: ${({isInCart}) => (isInCart ? "#fff" : "#1f1f1f")};
+  color: ${({ isInCart }) => (isInCart ? "#fff" : "#1f1f1f")};
   font-weight: 600;
   padding: 0 10px;
   white-space: nowrap;
 
   &:hover {
     cursor: pointer;
-    border: 1px solid rgba(0,0,0, 0.9);
-    filter: ${({isInCart}) => (isInCart ? "brightness(120%)" : "brightness(90%)")};
-    transition: all .2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    filter: ${({ isInCart }) =>
+      isInCart ? "brightness(120%)" : "brightness(90%)"};
+    transition: all 0.2s ease;
   }
-`
+
+  @media screen and (max-width: 400px){
+    height: 50px;
+    white-space: normal;
+  }
+`;
 
 export const SAddToFavorites = styled.div`
   width: 40px;
-  border: 1px solid rgba(0,0,0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({isInWishlist}) => (isInWishlist ? "#df3d41" : "white")};
+  background-color: ${({ isInWishlist }) =>
+    isInWishlist ? "#df3d41" : "white"};
 
   &:hover {
-    border: 1px solid rgba(0,0,0, 0.9);
-    filter: ${({isInWishlist}) => (isInWishlist ? "brightness(120%)" : "brightness(90%)")};
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    filter: ${({ isInWishlist }) =>
+      isInWishlist ? "brightness(120%)" : "brightness(90%)"};
     cursor: pointer;
   }
+`;
+
+export const SOnlineInstallmentBanksPayment = styled.div`
+  background-color: #ededed;
+  padding: 20px 10px;
+  margin-top: 30px;
+  border-radius: 10px;
+`;
+
+export const SPaymentMethods = styled.div`
+  > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin-top: 12px;
+    text-align: center;
+  }
+  > div > span {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  > h4 {
+    font-size: 16px;
+  }
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 450px){
+    > div {
+      padding: 0;
+    }
+    > div > span {
+      font-size: 3.2vw;
+    }
+  }
+`;
+
+export const SOnlineInstallmentBanks = styled.div`
+  > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  > div > img {
+    width: 30%;
+    background-blend-mode: darken;
+
+  }
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 `

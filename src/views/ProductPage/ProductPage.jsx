@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { ProductDescriptions } from "../../components/ProductDescriptions";
 import {
   SAddToFavorites,
+  SOnlineInstallmentBanks,
+  SOnlineInstallmentBanksPayment,
+  SPaymentMethods,
   SProductButtonsWrapper,
   SProductBuyNow,
   SProductCurrentQuantity,
@@ -24,17 +27,21 @@ import { NotificationPopup } from "../../components/NotificationPopup";
 import { CheckoutContext } from "../../context/CheckoutContext";
 
 export const ProductPage = ({ product }) => {
-
   const { wishlist, addToWishlist, removeFromWishlist } =
     useContext(WishlistContext);
-  const { cart, addToCart, removeFromCart, productQuantities, updateProductQuantity } = useContext(CheckoutContext);
+  const {
+    cart,
+    addToCart,
+    removeFromCart,
+    productQuantities,
+    updateProductQuantity,
+  } = useContext(CheckoutContext);
 
-  const productId = product.id
+  const productId = product.id;
   const productQuantity = productQuantities[productId] || 1;
-  
+
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
   const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
-
 
   const [isInWishlist, setIsInWishlist] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
@@ -122,7 +129,7 @@ export const ProductPage = ({ product }) => {
       discountRate,
       isDiscount,
       id,
-      alt
+      alt,
     } = product;
     if (isInCart) {
       removeFromCart({ id });
@@ -143,7 +150,7 @@ export const ProductPage = ({ product }) => {
       path,
       id,
       alt,
-      productQuantity
+      productQuantity,
     });
     setIsInCart(true);
     setShowCartPopup(true);
@@ -180,19 +187,30 @@ export const ProductPage = ({ product }) => {
             {product.isDiscount && <span>₾{product.oldPrice}.00</span>}
           </SProductPrices>
           <SProductQuantityBuyFavorites>
-            <SProductQuantity>
-              <SProductQuantityMinus onClick={handleDecrement}>
-                <img src="assets/svg/minus.svg" alt="minus" />
-              </SProductQuantityMinus>
-              <SProductCurrentQuantity
-                value={productQuantity}
-                onChange={handleQuantityChange}
-                maxLength="2"
-              />
-              <SProductQuantityPlus onClick={handleIncrement}>
-                <img src="assets/svg/plus.svg" alt="plus" />
-              </SProductQuantityPlus>
-            </SProductQuantity>
+            <div>
+              <SProductQuantity>
+                <SProductQuantityMinus onClick={handleDecrement}>
+                  <img src="assets/svg/minus.svg" alt="minus" />
+                </SProductQuantityMinus>
+                <SProductCurrentQuantity
+                  value={productQuantity}
+                  onChange={handleQuantityChange}
+                  maxLength="2"
+                />
+                <SProductQuantityPlus onClick={handleIncrement}>
+                  <img src="assets/svg/plus.svg" alt="plus" />
+                </SProductQuantityPlus>
+              </SProductQuantity>
+            </div>
+            <div>
+              <SAddToFavorites
+                onClick={handleWishlistClick}
+                isInWishlist={isInWishlist}
+              >
+                <img src="assets/svg/wishlist.svg" alt="wishlist" />
+              </SAddToFavorites>
+            </div>
+
             <SProductButtonsWrapper>
               <SProductBuyNow onClick={handleCartClick} isInCart={isInCart}>
                 {isInCart ? "კალათიდან წაშლა" : "კალათაში დამატება"}
@@ -205,6 +223,30 @@ export const ProductPage = ({ product }) => {
               </SAddToFavorites>
             </SProductButtonsWrapper>
           </SProductQuantityBuyFavorites>
+          <SOnlineInstallmentBanksPayment>
+            <SPaymentMethods>
+              <h4>გადახდის მეთოდები</h4>
+              <div>
+                <span>საბანკო გადარიცხვა</span>
+                <span>ნაღდი ანგარიშსწორება</span>
+              </div>
+            </SPaymentMethods>
+            <SOnlineInstallmentBanks>
+              <h4>ონლაინ განვადება</h4>
+              <div>
+                <img
+                  src="assets/images/bankLogos/bog.png"
+                  alt="Bank of Georgia"
+                />
+                <img
+                  src="assets/images/bankLogos/tbc.png"
+                  alt="TBC Bank"
+                  width={"20%"}
+                />
+                <img src="assets/images/bankLogos/credo.png" alt="Credo Bank" />
+              </div>
+            </SOnlineInstallmentBanks>
+          </SOnlineInstallmentBanksPayment>
         </SProductPageOptions>
       </SProductPage>
       <ProductDescriptions product={product} />
