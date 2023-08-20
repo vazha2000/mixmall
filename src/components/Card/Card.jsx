@@ -133,7 +133,7 @@ export const Card = (props) => {
         <SStyledLink to={path}>
           <SCardImageContainer>
             <SCardImageWrapper>
-              <SCardImage src={productImage} alt="" />
+              <SCardImage src={productImage[0]} alt="" />
             </SCardImageWrapper>
           </SCardImageContainer>
         </SStyledLink>
