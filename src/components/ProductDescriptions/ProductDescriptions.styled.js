@@ -6,7 +6,7 @@ export const SProductDescriptionTableHeader = styled.tr`
   background-color: #df3d41;
   height: 50px;
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
 
   @media screen and (max-width: 1024px) {
     font-size: 15px;
@@ -14,7 +14,7 @@ export const SProductDescriptionTableHeader = styled.tr`
 
   > td {
     border-radius: 10px 10px 0 0;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 `
 
