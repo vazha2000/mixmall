@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { ProductDescriptions } from "../../components/ProductDescriptions";
 import {
   SAddToFavorites,
+  SOnlineInstallmentBanks,
+  SOnlineInstallmentBanksPayment,
+  SPaymentMethods,
   SProductButtonsWrapper,
   SProductBuyNow,
   SProductCurrentQuantity,
@@ -205,6 +208,23 @@ export const ProductPage = ({ product }) => {
               </SAddToFavorites>
             </SProductButtonsWrapper>
           </SProductQuantityBuyFavorites>
+          <SOnlineInstallmentBanksPayment>
+            <SPaymentMethods>
+              <h4>გადახდის მეთოდები</h4>
+              <div>
+                <span>საბანკო გადარიცხვა</span>
+                <span>ნაღდი ანგარიშსწორება</span>
+              </div>
+            </SPaymentMethods>
+            <SOnlineInstallmentBanks>
+              <h4>ონლაინ განვადება</h4>
+              <div>
+                <img src="assets/images/bankLogos/bog.png" alt="Bank of Georgia" />
+                <img src="assets/images/bankLogos/tbc.png" alt="TBC Bank" width={"20%"}/>
+                <img src="assets/images/bankLogos/credo.png" alt="Credo Bank"/>
+              </div>
+            </SOnlineInstallmentBanks>
+          </SOnlineInstallmentBanksPayment>
         </SProductPageOptions>
       </SProductPage>
       <ProductDescriptions product={product} />
