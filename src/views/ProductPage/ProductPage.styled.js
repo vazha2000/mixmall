@@ -14,6 +14,14 @@ export const SProductPage = styled.div`
 export const SProductPageImages = styled.div`
   flex: 3;
   display: flex;
+  height: max-content;
+
+  @media screen and (max-width: 1400px){
+    flex-direction: column-reverse;
+  }
+  @media screen and (max-width: 1024px){
+    flex-direction: row;
+  }
 `;
 
 export const SProductPageSmallImages = styled.div`
@@ -21,6 +29,15 @@ export const SProductPageSmallImages = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  @media screen and (max-width: 1400px){
+    flex-direction: row;
+    justify-content: space-between;
+    width: 96%;
+  }
+  @media screen and (max-width: 1024px){
+    flex-direction: column;
+  }
 `;
 
 export const SProductPageSmallImage = styled.img`
@@ -30,6 +47,13 @@ export const SProductPageSmallImage = styled.img`
   box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 1400px){
+    width: 20%;
+  }
+  @media screen and (max-width: 1024px){
+    width: 80%;
+  }
 `;
 
 export const SProductPageMainImage = styled.div`
@@ -45,6 +69,10 @@ export const SProductPageBigImage = styled.img`
   box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 1400px){
+    width: 96%;
+  }
 
   @media screen and (max-width: 1024px) {
     width: 100%;
