@@ -16,10 +16,10 @@ export const SProductPageImages = styled.div`
   display: flex;
   height: max-content;
 
-  @media screen and (max-width: 1400px){
+  @media screen and (max-width: 1400px) {
     flex-direction: column-reverse;
   }
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     flex-direction: row;
   }
 `;
@@ -30,12 +30,12 @@ export const SProductPageSmallImages = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
-  @media screen and (max-width: 1400px){
+  @media screen and (max-width: 1400px) {
     flex-direction: row;
     justify-content: space-between;
     width: 96%;
   }
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
   }
 `;
@@ -48,10 +48,18 @@ export const SProductPageSmallImage = styled.img`
   -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: 1400px){
+  &:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+  }
+
+  @media screen and (max-width: 1400px) {
     width: 20%;
   }
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     width: 80%;
   }
 `;
@@ -70,12 +78,20 @@ export const SProductPageBigImage = styled.img`
   -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: 1400px){
+  @media screen and (max-width: 1400px) {
     width: 96%;
   }
 
   @media screen and (max-width: 1024px) {
     width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
   }
 `;
 
@@ -110,12 +126,12 @@ export const SProductPrices = styled.div`
     text-decoration-thickness: 3px;
   }
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 400px) {
     > span {
       font-size: 8vw;
     }
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 320px) {
     > span {
       font-size: 6vw;
     }
@@ -130,7 +146,7 @@ export const SProductQuantityBuyFavorites = styled.div`
   gap: 30px;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 400px) {
     > div:nth-child(2) {
       display: flex;
     }
@@ -143,7 +159,7 @@ export const SProductButtonsWrapper = styled.div`
   flex-wrap: wrap;
   gap: inherit;
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 400px) {
     > div:nth-child(2) {
       display: none;
     }
@@ -207,7 +223,7 @@ export const SProductBuyNow = styled.button`
     transition: all 0.2s ease;
   }
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 400px) {
     height: 50px;
     white-space: normal;
   }
@@ -256,7 +272,7 @@ export const SPaymentMethods = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 450px) {
     > div {
       padding: 0;
     }
@@ -274,10 +290,9 @@ export const SOnlineInstallmentBanks = styled.div`
   > div > img {
     width: 30%;
     background-blend-mode: darken;
-
   }
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-`
+`;
