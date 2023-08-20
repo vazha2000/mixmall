@@ -109,21 +109,50 @@ export const SProductPrices = styled.div`
     text-decoration: line-through;
     text-decoration-thickness: 3px;
   }
+
+  @media screen and (max-width: 400px){
+    > span {
+      font-size: 8vw;
+    }
+  }
+  @media screen and (max-width: 320px){
+    > span {
+      font-size: 6vw;
+    }
+  }
 `;
 
 export const SProductQuantityBuyFavorites = styled.div`
+  > div:nth-child(2) {
+    display: none;
+  }
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 400px){
+    > div:nth-child(2) {
+      display: flex;
+    }
+    gap: 20px;
+  }
 `;
 
 export const SProductButtonsWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: inherit;
+
+  @media screen and (max-width: 400px){
+    > div:nth-child(2) {
+      display: none;
+    }
+  }
 `;
 
 export const SProductQuantity = styled.div`
   display: flex;
+  height: 100%;
 `;
 
 export const SProductQuantityMinus = styled.button`
@@ -177,6 +206,11 @@ export const SProductBuyNow = styled.button`
       isInCart ? "brightness(120%)" : "brightness(90%)"};
     transition: all 0.2s ease;
   }
+
+  @media screen and (max-width: 400px){
+    height: 50px;
+    white-space: normal;
+  }
 `;
 
 export const SAddToFavorites = styled.div`
@@ -221,6 +255,15 @@ export const SPaymentMethods = styled.div`
   }
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 450px){
+    > div {
+      padding: 0;
+    }
+    > div > span {
+      font-size: 3.2vw;
+    }
+  }
 `;
 
 export const SOnlineInstallmentBanks = styled.div`
@@ -234,4 +277,7 @@ export const SOnlineInstallmentBanks = styled.div`
 
   }
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 `
