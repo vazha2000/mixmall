@@ -10,7 +10,7 @@ export const computerTechnic = [
     products: [
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: true,
         productName: "Asuss Gaming PC",
@@ -29,7 +29,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "MSIi Gaming PC",
@@ -47,7 +47,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Delll Gaming PC",
@@ -65,7 +65,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Alienwaree Gaming PC",
@@ -83,7 +83,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "asuss Gaming PC",
@@ -101,7 +101,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "nokiaa Gaming PC",
@@ -119,7 +119,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Alienwaree Gaming PC",
@@ -137,7 +137,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Alienwaree Gaming PC",
@@ -155,7 +155,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Alienwaree Gaming PC",
@@ -173,7 +173,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Alienwaree Gaming PC",
@@ -191,7 +191,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Alienwaree Gaming PC",
@@ -209,7 +209,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/orange.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Alienwaree Gaming PC",
@@ -234,7 +234,7 @@ export const computerTechnic = [
     products: [
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/allinone.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Matrexxx ALL IN ONE",
@@ -252,7 +252,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/allinone.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Asuss ALL IN ONE",
@@ -270,7 +270,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/allinone.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Ryzenn ALL IN ONE",
@@ -288,7 +288,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/allinone.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Intell ALL IN ONE",
@@ -313,7 +313,7 @@ export const computerTechnic = [
     products: [
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/laptop.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "MSIi Laptop",
@@ -331,7 +331,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/laptop.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Asuss Laptop",
@@ -349,7 +349,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/laptop.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Nokiaa Laptop",
@@ -367,7 +367,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/laptop.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Samsungg Laptop",
@@ -392,7 +392,7 @@ export const computerTechnic = [
     products: [
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/ipad.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Applee ipad",
@@ -410,7 +410,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/ipad.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "2Ee ipad",
@@ -428,7 +428,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/ipad.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "EVGAa ipad",
@@ -446,7 +446,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/ipad.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Zotacc ipad",
@@ -471,7 +471,7 @@ export const computerTechnic = [
     products: [
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/monitor.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "2Ee Monitor",
@@ -489,7 +489,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/monitor.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "AMDd Monitor",
@@ -507,7 +507,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/monitor.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "XFXx Monitor",
@@ -525,7 +525,7 @@ export const computerTechnic = [
       },
       {
         id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/monitor.png",
+        productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
         productName: "Samsungg Monitor",
