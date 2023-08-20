@@ -171,10 +171,9 @@ export const ProductPage = ({ product }) => {
         />
         <SProductPageImages>
           <SProductPageSmallImages>
-            <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
-            <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
-            <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
-            <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
+            {product.productImage.map((item, index) => (
+              <SProductPageSmallImage style={index === 0 ? {display: "none"} : {}} key={index} src={item} />
+            ))}
           </SProductPageSmallImages>
           <SProductPageMainImage>
             <SProductPageBigImage src="assets/images/computerTechnic/orange.png" />
