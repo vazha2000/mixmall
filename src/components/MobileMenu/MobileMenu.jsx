@@ -18,8 +18,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 import { v4 as uuidv4 } from "uuid";
 
-export const MobileMenu = ({ handleMobileMenuClick, isOpen, setIsOpen }) => {
-  // const [isCategoryClicked, setIsCategoryClicked] = useState(false);
+export const MobileMenu = ({ isOpen, setIsOpen }) => {
   const [openSubcategories, setOpenSubcategories] = useState(
     Array(categoriesListItems.length).fill(false)
   );
