@@ -20,6 +20,7 @@ export const SFooterLogoSocial = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  justify-content: center;
 `;
 
 export const SFooterLogoContainer = styled.div``;
@@ -80,12 +81,25 @@ export const SFooterInfo = styled(SFooterLogoSocial)`
   > div:nth-child(2) {
     flex-wrap: wrap;
   }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
   display: flex;
   flex-direction: column;
   gap: 25px;
+  @media screen and (max-width: 500px) {
+    gap: 10px;
+  }
 `;
 
-export const SFooterContact = styled(SFooterInfo)``;
+export const SFooterContact = styled(SFooterInfo)`
+  @media screen and (max-width: 500px) {
+    > div:nth-child(2) {
+      gap: 2px;
+    }
+  }
+  position: relative;
+`;
 
 export const SFooterInfoContact = styled.div`
   display: flex;
@@ -94,6 +108,10 @@ export const SFooterInfoContact = styled.div`
 
   @media screen and (max-width: 700px) {
     flex-direction: row;
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    gap: 20px;
   }
 `;
 
@@ -110,5 +128,10 @@ export const SFooterContactIcon = styled.div`
     color: #df3d41;
     cursor: pointer;
     transition: 0.3s ease;
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: row-reverse;
+    gap: 5px;
+    font-size: 12px;
   }
 `;
