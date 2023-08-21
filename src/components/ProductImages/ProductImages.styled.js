@@ -16,6 +16,16 @@ export const SProductImages = styled.div`
   -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   z-index: 2;
+
+  @media screen and (max-width: 1100px) {
+    width: 90%;
+    height: auto;
+    padding: 30px 0;
+  }
+  @media screen and (max-width: 550px) {
+    width: 100%;
+    padding: 30px 0;
+  }
 `;
 export const SProductImageContainer = styled.div`
   display: flex;
@@ -46,6 +56,11 @@ const SArrows = styled.div`
   &:hover {
     background-color: #df3d41;
   }
+
+  @media screen and (max-width: 550px){
+    height: 35px;
+    width: 35px;
+  }
 `;
 
 export const SPrevArrow = styled(SArrows)`
@@ -54,10 +69,44 @@ export const SPrevArrow = styled(SArrows)`
 
   > img {
     transform: rotate(180deg);
+    width: 15px;
+  }
+
+  @media screen and (max-width: 550px){
+    left: -50px;
+  }
+  @media screen and (max-width: 370px){
+    left: -40px;
   }
 `;
 
 export const SNextArrow = styled(SArrows)`
   right: -60px;
   cursor: pointer;
+
+  > img {
+    width: 15px;
+  }
+
+  @media screen and (max-width: 550px){
+    right: -50px;
+  }
+  @media screen and (max-width: 370px){
+    right: -40px;
+  }
 `;
+
+export const SCloseProductImages = styled.div`
+  > img {
+    width: 25px;
+    cursor: pointer;
+  }
+  position: absolute;
+  top: 10px;
+  right: 2%;
+  display: none;
+
+  @media screen and (max-width: 550px){
+    display: flex;
+  }
+`
