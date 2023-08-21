@@ -85,7 +85,7 @@ export const CartInfo = ({
                       <SCartCardTableBox key={index}>
                         <SCartCardTableBoxImageContent>
                           <img
-                            src={item.productImage}
+                            src={item.productImage[0]}
                             height={"100%"}
                             alt={item.alt}
                           />
@@ -119,7 +119,7 @@ export const CartInfo = ({
             </>
           )}
         </SCartInfoWrapper>
-        <SStyledLink to="/checkout" quantity={cart.length === 0}>
+        <SStyledLink to="/checkout" {...(cart.length === 0 && { quantity: "true" })}>
           <SCartinfoCheckoutButton
             onClick={() => {
               setIsCartClicked(false);
