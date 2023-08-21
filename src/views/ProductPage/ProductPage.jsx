@@ -25,6 +25,9 @@ import { WishlistContext } from "../../context/WishlistContext";
 import { useLocation } from "react-router-dom";
 import { NotificationPopup } from "../../components/NotificationPopup";
 import { CheckoutContext } from "../../context/CheckoutContext";
+import { ProductImages } from "../../components/ProductImages";
+import { AnimatePresence } from "framer-motion";
+import { Overlay } from "./Overlay";
 
 export const ProductPage = ({ product }) => {
   const { wishlist, addToWishlist, removeFromWishlist } =
@@ -39,6 +42,8 @@ export const ProductPage = ({ product }) => {
 
   const productId = product.id;
   const productQuantity = productQuantities[productId] || 1;
+
+  const [isImageClicked, setIsImageClicked] = useState(null);
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
   const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
@@ -171,13 +176,20 @@ export const ProductPage = ({ product }) => {
         />
         <SProductPageImages>
           <SProductPageSmallImages>
-            <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
-            <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
-            <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
-            <SProductPageSmallImage src="assets/images/computerTechnic/orange.png" />
+            {product.productImage.map((item, index) => (
+              <SProductPageSmallImage
+                onClick={() => setIsImageClicked(index)}
+                style={index === 0 ? { display: "none" } : {}}
+                key={index}
+                src={item}
+              />
+            ))}
           </SProductPageSmallImages>
           <SProductPageMainImage>
-            <SProductPageBigImage src="assets/images/computerTechnic/orange.png" />
+            <SProductPageBigImage
+              src={product.productImage[0]}
+              onClick={() => setIsImageClicked(0)}
+            />
           </SProductPageMainImage>
         </SProductPageImages>
         <SProductPageOptions>
@@ -250,6 +262,21 @@ export const ProductPage = ({ product }) => {
         </SProductPageOptions>
       </SProductPage>
       <ProductDescriptions product={product} />
+      <AnimatePresence>
+        {isImageClicked !== null && (
+          <>
+            <Overlay
+              isClicked={isImageClicked}
+              setIsClicked={setIsImageClicked}
+            />
+            <ProductImages
+              setIsClicked={setIsImageClicked}
+              productImage={product.productImage}
+              currentIndex={isImageClicked}
+            />
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 };

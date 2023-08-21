@@ -117,7 +117,7 @@ export const categoriesListItems = [
 export const testProducts = [
   {
     id: 1,
-    productImage: "assets/images/computerTechnic/orange.png",
+    productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
     discountRate: "20%",
     isDiscount: false,
     productName: "მანქანის კატალიზატორი და კიდევ მრავალი სხვა",
@@ -127,7 +127,7 @@ export const testProducts = [
   },
   {
     id: 2,
-    productImage: "assets/images/computerTechnic/orange.png",
+    productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
     discountRate: "40%",
     isDiscount: true,
     productName: "მიკრო ტალღური ღუმელი",
@@ -137,7 +137,7 @@ export const testProducts = [
   },
   {
     id: 3,
-    productImage: "assets/images/computerTechnic/orange.png",
+    productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
     discountRate: "10%",
     isDiscount: false,
     productName: "გეიმინგ მონიტორის დამჭერი ",
@@ -147,7 +147,7 @@ export const testProducts = [
   },
   {
     id: 4,
-    productImage: "assets/images/testImage.png",
+    productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
     discountRate: "900%",
     isDiscount: false,
     productName: "გასაბერი აუზი",
@@ -157,7 +157,7 @@ export const testProducts = [
   },
   {
     id: 5,
-    productImage: "assets/images/testImage.png",
+    productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
     discountRate: "900%",
     isDiscount: false,
     productName: "რამე სახელი",
@@ -167,7 +167,7 @@ export const testProducts = [
   },
   {
     id: 5,
-    productImage: "assets/images/testImage.png",
+    productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
     discountRate: "900%",
     isDiscount: false,
     productName: "რამე სახელი",
@@ -177,7 +177,7 @@ export const testProducts = [
   },
   {
     id: 7,
-    productImage: "assets/images/testImage.png",
+    productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
     discountRate: "900%",
     isDiscount: false,
     productName: "რამე სახელი",
@@ -187,7 +187,7 @@ export const testProducts = [
   },
   {
     id: 8,
-    productImage: "assets/images/testImage.png",
+    productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
     discountRate: "900%",
     isDiscount: false,
     productName: "რამე სახელი",
