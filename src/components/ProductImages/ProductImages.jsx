@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { SNextArrow, SPrevArrow, SProductImage, SProductImageContainer, SProductImages } from './ProductImages.styled'
+import { SCloseProductImages, SNextArrow, SPrevArrow, SProductImage, SProductImageContainer, SProductImages } from './ProductImages.styled'
 
-export const ProductImages = ({productImage, currentIndex}) => {
+export const ProductImages = ({productImage, currentIndex, setIsClicked}) => {
   const [imageIndex, setImageIndex] = useState(currentIndex);
 
   const handleNext = () => {
@@ -23,6 +23,9 @@ export const ProductImages = ({productImage, currentIndex}) => {
           <img src="assets/svg/arrowRight.svg" alt="right arrow" />
         </SNextArrow>
       </SProductImageContainer>
+      <SCloseProductImages onClick={() => setIsClicked(null)}>
+        <img src="assets/svg/close.svg" alt="close icon" />
+      </SCloseProductImages>
     </SProductImages>
   )
 }
