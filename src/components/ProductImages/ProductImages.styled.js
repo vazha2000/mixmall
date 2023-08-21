@@ -12,16 +12,17 @@ export const SProductImages = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
--moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 `;
 export const SProductImageContainer = styled.div`
   display: flex;
   width: 70%;
   max-height: 90%;
   position: relative;
-  border: 1px solid rgba(0,0,0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: inherit;
 `;
 export const SProductImage = styled.img`
@@ -38,7 +39,7 @@ const SArrows = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const SPrevArrow = styled(SArrows)`
   left: -50px;
@@ -48,4 +49,4 @@ export const SPrevArrow = styled(SArrows)`
 export const SNextArrow = styled(SArrows)`
   right: -50px;
   cursor: pointer;
-`
+`;
