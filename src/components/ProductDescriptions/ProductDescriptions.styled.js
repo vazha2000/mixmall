@@ -50,10 +50,17 @@ export const SShowButtonContainer = styled.div`
     padding: 10px 16px;
     background-color: #df3d41;
     color: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
 
     &:hover {
       cursor: pointer;
-      background-color: #f74347;
+      background-color: transparent;
+      color: #df3d41;
+      font-weight: bold;
+      border: 1px solid #df3d41;
+      transition: 0.1s ease-in;
     }
   }
   width: 100%;
