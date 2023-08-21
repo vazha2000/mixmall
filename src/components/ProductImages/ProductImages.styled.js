@@ -52,6 +52,7 @@ const SArrows = styled.div`
   justify-content: center;
   align-items: center;
   transform: translateY(-50%);
+  user-select: none;
 
   &:hover {
     background-color: #df3d41;
