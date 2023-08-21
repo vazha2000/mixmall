@@ -8,9 +8,9 @@ export const Overlay = ({isClicked, setIsClicked}) => {
   }
   return (
     <SOverlay
-    onClick={() => setIsClicked(false)}
+    onClick={() => setIsClicked(null)}
     initial="hidden"
-    animate={isClicked ? "visible" : "hidden"}
+    animate={isClicked !== null ? "visible" : "hidden"}
     variants={overlayVariants}
     />
   )
