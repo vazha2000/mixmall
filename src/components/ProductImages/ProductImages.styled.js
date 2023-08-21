@@ -4,7 +4,7 @@ export const SProductImages = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
-  background-color: #ededed;
+  background-color: #fafafa;
   width: 80%;
   height: 80%;
   transform: translate(-50%, -50%);
