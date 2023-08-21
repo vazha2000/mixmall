@@ -186,7 +186,10 @@ export const ProductPage = ({ product }) => {
             ))}
           </SProductPageSmallImages>
           <SProductPageMainImage>
-            <SProductPageBigImage src={product.productImage[0]} onClick={() => setIsImageClicked(0)} />
+            <SProductPageBigImage
+              src={product.productImage[0]}
+              onClick={() => setIsImageClicked(0)}
+            />
           </SProductPageMainImage>
         </SProductPageImages>
         <SProductPageOptions>
@@ -266,7 +269,11 @@ export const ProductPage = ({ product }) => {
               isClicked={isImageClicked}
               setIsClicked={setIsImageClicked}
             />
-            <ProductImages productImage={product.productImage} currentIndex={isImageClicked}/>
+            <ProductImages
+              setIsClicked={setIsImageClicked}
+              productImage={product.productImage}
+              currentIndex={isImageClicked}
+            />
           </>
         )}
       </AnimatePresence>
