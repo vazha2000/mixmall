@@ -4,12 +4,12 @@ import {
   SProductDescriptionTable,
   SProductDescriptionTableHeader,
   SProductDescriptionTableRow,
+  SShowButtonContainer,
 } from "./ProductDescriptions.styled";
 
 export const ProductDescriptions = ({ product }) => {
-
   const [showAllDescriptions, setShowAllDescriptions] = useState(false);
-  
+
   const keys = Object.keys(product.descriptions[0]);
   const values = Object.values(product.descriptions[0]);
 
@@ -23,7 +23,13 @@ export const ProductDescriptions = ({ product }) => {
             <td>დეტალური მახასიათებლები</td>
           </SProductDescriptionTableHeader>
           {keys.slice(0, numDescriptionsToShow).map((item, index) => (
-            <SProductDescriptionTableRow key={index} isEven={index % 2 === 0}>
+            <SProductDescriptionTableRow
+              key={index}
+              isLast={
+                showAllDescriptions ? index === keys.length - 1 : index === 4
+              }
+              isEven={index % 2 === 0}
+            >
               <td>{item}</td>
               <td>{values[index]}</td>
             </SProductDescriptionTableRow>
@@ -31,13 +37,17 @@ export const ProductDescriptions = ({ product }) => {
         </tbody>
       </SProductDescriptionTable>
       {keys.length > 5 && (
-        <div>
+        <SShowButtonContainer>
           {!showAllDescriptions ? (
-            <button onClick={() => setShowAllDescriptions(true)}>Show More</button>
+            <button onClick={() => setShowAllDescriptions(true)}>
+              მეტის ჩვენება
+            </button>
           ) : (
-            <button onClick={() => setShowAllDescriptions(false)}>Show Less</button>
+            <button onClick={() => setShowAllDescriptions(false)}>
+              ნაკლების ჩვენება
+            </button>
           )}
-        </div>
+        </SShowButtonContainer>
       )}
     </SProductDescription>
   );
