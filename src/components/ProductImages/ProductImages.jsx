@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SCloseProductImages, SNextArrow, SPrevArrow, SProductImage, SProductImageContainer, SProductImages } from './ProductImages.styled'
 
 export const ProductImages = ({productImage, currentIndex, setIsClicked}) => {
@@ -11,6 +11,19 @@ export const ProductImages = ({productImage, currentIndex, setIsClicked}) => {
   const handlePrev = () => {
     setImageIndex((prevIndex) => (prevIndex - 1 + productImage.length) % productImage.length);
   };
+
+  useEffect(() => {
+    const body = document.body;
+    if (productImage) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
+
+    return () => {
+      body.style.overflow = "auto";
+    };
+  }, [productImage]);
   
   return (
     <SProductImages>
