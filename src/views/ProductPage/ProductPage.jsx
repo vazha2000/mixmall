@@ -26,6 +26,8 @@ import { useLocation } from "react-router-dom";
 import { NotificationPopup } from "../../components/NotificationPopup";
 import { CheckoutContext } from "../../context/CheckoutContext";
 import { ProductImages } from "../../components/ProductImages";
+import { AnimatePresence } from "framer-motion";
+import { Overlay } from "./Overlay";
 
 export const ProductPage = ({ product }) => {
   const { wishlist, addToWishlist, removeFromWishlist } =
@@ -40,6 +42,8 @@ export const ProductPage = ({ product }) => {
 
   const productId = product.id;
   const productQuantity = productQuantities[productId] || 1;
+
+  const [isImageClicked, setIsImageClicked] = useState(false)
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
   const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
@@ -173,7 +177,7 @@ export const ProductPage = ({ product }) => {
         <SProductPageImages>
           <SProductPageSmallImages>
             {product.productImage.map((item, index) => (
-              <SProductPageSmallImage style={index === 0 ? {display: "none"} : {}} key={index} src={item} />
+              <SProductPageSmallImage onClick={() => setIsImageClicked(true)} style={index === 0 ? {display: "none"} : {}} key={index} src={item} />
             ))}
           </SProductPageSmallImages>
           <SProductPageMainImage>
@@ -250,7 +254,17 @@ export const ProductPage = ({ product }) => {
         </SProductPageOptions>
       </SProductPage>
       <ProductDescriptions product={product} />
-      <ProductImages productImage={product.productImage}/>
+      <AnimatePresence>
+          {isImageClicked && (
+            <>
+              <Overlay
+                isClicked={isImageClicked}
+                setIsClicked={setIsImageClicked}
+              />
+              <ProductImages productImage={product.productImage}/>
+            </>
+          )}
+        </AnimatePresence>
     </>
   );
 };
