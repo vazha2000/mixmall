@@ -22,7 +22,7 @@ export const SProductImageContainer = styled.div`
   width: 70%;
   max-height: 90%;
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: inherit;
 `;
 export const SProductImage = styled.img`
@@ -33,20 +33,31 @@ export const SProductImage = styled.img`
 const SArrows = styled.div`
   position: absolute;
   top: 50%;
-  background-color: yellow;
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(-50%);
+
+  &:hover {
+    background-color: #df3d41;
+  }
 `;
 
 export const SPrevArrow = styled(SArrows)`
-  left: -50px;
+  left: -60px;
   cursor: pointer;
+
+  > img {
+    transform: rotate(180deg);
+  }
 `;
 
 export const SNextArrow = styled(SArrows)`
-  right: -50px;
+  right: -60px;
   cursor: pointer;
 `;
