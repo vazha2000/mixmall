@@ -33,6 +33,7 @@ import { useForm } from "react-hook-form";
 
 export const Checkout = () => {
   const { cart, removeFromCart } = useContext(CheckoutContext);
+  console.log(cart)
 
   const totalPrice = cart.reduce((sum, item) => {
     const productPrice = item.productQuantity * item.currentPrice;
@@ -195,7 +196,7 @@ export const Checkout = () => {
             <label htmlFor="">თქვენი შეკვეთა</label>
             {cart.map((item, index) => (
               <SCheckoutProduct key={index}>
-                <SCheckoutProductImg src={item.productImage} alt={item.alt} />
+                <SCheckoutProductImg src={item.productImage[0]} alt={item.alt} />
                 <SCheckoutProductNameQuantity>
                   <span>{item.productName}</span>
                   <span>რაოდენობა: {item.productQuantity}</span>

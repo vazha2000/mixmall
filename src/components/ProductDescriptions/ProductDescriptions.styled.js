@@ -22,13 +22,13 @@ export const SProductDescriptionTable = styled.table`
   width: 100%;
   box-sizing: border-box;
   border-spacing: 0;
-  margin-bottom: 3rem;
 `;
 
 export const SProductDescriptionTableRow = styled.tr`
   display: flex;
   width: 100%;
   background-color: ${({isEven}) => (isEven ? "white" : "#f7dcdd")};
+  border-bottom: ${({isLast}) => (isLast ? "1px solid rgba(0,0,0, 0.15)" : "none")};
 
   > td {
     height: 50px;
@@ -44,3 +44,27 @@ export const SProductDescriptionTableRow = styled.tr`
     flex: 2;
   }
 `;
+
+export const SShowButtonContainer = styled.div`
+  > button {
+    padding: 10px 16px;
+    background-color: #df3d41;
+    color: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+
+    &:hover {
+      cursor: pointer;
+      background-color: transparent;
+      color: #df3d41;
+      font-weight: bold;
+      border: 1px solid #df3d41;
+      transition: 0.1s ease-in;
+    }
+  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+`

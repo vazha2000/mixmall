@@ -23,6 +23,10 @@ export const computerTechnic = [
             "weight": "200g",
             "screen size": "1080p",
             "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
         
@@ -42,6 +46,10 @@ export const computerTechnic = [
             "weight": "200g",
             "screen size": "1080p",
             "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -60,6 +68,10 @@ export const computerTechnic = [
             "weight": "200g",
             "screen size": "1080p",
             "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -75,9 +87,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -93,9 +109,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -111,9 +131,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -129,9 +153,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -147,9 +175,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -165,9 +197,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -183,9 +219,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -201,9 +241,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -219,9 +263,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -244,9 +292,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -262,9 +314,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -280,9 +336,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -298,9 +358,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -323,9 +387,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -341,9 +409,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -359,9 +431,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -377,9 +453,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -402,9 +482,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -420,9 +504,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -438,9 +526,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -456,9 +548,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -481,9 +577,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -499,9 +599,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -517,9 +621,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
@@ -535,9 +643,13 @@ export const computerTechnic = [
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "400g",
+            "weight": "200g",
             "screen size": "1080p",
-            "color": "red",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
           }
         ]
       },
