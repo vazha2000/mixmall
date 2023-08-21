@@ -43,7 +43,7 @@ export const ProductPage = ({ product }) => {
   const productId = product.id;
   const productQuantity = productQuantities[productId] || 1;
 
-  const [isImageClicked, setIsImageClicked] = useState(false)
+  const [isImageClicked, setIsImageClicked] = useState(null);
 
   const [showWishlistPopup, setShowWishlistPopup] = useState(false);
   const [showWishlistRemovePopup, setShowWishlistRemovePopup] = useState(false);
@@ -177,11 +177,16 @@ export const ProductPage = ({ product }) => {
         <SProductPageImages>
           <SProductPageSmallImages>
             {product.productImage.map((item, index) => (
-              <SProductPageSmallImage onClick={() => setIsImageClicked(true)} style={index === 0 ? {display: "none"} : {}} key={index} src={item} />
+              <SProductPageSmallImage
+                onClick={() => setIsImageClicked(index)}
+                style={index === 0 ? { display: "none" } : {}}
+                key={index}
+                src={item}
+              />
             ))}
           </SProductPageSmallImages>
           <SProductPageMainImage>
-            <SProductPageBigImage src="assets/images/computerTechnic/orange.png" />
+            <SProductPageBigImage src={product.productImage[0]} onClick={() => setIsImageClicked(0)} />
           </SProductPageMainImage>
         </SProductPageImages>
         <SProductPageOptions>
@@ -255,16 +260,16 @@ export const ProductPage = ({ product }) => {
       </SProductPage>
       <ProductDescriptions product={product} />
       <AnimatePresence>
-          {isImageClicked && (
-            <>
-              <Overlay
-                isClicked={isImageClicked}
-                setIsClicked={setIsImageClicked}
-              />
-              <ProductImages productImage={product.productImage}/>
-            </>
-          )}
-        </AnimatePresence>
+        {isImageClicked !== null && (
+          <>
+            <Overlay
+              isClicked={isImageClicked}
+              setIsClicked={setIsImageClicked}
+            />
+            <ProductImages productImage={product.productImage} currentIndex={isImageClicked}/>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 };
