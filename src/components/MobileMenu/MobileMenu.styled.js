@@ -94,11 +94,26 @@ export const SMobileMenuCategoriesListItems = styled.li`
 export const SMobileMenuNameIcon = styled.div`
   position: relative;
 
+  > img {
+    display: flex;
+  }
+
   > span {
     position: absolute;
-    top: 5px;
+    top: 4px;
     left: 30px;
     white-space: nowrap;
+  }
+  @media screen and (max-width: 390px){
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+    > span {
+      position: static;
+      white-space: normal;
+      padding: 5px 0 0 0;
+    }
   }
 `
 
