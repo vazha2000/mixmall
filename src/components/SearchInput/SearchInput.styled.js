@@ -5,9 +5,13 @@ import {
   SCheckoutProductNameQuantity,
   SCheckoutProductTotal,
 } from "../../views/Checkout/Checkout.styled";
+import {
+  SCartCardTableBox,
+  SCartCardTableBoxImageContent,
+  SCartCardTableBoxNameContent,
+} from "../CartInfo/CartInfo.styled";
 
 export const SSearchInputContainer = styled.div`
-  background-color: red;
   position: relative;
   background-color: transparent;
   height: 2.8rem;
@@ -15,10 +19,11 @@ export const SSearchInputContainer = styled.div`
   display: flex;
   border-radius: 0.5rem;
   border: ${({ isFocused }) =>
-  isFocused ? "1px solid rgba(0,0,0, 0.7)" : "1px solid rgba(0,0,0, 0.2)"};
+    isFocused ? "1px solid rgba(0,0,0, 0.7)" : "1px solid rgba(0,0,0, 0.2)"};
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
+  z-index: 6;
 
   @media screen and (max-width: 1024px) {
     border-radius: 0.25rem;
@@ -57,15 +62,12 @@ export const SSearchIconContainer = styled.div`
 
   &:hover {
     filter: brightness(110%);
-
   }
 `;
 
-export const SSearchIcon = styled.img`
+export const SSearchIcon = styled.img``;
 
-`;
-
-export const SSearchedProducts = styled.div`
+export const SSearchedProducts = styled.table`
   position: absolute;
   top: 50px;
   right: 0;
@@ -73,22 +75,55 @@ export const SSearchedProducts = styled.div`
   max-height: 500px;
   overflow-y: auto;
   z-index: 5;
-  background-color: white;
+  background-color: #fff;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   -webkit-box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
   display: ${({ filteredProducts }) => (filteredProducts ? "none" : "flex")};
   flex-direction: column;
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #c9c9c9;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5e5e5e;
+  }
 `;
 
-export const SSearchProduct = styled(SCheckoutProduct)``;
+export const SSearchProductBox = styled(SCartCardTableBox)`
+  margin-bottom: 10px;
+  border: 1px solid rgba(0,0,0, 0.1);
+  height: 100px;
+`;
 
-export const SSearchProductImage = styled(SCheckoutProductImg)``;
-
-export const SSearchProductNameQuantity = styled(
-  SCheckoutProductNameQuantity
+export const SSearchProductBoxImageContent = styled(
+  SCartCardTableBoxImageContent
 )``;
 
-export const SSearchProductPrice = styled(SCheckoutProductTotal)``;
+export const SSearchProductImage = styled.img`
+  height: 100%;
+`;
+
+export const SSearchProductNameQuantity = styled(
+  SCartCardTableBoxNameContent
+)``;
+
+export const SSearchProductPrice = styled.td`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+`;
