@@ -1,15 +1,17 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState } from "react";
 
-export const AllFoundProductsContext = createContext();
+const AllFoundProductsContext = createContext();
 
-export const AllFoundProductsProvider = ({children}) => {
+const AllFoundProductsProvider = ({ children }) => {
   const [allFoundProducts, setAllFoundProducts] = useState([]);
 
   return (
-    <AllFoundProductsContext.Provider value={{allFoundProducts, setAllFoundProducts}}>
+    <AllFoundProductsContext.Provider
+      value={{ allFoundProducts, setAllFoundProducts }}
+    >
       {children}
     </AllFoundProductsContext.Provider>
-  )
-}
+  );
+};
 
-export {AllFoundProductsContext, AllFoundProductsProvider}
+export { AllFoundProductsContext, AllFoundProductsProvider };
