@@ -19,6 +19,10 @@ export const SearchInput = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
+  console.log("ISFOCUSED", isFocused)
+  console.log("loading", isLoading)
+  console.log("query", searchQuery)
+  console.log("filtered", filteredProducts)
 
   const allProducts = categoriesListItems
     .map((category) =>
@@ -36,15 +40,19 @@ export const SearchInput = () => {
     .flat();
 
   const handleFocus = () => {
-    searchProducts();
+    if(searchQuery.trim() !== "") {
+      searchProducts();
+    }
     setIsFocused(true);
   };
   const handleBlur = () => {
     // setFilteredProducts([]);
     setIsFocused(false);
+    setIsLoading(false)
   };
 
   const searchProducts = () => {
+    setIsLoading(true)
     if (searchQuery.trim() === "") {
       setFilteredProducts([]);
       return;
@@ -93,9 +101,13 @@ export const SearchInput = () => {
       </SSearchIconContainer>
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
         <tbody>
-          {isLoading ? (
+          {isLoading && searchQuery !== "" ? (
             <tr>
               <td>loading...</td>
+            </tr>
+          ) : filteredProducts.length === 0 && isFocused && searchQuery !== "" ? (
+            <tr>
+              <td>nothing found</td>
             </tr>
           ) : (
             filteredProducts.map(
