@@ -136,28 +136,29 @@ export const SSearchProductPrice = styled.td`
 `;
 
 export const SShowAllProducts = styled.tr`
-  > td {
-    background-color: #df3d41;
-    border-radius: 4px;
-    border: 1px solid #df3d41;
-    font-size: 14px;
-    font-family: "BPG Mrgvlovani Caps 2010";
-    color: #fff;
-    height: 50px;
-    width: 160px;
-    white-space: nowrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-      cursor: pointer;
-      background-color: #fff;
-      color: #df3d41;
-      font-weight: bold;
-      transition: 0.1s ease-in;
-    }
-  }
   display: ${({ isLast }) => (isLast ? "flex" : "none")};
   justify-content: center;
+`;
+
+export const SShowAllProductsButton = styled.td`
+  background-color: #df3d41;
+  border-radius: 4px;
+  border: 1px solid #df3d41;
+  font-size: 14px;
+  font-family: "BPG Mrgvlovani Caps 2010";
+  color: #fff;
+  height: 50px;
+  width: 160px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #df3d41;
+    font-weight: bold;
+    transition: 0.1s ease-in;
+  }
 `;
