@@ -67,6 +67,9 @@ export const SProductPageSmallImage = styled.img`
 
 export const SProductPageMainImage = styled.div`
   flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const SProductPageBigImage = styled.img`
