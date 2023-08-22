@@ -11,6 +11,7 @@ import {
   SSearchProductNameQuantity,
   SSearchProductPrice,
   SSearchedProducts,
+  SShowAllProducts,
 } from "./SearchInput.styled";
 import { categoriesListItems } from "../../data/data";
 import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
@@ -21,6 +22,7 @@ export const SearchInput = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [allFoundProducts, setAllFoundProducts] = useState([]);
   const searchInputRef = useRef(null);
 
   const allProducts = categoriesListItems
@@ -39,7 +41,7 @@ export const SearchInput = () => {
     .flat();
 
   const handleFocus = () => {
-    if(searchQuery.trim() !== "") {
+    if (searchQuery.trim() !== "") {
       searchProducts();
     }
     setIsFocused(true);
@@ -50,12 +52,12 @@ export const SearchInput = () => {
   };
 
   const searchProducts = () => {
-    setIsLoading(true)
+    setIsLoading(true);
     if (searchQuery.trim() === "") {
       setFilteredProducts([]);
       return;
     }
-    
+
     const queryWords = searchQuery.toLowerCase().split(" ");
 
     // const filtered = allProducts.filter(
@@ -65,7 +67,9 @@ export const SearchInput = () => {
 
     const filtered = allProducts.filter(
       ([productName, categoryName, id, oldPrice, currentPrice, productImage]) =>
-        queryWords.every((word) => productName.toLowerCase().split(" ").includes(word))
+        queryWords.every((word) =>
+          productName.toLowerCase().split(" ").includes(word)
+        )
     );
 
     setTimeout(() => {
@@ -74,6 +78,7 @@ export const SearchInput = () => {
 
     const renderTenProducts = filtered.slice(0, 10);
     setFilteredProducts(renderTenProducts);
+    setAllFoundProducts(filtered);
   };
 
   useEffect(() => {
@@ -129,7 +134,9 @@ export const SearchInput = () => {
             <SLoadingResult>
               <td>loading...</td>
             </SLoadingResult>
-          ) : filteredProducts.length === 0 && isFocused && searchQuery !== "" ? (
+          ) : filteredProducts.length === 0 &&
+            isFocused &&
+            searchQuery !== "" ? (
             <SLoadingResult>
               <td>ვერაფერი მოიძებნა</td>
             </SLoadingResult>
@@ -146,24 +153,32 @@ export const SearchInput = () => {
                 ],
                 index
               ) => (
-                <SSearchProductBox key={index}>
-                  <SSearchProductBoxImageContent>
-                    <SSearchProductImage
-                      src={productImage[0]}
-                      alt={productName}
-                    />
-                  </SSearchProductBoxImageContent>
-                  <SSearchProductNameQuantity>
-                    <SStyledLink
-                      to={`/${categoryName}/${productId}/${productName}`}
-                      onClick={handleClickProduct}
-                    >
-                      <span>{productName}</span>
-                    </SStyledLink>
-                    <span>Category: {categoryName}</span>
-                  </SSearchProductNameQuantity>
-                  <SSearchProductPrice>{currentPrice}₾</SSearchProductPrice>
-                </SSearchProductBox>
+                <React.Fragment key={index}>
+                  <SSearchProductBox>
+                    <SSearchProductBoxImageContent>
+                      <SSearchProductImage
+                        src={productImage[0]}
+                        alt={productName}
+                      />
+                    </SSearchProductBoxImageContent>
+                    <SSearchProductNameQuantity>
+                      <SStyledLink
+                        to={`/${categoryName}/${productId}/${productName}`}
+                        onClick={handleClickProduct}
+                      >
+                        <span>{productName}</span>
+                      </SStyledLink>
+                      <span>Category: {categoryName}</span>
+                    </SSearchProductNameQuantity>
+                    <SSearchProductPrice>{currentPrice}₾</SSearchProductPrice>
+                  </SSearchProductBox>
+
+                  {allFoundProducts.length > 10 && (
+                    <SShowAllProducts isLast={index === filteredProducts.length - 1}>
+                      <td><span>ყველას ნახვა</span></td>
+                    </SShowAllProducts>
+                  )}
+                </React.Fragment>
               )
             )
           )}
