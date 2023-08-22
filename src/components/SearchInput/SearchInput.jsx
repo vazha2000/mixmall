@@ -125,7 +125,7 @@ export const SearchInput = () => {
                     </SStyledLink>
                     <span>Category: {categoryName}</span>
                   </SSearchProductNameQuantity>
-                  <SSearchProductPrice>{currentPrice}</SSearchProductPrice>
+                  <SSearchProductPrice>{currentPrice}₾</SSearchProductPrice>
                 </SSearchProductBox>
               )
             )
