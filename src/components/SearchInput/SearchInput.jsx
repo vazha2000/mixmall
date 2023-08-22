@@ -42,9 +42,9 @@ export const SearchInput = () => {
     setIsFocused(true);
   };
   const handleBlur = () => {
-    // setFilteredProducts([]);
     setIsFocused(false);
-    setIsLoading(false)
+    setIsLoading(false);
+    setFilteredProducts([])
   };
 
   const searchProducts = () => {
