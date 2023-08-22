@@ -19,10 +19,6 @@ export const SearchInput = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
-  console.log("ISFOCUSED", isFocused)
-  console.log("loading", isLoading)
-  console.log("query", searchQuery)
-  console.log("filtered", filteredProducts)
 
   const allProducts = categoriesListItems
     .map((category) =>
