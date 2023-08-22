@@ -140,7 +140,7 @@ export const SShowAllProducts = styled.tr`
   justify-content: center;
 `;
 
-export const SShowAllProductsButton = styled.td`
+export const SShowAllProductsButton = styled.button`
   background-color: #df3d41;
   border-radius: 4px;
   border: 1px solid #df3d41;
