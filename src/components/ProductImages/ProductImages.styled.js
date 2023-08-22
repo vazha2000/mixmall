@@ -56,6 +56,10 @@ const SArrows = styled.div`
 
   &:hover {
     background-color: #df3d41;
+    border: 1px solid rgba(0,0,0, 0.2);
+    > img {
+      filter: brightness(0) invert(1);
+    }
   }
 
   @media screen and (max-width: 550px){
