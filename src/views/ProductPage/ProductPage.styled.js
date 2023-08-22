@@ -98,12 +98,14 @@ export const SProductPageBigImage = styled.img`
 
 export const SProductPageOptions = styled.div`
   flex: 3;
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 10px;
   box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
-  padding: 20px 10px 10px 10px;
+  padding: 25px 10px 10px 10px;
 
   > h2 {
     color: #1f1f1f;
