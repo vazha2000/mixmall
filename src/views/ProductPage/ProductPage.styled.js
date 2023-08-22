@@ -114,7 +114,7 @@ export const SProductPageOptions = styled.div`
 export const SProductPrices = styled.div`
   display: flex;
   gap: 20px;
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding-bottom: 10px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   > span {
@@ -131,7 +131,7 @@ export const SProductPrices = styled.div`
     position: relative;
 
     ::after {
-      content: '(-5%)';
+      content: "(-5%)";
       position: absolute;
       top: -10px;
       right: -35px;
@@ -194,7 +194,6 @@ export const SProductQuantity = styled.div`
 `;
 
 export const SProductQuantityMinus = styled(motion.button)`
-
   > img {
     width: 25px;
   }
@@ -226,8 +225,7 @@ export const SProductCurrentQuantity = styled.input`
   background-color: inherit;
 `;
 
-export const SProductQuantityPlus = styled(SProductQuantityMinus)`
-`;
+export const SProductQuantityPlus = styled(SProductQuantityMinus)``;
 
 export const SProductBuyNow = styled.button`
   width: auto;
@@ -320,4 +318,14 @@ export const SOnlineInstallmentBanks = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+`;
+
+export const SProductWarranty = styled.div`
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  > span {
+    color: #df3d41;
+  }
+  margin-bottom: 15px;
 `;

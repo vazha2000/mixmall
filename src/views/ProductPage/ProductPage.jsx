@@ -20,6 +20,7 @@ import {
   SProductQuantityBuyFavorites,
   SProductQuantityMinus,
   SProductQuantityPlus,
+  SProductWarranty,
 } from "./ProductPage.styled";
 import { WishlistContext } from "../../context/WishlistContext";
 import { useLocation } from "react-router-dom";
@@ -198,6 +199,7 @@ export const ProductPage = ({ product }) => {
             <span>{product.currentPrice.toFixed(2)} ₾</span>
             {product.isDiscount && <span>{product.oldPrice.toFixed(2)} ₾</span>}
           </SProductPrices>
+          <SProductWarranty>გარანტია: <span>2 წელი</span></SProductWarranty>
           <SProductQuantityBuyFavorites>
             <div>
               <SProductQuantity>
