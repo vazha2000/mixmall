@@ -1,0 +1,1 @@
+export { SearchedProducts } from "./SearchedProducts"
