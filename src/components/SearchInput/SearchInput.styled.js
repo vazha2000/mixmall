@@ -103,6 +103,13 @@ export const SSearchedProducts = styled.table`
   }
 `;
 
+export const SLoadingResult = styled.tr`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+`
+
 export const SSearchProductBox = styled(SCartCardTableBox)`
   margin-bottom: 10px;
   border: 1px solid rgba(0,0,0, 0.1);

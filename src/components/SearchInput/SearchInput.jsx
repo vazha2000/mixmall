@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
+  SLoadingResult,
   SSearchIcon,
   SSearchIconContainer,
   SSearchInput,
@@ -120,13 +121,13 @@ export const SearchInput = () => {
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
         <tbody>
           {isLoading && searchQuery !== "" ? (
-            <tr>
+            <SLoadingResult>
               <td>loading...</td>
-            </tr>
+            </SLoadingResult>
           ) : filteredProducts.length === 0 && isFocused && searchQuery !== "" ? (
-            <tr>
-              <td>nothing found</td>
-            </tr>
+            <SLoadingResult>
+              <td>ვერაფერი მოიძებნა</td>
+            </SLoadingResult>
           ) : (
             filteredProducts.map(
               (
