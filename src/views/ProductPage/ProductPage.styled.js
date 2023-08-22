@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const SProductPage = styled.div`
@@ -177,7 +178,7 @@ export const SProductQuantity = styled.div`
   border-radius: 20px;
 `;
 
-export const SProductQuantityMinus = styled.button`
+export const SProductQuantityMinus = styled(motion.button)`
 
   > img {
     width: 25px;

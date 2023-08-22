@@ -201,7 +201,7 @@ export const ProductPage = ({ product }) => {
           <SProductQuantityBuyFavorites>
             <div>
               <SProductQuantity>
-                <SProductQuantityMinus onClick={handleDecrement}>
+                <SProductQuantityMinus whileTap={{scale: "1.07"}} onClick={handleDecrement}>
                   <img src="assets/svg/minus.svg" alt="minus" />
                 </SProductQuantityMinus>
                 <SProductCurrentQuantity
@@ -209,7 +209,7 @@ export const ProductPage = ({ product }) => {
                   onChange={handleQuantityChange}
                   maxLength="2"
                 />
-                <SProductQuantityPlus onClick={handleIncrement}>
+                <SProductQuantityPlus whileTap={{scale: "1.07"}} onClick={handleIncrement}>
                   <img src="assets/svg/plus.svg" alt="plus" />
                 </SProductQuantityPlus>
               </SProductQuantity>
