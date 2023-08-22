@@ -128,6 +128,17 @@ export const SProductPrices = styled.div`
     font-size: 22px;
     display: flex;
     align-items: center;
+    position: relative;
+
+    ::after {
+      content: '(-5%)';
+      position: absolute;
+      top: -10px;
+      right: -35px;
+      font-size: 14px;
+      color: #df3d41;
+      font-weight: bold;
+    }
   }
 
   @media screen and (max-width: 400px) {
@@ -176,6 +187,10 @@ export const SProductQuantity = styled.div`
   background-color: #ededed;
   padding: 4px;
   border-radius: 20px;
+
+  &:hover {
+    background-color: #e3e3e3;
+  }
 `;
 
 export const SProductQuantityMinus = styled(motion.button)`
@@ -183,8 +198,8 @@ export const SProductQuantityMinus = styled(motion.button)`
   > img {
     width: 25px;
   }
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -216,19 +231,16 @@ export const SProductQuantityPlus = styled(SProductQuantityMinus)`
 
 export const SProductBuyNow = styled.button`
   width: auto;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  background-color: inherit;
-  background-color: ${({ isInCart }) => (isInCart ? "#df3d41" : "white")};
-  border-radius: 5px;
-  font-size: 16px;
+  background-color: ${({ isInCart }) => (isInCart ? "#df3d41" : "#ededed")};
+  border-radius: 20px;
+  font-size: 14px;
   color: ${({ isInCart }) => (isInCart ? "#fff" : "#1f1f1f")};
   font-weight: 600;
-  padding: 0 10px;
+  padding: 0 30px;
   white-space: nowrap;
 
   &:hover {
     cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.9);
     filter: ${({ isInCart }) =>
       isInCart ? "brightness(120%)" : "brightness(90%)"};
     transition: all 0.2s ease;
@@ -241,17 +253,18 @@ export const SProductBuyNow = styled.button`
 `;
 
 export const SAddToFavorites = styled.div`
+  > img {
+    width: 30px;
+  }
   width: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${({ isInWishlist }) =>
-    isInWishlist ? "#df3d41" : "white"};
+    isInWishlist ? "#df3d41" : "#ededed"};
 
   &:hover {
-    border: 1px solid rgba(0, 0, 0, 0.9);
     filter: ${({ isInWishlist }) =>
       isInWishlist ? "brightness(120%)" : "brightness(90%)"};
     cursor: pointer;
