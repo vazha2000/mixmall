@@ -58,9 +58,14 @@ export const SearchInput = () => {
     
     const queryWords = searchQuery.toLowerCase().split(" ");
 
+    // const filtered = allProducts.filter(
+    //   ([productName, categoryName, id, oldPrice, currentPrice, productImage]) =>
+    //     queryWords.every((word) => productName.toLowerCase().includes(word))
+    // );
+
     const filtered = allProducts.filter(
       ([productName, categoryName, id, oldPrice, currentPrice, productImage]) =>
-        queryWords.every((word) => productName.toLowerCase().includes(word))
+        queryWords.every((word) => productName.toLowerCase().split(" ").includes(word))
     );
 
     setTimeout(() => {
