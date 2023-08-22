@@ -48,13 +48,12 @@ export const SearchInput = () => {
   };
 
   const searchProducts = () => {
+    setIsLoading(true)
     if (searchQuery.trim() === "") {
       setFilteredProducts([]);
       return;
     }
-
-    setIsLoading(true);
-
+    
     const queryWords = searchQuery.toLowerCase().split(" ");
 
     const filtered = allProducts.filter(
