@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   SLoadingResult,
   SSearchIcon,
@@ -17,15 +17,18 @@ import {
 import { categoriesListItems } from "../../data/data";
 import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { AllFoundProductsContext } from "../../context/AllFoundProductsContext";
 
 export const SearchInput = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [allFoundProducts, setAllFoundProducts] = useState([]);
   const searchInputRef = useRef(null);
+
+  const { allFoundProducts, setAllFoundProducts } = useContext(
+    AllFoundProductsContext
+  );
 
   const allProducts = categoriesListItems
     .map((category) =>
@@ -179,11 +182,16 @@ export const SearchInput = () => {
                     <SShowAllProducts
                       isLast={index === filteredProducts.length - 1}
                     >
-                      <SStyledLink to={`/search-products`} onClick={handleClickProduct}>
-                        <SShowAllProductsButton>
-                          <span>ყველას ნახვა</span>
-                        </SShowAllProductsButton>
-                      </SStyledLink>
+                      <td>
+                        <SStyledLink
+                          to={`/search-products`}
+                          onClick={handleClickProduct}
+                        >
+                          <SShowAllProductsButton>
+                            ყველას ნახვა
+                          </SShowAllProductsButton>
+                        </SStyledLink>
+                      </td>
                     </SShowAllProducts>
                   )}
                 </React.Fragment>
