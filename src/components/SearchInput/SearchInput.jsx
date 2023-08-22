@@ -13,12 +13,14 @@ import {
 } from "./SearchInput.styled";
 import { categoriesListItems } from "../../data/data";
 import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
+import { useRef } from "react";
 
 export const SearchInput = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const searchInputRef = useRef(null);
 
   const allProducts = categoriesListItems
     .map((category) =>
@@ -44,7 +46,6 @@ export const SearchInput = () => {
   const handleBlur = () => {
     setIsFocused(false);
     setIsLoading(false);
-    setFilteredProducts([])
   };
 
   const searchProducts = () => {
@@ -81,8 +82,26 @@ export const SearchInput = () => {
     setSearchQuery(event.target.value);
   };
 
+  const handleClickOutside = (event) => {
+    if (
+      searchInputRef.current &&
+      !searchInputRef.current.contains(event.target)
+    ) {
+      setIsFocused(false);
+      setFilteredProducts([]);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <SSearchInputContainer isFocused={isFocused}>
+    <SSearchInputContainer ref={searchInputRef} isFocused={isFocused}>
       <SSearchInput
         onFocus={handleFocus}
         onBlur={handleBlur}
