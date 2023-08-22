@@ -103,7 +103,7 @@ export const SProductPageOptions = styled.div`
   box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  padding: 20px 10px 10px 10px;
 
   > h2 {
     color: #1f1f1f;
@@ -113,7 +113,7 @@ export const SProductPageOptions = styled.div`
 
 export const SProductPrices = styled.div`
   display: flex;
-  gap: 2rem;
+  gap: 20px;
   margin: 2rem 0;
   padding-bottom: 10px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
@@ -238,6 +238,7 @@ export const SProductBuyNow = styled.button`
   font-weight: 600;
   padding: 0 30px;
   white-space: nowrap;
+  min-height: 38px;
 
   &:hover {
     cursor: pointer;
