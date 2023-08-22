@@ -4,14 +4,15 @@ import {
   SSearchIconContainer,
   SSearchInput,
   SSearchInputContainer,
-  SSearchProduct,
+  SSearchProductBox,
+  SSearchProductBoxImageContent,
   SSearchProductImage,
   SSearchProductNameQuantity,
   SSearchProductPrice,
   SSearchedProducts,
 } from "./SearchInput.styled";
 import { categoriesListItems } from "../../data/data";
-import { Link } from "react-router-dom";
+import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 
 export const SearchInput = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -91,34 +92,45 @@ export const SearchInput = () => {
         <SSearchIcon src="../assets/svg/search.svg" alt="search icon" />
       </SSearchIconContainer>
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
-        {isLoading ? (
-          <div>loadinggg</div>
-        ) : (
-          filteredProducts.map(
-            (
-              [
-                productName,
-                categoryName,
-                productId,
-                oldPrice,
-                currentPrice,
-                productImage,
-              ],
-              index
-            ) => (
-              <SSearchProduct key={index}>
-                <SSearchProductImage src={productImage} alt={productName} />
-                <SSearchProductNameQuantity>
-                  <Link to={`/${categoryName}/${productId}/${productName}`}>
-                    <span>{productName}</span>
-                  </Link>
-                  <span>Category: {categoryName}</span>
-                </SSearchProductNameQuantity>
-                <SSearchProductPrice>{currentPrice}</SSearchProductPrice>
-              </SSearchProduct>
+        <tbody>
+          {isLoading ? (
+            <tr>
+              <td>loading...</td>
+            </tr>
+          ) : (
+            filteredProducts.map(
+              (
+                [
+                  productName,
+                  categoryName,
+                  productId,
+                  oldPrice,
+                  currentPrice,
+                  productImage,
+                ],
+                index
+              ) => (
+                <SSearchProductBox key={index}>
+                  <SSearchProductBoxImageContent>
+                    <SSearchProductImage
+                      src={productImage[0]}
+                      alt={productName}
+                    />
+                  </SSearchProductBoxImageContent>
+                  <SSearchProductNameQuantity>
+                    <SStyledLink
+                      to={`/${categoryName}/${productId}/${productName}`}
+                    >
+                      <span>{productName}</span>
+                    </SStyledLink>
+                    <span>Category: {categoryName}</span>
+                  </SSearchProductNameQuantity>
+                  <SSearchProductPrice>{currentPrice}</SSearchProductPrice>
+                </SSearchProductBox>
+              )
             )
-          )
-        )}
+          )}
+        </tbody>
       </SSearchedProducts>
     </SSearchInputContainer>
   );
