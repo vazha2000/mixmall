@@ -114,16 +114,19 @@ export const SProductPrices = styled.div`
   display: flex;
   gap: 2rem;
   margin: 2rem 0;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   > span {
-    color: #1f1f1f;
+    color: #df3d41;
     font-size: 30px;
   }
   > span:nth-child(2) {
-    color: #df3d41;
+    color: #1f1f1f;
     text-decoration: line-through;
     text-decoration-thickness: 3px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
   }
 
   @media screen and (max-width: 400px) {
