@@ -172,19 +172,28 @@ export const SProductButtonsWrapper = styled.div`
 export const SProductQuantity = styled.div`
   display: flex;
   height: 100%;
+  background-color: #ededed;
+  padding: 4px;
+  border-radius: 20px;
 `;
 
 export const SProductQuantityMinus = styled.button`
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+
+  > img {
+    width: 25px;
+  }
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px 0 0 4px;
+  border-radius: 50%;
   background-color: #fff;
 
   &:hover {
+    > img {
+      filter: brightness(0) invert(1);
+    }
     cursor: pointer;
     transition: all 0.2s ease;
     background-color: #df3d41;
@@ -197,13 +206,11 @@ export const SProductCurrentQuantity = styled.input`
   outline: none;
   box-sizing: border-box;
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   text-align: center;
+  background-color: inherit;
 `;
 
 export const SProductQuantityPlus = styled(SProductQuantityMinus)`
-  border-radius: 0 4px 4px 0;
 `;
 
 export const SProductBuyNow = styled.button`

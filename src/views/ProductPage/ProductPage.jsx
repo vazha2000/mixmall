@@ -195,8 +195,8 @@ export const ProductPage = ({ product }) => {
         <SProductPageOptions>
           <h2>{product.productName}</h2>
           <SProductPrices>
-            <span>₾{product.currentPrice}.00</span>
-            {product.isDiscount && <span>₾{product.oldPrice}.00</span>}
+            <span>₾{product.currentPrice.toFixed(2)}</span>
+            {product.isDiscount && <span>₾{product.oldPrice.toFixed(2)}</span>}
           </SProductPrices>
           <SProductQuantityBuyFavorites>
             <div>
