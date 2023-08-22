@@ -12,10 +12,12 @@ import {
   SSearchProductPrice,
   SSearchedProducts,
   SShowAllProducts,
+  SShowAllProductsButton,
 } from "./SearchInput.styled";
 import { categoriesListItems } from "../../data/data";
 import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 export const SearchInput = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -174,8 +176,14 @@ export const SearchInput = () => {
                   </SSearchProductBox>
 
                   {allFoundProducts.length > 10 && (
-                    <SShowAllProducts isLast={index === filteredProducts.length - 1}>
-                      <td><span>ყველას ნახვა</span></td>
+                    <SShowAllProducts
+                      isLast={index === filteredProducts.length - 1}
+                    >
+                      <SStyledLink to={`/search-products`} onClick={handleClickProduct}>
+                        <SShowAllProductsButton>
+                          <span>ყველას ნახვა</span>
+                        </SShowAllProductsButton>
+                      </SStyledLink>
                     </SShowAllProducts>
                   )}
                 </React.Fragment>
