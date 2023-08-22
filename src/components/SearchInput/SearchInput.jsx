@@ -52,7 +52,6 @@ export const SearchInput = () => {
   };
 
   const searchProducts = () => {
-    setIsLoading(true)
     if (searchQuery.trim() === "") {
       setFilteredProducts([]);
       return;
