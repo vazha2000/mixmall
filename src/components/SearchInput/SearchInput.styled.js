@@ -70,18 +70,18 @@ export const SSearchIcon = styled.img``;
 export const SSearchedProducts = styled.table`
   position: absolute;
   top: 50px;
-  right: 0;
-  width: 600px;
+  right: -25%;
+  width: 45vw;
   max-height: 500px;
   overflow-y: auto;
   z-index: 5;
   background-color: #fff;
-  padding: 10px;
+  padding: ${({filteredProducts}) => (filteredProducts ? "0" : "10px")};
   border-radius: 10px;
   -webkit-box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
-  display: ${({ filteredProducts }) => (filteredProducts ? "none" : "flex")};
+  display: flex;
   flex-direction: column;
 
   ::-webkit-scrollbar {
