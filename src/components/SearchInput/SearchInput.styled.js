@@ -76,7 +76,7 @@ export const SSearchedProducts = styled.table`
   overflow-y: auto;
   z-index: 5;
   background-color: #fff;
-  padding: ${({filteredProducts}) => (filteredProducts ? "0" : "10px")};
+  padding: ${({ filteredProducts }) => (filteredProducts ? "0" : "10px")};
   border-radius: 10px;
   -webkit-box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 22px 47px 2px rgba(0, 0, 0, 0.75);
@@ -108,11 +108,11 @@ export const SLoadingResult = styled.tr`
   justify-content: center;
   align-items: center;
   height: 50px;
-`
+`;
 
 export const SSearchProductBox = styled(SCartCardTableBox)`
   margin-bottom: 10px;
-  border: 1px solid rgba(0,0,0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   height: 100px;
 `;
 
@@ -133,4 +133,31 @@ export const SSearchProductPrice = styled.td`
   align-items: center;
   justify-content: center;
   width: 100px;
+`;
+
+export const SShowAllProducts = styled.tr`
+  > td {
+    background-color: #df3d41;
+    border-radius: 4px;
+    border: 1px solid #df3d41;
+    font-size: 14px;
+    font-family: "BPG Mrgvlovani Caps 2010";
+    color: #fff;
+    height: 50px;
+    width: 160px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color: #df3d41;
+      font-weight: bold;
+      transition: 0.1s ease-in;
+    }
+  }
+  display: ${({ isLast }) => (isLast ? "flex" : "none")};
+  justify-content: center;
 `;
