@@ -20,6 +20,7 @@ import {
   SProductQuantityBuyFavorites,
   SProductQuantityMinus,
   SProductQuantityPlus,
+  SProductWarranty,
 } from "./ProductPage.styled";
 import { WishlistContext } from "../../context/WishlistContext";
 import { useLocation } from "react-router-dom";
@@ -195,13 +196,14 @@ export const ProductPage = ({ product }) => {
         <SProductPageOptions>
           <h2>{product.productName}</h2>
           <SProductPrices>
-            <span>₾{product.currentPrice}.00</span>
-            {product.isDiscount && <span>₾{product.oldPrice}.00</span>}
+            <span>{product.currentPrice.toFixed(2)} ₾</span>
+            {product.isDiscount && <span>{product.oldPrice.toFixed(2)} ₾</span>}
           </SProductPrices>
+          <SProductWarranty>გარანტია: <span>2 წელი</span></SProductWarranty>
           <SProductQuantityBuyFavorites>
             <div>
               <SProductQuantity>
-                <SProductQuantityMinus onClick={handleDecrement}>
+                <SProductQuantityMinus whileTap={{scale: "1.07"}} onClick={handleDecrement}>
                   <img src="assets/svg/minus.svg" alt="minus" />
                 </SProductQuantityMinus>
                 <SProductCurrentQuantity
@@ -209,7 +211,7 @@ export const ProductPage = ({ product }) => {
                   onChange={handleQuantityChange}
                   maxLength="2"
                 />
-                <SProductQuantityPlus onClick={handleIncrement}>
+                <SProductQuantityPlus whileTap={{scale: "1.07"}} onClick={handleIncrement}>
                   <img src="assets/svg/plus.svg" alt="plus" />
                 </SProductQuantityPlus>
               </SProductQuantity>

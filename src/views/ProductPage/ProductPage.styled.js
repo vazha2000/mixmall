@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const SProductPage = styled.div`
@@ -102,7 +103,7 @@ export const SProductPageOptions = styled.div`
   box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  padding: 20px 10px 10px 10px;
 
   > h2 {
     color: #1f1f1f;
@@ -112,18 +113,32 @@ export const SProductPageOptions = styled.div`
 
 export const SProductPrices = styled.div`
   display: flex;
-  gap: 2rem;
-  margin: 2rem 0;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  gap: 20px;
+  margin: 1rem 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   > span {
-    color: #1f1f1f;
+    color: #df3d41;
     font-size: 30px;
   }
   > span:nth-child(2) {
-    color: #df3d41;
+    color: #1f1f1f;
     text-decoration: line-through;
     text-decoration-thickness: 3px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    ::after {
+      content: "(-5%)";
+      position: absolute;
+      top: -10px;
+      right: -35px;
+      font-size: 14px;
+      color: #df3d41;
+      font-weight: bold;
+    }
   }
 
   @media screen and (max-width: 400px) {
@@ -169,19 +184,31 @@ export const SProductButtonsWrapper = styled.div`
 export const SProductQuantity = styled.div`
   display: flex;
   height: 100%;
+  background-color: #ededed;
+  padding: 4px;
+  border-radius: 20px;
+
+  &:hover {
+    background-color: #e3e3e3;
+  }
 `;
 
-export const SProductQuantityMinus = styled.button`
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+export const SProductQuantityMinus = styled(motion.button)`
+  > img {
+    width: 25px;
+  }
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px 0 0 4px;
+  border-radius: 50%;
   background-color: #fff;
 
   &:hover {
+    > img {
+      filter: brightness(0) invert(1);
+    }
     cursor: pointer;
     transition: all 0.2s ease;
     background-color: #df3d41;
@@ -194,30 +221,25 @@ export const SProductCurrentQuantity = styled.input`
   outline: none;
   box-sizing: border-box;
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   text-align: center;
+  background-color: inherit;
 `;
 
-export const SProductQuantityPlus = styled(SProductQuantityMinus)`
-  border-radius: 0 4px 4px 0;
-`;
+export const SProductQuantityPlus = styled(SProductQuantityMinus)``;
 
 export const SProductBuyNow = styled.button`
   width: auto;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  background-color: inherit;
-  background-color: ${({ isInCart }) => (isInCart ? "#df3d41" : "white")};
-  border-radius: 5px;
-  font-size: 16px;
+  background-color: ${({ isInCart }) => (isInCart ? "#df3d41" : "#ededed")};
+  border-radius: 20px;
+  font-size: 14px;
   color: ${({ isInCart }) => (isInCart ? "#fff" : "#1f1f1f")};
   font-weight: 600;
-  padding: 0 10px;
+  padding: 0 30px;
   white-space: nowrap;
+  min-height: 38px;
 
   &:hover {
     cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.9);
     filter: ${({ isInCart }) =>
       isInCart ? "brightness(120%)" : "brightness(90%)"};
     transition: all 0.2s ease;
@@ -230,17 +252,18 @@ export const SProductBuyNow = styled.button`
 `;
 
 export const SAddToFavorites = styled.div`
+  > img {
+    width: 30px;
+  }
   width: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${({ isInWishlist }) =>
-    isInWishlist ? "#df3d41" : "white"};
+    isInWishlist ? "#df3d41" : "#ededed"};
 
   &:hover {
-    border: 1px solid rgba(0, 0, 0, 0.9);
     filter: ${({ isInWishlist }) =>
       isInWishlist ? "brightness(120%)" : "brightness(90%)"};
     cursor: pointer;
@@ -295,4 +318,14 @@ export const SOnlineInstallmentBanks = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+`;
+
+export const SProductWarranty = styled.div`
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  > span {
+    color: #df3d41;
+  }
+  margin-bottom: 15px;
 `;
