@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from "react";
 import {
+  SLoadingResult,
   SSearchIcon,
   SSearchIconContainer,
   SSearchInput,
   SSearchInputContainer,
-  SSearchProduct,
+  SSearchProductBox,
+  SSearchProductBoxImageContent,
   SSearchProductImage,
   SSearchProductNameQuantity,
   SSearchProductPrice,
   SSearchedProducts,
+  SShowAllProducts,
 } from "./SearchInput.styled";
 import { categoriesListItems } from "../../data/data";
-import { Link } from "react-router-dom";
+import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
+import { useRef } from "react";
 
 export const SearchInput = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [allFoundProducts, setAllFoundProducts] = useState([]);
+  const searchInputRef = useRef(null);
 
   const allProducts = categoriesListItems
     .map((category) =>
@@ -35,27 +41,35 @@ export const SearchInput = () => {
     .flat();
 
   const handleFocus = () => {
-    searchProducts();
+    if (searchQuery.trim() !== "") {
+      searchProducts();
+    }
     setIsFocused(true);
   };
   const handleBlur = () => {
-    // setFilteredProducts([]);
     setIsFocused(false);
+    setIsLoading(false);
   };
 
   const searchProducts = () => {
+    setIsLoading(true);
     if (searchQuery.trim() === "") {
       setFilteredProducts([]);
       return;
     }
 
-    setIsLoading(true);
-
     const queryWords = searchQuery.toLowerCase().split(" ");
+
+    // const filtered = allProducts.filter(
+    //   ([productName, categoryName, id, oldPrice, currentPrice, productImage]) =>
+    //     queryWords.every((word) => productName.toLowerCase().includes(word))
+    // );
 
     const filtered = allProducts.filter(
       ([productName, categoryName, id, oldPrice, currentPrice, productImage]) =>
-        queryWords.every((word) => productName.toLowerCase().includes(word))
+        queryWords.every((word) =>
+          productName.toLowerCase().split(" ").includes(word)
+        )
     );
 
     setTimeout(() => {
@@ -64,6 +78,7 @@ export const SearchInput = () => {
 
     const renderTenProducts = filtered.slice(0, 10);
     setFilteredProducts(renderTenProducts);
+    setAllFoundProducts(filtered);
   };
 
   useEffect(() => {
@@ -78,8 +93,31 @@ export const SearchInput = () => {
     setSearchQuery(event.target.value);
   };
 
+  const handleClickOutside = (event) => {
+    if (
+      searchInputRef.current &&
+      !searchInputRef.current.contains(event.target)
+    ) {
+      setIsFocused(false);
+      setFilteredProducts([]);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  const handleClickProduct = () => {
+    setIsFocused(false);
+    setFilteredProducts([]);
+  };
+
   return (
-    <SSearchInputContainer isFocused={isFocused}>
+    <SSearchInputContainer ref={searchInputRef} isFocused={isFocused}>
       <SSearchInput
         onFocus={handleFocus}
         onBlur={handleBlur}
@@ -91,34 +129,60 @@ export const SearchInput = () => {
         <SSearchIcon src="../assets/svg/search.svg" alt="search icon" />
       </SSearchIconContainer>
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
-        {isLoading ? (
-          <div>loadinggg</div>
-        ) : (
-          filteredProducts.map(
-            (
-              [
-                productName,
-                categoryName,
-                productId,
-                oldPrice,
-                currentPrice,
-                productImage,
-              ],
-              index
-            ) => (
-              <SSearchProduct key={index}>
-                <SSearchProductImage src={productImage} alt={productName} />
-                <SSearchProductNameQuantity>
-                  <Link to={`/${categoryName}/${productId}/${productName}`}>
-                    <span>{productName}</span>
-                  </Link>
-                  <span>Category: {categoryName}</span>
-                </SSearchProductNameQuantity>
-                <SSearchProductPrice>{currentPrice}</SSearchProductPrice>
-              </SSearchProduct>
+        <tbody>
+          {isLoading && searchQuery !== "" ? (
+            <SLoadingResult>
+              <td>loading...</td>
+            </SLoadingResult>
+          ) : filteredProducts.length === 0 &&
+            isFocused &&
+            searchQuery !== "" ? (
+            <SLoadingResult>
+              <td>ვერაფერი მოიძებნა</td>
+            </SLoadingResult>
+          ) : (
+            filteredProducts.map(
+              (
+                [
+                  productName,
+                  categoryName,
+                  productId,
+                  oldPrice,
+                  currentPrice,
+                  productImage,
+                ],
+                index
+              ) => (
+                <React.Fragment key={index}>
+                  <SSearchProductBox>
+                    <SSearchProductBoxImageContent>
+                      <SSearchProductImage
+                        src={productImage[0]}
+                        alt={productName}
+                      />
+                    </SSearchProductBoxImageContent>
+                    <SSearchProductNameQuantity>
+                      <SStyledLink
+                        to={`/${categoryName}/${productId}/${productName}`}
+                        onClick={handleClickProduct}
+                      >
+                        <span>{productName}</span>
+                      </SStyledLink>
+                      <span>Category: {categoryName}</span>
+                    </SSearchProductNameQuantity>
+                    <SSearchProductPrice>{currentPrice}₾</SSearchProductPrice>
+                  </SSearchProductBox>
+
+                  {allFoundProducts.length > 10 && (
+                    <SShowAllProducts isLast={index === filteredProducts.length - 1}>
+                      <td><span>ყველას ნახვა</span></td>
+                    </SShowAllProducts>
+                  )}
+                </React.Fragment>
+              )
             )
-          )
-        )}
+          )}
+        </tbody>
       </SSearchedProducts>
     </SSearchInputContainer>
   );
