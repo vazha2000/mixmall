@@ -100,6 +100,11 @@ export const SearchInput = () => {
     };
   }, []);
 
+  const handleClickProduct = () => {
+    setIsFocused(false);
+    setFilteredProducts([]);
+  };
+
   return (
     <SSearchInputContainer ref={searchInputRef} isFocused={isFocused}>
       <SSearchInput
@@ -145,6 +150,7 @@ export const SearchInput = () => {
                   <SSearchProductNameQuantity>
                     <SStyledLink
                       to={`/${categoryName}/${productId}/${productName}`}
+                      onClick={handleClickProduct}
                     >
                       <span>{productName}</span>
                     </SStyledLink>
