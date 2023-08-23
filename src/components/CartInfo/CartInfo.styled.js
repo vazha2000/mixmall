@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 
 export const SCartInfo = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #faf2f2;
