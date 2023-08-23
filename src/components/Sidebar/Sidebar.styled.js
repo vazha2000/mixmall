@@ -15,11 +15,11 @@ export const SSideBarCategories = styled.ul`
   display: flex;
   flex-direction: column;
   background-color: #ededed;
-  -webkit-box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.7);
-  box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -10px 0px 21px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -10px 0px 21px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: -10px 0px 21px 3px rgba(0, 0, 0, 0.75);
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 15px 0 0 15px;
 `;
 
 export const SSideBarCategoriesListWrapper = styled.div`
@@ -57,10 +57,11 @@ export const SSideBarCategoriesIconName = styled.div`
   gap: 10px;
   padding: 0 20px;
   width: 86%;
-  border-bottom: ${({isLast}) => (isLast ? "none" : "1px solid rgba(0,0,0, 0.15)")};
+  border-bottom: ${({ isLast }) =>
+    isLast ? "none" : "1px solid rgba(0,0,0, 0.15)"};
   margin: 0 auto;
   position: relative;
-  
+
   > span {
     font-size: 12px;
     display: flex;
@@ -69,4 +70,4 @@ export const SSideBarCategoriesIconName = styled.div`
     top: 56%;
     transform: translateY(-50%);
   }
-`
+`;
