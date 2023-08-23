@@ -15,11 +15,10 @@ export const SSideBarCategories = styled.ul`
   display: flex;
   flex-direction: column;
   background-color: #ededed;
-  -webkit-box-shadow: -10px 0px 21px 3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -10px 0px 21px 3px rgba(0, 0, 0, 0.75);
-  box-shadow: -10px 0px 21px 3px rgba(0, 0, 0, 0.75);
-  overflow: hidden;
-  border-radius: 15px 0 0 15px;
+  -webkit-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.75);
+  /* overflow: hidden; */
 `;
 
 export const SSideBarCategoriesListWrapper = styled.div`

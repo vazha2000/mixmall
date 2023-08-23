@@ -20,7 +20,7 @@ export const SDropDownMenuWrapper = styled.div`
   min-width: 600px;
 `;
 export const SDropDownMenu = styled(motion.div)`
-  background-color: #ededed;
+  background-color: #f2f2f2;
   padding: 20px;
   border-radius: 0 8px 8px 0;
   z-index: 2;
@@ -57,6 +57,11 @@ export const SMenuGridContainer = styled.ul`
 `;
 
 export const SMenuItemsDot = styled.div`
+  > img {
+    filter: invert(30%) sepia(0%) saturate(4500%) hue-rotate(349deg)
+      brightness(92%) contrast(100%);
+  }
+
   display: flex;
   align-items: center;
   color: #303030;
