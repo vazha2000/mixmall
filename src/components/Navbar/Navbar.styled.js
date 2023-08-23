@@ -170,7 +170,7 @@ export const SNavMenu = styled.div`
   }
 `
 export const SNavMenuCategoriesWrapper = styled.div`
-  flex: 1.3;
+  flex: 0.4;
 `
 export const SNavMenuCategories = styled.div`
   > span {
@@ -197,7 +197,7 @@ export const SNavSidebarWrapper = styled.div`
 `
 
 export const SNavMenuItemsContainer = styled.ul`
-  flex: 1;
+  flex: 0.3;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -205,12 +205,13 @@ export const SNavMenuItemsContainer = styled.ul`
   background-color: ${({isMenuHovered}) => (isMenuHovered ? "#b9b9b9" : "#ededed")};
   position: relative;
   font-size: 13px;
+  font-weight: bold;
   color: ${({isMenuHovered}) => (isMenuHovered ? "#fff" : "#1f1f1f")};
   transition: 0.3s ease;
   cursor: pointer;
 
   
-  &::before {
+  /* &::before {
     content: '';
     position: absolute;
     left: -18px;
@@ -233,7 +234,7 @@ export const SNavMenuItemsContainer = styled.ul`
     border-top: ${({isMenuHovered}) => (isMenuHovered ? "50px solid #b9b9b9" : "50px solid #ededed")};
     border-right: 21px solid transparent;
     transition: 0.3s ease;
-  }
+  } */
 `
 
 export const SNavMenuItems = styled.li`
@@ -245,7 +246,7 @@ export const SNavMenuItems = styled.li`
 `
 
 export const SNavMenuDiscount = styled.div`
-  flex: 1.2;
+  flex: 1;
   background-color: #df3d41;
 
 `
