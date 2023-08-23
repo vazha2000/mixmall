@@ -5,22 +5,25 @@ import styled from "styled-components";
 export const SDropDownMenuWrapper = styled.div`
   > div:nth-child(1) {
     height: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+      box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
 
-    &:hover {
+    /* &:hover {
       -webkit-box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
       box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
       transition: box-shadow 0.3s ease-in-out;
-    }
+      box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    } */
   }
   position: absolute;
   top: 15px;
-  left: 100%;
+  left: 99.8%;
   height: calc(100% - 15px);
   min-width: 600px;
 `;
 export const SDropDownMenu = styled(motion.div)`
-  background-color: #f2f2f2;
+  background-color: #ededed;
   padding: 20px;
   z-index: 2;
   height: 100%;
