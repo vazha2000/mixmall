@@ -125,7 +125,7 @@ export const SearchInput = () => {
   };
 
   return (
-    <SSearchInputContainer ref={searchInputRef} isFocused={isFocused}>
+    <SSearchInputContainer ref={searchInputRef}>
       <SSearchInput
         onFocus={handleFocus}
         onBlur={handleBlur}
@@ -134,7 +134,7 @@ export const SearchInput = () => {
         placeholder="პროდუქტების ძიება"
       />
       <SSearchIconContainer>
-        <SSearchIcon src="../assets/svg/search.svg" alt="search icon" />
+        <span>ძიება</span>
       </SSearchIconContainer>
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
         <tbody>
