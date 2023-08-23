@@ -22,7 +22,6 @@ export const SDropDownMenuWrapper = styled.div`
 export const SDropDownMenu = styled(motion.div)`
   background-color: #f2f2f2;
   padding: 20px;
-  border-radius: 0 8px 8px 0;
   z-index: 2;
   height: 100%;
   width: 100%;
