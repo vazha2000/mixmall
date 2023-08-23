@@ -17,15 +17,12 @@ export const SLogo = styled.img`
 
 export const SNavActions = styled.div`
   display: flex;
-  width: 90%;
+  width: auto;
   gap: 1rem;
   margin-left: 1rem;
   justify-content: flex-end;
   padding-right: 5px;
 
-  @media screen and (max-width: 1024px) {
-    width: auto;
-  }
   @media screen and (max-width: 768px) {
     padding-right: 9px;
   }
