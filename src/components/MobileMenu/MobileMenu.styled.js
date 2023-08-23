@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { SCartInfoHeaderContainer } from "../CartInfo/CartInfo.styled";
 
 export const SMobileMenu = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: #e3e2de;

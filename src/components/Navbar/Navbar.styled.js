@@ -152,7 +152,6 @@ export const SBurgerMenuIcon = styled.img`
 
 export const SNavMenu = styled.div`
   display: flex;
-  padding: 0 10px;
   height: 60px;
   position: relative;
 
