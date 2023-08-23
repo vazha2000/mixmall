@@ -22,6 +22,7 @@ export const SNavActions = styled.div`
   margin-left: 1rem;
   justify-content: flex-end;
   padding-right: 5px;
+  height: 45px;
 
   @media screen and (max-width: 768px) {
     padding-right: 9px;
@@ -30,9 +31,10 @@ export const SNavActions = styled.div`
 
 export const SNavInputContainer = styled.div`
   display: flex;
-  width: 50%;
-  border-radius: 0.5rem;
-
+  flex: 1;
+  padding-right: 10px;
+  align-items: center;
+  background-color: #ededed;
   @media screen and (max-width: 1024px) {
     display: none;
   }
@@ -46,13 +48,15 @@ export const SNavContactContainer = styled.div`
 
   min-width: 240px;
   gap: 20px;
-  background-color: #f0f0f0;
+  background-color: #ededed;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 4px;
   border-radius: 5px;
   white-space: nowrap;
+  height: 100%;
+
 
   &:hover {
     background-color: #df3d41;
@@ -95,7 +99,7 @@ export const SWishlistContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
   height: 2.8rem;
-  background-color: #f0f0f0;
+  background-color: #ededed;
   width: 50px;
   border-radius: 12px;
   transition: all 0.2s ease;
@@ -150,7 +154,8 @@ export const SBurgerMenuIcon = styled.img`
 
 export const SNavMenu = styled.div`
   display: flex;
-  height: 50px;
+  padding: 0 10px;
+  height: 60px;
   position: relative;
 
   @media screen and (max-width: 900px){
@@ -175,16 +180,22 @@ export const SNavMenuCategoriesWrapper = styled.div`
 export const SNavMenuCategories = styled.div`
   > span {
     font-size: 13px;
+    margin-top: 5px;
   }
-  background-color: #1f1f1f;
+  > img {
+    width: 20px;
+    filter: brightness(0) invert(1);
+  }
+  background-color: #df3d41;
   color: #fff;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 
   &:hover {
-    background-color: #df3d41;
+    background-color: #ff494e;
     cursor: pointer;
     transition: 0.3s ease;
   }
@@ -201,7 +212,6 @@ export const SNavMenuItemsContainer = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #ededed;
   background-color: ${({isMenuHovered}) => (isMenuHovered ? "#b9b9b9" : "#ededed")};
   position: relative;
   font-size: 13px;
@@ -209,32 +219,6 @@ export const SNavMenuItemsContainer = styled.ul`
   color: ${({isMenuHovered}) => (isMenuHovered ? "#fff" : "#1f1f1f")};
   transition: 0.3s ease;
   cursor: pointer;
-
-  
-  /* &::before {
-    content: '';
-    position: absolute;
-    left: -18px;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;
-    border-right: ${({isMenuHovered}) => (isMenuHovered ? "19px solid #b9b9b9" : "19px solid #ededed")};
-    overflow: hidden;
-    transition: 0.3s ease;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    right: -19px;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-top: ${({isMenuHovered}) => (isMenuHovered ? "50px solid #b9b9b9" : "50px solid #ededed")};
-    border-right: 21px solid transparent;
-    transition: 0.3s ease;
-  } */
 `
 
 export const SNavMenuItems = styled.li`
