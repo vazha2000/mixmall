@@ -8,7 +8,7 @@ import {
 export const SSearchInputContainer = styled.div`
   position: relative;
   background-color: #fff;
-  height: 85%;
+  height: 80%;
   width: 100%;
   display: flex;
   border-radius: 10px;
@@ -28,7 +28,7 @@ export const SSearchInput = styled.input`
   border: none;
   background-color: inherit;
   color: rgba(0, 0, 0, 0.8);
-  padding-left: 1.25rem;
+  padding-left: 10px;
   width: 90%;
   &:focus {
     outline: none;
@@ -40,6 +40,20 @@ export const SSearchInput = styled.input`
 `;
 
 export const SSearchIconContainer = styled.div`
+  > img {
+    width: 20px;
+    filter: invert(0) sepia(0%) saturate(400%) hue-rotate(349deg)
+      brightness(85%) contrast(100%);
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 100%;
+  transition: all 0.1s ease;
+`;
+
+export const SSearchButtonContainer = styled.div`
   > span {
     font-size: 12px;
     color: #fff;

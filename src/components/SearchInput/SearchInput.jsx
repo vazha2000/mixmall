@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import {
   SLoadingResult,
+  SSearchButtonContainer,
   SSearchIcon,
   SSearchIconContainer,
   SSearchInput,
@@ -126,6 +127,9 @@ export const SearchInput = () => {
 
   return (
     <SSearchInputContainer ref={searchInputRef}>
+      <SSearchIconContainer>
+        <img src="assets/svg/search.svg" alt="search icon" />
+      </SSearchIconContainer>
       <SSearchInput
         onFocus={handleFocus}
         onBlur={handleBlur}
@@ -133,9 +137,9 @@ export const SearchInput = () => {
         value={searchQuery}
         placeholder="პროდუქტების ძიება"
       />
-      <SSearchIconContainer>
+      <SSearchButtonContainer>
         <span>ძიება</span>
-      </SSearchIconContainer>
+      </SSearchButtonContainer>
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
         <tbody>
           {isLoading && searchQuery !== "" ? (
