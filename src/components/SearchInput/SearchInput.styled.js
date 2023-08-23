@@ -1,11 +1,5 @@
 import styled from "styled-components";
 import {
-  SCheckoutProduct,
-  SCheckoutProductImg,
-  SCheckoutProductNameQuantity,
-  SCheckoutProductTotal,
-} from "../../views/Checkout/Checkout.styled";
-import {
   SCartCardTableBox,
   SCartCardTableBoxImageContent,
   SCartCardTableBoxNameContent,
@@ -13,13 +7,11 @@ import {
 
 export const SSearchInputContainer = styled.div`
   position: relative;
-  background-color: transparent;
-  height: 2.8rem;
+  background-color: #fff;
+  height: 85%;
   width: 100%;
   display: flex;
-  border-radius: 0.5rem;
-  border: ${({ isFocused }) =>
-    isFocused ? "1px solid rgba(0,0,0, 0.7)" : "1px solid rgba(0,0,0, 0.2)"};
+  border-radius: 10px;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
@@ -38,7 +30,6 @@ export const SSearchInput = styled.input`
   color: rgba(0, 0, 0, 0.8);
   padding-left: 1.25rem;
   width: 90%;
-  border-radius: 0.5rem;
   &:focus {
     outline: none;
   }
@@ -49,14 +40,18 @@ export const SSearchInput = styled.input`
 `;
 
 export const SSearchIconContainer = styled.div`
+  > span {
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
   width: 4rem;
-  height: 85%;
+  height: 100%;
   background-color: #df3d41;
-  margin-right: 4px;
-  border-radius: inherit;
+  border-radius: 0 10px 10px 0;
   cursor: pointer;
   transition: all 0.1s ease;
 
