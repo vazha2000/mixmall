@@ -204,7 +204,7 @@ export const SNavMenuCategories = styled.div`
 export const SNavSidebarWrapper = styled.div`
   position: absolute;
   top: 100%;
-  left: 20px;
+  left: 10px;
 `
 
 export const SNavMenuItemsContainer = styled.ul`
