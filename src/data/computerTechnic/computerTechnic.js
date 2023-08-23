@@ -2,6 +2,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 let productIdCounter = 1;
 
+const generateProductId = () => {
+  return productIdCounter++;
+};
+
 export const computerTechnic = [
   {
     id: uuidv4(),
@@ -9,7 +13,7 @@ export const computerTechnic = [
     subcategoryName: "1",
     products: [
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: true,
@@ -32,7 +36,7 @@ export const computerTechnic = [
         
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -54,7 +58,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -76,12 +80,12 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
-        productName: "asuss Gaming PC",
-        currentPrice: 1000,
+        productName: "Palit Gaming PC",
+        currentPrice: 90000,
         oldPrice: 300,
         alt: "test",
         isInWishlist: false,
@@ -98,7 +102,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -120,7 +124,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -142,7 +146,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -164,7 +168,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -186,7 +190,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -208,7 +212,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -230,7 +234,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -252,7 +256,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -281,7 +285,7 @@ export const computerTechnic = [
     subcategoryName: "2",
     products: [
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -303,7 +307,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -325,7 +329,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -347,7 +351,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -376,7 +380,7 @@ export const computerTechnic = [
     subcategoryName: "3",
     products: [
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -398,7 +402,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -420,7 +424,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -442,7 +446,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -471,7 +475,7 @@ export const computerTechnic = [
     subcategoryName: "4",
     products: [
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -493,7 +497,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -515,7 +519,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -537,7 +541,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -566,7 +570,7 @@ export const computerTechnic = [
     subcategoryName: "5",
     products: [
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -588,7 +592,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -610,7 +614,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -632,7 +636,7 @@ export const computerTechnic = [
         ]
       },
       {
-        id: productIdCounter++,
+        id: generateProductId(),
         productImage: ["../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/brilliant.png", "../assets/images/computerTechnic/orange.png", "../assets/images/computerTechnic/orange.png"],
         discountRate: "20%",
         isDiscount: false,
