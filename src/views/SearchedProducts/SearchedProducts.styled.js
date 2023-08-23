@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const SSearchedProductsContainer = styled.div`
-  margin-top: 60px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  padding: 0 10px;
+  padding: 20px 10px;
 
   @media screen and (max-width: 800px){
     grid-template-columns: repeat(3, 1fr);
