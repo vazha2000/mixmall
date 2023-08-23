@@ -32,11 +32,10 @@ export const SaleOfMonth = () => {
     <SSaleOfMonth>
       <SSaleOfMonthLabel>
         <img src="assets/svg/labelIcon.svg" alt="label icon" />
-        <SSaleOfMonthLabelText>ამ თვეში</SSaleOfMonthLabelText>
+        <SSaleOfMonthLabelText>თვის აქცია</SSaleOfMonthLabelText>
       </SSaleOfMonthLabel>
       <SSaleOfMonthHeaderButton>
         <SSaleOfMonthHeaderCountingDown>
-          <SSaleOfMonthHeader>თვის აქცია</SSaleOfMonthHeader>
           <CountingDown />
         </SSaleOfMonthHeaderCountingDown>
         <SSaleOfMonthButton>ყველას ნახვა</SSaleOfMonthButton>

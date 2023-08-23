@@ -1,16 +1,13 @@
 import styled from "styled-components";
+import { SBrowseByCategoryLabel } from "../BrowseByCategory/BrowseByCategory.styled";
 
 export const SBrands = styled.div`
   margin: 5rem 0;
   position: relative;
-`
-
-export const SBrandsLabel = styled.label`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   padding: 0 10px;
 `
+
+export const SBrandsLabel = styled(SBrowseByCategoryLabel)``
 
 export const SBrandsLabelText = styled.span`
   color: #df3d41;

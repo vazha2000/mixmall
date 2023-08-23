@@ -5,27 +5,24 @@ import styled from "styled-components";
 export const SDropDownMenuWrapper = styled.div`
   > div:nth-child(1) {
     height: 100%;
-    border-radius: 15px;
-    
+
     &:hover {
-      -webkit-box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.7);
-  box-shadow: 1px 1px 20px 3px rgba(0, 0, 0, 0.7);
+      -webkit-box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
+      box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
       transition: box-shadow 0.3s ease-in-out;
     }
   }
   position: absolute;
   top: 15px;
   left: 100%;
-  padding-left: 20px;
   height: calc(100% - 15px);
-  width: 400px;
+  min-width: 600px;
 `;
 export const SDropDownMenu = styled(motion.div)`
   background-color: #ededed;
   padding: 20px;
-  border-radius: ${({ isOverflowing }) =>
-    isOverflowing ? "15px 8px 8px 15px " : "15px"};
+  border-radius: 0 8px 8px 0;
   z-index: 2;
   height: 100%;
   width: 100%;
@@ -54,7 +51,7 @@ export const SDropDownMenu = styled(motion.div)`
 
 export const SMenuGridContainer = styled.ul`
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   white-space: nowrap;
 `;

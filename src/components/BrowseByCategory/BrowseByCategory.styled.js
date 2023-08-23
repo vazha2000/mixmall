@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const SBrowseByCategory = styled.div`
   margin-top: 5rem;
-  /* height: 31.25rem; */
   position: relative;
 `
 
@@ -10,12 +9,13 @@ export const SBrowseByCategoryLabel = styled.label`
   display: flex;
   align-items: center;
   gap: 1rem;
+  background-color: #ededed;
+  padding: 5px 8px;
 `
 
 export const SBrowseByCategoryLabelText = styled.span`
-  color: #df3d41;
+  color: #1f1f1f;
   font-weight: bold;
-  text-shadow: 0px 0px 0px red;
 `
 export const SBrowseByCategoryHeaderSlider = styled.div`
   margin-top: 1.25rem;
