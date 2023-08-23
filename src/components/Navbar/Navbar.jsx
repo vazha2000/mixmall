@@ -185,7 +185,6 @@ export const Navbar = () => {
         >
           <SNavMenuItems>კონტაქტი</SNavMenuItems>
         </SNavMenuItemsContainer>
-        {/* <SNavMenuDiscount></SNavMenuDiscount> */}
         <SNavInputContainer>
             <SearchInput />
           </SNavInputContainer>

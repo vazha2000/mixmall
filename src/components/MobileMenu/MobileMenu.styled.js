@@ -47,12 +47,12 @@ export const SMobileMenuCategoriesList = styled(SSideBarCategoriesList)`
       display: flex;
     }
   }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 750px) {
     &:nth-last-child(1) {
       display: flex;
     }
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 620px) {
     &:nth-last-child(3) {
       display: flex;
     }
