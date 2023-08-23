@@ -12,16 +12,14 @@ import { Card } from "../../components/Card";
 import { SPaginationEllipsis } from "../../components/SubcategoryPagination/SubcategoryPagination.styled";
 export const SearchedProducts = () => {
   const {
-    allFoundProducts,
     currentPage,
     currentProducts,
     setCurrentPage,
-    productsPerPage,
     totalPages,
   } = useContext(AllFoundProductsContext);
 
   const [hoverStates, setHoverStates] = useState(
-    allFoundProducts.map(() => false)
+    currentProducts.map(() => false)
   );
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
