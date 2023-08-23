@@ -16,7 +16,6 @@ const AllFoundProductsProvider = ({ children }) => {
       indexOfLastProduct
     );
 
-    // Update the currentProducts slice whenever allFoundProducts or currentPage changes
     setCurrentProducts(currentProducts);
   }, [allFoundProducts, currentPage]);
 
