@@ -40,6 +40,9 @@ export const SearchInput = () => {
           product.oldPrice,
           product.currentPrice,
           product.productImage,
+          product.isDiscount,
+          product.discountRate,
+          product.alt
         ])
       )
     )
