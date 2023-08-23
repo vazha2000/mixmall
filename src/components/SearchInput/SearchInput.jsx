@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   SLoadingResult,
   SSearchIcon,
@@ -12,18 +12,23 @@ import {
   SSearchProductPrice,
   SSearchedProducts,
   SShowAllProducts,
+  SShowAllProductsButton,
 } from "./SearchInput.styled";
 import { categoriesListItems } from "../../data/data";
 import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 import { useRef } from "react";
+import { AllFoundProductsContext } from "../../context/AllFoundProductsContext";
 
 export const SearchInput = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [allFoundProducts, setAllFoundProducts] = useState([]);
   const searchInputRef = useRef(null);
+
+  const { allFoundProducts, setAllFoundProducts } = useContext(
+    AllFoundProductsContext
+  );
 
   const allProducts = categoriesListItems
     .map((category) =>
@@ -35,6 +40,9 @@ export const SearchInput = () => {
           product.oldPrice,
           product.currentPrice,
           product.productImage,
+          product.isDiscount,
+          product.discountRate,
+          product.alt
         ])
       )
     )
@@ -132,7 +140,7 @@ export const SearchInput = () => {
         <tbody>
           {isLoading && searchQuery !== "" ? (
             <SLoadingResult>
-              <td>loading...</td>
+              <td>ძიება...</td>
             </SLoadingResult>
           ) : filteredProducts.length === 0 &&
             isFocused &&
@@ -173,9 +181,20 @@ export const SearchInput = () => {
                     <SSearchProductPrice>{currentPrice}₾</SSearchProductPrice>
                   </SSearchProductBox>
 
-                  {allFoundProducts.length > 10 && (
-                    <SShowAllProducts isLast={index === filteredProducts.length - 1}>
-                      <td><span>ყველას ნახვა</span></td>
+                  {allFoundProducts.length > 8 && (
+                    <SShowAllProducts
+                      isLast={index === filteredProducts.length - 1}
+                    >
+                      <td>
+                        <SStyledLink
+                          to={`/search-products`}
+                          onClick={handleClickProduct}
+                        >
+                          <SShowAllProductsButton>
+                            ყველას ნახვა
+                          </SShowAllProductsButton>
+                        </SStyledLink>
+                      </td>
                     </SShowAllProducts>
                   )}
                 </React.Fragment>
