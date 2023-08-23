@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SCubcategoryPaginationButton, SSubcategoryPagination, SSubcategoryPaginationList, SSubcategoryPaginationListItems } from "../../components/SubcategoryPagination/SubcategoryPagination.styled";
 
 export const SSearchedProductsContainer = styled.div`
   margin-top: 20px;
@@ -18,3 +19,17 @@ export const SSearchedProductsContainer = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `
+
+export const SSearchedProductsPagination = styled(SSubcategoryPagination)`
+
+`
+
+export const SSearchedProductsPaginationList = styled(SSubcategoryPaginationList)`
+  display: flex;
+`
+
+export const SSearchedProductsPaginationButton = styled(SCubcategoryPaginationButton)`
+
+`
+
+export const SSearchedProductsPaginationListItems = styled(SSubcategoryPaginationListItems)``
