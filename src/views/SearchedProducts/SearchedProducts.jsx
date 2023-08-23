@@ -1,19 +1,27 @@
 import React, { useContext, useState } from "react";
 import { AllFoundProductsContext } from "../../context/AllFoundProductsContext";
-import { SSearchedProductsContainer } from "./SearchedProducts.styled";
+import {
+  SSearchedProductsContainer,
+  SSearchedProductsPagination,
+  SSearchedProductsPaginationButton,
+  SSearchedProductsPaginationList,
+  SSearchedProductsPaginationListItems,
+} from "./SearchedProducts.styled";
 import { Card } from "../../components/Card";
+import { SPaginationEllipsis } from "../../components/SubcategoryPagination/SubcategoryPagination.styled";
 export const SearchedProducts = () => {
-  const { allFoundProducts, currentPage, setCurrentPage, productsPerPage } =
-    useContext(AllFoundProductsContext);
+  const {
+    allFoundProducts,
+    currentPage,
+    currentProducts,
+    setCurrentPage,
+    productsPerPage,
+    totalPages,
+  } = useContext(AllFoundProductsContext);
 
-  const totalPages = Math.ceil(allFoundProducts.length / productsPerPage);
-
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
-  const [hoverStates, setHoverStates] = useState(allFoundProducts.map(() => false));
-
+  const [hoverStates, setHoverStates] = useState(
+    allFoundProducts.map(() => false)
+  );
 
   const handleHover = (index) => {
     setHoverStates((prevStates) => {
@@ -23,10 +31,55 @@ export const SearchedProducts = () => {
     });
   };
 
-  console.log(allFoundProducts)
+  // const handlePageChange = (pageNumber) => {
+  //   if (pageNumber >= 1 && pageNumber <= totalPages) {
+  //     setCurrentPage(pageNumber);
+  //   }
+  // };
+  const maxPageNumbersToShow = 5;
+
+  const pageNumbers = Array.from(
+    { length: totalPages },
+    (_, index) => index + 1
+  );
+
+  const getPageNumbersWithEllipsis = () => {
+    if (totalPages <= 3) {
+      return pageNumbers;
+    }
+
+    const leftEllipsis = currentPage - Math.floor(maxPageNumbersToShow / 3);
+    const rightEllipsis = currentPage + Math.floor(maxPageNumbersToShow / 3);
+
+    if (leftEllipsis <= 1) {
+      return [...pageNumbers.slice(0, maxPageNumbersToShow - 1), "ellipsis", totalPages];
+    } else if (rightEllipsis >= totalPages) {
+      return [1, "ellipsis", ...pageNumbers.slice(totalPages - maxPageNumbersToShow + 2)];
+    } else {
+      return [1, "ellipsis", ...pageNumbers.slice(leftEllipsis, rightEllipsis), "ellipsis", totalPages];
+    }
+  };
+
+  const handleNextPage = () => {
+    if(currentPage !== totalPages) {
+      setCurrentPage(prev => prev + 1)
+    }
+  }
+
+  const handlePrevPage = () => {
+    if(currentPage !== 1) {
+      setCurrentPage(prev => prev - 1)
+    }
+  }
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+
   return (
     <SSearchedProductsContainer>
-      {allFoundProducts.map(
+      {currentProducts.map(
         (
           [
             productName,
@@ -37,7 +90,7 @@ export const SearchedProducts = () => {
             productImage,
             isDiscount,
             discountRate,
-            alt
+            alt,
           ],
           index
         ) => (
@@ -60,6 +113,36 @@ export const SearchedProducts = () => {
           </div>
         )
       )}
+      <SSearchedProductsPagination>
+        <SSearchedProductsPaginationList>
+          <SSearchedProductsPaginationButton onClick={handlePrevPage}>
+            <img src="assets/svg/paginationLeft.svg" alt="left" />
+          </SSearchedProductsPaginationButton>
+          {getPageNumbersWithEllipsis().map((page, index) => (
+          <React.Fragment key={index}>
+            {page === "ellipsis" ? (
+              <SPaginationEllipsis>
+                <img src="assets/svg/ellipsis.svg" alt="ellipsis" />
+              </SPaginationEllipsis>
+            ) : (
+              <SSearchedProductsPaginationListItems
+                onClick={() => handlePageChange(page)}
+                isActive={currentPage === page}
+              >
+                {page}
+              </SSearchedProductsPaginationListItems>
+            )}
+          </React.Fragment>
+        ))}
+        <SSearchedProductsPaginationButton onClick={handleNextPage} rotate="true" lastPage={currentPage === totalPages}>
+          <img src="assets/svg/paginationLeft.svg" alt="right" />
+        </SSearchedProductsPaginationButton>
+        </SSearchedProductsPaginationList>
+      </SSearchedProductsPagination>
     </SSearchedProductsContainer>
   );
 };
+
+{
+  /* <span>Page {currentPage} of {totalPages}</span> */
+}
