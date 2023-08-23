@@ -1,0 +1,20 @@
+import styled from "styled-components";
+
+export const SSearchedProductsContainer = styled.div`
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 10px;
+
+  @media screen and (max-width: 800px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 620px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 440px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
