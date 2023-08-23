@@ -6,7 +6,7 @@ export const SDropDownMenuWrapper = styled.div`
   > div:nth-child(1) {
     height: 100%;
     transition: box-shadow 0.3s ease-in-out;
-      box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+      /* box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2); */
 
     /* &:hover {
       -webkit-box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
@@ -23,7 +23,7 @@ export const SDropDownMenuWrapper = styled.div`
   min-width: 600px;
 `;
 export const SDropDownMenu = styled(motion.div)`
-  background-color: #ededed;
+  background-color: #f2f2f2;
   padding: 20px;
   z-index: 2;
   height: 100%;
