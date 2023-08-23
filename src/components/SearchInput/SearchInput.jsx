@@ -140,7 +140,7 @@ export const SearchInput = () => {
         <tbody>
           {isLoading && searchQuery !== "" ? (
             <SLoadingResult>
-              <td>loading...</td>
+              <td>ძიება...</td>
             </SLoadingResult>
           ) : filteredProducts.length === 0 &&
             isFocused &&
