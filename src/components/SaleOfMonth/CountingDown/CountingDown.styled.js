@@ -12,7 +12,6 @@ export const SCountingDown = styled.div`
 export const SCountingDownTimeContainer = styled.div`
   > span {
     font-size: 13px;
-    text-shadow: 0px 0px 0px black;
   }
   > h2 {
     text-align: center;
