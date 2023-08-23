@@ -33,3 +33,17 @@ export const SSearchedProductsPaginationButton = styled(SCubcategoryPaginationBu
 `
 
 export const SSearchedProductsPaginationListItems = styled(SSubcategoryPaginationListItems)``
+
+export const SSearchedProductsNoData = styled.div`
+  > h1 {
+    text-align: center;
+  }
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 300px){
+    > h1 {
+      font-size: 20px;
+    }
+  }
+`
