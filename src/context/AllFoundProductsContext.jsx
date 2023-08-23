@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 const AllFoundProductsContext = createContext();
 
@@ -7,12 +7,23 @@ const AllFoundProductsProvider = ({ children }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 8;
 
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = allFoundProducts.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
+
+  useEffect(() => {
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = allFoundProducts.slice(
+      indexOfFirstProduct,
+      indexOfLastProduct
+    );
+
+    // Update the currentProducts slice whenever allFoundProducts or currentPage changes
+    setCurrentProducts(currentProducts);
+  }, [allFoundProducts, currentPage]);
+
+  const [currentProducts, setCurrentProducts] = useState([]);
+
+  const totalPages = Math.ceil(allFoundProducts.length / productsPerPage);
+  
   
   return (
     <AllFoundProductsContext.Provider
@@ -23,6 +34,7 @@ const AllFoundProductsProvider = ({ children }) => {
       currentPage,
       setCurrentPage,
       productsPerPage,
+      totalPages
     }}
     >
       {children}
