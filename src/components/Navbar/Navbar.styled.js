@@ -35,13 +35,12 @@ export const SNavInputContainer = styled.div`
   padding-right: 10px;
   align-items: center;
   background-color: #ededed;
-  @media screen and (max-width: 1024px) {
+  /* @media screen and (max-width: 1024px) {
     display: none;
-  }
+  } */
 `;
 
 export const SNavContactContainer = styled.div`
-
   > span {
     font-weight: bold;
   }
@@ -57,7 +56,6 @@ export const SNavContactContainer = styled.div`
   white-space: nowrap;
   height: 100%;
 
-
   &:hover {
     background-color: #df3d41;
     transition: 0.5s ease;
@@ -68,10 +66,10 @@ export const SNavContactContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 650px){
+  @media screen and (max-width: 650px) {
     display: none;
   }
-`
+`;
 
 export const SNavContactIconContainer = styled.div`
   background-color: red;
@@ -85,7 +83,7 @@ export const SNavContactIconContainer = styled.div`
   > img {
     width: 30px;
   }
-`
+`;
 
 export const SWishlistCartContainer = styled.div`
   display: flex;
@@ -112,7 +110,8 @@ export const SWishlistContainer = styled(motion.div)`
 
 export const SWishlistIcon = styled.img`
   transition: all 0.2s ease;
-  filter: ${({isInWishlist}) => (isInWishlist ? "brightness(0) invert(1)" : "brightness(0)")};
+  filter: ${({ isInWishlist }) =>
+    isInWishlist ? "brightness(0) invert(1)" : "brightness(0)"};
 
   ${SWishlistContainer}:hover & {
     filter: brightness(0) invert(1);
@@ -141,8 +140,7 @@ export const SCartIcon = styled(SWishlistIcon)`
   width: 32px;
 `;
 
-export const SCartQuantity = styled(SWishlistQuantity)`
-`;
+export const SCartQuantity = styled(SWishlistQuantity)``;
 
 export const SBurgerMenuIcon = styled.img`
   cursor: pointer;
@@ -158,25 +156,26 @@ export const SNavMenu = styled.div`
   height: 60px;
   position: relative;
 
-  @media screen and (max-width: 900px){
+  @media screen and (max-width: 900px) {
     > ul:nth-child(3) {
       display: none;
     }
   }
-  @media screen and (max-width: 550px){
+  @media screen and (max-width: 750px) {
     > ul:nth-child(4) {
       display: none;
     }
   }
-  @media screen and (max-width: 420px){
+  @media screen and (max-width: 620px) {
     > ul:nth-child(2) {
       display: none;
     }
   }
-`
+`;
 export const SNavMenuCategoriesWrapper = styled.div`
   flex: 0.4;
-`
+  min-width: 200px;
+`;
 export const SNavMenuCategories = styled.div`
   > span {
     font-size: 13px;
@@ -199,38 +198,40 @@ export const SNavMenuCategories = styled.div`
     cursor: pointer;
     transition: 0.3s ease;
   }
-`
+`;
 
 export const SNavSidebarWrapper = styled.div`
   position: absolute;
   top: 100%;
   left: 10px;
-`
+`;
 
 export const SNavMenuItemsContainer = styled.ul`
   flex: 0.3;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: ${({isMenuHovered}) => (isMenuHovered ? "#b9b9b9" : "#ededed")};
+  background-color: ${({ isMenuHovered }) =>
+    isMenuHovered ? "#b9b9b9" : "#ededed"};
   position: relative;
   font-size: 13px;
   font-weight: bold;
-  color: ${({isMenuHovered}) => (isMenuHovered ? "#fff" : "#1f1f1f")};
+  color: ${({ isMenuHovered }) => (isMenuHovered ? "#fff" : "#1f1f1f")};
   transition: 0.3s ease;
   cursor: pointer;
-`
+`;
 
 export const SNavMenuItems = styled.li`
+  text-align: center;
+  margin-top: 4px;
   /* &:hover {
     cursor: pointer;
     color: #df3d41;
 
   } */
-`
+`;
 
 export const SNavMenuDiscount = styled.div`
   flex: 1;
   background-color: #df3d41;
-
-`
+`;

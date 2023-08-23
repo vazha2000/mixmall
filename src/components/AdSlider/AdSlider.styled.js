@@ -6,6 +6,7 @@ export const SAdSlider = styled.div`
   align-items: center;
   justify-content: flex-end;
   width: 0;
+  padding: 0 10px;
   @media screen and (max-width: 1024px) {
     justify-content: center;
   }

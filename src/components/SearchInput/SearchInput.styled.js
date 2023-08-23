@@ -20,7 +20,7 @@ export const SSearchInputContainer = styled.div`
   @media screen and (max-width: 1024px) {
     border-radius: 0.25rem;
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 `;
 
@@ -79,8 +79,9 @@ export const SSearchIcon = styled.img``;
 export const SSearchedProducts = styled.table`
   position: absolute;
   top: 50px;
-  right: -25%;
+  right: 0;
   width: 45vw;
+  min-width: 540px;
   max-height: 500px;
   overflow-y: auto;
   z-index: 5;

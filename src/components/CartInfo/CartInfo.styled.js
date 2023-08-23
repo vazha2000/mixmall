@@ -6,7 +6,7 @@ export const SCartInfo = styled(motion.div)`
   top: 0;
   right: 0;
   background-color: #faf2f2;
-  z-index: 6;
+  z-index: 7;
   border: 1px solid rgba(0, 0, 0, 0.3);
   width: 675px;
   height: 100%;
