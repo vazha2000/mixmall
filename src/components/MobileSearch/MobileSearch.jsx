@@ -30,6 +30,7 @@ export const MobileSearch = ({
         <SearchInput
           isMobileSearchClicked={isMobileSearchClicked}
           setIsMobileSearchClicked={setIsMobileSearchClicked}
+          windowWidth={windowWidth}
           height={"30%"}
         />
       </SmobileSearchHeaderContainer>
