@@ -9,7 +9,7 @@ export const CountingDown = () => {
     seconds: 0
   })
 
-  const saleEndDate = new Date("2023-07-28T21:00:00").getTime()
+  const saleEndDate = new Date("2023-09-28T21:00:00").getTime()
 
   useEffect(() => {
     const updateCountDown = () => {

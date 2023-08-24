@@ -11,12 +11,8 @@ import {
 import { Card } from "../../components/Card";
 import { SPaginationEllipsis } from "../../components/SubcategoryPagination/SubcategoryPagination.styled";
 export const SearchedProducts = () => {
-  const {
-    currentPage,
-    currentProducts,
-    setCurrentPage,
-    totalPages,
-  } = useContext(AllFoundProductsContext);
+  const { currentPage, currentProducts, setCurrentPage, totalPages } =
+    useContext(AllFoundProductsContext);
 
   const [hoverStates, setHoverStates] = useState(
     currentProducts.map(() => false)
@@ -119,7 +115,7 @@ export const SearchedProducts = () => {
               isDiscount,
               discountRate,
               alt,
-              id
+              id,
             ],
             index
           ) => (
@@ -151,7 +147,7 @@ export const SearchedProducts = () => {
       ) : (
         <SSearchedProductsPagination>
           <SSearchedProductsPaginationList>
-            <SSearchedProductsPaginationButton onClick={handlePrevPage}>
+            <SSearchedProductsPaginationButton firstPage={currentPage === 1} onClick={handlePrevPage}>
               <img src="assets/svg/paginationLeft.svg" alt="left" />
             </SSearchedProductsPaginationButton>
             {getPageNumbersWithEllipsis().map((page, index) => (
@@ -165,7 +161,7 @@ export const SearchedProducts = () => {
                     onClick={() => handlePageChange(page)}
                     isActive={currentPage === page}
                   >
-                    {page}
+                    <span>{page}</span>
                   </SSearchedProductsPaginationListItems>
                 )}
               </React.Fragment>

@@ -12,6 +12,7 @@ export const SBrandsLabel = styled(SBrowseByCategoryLabel)``
 export const SBrandsLabelText = styled.span`
   color: #df3d41;
   font-weight: bold;
+  margin-top: 4px;
   text-shadow: 0px 0px 0px red;
 `
 export const SBrandsHeaderSlider = styled.div`

@@ -41,7 +41,7 @@ export const Navbar = () => {
   const [isCartClicked, setIsCartClicked] = useState(false);
   const [isCategoriesActive, setIsCategoriesActive] = useState(false);
   const [isCategoriesClicked, setIsCategoriesClicked] = useState(false);
-  const [isMobileSearchClicked, setIsMobileSearchClicked] = useState(false)
+  const [isMobileSearchClicked, setIsMobileSearchClicked] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [menuItemsHover, setMenuItemsHover] = useState({
     main: false,
@@ -87,12 +87,15 @@ export const Navbar = () => {
           {/* <SNavInputContainer>
             <SearchInput />
           </SNavInputContainer> */}
-          <SNavContactContainer>
-            <SNavContactIconContainer>
-              <img src="assets/svg/phone.svg" alt="phone icon" />
-            </SNavContactIconContainer>
-            <span>+995 579 33 33 11</span>
-          </SNavContactContainer>
+          <SStyledLink to={"tel:+995 579 33 33 11"}>
+            <SNavContactContainer>
+              <SNavContactIconContainer>
+                <img src="assets/svg/phone.svg" alt="phone icon" />
+              </SNavContactIconContainer>
+              <span>+995 579 33 33 11</span>
+            </SNavContactContainer>
+          </SStyledLink>
+
           <SWishlistCartContainer>
             <SStyledLink to="/wishlist">
               <SWishlistContainer>
@@ -193,7 +196,9 @@ export const Navbar = () => {
           <SearchInput />
         </SNavInputContainer>
         <SNavInputSearchIconContainer>
-          <SNavInputSearchIcon onClick={() => setIsMobileSearchClicked(!isMobileSearchClicked)}>
+          <SNavInputSearchIcon
+            onClick={() => setIsMobileSearchClicked(!isMobileSearchClicked)}
+          >
             <img src="assets/svg/search.svg" alt="search icon" />
           </SNavInputSearchIcon>
         </SNavInputSearchIconContainer>
@@ -209,14 +214,14 @@ export const Navbar = () => {
         )}
       </AnimatePresence>
       <AnimatePresence>
-          {isMobileSearchClicked && (
-            <MobileSearch
-              isMobileSearchClicked={isMobileSearchClicked}
-              setIsMobileSearchClicked={setIsMobileSearchClicked}
-              windowWidth={windowWidth}
-            />
-          )}
-        </AnimatePresence>
+        {isMobileSearchClicked && (
+          <MobileSearch
+            isMobileSearchClicked={isMobileSearchClicked}
+            setIsMobileSearchClicked={setIsMobileSearchClicked}
+            windowWidth={windowWidth}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

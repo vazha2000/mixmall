@@ -16,6 +16,7 @@ export const SBrowseByCategoryLabel = styled.label`
 export const SBrowseByCategoryLabelText = styled.span`
   color: #1f1f1f;
   font-weight: bold;
+  margin-top: 4px;
 `
 export const SBrowseByCategoryHeaderSlider = styled.div`
   margin-top: 1.25rem;
