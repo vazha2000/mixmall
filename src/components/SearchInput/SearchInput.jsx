@@ -185,7 +185,7 @@ export const SearchInput = () => {
                     <SSearchProductPrice>{currentPrice}₾</SSearchProductPrice>
                   </SSearchProductBox>
 
-                  {allFoundProducts.length > 8 && (
+                  {allFoundProducts.length > 0 && (
                     <SShowAllProducts
                       isLast={index === filteredProducts.length - 1}
                     >
