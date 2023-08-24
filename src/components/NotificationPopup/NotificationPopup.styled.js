@@ -7,7 +7,7 @@ top: 0;
 left: 50%;
 transform: translateX(-50%);
 width: 90%;
-z-index: 5;
+z-index: 10;
 @media screen and (max-width: 600px){
   width: 95%;
 }

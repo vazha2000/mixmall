@@ -21,7 +21,7 @@ import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 import { useRef } from "react";
 import { AllFoundProductsContext } from "../../context/AllFoundProductsContext";
 
-export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked}) => {
+export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked, windowWidth}) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -44,7 +44,8 @@ export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked}) =
           product.productImage,
           product.isDiscount,
           product.discountRate,
-          product.alt
+          product.alt,
+          product.id
         ])
       )
     )
@@ -124,7 +125,9 @@ export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked}) =
   const handleClickProduct = () => {
     setIsFocused(false);
     setFilteredProducts([]);
-    setIsMobileSearchClicked(false)
+    if(windowWidth < 576) {
+      setIsMobileSearchClicked(false)
+    }
   };
 
   return (
@@ -141,6 +144,7 @@ export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked}) =
       />
       <SSearchButtonContainer>
         <span>ძიება</span>
+        <img src="assets/svg/search.svg" alt="search" />
       </SSearchButtonContainer>
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
         <tbody>

@@ -57,6 +57,10 @@ export const SSearchButtonContainer = styled.div`
     font-size: 12px;
     color: #fff;
     font-weight: bold;
+    margin-top: 4px;
+  }
+  > img {
+    display: none;
   }
   display: flex;
   justify-content: center;
@@ -70,6 +74,15 @@ export const SSearchButtonContainer = styled.div`
 
   &:hover {
     filter: brightness(110%);
+  }
+
+  @media screen and (max-width: 576px){
+    > span {
+      display: none;
+    }
+    > img {
+      display: inline;
+    }
   }
 `;
 
