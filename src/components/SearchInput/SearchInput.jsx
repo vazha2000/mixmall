@@ -144,6 +144,7 @@ export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked, wi
       />
       <SSearchButtonContainer>
         <span>ძიება</span>
+        <img src="assets/svg/search.svg" alt="search" />
       </SSearchButtonContainer>
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
         <tbody>

@@ -23,17 +23,23 @@ export const MobileSearch = ({
       exit={{ x: "100%" }}
       transition={{ type: "tween", duration: 0.4, delay: 0.1 }}
     >
-      <SMobileSearchClose>
-        <img src="assets/svg/close.svg" alt="close" width={30} onClick={() => setIsMobileSearchClicked(false)}/>
-      </SMobileSearchClose>
       <SmobileSearchHeaderContainer>
-        <SearchInput
+        <div>
+          <img src="assets/svg/search.svg" alt="search" />
+          <h2>ძებნა</h2>
+        </div>
+        <SMobileSearchClose onClick={() => setIsMobileSearchClicked(false)}>
+          <img src="assets/svg/close.svg" alt="close" width={30}/>
+        </SMobileSearchClose>
+      </SmobileSearchHeaderContainer>
+      <div>
+      <SearchInput
           isMobileSearchClicked={isMobileSearchClicked}
           setIsMobileSearchClicked={setIsMobileSearchClicked}
           windowWidth={windowWidth}
           height={"30%"}
-        />
-      </SmobileSearchHeaderContainer>
+        /> 
+      </div>
     </SMobileSearch>
   );
 };
