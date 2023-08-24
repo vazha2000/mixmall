@@ -35,11 +35,13 @@ import { AnimatePresence } from "framer-motion";
 import { SSubcategoriesSidebarWrapper } from "../../views/SubCategories/Subcategories.styled";
 import { Sidebar } from "../Sidebar";
 import { MobileMenu } from "../MobileMenu";
+import { MobileSearch } from "../MobileSearch/MobileSearch";
 
 export const Navbar = () => {
   const [isCartClicked, setIsCartClicked] = useState(false);
   const [isCategoriesActive, setIsCategoriesActive] = useState(false);
   const [isCategoriesClicked, setIsCategoriesClicked] = useState(false);
+  const [isMobileSearchClicked, setIsMobileSearchClicked] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [menuItemsHover, setMenuItemsHover] = useState({
     main: false,
@@ -191,7 +193,7 @@ export const Navbar = () => {
           <SearchInput />
         </SNavInputContainer>
         <SNavInputSearchIconContainer>
-          <SNavInputSearchIcon>
+          <SNavInputSearchIcon onClick={() => setIsMobileSearchClicked(!isMobileSearchClicked)}>
             <img src="assets/svg/search.svg" alt="search icon" />
           </SNavInputSearchIcon>
         </SNavInputSearchIconContainer>
@@ -206,6 +208,15 @@ export const Navbar = () => {
           </div>
         )}
       </AnimatePresence>
+      <AnimatePresence>
+          {isMobileSearchClicked && (
+            <MobileSearch
+              isMobileSearchClicked={isMobileSearchClicked}
+              setIsMobileSearchClicked={setIsMobileSearchClicked}
+              windowWidth={windowWidth}
+            />
+          )}
+        </AnimatePresence>
     </div>
   );
 };
