@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {
   SMobileSearch,
+  SMobileSearchClose,
   SmobileSearchHeaderContainer,
 } from "./MobileSearch.styled";
 import { SearchInput } from "../SearchInput";
@@ -22,8 +23,15 @@ export const MobileSearch = ({
       exit={{ x: "100%" }}
       transition={{ type: "tween", duration: 0.4, delay: 0.1 }}
     >
+      <SMobileSearchClose>
+        <img src="assets/svg/close.svg" alt="close" width={30} onClick={() => setIsMobileSearchClicked(false)}/>
+      </SMobileSearchClose>
       <SmobileSearchHeaderContainer>
-        <SearchInput isMobileSearchClicked={isMobileSearchClicked} setIsMobileSearchClicked={setIsMobileSearchClicked} height={"30%"} />
+        <SearchInput
+          isMobileSearchClicked={isMobileSearchClicked}
+          setIsMobileSearchClicked={setIsMobileSearchClicked}
+          height={"30%"}
+        />
       </SmobileSearchHeaderContainer>
     </SMobileSearch>
   );
