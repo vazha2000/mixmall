@@ -126,11 +126,6 @@ export const SNavInputSearchIcon = styled(SWishlistContainer)`
 
   &:hover {
     background-color: #ff494e;
-
-    > img {
-    filter: brightness(0);
-    transition: 0.3s ease;
-  }
   }
 `
 
