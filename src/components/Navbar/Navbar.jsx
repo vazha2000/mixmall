@@ -8,6 +8,8 @@ import {
   SNavContactContainer,
   SNavContactIconContainer,
   SNavInputContainer,
+  SNavInputSearchIcon,
+  SNavInputSearchIconContainer,
   SNavMenu,
   SNavMenuCategories,
   SNavMenuCategoriesWrapper,
@@ -33,11 +35,13 @@ import { AnimatePresence } from "framer-motion";
 import { SSubcategoriesSidebarWrapper } from "../../views/SubCategories/Subcategories.styled";
 import { Sidebar } from "../Sidebar";
 import { MobileMenu } from "../MobileMenu";
+import { MobileSearch } from "../MobileSearch/MobileSearch";
 
 export const Navbar = () => {
   const [isCartClicked, setIsCartClicked] = useState(false);
   const [isCategoriesActive, setIsCategoriesActive] = useState(false);
   const [isCategoriesClicked, setIsCategoriesClicked] = useState(false);
+  const [isMobileSearchClicked, setIsMobileSearchClicked] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [menuItemsHover, setMenuItemsHover] = useState({
     main: false,
@@ -124,7 +128,7 @@ export const Navbar = () => {
           onMouseLeave={() => setIsCategoriesActive(false)}
         >
           <SNavMenuCategories onClick={handleCategoriesClick}>
-            <img src="assets/svg/burgerMenu.svg" alt="burger menu"/>
+            <img src="assets/svg/burgerMenu.svg" alt="burger menu" />
             <span>კატეგორიები</span>
           </SNavMenuCategories>
           {isCategoriesActive && (
@@ -186,9 +190,13 @@ export const Navbar = () => {
           <SNavMenuItems>კონტაქტი</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavInputContainer>
-            <SearchInput />
-          </SNavInputContainer>
-
+          <SearchInput />
+        </SNavInputContainer>
+        <SNavInputSearchIconContainer>
+          <SNavInputSearchIcon onClick={() => setIsMobileSearchClicked(!isMobileSearchClicked)}>
+            <img src="assets/svg/search.svg" alt="search icon" />
+          </SNavInputSearchIcon>
+        </SNavInputSearchIconContainer>
       </SNavMenu>
       <AnimatePresence>
         {isCategoriesClicked && (
@@ -200,6 +208,15 @@ export const Navbar = () => {
           </div>
         )}
       </AnimatePresence>
+      <AnimatePresence>
+          {isMobileSearchClicked && (
+            <MobileSearch
+              isMobileSearchClicked={isMobileSearchClicked}
+              setIsMobileSearchClicked={setIsMobileSearchClicked}
+              windowWidth={windowWidth}
+            />
+          )}
+        </AnimatePresence>
     </div>
   );
 };

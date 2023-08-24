@@ -8,19 +8,18 @@ import {
 export const SSearchInputContainer = styled.div`
   position: relative;
   background-color: #fff;
-  height: 80%;
+  height: ${({ height }) => (height ? height : "80%")};
   width: 100%;
   display: flex;
-  border-radius: 10px;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   z-index: 6;
+  border-radius: 4px;
 
   @media screen and (max-width: 1024px) {
     border-radius: 0.25rem;
     display: flex;
-    /* overflow: hidden; */
   }
 `;
 
@@ -65,7 +64,7 @@ export const SSearchButtonContainer = styled.div`
   width: 4rem;
   height: 100%;
   background-color: #df3d41;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
   transition: all 0.1s ease;
 
@@ -94,6 +93,13 @@ export const SSearchedProducts = styled.table`
   display: flex;
   flex-direction: column;
 
+  @media screen and (max-width: 576px) {
+    top: 70px;
+    min-width: auto;
+    width: 110%;
+    right: -5%;
+  }
+
   ::-webkit-scrollbar {
     width: 12px;
   }
@@ -118,9 +124,19 @@ export const SLoadingResult = styled.tr`
   justify-content: center;
   align-items: center;
   height: 50px;
+
+  @media screen and (max-width: 576px) {
+    color: #1f1f1f;
+  }
 `;
 
 export const SSearchProductBox = styled(SCartCardTableBox)`
+  @media screen and (max-width: 410px) {
+    > td:nth-last-child(1) {
+      display: none;
+    }
+  }
+
   margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   height: 100px;
@@ -132,17 +148,45 @@ export const SSearchProductBoxImageContent = styled(
 
 export const SSearchProductImage = styled.img`
   height: 100%;
+
+  @media screen and (max-width: 576px) {
+    height: 80%;
+  }
 `;
 
-export const SSearchProductNameQuantity = styled(
-  SCartCardTableBoxNameContent
-)``;
+export const SSearchProductNameQuantity = styled(SCartCardTableBoxNameContent)`
+  > span:nth-child(3) {
+    display: none;
+  }
+  @media screen and (max-width: 410px) {
+    > span:nth-child(2) {
+      display: none;
+    }
+    > span:nth-child(3) {
+      display: flex;
+    }
+  }
+
+  padding: 8px 4px;
+  justify-content: space-around;
+`;
+
+export const SSearchProductName = styled.span`
+  &:hover {
+    color: #df3d41;
+  }
+`
 
 export const SSearchProductPrice = styled.td`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100px;
+  color: #1f1f1f;
+
+  @media screen and (max-width: 576px) {
+    font-weight: bold;
+  }
 `;
 
 export const SShowAllProducts = styled.tr`

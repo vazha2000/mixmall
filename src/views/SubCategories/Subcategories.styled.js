@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const SSubcategories = styled.div`
-  
+  padding: 0 10px;
 `
 export const SSubcategoriesBreadcrumbs = styled.div`
   background-color: red;

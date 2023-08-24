@@ -9,6 +9,7 @@ import {
   SSearchProductBox,
   SSearchProductBoxImageContent,
   SSearchProductImage,
+  SSearchProductName,
   SSearchProductNameQuantity,
   SSearchProductPrice,
   SSearchedProducts,
@@ -20,7 +21,7 @@ import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 import { useRef } from "react";
 import { AllFoundProductsContext } from "../../context/AllFoundProductsContext";
 
-export const SearchInput = () => {
+export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked}) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -123,6 +124,7 @@ export const SearchInput = () => {
   const handleClickProduct = () => {
     setIsFocused(false);
     setFilteredProducts([]);
+    setIsMobileSearchClicked(false)
   };
 
   return (
@@ -178,14 +180,15 @@ export const SearchInput = () => {
                         to={`/${categoryName}/${productId}/${productName}`}
                         onClick={handleClickProduct}
                       >
-                        <span>{productName}</span>
+                        <SSearchProductName>{productName}</SSearchProductName>
                       </SStyledLink>
                       <span>Category: {categoryName}</span>
+                      <span>ფასი: {currentPrice}</span>
                     </SSearchProductNameQuantity>
                     <SSearchProductPrice>{currentPrice}₾</SSearchProductPrice>
                   </SSearchProductBox>
 
-                  {allFoundProducts.length > 8 && (
+                  {allFoundProducts.length > 0 && (
                     <SShowAllProducts
                       isLast={index === filteredProducts.length - 1}
                     >
@@ -194,7 +197,7 @@ export const SearchInput = () => {
                           to={`/search-products`}
                           onClick={handleClickProduct}
                         >
-                          <SShowAllProductsButton>
+                          <SShowAllProductsButton onClick={isMobileSearchClicked && (() => setIsMobileSearchClicked(false))}>
                             ყველას ნახვა
                           </SShowAllProductsButton>
                         </SStyledLink>

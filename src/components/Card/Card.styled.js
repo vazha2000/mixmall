@@ -7,7 +7,7 @@ export const SCard = styled.div`
   padding-bottom: 20px;
   border: ${({ isHovered }) =>
     isHovered ? "1px solid rgba(0,0,0, 0.4);" : "1px solid rgba(0,0,0, 0.15);"};
-  border-radius: 10px;
+  /* border-radius: 10px; */
   position: relative;
   overflow: hidden;
 `;
@@ -36,8 +36,7 @@ export const SAddToCardButton = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px 0;
-  border-radius: 10px;
+  padding: 20px 0;
   cursor: pointer;
   transition: 0.2s ease;
   background-color: ${({ isInCart }) => (isInCart ? "#df3d41" : "fff")};
