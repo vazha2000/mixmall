@@ -20,7 +20,7 @@ import { SStyledLink } from "../DropdownMenu/DropdownMenu.styled";
 import { useRef } from "react";
 import { AllFoundProductsContext } from "../../context/AllFoundProductsContext";
 
-export const SearchInput = () => {
+export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked}) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -181,6 +181,7 @@ export const SearchInput = () => {
                         <span>{productName}</span>
                       </SStyledLink>
                       <span>Category: {categoryName}</span>
+                      <span>ფასი: {currentPrice}</span>
                     </SSearchProductNameQuantity>
                     <SSearchProductPrice>{currentPrice}₾</SSearchProductPrice>
                   </SSearchProductBox>
@@ -194,7 +195,7 @@ export const SearchInput = () => {
                           to={`/search-products`}
                           onClick={handleClickProduct}
                         >
-                          <SShowAllProductsButton>
+                          <SShowAllProductsButton onClick={isMobileSearchClicked && (() => setIsMobileSearchClicked(false))}>
                             ყველას ნახვა
                           </SShowAllProductsButton>
                         </SStyledLink>
