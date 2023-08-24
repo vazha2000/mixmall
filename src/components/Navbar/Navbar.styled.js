@@ -56,6 +56,7 @@ export const SNavInputSearchIconContainer = styled.div`
 export const SNavContactContainer = styled.div`
   > span {
     font-weight: bold;
+    margin-top: 4px;
   }
 
   min-width: 240px;
