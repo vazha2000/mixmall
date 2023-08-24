@@ -35,10 +35,23 @@ export const SNavInputContainer = styled.div`
   padding-right: 10px;
   align-items: center;
   background-color: #ededed;
-  /* @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 576px) {
     display: none;
-  } */
+  }
 `;
+export const SNavInputSearchIconContainer = styled.div`
+  display: none;
+  flex: 1;
+  padding-right: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #ededed;
+  @media screen and (max-width: 576px) {
+    display: flex;
+  }
+`;
+
+
 
 export const SNavContactContainer = styled.div`
   > span {
@@ -107,6 +120,19 @@ export const SWishlistContainer = styled(motion.div)`
     cursor: pointer;
   }
 `;
+
+export const SNavInputSearchIcon = styled(SWishlistContainer)`
+  background-color: #df3d41;
+
+  &:hover {
+    background-color: #ff494e;
+
+    > img {
+    filter: brightness(0);
+    transition: 0.3s ease;
+  }
+  }
+`
 
 export const SWishlistIcon = styled.img`
   transition: all 0.2s ease;

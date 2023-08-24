@@ -8,6 +8,8 @@ import {
   SNavContactContainer,
   SNavContactIconContainer,
   SNavInputContainer,
+  SNavInputSearchIcon,
+  SNavInputSearchIconContainer,
   SNavMenu,
   SNavMenuCategories,
   SNavMenuCategoriesWrapper,
@@ -124,7 +126,7 @@ export const Navbar = () => {
           onMouseLeave={() => setIsCategoriesActive(false)}
         >
           <SNavMenuCategories onClick={handleCategoriesClick}>
-            <img src="assets/svg/burgerMenu.svg" alt="burger menu"/>
+            <img src="assets/svg/burgerMenu.svg" alt="burger menu" />
             <span>კატეგორიები</span>
           </SNavMenuCategories>
           {isCategoriesActive && (
@@ -186,9 +188,13 @@ export const Navbar = () => {
           <SNavMenuItems>კონტაქტი</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavInputContainer>
-            <SearchInput />
-          </SNavInputContainer>
-
+          <SearchInput />
+        </SNavInputContainer>
+        <SNavInputSearchIconContainer>
+          <SNavInputSearchIcon>
+            <img src="assets/svg/search.svg" alt="search icon" />
+          </SNavInputSearchIcon>
+        </SNavInputSearchIconContainer>
       </SNavMenu>
       <AnimatePresence>
         {isCategoriesClicked && (
