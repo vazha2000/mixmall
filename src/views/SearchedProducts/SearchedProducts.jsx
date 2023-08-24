@@ -119,6 +119,7 @@ export const SearchedProducts = () => {
               isDiscount,
               discountRate,
               alt,
+              id
             ],
             index
           ) => (
@@ -137,6 +138,7 @@ export const SearchedProducts = () => {
                 isHovered={hoverStates[index]}
                 handleHover={() => handleHover(index)}
                 path={`/${categoryName}/${productId}/${productName}`}
+                id={id}
               />
             </div>
           )
