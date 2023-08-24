@@ -44,7 +44,8 @@ export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked, wi
           product.productImage,
           product.isDiscount,
           product.discountRate,
-          product.alt
+          product.alt,
+          product.id
         ])
       )
     )
