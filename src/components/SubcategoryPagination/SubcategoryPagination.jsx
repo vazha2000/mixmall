@@ -14,7 +14,7 @@ export const SubcategoryPagination = ({
   onPageChange,
   currentPage,
   itemsPerPage,
-  setCurrentPage
+  setCurrentPage,
 }) => {
   const totalPages = Math.ceil(item.products.length / itemsPerPage);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -46,31 +46,47 @@ export const SubcategoryPagination = ({
     const rightEllipsis = currentPage + Math.floor(maxPageNumbersToShow / 3);
 
     if (leftEllipsis <= 1) {
-      return [...pageNumbers.slice(0, maxPageNumbersToShow - 1), "ellipsis", totalPages];
+      return [
+        ...pageNumbers.slice(0, maxPageNumbersToShow - 1),
+        "ellipsis",
+        totalPages,
+      ];
     } else if (rightEllipsis >= totalPages) {
-      return [1, "ellipsis", ...pageNumbers.slice(totalPages - maxPageNumbersToShow + 2)];
+      return [
+        1,
+        "ellipsis",
+        ...pageNumbers.slice(totalPages - maxPageNumbersToShow + 2),
+      ];
     } else {
-      return [1, "ellipsis", ...pageNumbers.slice(leftEllipsis, rightEllipsis), "ellipsis", totalPages];
+      return [
+        1,
+        "ellipsis",
+        ...pageNumbers.slice(leftEllipsis, rightEllipsis),
+        "ellipsis",
+        totalPages,
+      ];
     }
   };
 
   const handleNextPage = () => {
-    if(currentPage !== totalPages) {
-      setCurrentPage(prev => prev + 1)
+    if (currentPage !== totalPages) {
+      setCurrentPage((prev) => prev + 1);
     }
-  }
+  };
 
   const handlePrevPage = () => {
-    if(currentPage !== 1) {
-      setCurrentPage(prev => prev - 1)
+    if (currentPage !== 1) {
+      setCurrentPage((prev) => prev - 1);
     }
-  }
-
+  };
 
   return (
     <SSubcategoryPagination>
       <SSubcategoryPaginationList style={{ display: "flex" }}>
-        <SCubcategoryPaginationButton onClick={handlePrevPage} firstPage={currentPage === 1}>
+        <SCubcategoryPaginationButton
+          onClick={handlePrevPage}
+          firstPage={currentPage === 1}
+        >
           <img src="assets/svg/paginationLeft.svg" alt="left" />
         </SCubcategoryPaginationButton>
         {getPageNumbersWithEllipsis().map((page, index) => (
@@ -84,12 +100,16 @@ export const SubcategoryPagination = ({
                 onClick={() => onPageChange(page)}
                 isActive={currentPage === page}
               >
-                {page}
+                <span>{page}</span>
               </SSubcategoryPaginationListItems>
             )}
           </React.Fragment>
         ))}
-        <SCubcategoryPaginationButton onClick={handleNextPage} rotate="true" lastPage={currentPage === totalPages}>
+        <SCubcategoryPaginationButton
+          onClick={handleNextPage}
+          rotate="true"
+          lastPage={currentPage === totalPages}
+        >
           <img src="assets/svg/paginationLeft.svg" alt="right" />
         </SCubcategoryPaginationButton>
       </SSubcategoryPaginationList>
