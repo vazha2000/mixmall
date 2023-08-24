@@ -9,7 +9,7 @@ transform: translateX(-50%);
 width: 90%;
 z-index: 5;
 @media screen and (max-width: 600px){
-  width: 80%;
+  width: 95%;
 }
 `;
 
@@ -31,6 +31,8 @@ export const SProductAddedToWishlist = styled(motion.div)`
   gap: 1%;
   
   @media screen and (max-width: 600px){
-  white-space: normal; 
+    white-space: normal; 
+    width: 100%;
+    font-size: 14px;
 }
 `
