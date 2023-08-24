@@ -9,6 +9,7 @@ import {
   SSearchProductBox,
   SSearchProductBoxImageContent,
   SSearchProductImage,
+  SSearchProductName,
   SSearchProductNameQuantity,
   SSearchProductPrice,
   SSearchedProducts,
@@ -123,6 +124,7 @@ export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked}) =
   const handleClickProduct = () => {
     setIsFocused(false);
     setFilteredProducts([]);
+    setIsMobileSearchClicked(false)
   };
 
   return (
@@ -178,7 +180,7 @@ export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked}) =
                         to={`/${categoryName}/${productId}/${productName}`}
                         onClick={handleClickProduct}
                       >
-                        <span>{productName}</span>
+                        <SSearchProductName>{productName}</SSearchProductName>
                       </SStyledLink>
                       <span>Category: {categoryName}</span>
                       <span>ფასი: {currentPrice}</span>

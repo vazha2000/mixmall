@@ -15,6 +15,7 @@ export const SSearchInputContainer = styled.div`
   display: flex;
   align-items: center;
   z-index: 6;
+  border-radius: 4px;
 
   @media screen and (max-width: 1024px) {
     border-radius: 0.25rem;
@@ -169,6 +170,12 @@ export const SSearchProductNameQuantity = styled(SCartCardTableBoxNameContent)`
   padding: 8px 4px;
   justify-content: space-around;
 `;
+
+export const SSearchProductName = styled.span`
+  &:hover {
+    color: #df3d41;
+  }
+`
 
 export const SSearchProductPrice = styled.td`
   display: flex;
