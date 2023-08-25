@@ -123,7 +123,7 @@ export const SCartCardTableBody = styled.tbody`
   padding: 0 20px;
 `;
 
-const BaseTableCell = styled.td`
+export const BaseTableCell = styled.td`
   height: 100%;
   display: flex;
   align-items: center;
