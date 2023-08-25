@@ -96,7 +96,7 @@ export const Checkout = () => {
       if (item.id === productId) {
         return {
           ...item,
-          productQuantity: Math.min(item.productQuantity + 1, 99), // Make sure it doesn't exceed 99
+          productQuantity: Math.min(item.productQuantity + 1, 99),
         };
       }
       return item;
@@ -110,7 +110,7 @@ export const Checkout = () => {
       if (item.id === productId) {
         return {
           ...item,
-          productQuantity: Math.max(item.productQuantity - 1, 1), // Make sure it doesn't go below 1
+          productQuantity: Math.max(item.productQuantity - 1, 1),
         };
       }
       return item;
