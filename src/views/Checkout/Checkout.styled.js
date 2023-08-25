@@ -144,8 +144,11 @@ export const SCheckoutPricing = styled.div`
 export const SCheckoutProductTable = styled(SCartCardTable)``;
 
 export const SCheckoutProductTableBody = styled(SCartCardTableBody)`
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 0;
   border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   padding: 10px;
 `;
 
@@ -157,7 +160,9 @@ export const SCheckoutProductTableBoxImageContent = styled(
   SCartCardTableBoxImageContent
 )``;
 
-export const SCheckoutProductTableBoxNameContent = styled(SCartCardTableBoxNameContent)`
+export const SCheckoutProductTableBoxNameContent = styled(
+  SCartCardTableBoxNameContent
+)`
   justify-content: space-between;
   padding: 12px 15px;
 `;
@@ -166,11 +171,11 @@ export const SCheckoutProductButtonsContainer = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
-`
+`;
 
 export const SCheckoutProductQuantity = styled.span`
   margin-top: 4px;
-`
+`;
 
 const SCheckoutProductButton = styled.button`
   width: 30px;
@@ -191,14 +196,10 @@ const SCheckoutProductButton = styled.button`
     cursor: pointer;
     transition: 0.3s ease;
   }
-`
+`;
 
-export const SCheckoutProductLeftButton = styled(SCheckoutProductButton)`
-  
-`
-export const SCheckoutProductRightButton = styled(SCheckoutProductButton)`
-
-`
+export const SCheckoutProductLeftButton = styled(SCheckoutProductButton)``;
+export const SCheckoutProductRightButton = styled(SCheckoutProductButton)``;
 
 export const SCheckoutProductTablePrice = styled.td`
   > hr {
@@ -216,7 +217,7 @@ export const SCheckoutProductTablePrice = styled.td`
     display: flex;
     gap: 12px;
     ::after {
-      content: '99';
+      content: "99";
       position: absolute;
       top: -10px;
       right: 12px;
@@ -230,13 +231,47 @@ export const SCheckoutProductTablePrice = styled.td`
   gap: 20px;
 `;
 
-export const SCheckoutPricingTable = styled.table`
-  border-spacing: 0;
-  width: inherit;
+export const SCheckoutPricingRowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-top: none;
+  background-color: #f2f2f2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 0;
 `;
 
-export const SCheckoutPricingTableBody = styled.tbody`
-  border: 1px solid rgba(0, 0, 0, 0.5);
+export const SCheckoutPricingRow = styled.div`
+  > span:nth-child(1) {
+    color: #707070;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  > span:nth-child(2) {
+    text-align: start;
+    width: 100px;
+    white-space: nowrap;
+    margin-top: 4px;
+    font-size: 14px;
+  }
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0, 0.2);
 `;
 
-export const SCheckoutPricingTableRow = styled.tr``;
+export const SCheckoutPricingRowTotal = styled(SCheckoutPricingRow)`
+  > span:nth-child(1) {
+    font-size: 24px;
+    color: #1f1f1f;
+    font-weight: bold;
+  }
+  > span:nth-child(2) {
+    height: max-content;
+  }
+  align-items: center;
+  border-bottom: none;
+`
