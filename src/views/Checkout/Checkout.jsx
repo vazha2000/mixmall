@@ -17,7 +17,7 @@ import {
   SCheckoutProductTableBox,
   SCheckoutProductTableBoxImageContent,
   SCheckoutProductTableBoxNameContent,
-  SCheckoutProductTableRemove,
+  SCheckoutProductTablePrice,
   SCheckoutProductTotal,
   SCompanyNameInput,
   SCountrySelect,
@@ -238,25 +238,24 @@ export const Checkout = () => {
                     </SCheckoutProductTableBoxImageContent>
                     <SCheckoutProductTableBoxNameContent>
                       <div>{item.productName}</div>
-                      <SCheckoutProductTableRemove>
-                        <img
-                          src="assets/svg/trash.svg"
-                          alt="remove"
-                          onClick={() => handleRemoveClick(item)}
-                        />
-                      </SCheckoutProductTableRemove>
+                      <img
+                        src="assets/svg/trash.svg"
+                        alt="remove"
+                        onClick={() => handleRemoveClick(item)}
+                        width={20}
+                      />
                     </SCheckoutProductTableBoxNameContent>
-                    <div>
-                        {item.productQuantity} x{" "}
+                    <SCheckoutProductTablePrice>
                         <span>
-                          {item.currentPrice}
+                          {item.currentPrice}.
                           <img src="assets/svg/lari.svg" alt="lari icon" />
                         </span>
                         <span>
-                          {item?.oldPrice}
+                          {item?.oldPrice}.
                           <img src="assets/svg/lari.svg" alt="lari icon" />
                         </span>
-                      </div>
+                        <hr />
+                      </SCheckoutProductTablePrice>
                   </SCheckoutProductTableBox>
                 ))}
 
