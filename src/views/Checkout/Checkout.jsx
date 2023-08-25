@@ -35,6 +35,7 @@ import {
 } from "./Checkout.styled";
 import { CheckoutContext } from "../../context/CheckoutContext";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 export const Checkout = () => {
   const { cart, setCart, removeFromCart, updateProductQuantity } =
@@ -54,7 +55,7 @@ export const Checkout = () => {
   } = useForm();
 
   const validateOnlyLetters = (value) => {
-    const onlyLetters = /^[A-Za-z]+$/;
+    const onlyLetters = /^[A-Za-z\u10A0-\u10FF]+$/;
     return (
       onlyLetters.test(value) || "Please enter a valid input with only letters"
     );
@@ -106,15 +107,50 @@ export const Checkout = () => {
     setCart(updatedCart);
   };
 
+  const sendEmail = (formData) => {
+    // e.preventDefault();
+    const serviceID = "service_m4wjaqi";
+    const templateID = "template_673scd6";
+    const userID = "1djXRcgUQ3KyzVEvg";
+
+    const emailData = {
+      firstname: formData?.firstname,
+      lastname: formData?.lastname,
+      companyName: formData?.companyName,
+      phoneNumber: formData?.phoneNumber,
+      populatedArea: formData?.populatedArea,
+      region: formData?.region,
+      streetAddress: formData?.streetAddress,
+    };
+
+    emailjs.send(serviceID, templateID, emailData, userID).then(
+      (result) => {
+        console.log("Success!!!", result.text);
+      },
+      (error) => {
+        console.log("Error!!!", error.text);
+      }
+    );
+  };
+
+  const onSubmit = (data) => {
+    data.cart = cart.map((item) => [
+      {
+        productName: item.productName,
+        price: item.currentPrice,
+        oldPrice: item.oldPrice,
+        quantity: item.productQuantity,
+      },
+    ]);
+    console.log(data)
+    // sendEmail(data)
+  };
+
   return (
     <SCheckout>
       <SCheckoutInputs>
         <SCheckoutForm
-          onSubmit={handleSubmit((data) => {
-            data.cart = cart.map((item) => [{productName: item.productName, price: item.currentPrice, oldPrice: item.oldPrice,quantity: item.productQuantity}])
-            console.log(data)
-            reset();
-          })}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <SCheckoutInputsLabel>გადახდის დეტალები</SCheckoutInputsLabel>
           <SFirstLastnameContainer>
