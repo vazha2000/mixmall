@@ -157,9 +157,48 @@ export const SCheckoutProductTableBoxImageContent = styled(
   SCartCardTableBoxImageContent
 )``;
 
-export const SCheckoutProductTableBoxNameContent = styled(
-  SCartCardTableBoxNameContent
-)``;
+export const SCheckoutProductTableBoxNameContent = styled(SCartCardTableBoxNameContent)`
+  justify-content: space-between;
+  padding: 12px 15px;
+`;
+
+export const SCheckoutProductButtonsContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`
+
+export const SCheckoutProductQuantity = styled.span`
+  margin-top: 4px;
+`
+
+const SCheckoutProductButton = styled.button`
+  width: 30px;
+  height: 30px;
+  /* background-color: red; */
+  background-color: transparent;
+  border-radius: 30%;
+  border: 1px solid #d4d4d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    img {
+      filter: brightness(0) invert(1);
+    }
+    background-color: #df3d41;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+`
+
+export const SCheckoutProductLeftButton = styled(SCheckoutProductButton)`
+  
+`
+export const SCheckoutProductRightButton = styled(SCheckoutProductButton)`
+
+`
 
 export const SCheckoutProductTablePrice = styled.td`
   > hr {

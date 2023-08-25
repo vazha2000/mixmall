@@ -10,8 +10,12 @@ import {
   SCheckoutPricingTableBody,
   SCheckoutPricingTableRow,
   SCheckoutProduct,
+  SCheckoutProductButtonsContainer,
   SCheckoutProductImg,
+  SCheckoutProductLeftButton,
   SCheckoutProductNameQuantity,
+  SCheckoutProductQuantity,
+  SCheckoutProductRightButton,
   SCheckoutProductTable,
   SCheckoutProductTableBody,
   SCheckoutProductTableBox,
@@ -238,6 +242,23 @@ export const Checkout = () => {
                     </SCheckoutProductTableBoxImageContent>
                     <SCheckoutProductTableBoxNameContent>
                       <div>{item.productName}</div>
+                      <SCheckoutProductButtonsContainer>
+                        <SCheckoutProductLeftButton>
+                          <img
+                            src="assets/svg/minus.svg"
+                            alt="minus"
+                            width={18}
+                          />
+                        </SCheckoutProductLeftButton>
+                        <SCheckoutProductQuantity>{item.productQuantity}</SCheckoutProductQuantity>
+                        <SCheckoutProductRightButton>
+                          <img
+                            src="assets/svg/plus.svg"
+                            alt="plus"
+                            width={20}
+                          />
+                        </SCheckoutProductRightButton>
+                      </SCheckoutProductButtonsContainer>
                       <img
                         src="assets/svg/trash.svg"
                         alt="remove"
@@ -246,16 +267,16 @@ export const Checkout = () => {
                       />
                     </SCheckoutProductTableBoxNameContent>
                     <SCheckoutProductTablePrice>
-                        <span>
-                          {item.currentPrice}.
-                          <img src="assets/svg/lari.svg" alt="lari icon" />
-                        </span>
-                        <span>
-                          {item?.oldPrice}.
-                          <img src="assets/svg/lari.svg" alt="lari icon" />
-                        </span>
-                        <hr />
-                      </SCheckoutProductTablePrice>
+                      <span>
+                        {item.currentPrice}.
+                        <img src="assets/svg/lari.svg" alt="lari icon" />
+                      </span>
+                      <span>
+                        {item?.oldPrice}.
+                        <img src="assets/svg/lari.svg" alt="lari icon" />
+                      </span>
+                      <hr />
+                    </SCheckoutProductTablePrice>
                   </SCheckoutProductTableBox>
                 ))}
 
