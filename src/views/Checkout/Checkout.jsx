@@ -144,6 +144,7 @@ export const Checkout = () => {
     ]);
     console.log(data)
     // sendEmail(data)
+    reset()
   };
 
   return (
