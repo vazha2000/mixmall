@@ -111,6 +111,8 @@ export const Checkout = () => {
       <SCheckoutInputs>
         <SCheckoutForm
           onSubmit={handleSubmit((data) => {
+            data.cart = cart.map((item) => [{productName: item.productName, price: item.currentPrice, oldPrice: item.oldPrice,quantity: item.productQuantity}])
+            console.log(data)
             reset();
           })}
         >
