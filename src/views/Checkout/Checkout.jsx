@@ -12,6 +12,12 @@ import {
   SCheckoutProduct,
   SCheckoutProductImg,
   SCheckoutProductNameQuantity,
+  SCheckoutProductTable,
+  SCheckoutProductTableBody,
+  SCheckoutProductTableBox,
+  SCheckoutProductTableBoxImageContent,
+  SCheckoutProductTableBoxNameContent,
+  SCheckoutProductTableRemove,
   SCheckoutProductTotal,
   SCompanyNameInput,
   SCountrySelect,
@@ -30,10 +36,19 @@ import {
 } from "./Checkout.styled";
 import { CheckoutContext } from "../../context/CheckoutContext";
 import { useForm } from "react-hook-form";
+import {
+  SCartCardTable,
+  SCartCardTableBody,
+  SCartCardTableBox,
+  SCartCardTableBoxImageContent,
+  SCartCardTableBoxNameContent,
+  SCartCardTablleRemove,
+} from "../../components/CartInfo/CartInfo.styled";
 
 export const Checkout = () => {
-  const { cart, removeFromCart } = useContext(CheckoutContext);
-  console.log(cart)
+  const { cart, removeFromCart, updateProductQuantity } =
+    useContext(CheckoutContext);
+  console.log(cart);
 
   const totalPrice = cart.reduce((sum, item) => {
     const productPrice = item.productQuantity * item.currentPrice;
@@ -69,12 +84,28 @@ export const Checkout = () => {
     return emailPattern.test(value) || "Please enter a valid email address";
   };
 
+  const handleRemoveClick = (item) => {
+    removeFromCart(item);
+  };
+
+  // const handleIncrement = () => {
+  //   if (productQuantity < 99) {
+  //     updateProductQuantity(productId, productQuantity + 1);
+  //   }
+  // };
+
+  // const handleDecrement = () => {
+  //   if (productQuantity > 1) {
+  //     updateProductQuantity(productId, productQuantity - 1);
+  //   }
+  // };
+
   return (
     <SCheckout>
       <SCheckoutInputs>
         <SCheckoutForm
           onSubmit={handleSubmit((data) => {
-            reset()
+            reset();
           })}
         >
           <SCheckoutInputsLabel>გადახდის დეტალები</SCheckoutInputsLabel>
@@ -194,36 +225,56 @@ export const Checkout = () => {
         ) : (
           <>
             <label htmlFor="">თქვენი შეკვეთა</label>
-            {cart.map((item, index) => (
-              <SCheckoutProduct key={index}>
-                <SCheckoutProductImg src={item.productImage[0]} alt={item.alt} />
-                <SCheckoutProductNameQuantity>
-                  <span>{item.productName}</span>
-                  <span>რაოდენობა: {item.productQuantity}</span>
-                </SCheckoutProductNameQuantity>
-                <SCheckoutProductTotal>
-                  {item.productQuantity * item.currentPrice}
-                </SCheckoutProductTotal>
-              </SCheckoutProduct>
-            ))}
-            <SCheckoutPricing>
-              <SCheckoutPricingTable>
-                <SCheckoutPricingTableBody>
-                  <SCheckoutPricingTableRow>
-                    <td>სულ ფასი:</td>
-                    <td>{totalPrice} ლარი</td>
-                  </SCheckoutPricingTableRow>
-                  <SCheckoutPricingTableRow>
-                    <td>მიწოდების საფასური:</td>
-                    <td>15 ლარი</td>
-                  </SCheckoutPricingTableRow>
-                  <SCheckoutPricingTableRow>
-                    <td>გადასახდელი თანხა:</td>
-                    <td>{totalPrice + 15} ლარი</td>
-                  </SCheckoutPricingTableRow>
-                </SCheckoutPricingTableBody>
-              </SCheckoutPricingTable>
-            </SCheckoutPricing>
+            <SCheckoutProductTable>
+              <SCheckoutProductTableBody>
+                {cart.map((item, index) => (
+                  <SCheckoutProductTableBox key={index}>
+                    <SCheckoutProductTableBoxImageContent>
+                      <img
+                        src={item.productImage[0]}
+                        height={"100%"}
+                        alt={item.alt}
+                      />
+                    </SCheckoutProductTableBoxImageContent>
+                    <SCheckoutProductTableBoxNameContent>
+                      <div>{item.productName}</div>
+                      <SCheckoutProductTableRemove>
+                        <img
+                          src="assets/svg/trash.svg"
+                          alt="remove"
+                          onClick={() => handleRemoveClick(item)}
+                        />
+                      </SCheckoutProductTableRemove>
+                    </SCheckoutProductTableBoxNameContent>
+                    <div>
+                        {item.productQuantity} x{" "}
+                        <span>
+                          {item.currentPrice}
+                          <img src="assets/svg/lari.svg" alt="lari icon" />
+                        </span>
+                        <span>
+                          {item?.oldPrice}
+                          <img src="assets/svg/lari.svg" alt="lari icon" />
+                        </span>
+                      </div>
+                  </SCheckoutProductTableBox>
+                ))}
+
+                <SCheckoutPricingTableRow>
+                  <td>სულ ფასი:</td>
+                  <td>{totalPrice} ლარი</td>
+                </SCheckoutPricingTableRow>
+                <SCheckoutPricingTableRow>
+                  <td>მიწოდების საფასური:</td>
+                  <td>15 ლარი</td>
+                </SCheckoutPricingTableRow>
+                <SCheckoutPricingTableRow>
+                  <td>გადასახდელი თანხა:</td>
+                  <td>{totalPrice + 15} ლარი</td>
+                </SCheckoutPricingTableRow>
+              </SCheckoutProductTableBody>
+            </SCheckoutProductTable>
+            <SCheckoutPricing></SCheckoutPricing>
           </>
         )}
       </SCheckoutInfo>
