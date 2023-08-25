@@ -50,7 +50,7 @@ import {
 } from "../../components/CartInfo/CartInfo.styled";
 
 export const Checkout = () => {
-  const { cart, removeFromCart, updateProductQuantity } =
+  const { cart, setCart, removeFromCart, updateProductQuantity } =
     useContext(CheckoutContext);
   console.log(cart);
 
@@ -93,16 +93,44 @@ export const Checkout = () => {
   };
 
   // const handleIncrement = () => {
-  //   if (productQuantity < 99) {
-  //     updateProductQuantity(productId, productQuantity + 1);
+  //   if (cart.productQuantity < 99) {
+  //     updateProductQuantity(cart.id, cart.productQuantity + 1);
   //   }
   // };
 
   // const handleDecrement = () => {
-  //   if (productQuantity > 1) {
-  //     updateProductQuantity(productId, productQuantity - 1);
+  //   if (cart.productQuantity > 1) {
+  //     updateProductQuantity(cart.id, cart.productQuantity - 1);
   //   }
   // };
+
+  const handleIncrement = (productId) => {
+    const updatedCart = cart.map(item => {
+      if (item.id === productId) {
+        return {
+          ...item,
+          productQuantity: Math.min(item.productQuantity + 1, 99) // Make sure it doesn't exceed 99
+        };
+      }
+      return item;
+    });
+  
+    setCart(updatedCart);
+  };
+  
+  const handleDecrement = (productId) => {
+    const updatedCart = cart.map(item => {
+      if (item.id === productId) {
+        return {
+          ...item,
+          productQuantity: Math.max(item.productQuantity - 1, 1) // Make sure it doesn't go below 1
+        };
+      }
+      return item;
+    });
+  
+    setCart(updatedCart);
+  };
 
   return (
     <SCheckout>
@@ -243,7 +271,7 @@ export const Checkout = () => {
                     <SCheckoutProductTableBoxNameContent>
                       <div>{item.productName}</div>
                       <SCheckoutProductButtonsContainer>
-                        <SCheckoutProductLeftButton>
+                        <SCheckoutProductLeftButton onClick={() => handleDecrement(item.id)}>
                           <img
                             src="assets/svg/minus.svg"
                             alt="minus"
@@ -251,7 +279,7 @@ export const Checkout = () => {
                           />
                         </SCheckoutProductLeftButton>
                         <SCheckoutProductQuantity>{item.productQuantity}</SCheckoutProductQuantity>
-                        <SCheckoutProductRightButton>
+                        <SCheckoutProductRightButton onClick={() => handleIncrement(item.id)}>
                           <img
                             src="assets/svg/plus.svg"
                             alt="plus"
