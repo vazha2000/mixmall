@@ -5,15 +5,11 @@ import {
   SCheckoutInfo,
   SCheckoutInputs,
   SCheckoutInputsLabel,
-  SCheckoutPricing,
   SCheckoutPricingRow,
   SCheckoutPricingRowContainer,
   SCheckoutPricingRowTotal,
-  SCheckoutProduct,
   SCheckoutProductButtonsContainer,
-  SCheckoutProductImg,
   SCheckoutProductLeftButton,
-  SCheckoutProductNameQuantity,
   SCheckoutProductQuantity,
   SCheckoutProductRightButton,
   SCheckoutProductTable,
@@ -22,7 +18,6 @@ import {
   SCheckoutProductTableBoxImageContent,
   SCheckoutProductTableBoxNameContent,
   SCheckoutProductTablePrice,
-  SCheckoutProductTotal,
   SCompanyNameInput,
   SCountrySelect,
   SDistrictInput,
@@ -40,14 +35,6 @@ import {
 } from "./Checkout.styled";
 import { CheckoutContext } from "../../context/CheckoutContext";
 import { useForm } from "react-hook-form";
-import {
-  SCartCardTable,
-  SCartCardTableBody,
-  SCartCardTableBox,
-  SCartCardTableBoxImageContent,
-  SCartCardTableBoxNameContent,
-  SCartCardTablleRemove,
-} from "../../components/CartInfo/CartInfo.styled";
 
 export const Checkout = () => {
   const { cart, setCart, removeFromCart, updateProductQuantity } =
