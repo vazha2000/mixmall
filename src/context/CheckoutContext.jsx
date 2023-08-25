@@ -29,7 +29,7 @@ const CheckoutProvider = ({children}) => {
   }, [cart])
 
   return (
-    <CheckoutContext.Provider value={{cart, addToCart, removeFromCart, productQuantities, updateProductQuantity}}>
+    <CheckoutContext.Provider value={{cart, setCart, addToCart, removeFromCart, productQuantities, updateProductQuantity}}>
       {children}
     </CheckoutContext.Provider>
   )
