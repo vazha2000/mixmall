@@ -5,7 +5,7 @@ export const SCheckout = styled.div`
   margin-top: 50px;
   box-sizing: border-box;
   padding: 0 40px;
-  gap: 200px;
+  gap: 50px;
 `;
 
 export const SCheckoutForm = styled.form`
@@ -15,7 +15,7 @@ export const SCheckoutForm = styled.form`
 `
 
 export const SCheckoutInputs = styled.div`
-  flex: 8;
+  width: 60%;
 `;
 
 const InputBase = styled.input`
@@ -44,11 +44,11 @@ export const SFirstLastnameContainer = styled.div`
 `;
 
 export const SFirstnameInput = styled(InputBase)`
-  flex: 1;
+  width: 50%;
 `;
 
 export const SLastnameInput = styled(InputBase)`
-  flex: 1;
+  width: 50%;
 `;
 
 export const SCompanyNameInput = styled(InputBase)`
@@ -90,6 +90,7 @@ export const SFormSubmitButtonContainer = styled.div`
 export const SFormSubmitButton = styled.button`
   height: 40px;
   background-color: #df3d41;
+  
   color: #fff;
   padding: 0 5px;
   display: flex;
@@ -98,14 +99,13 @@ export const SFormSubmitButton = styled.button`
   margin-bottom: 20px;
 
   &:hover {
-    filter: brightness(110%);
-    cursor: pointer;
-    background-color: gray;
+    cursor: ${({disabled}) => (disabled ? "not-allowed" : "pointer")};
+    background-color: ${({disabled}) => (disabled ? "gray" : "#ff494e")};
   }
 `
 
 export const SCheckoutInfo = styled.div`
-  flex: 7;
+  width: 40%;
 `;
 
 export const SCheckoutProduct = styled.div`
