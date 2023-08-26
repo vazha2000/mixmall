@@ -365,8 +365,6 @@ export const Checkout = () => {
                 <span>{totalPrice + 15} ლარი</span>
               </SCheckoutPricingRowTotal>
             </SCheckoutPricingRowContainer>
-
-            {/* <SCheckoutPricing>კოკო</SCheckoutPricing> */}
           </div>
         )}
       </SCheckoutInfo>
