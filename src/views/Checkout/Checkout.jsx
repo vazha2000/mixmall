@@ -290,7 +290,7 @@ export const Checkout = () => {
             <SCheckoutProductTable>
               <SCheckoutProductTableBody>
                 {cart.map((item, index) => (
-                  <SCheckoutProductTableBox key={index}>
+                  <SCheckoutProductTableBox isFirst={index === 0} isLast={index === cart.length - 1} key={index}>
                     <SCheckoutProductTableBoxImageContent>
                       <img
                         src={item.productImage[0]}
@@ -331,6 +331,12 @@ export const Checkout = () => {
                       />
                     </SCheckoutProductTableBoxNameContent>
                     <SCheckoutProductTablePrice>
+                    <img
+                        src="assets/svg/trash.svg"
+                        alt="remove"
+                        onClick={() => handleRemoveClick(item)}
+                        width={20}
+                      />
                       <span>
                         {item.currentPrice}.
                         <img src="assets/svg/lari.svg" alt="lari icon" />
