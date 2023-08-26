@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import {
-  BaseTableCell,
   SCartCardTable,
   SCartCardTableBody,
   SCartCardTableBox,
   SCartCardTableBoxImageContent,
   SCartCardTableBoxNameContent,
-  SCartCardTablleRemove,
 } from "../../components/CartInfo/CartInfo.styled";
 
 export const SCheckout = styled.div`
@@ -15,6 +13,11 @@ export const SCheckout = styled.div`
   box-sizing: border-box;
   padding: 0 10px;
   gap: 50px;
+
+  @media screen and (max-width: 950px){
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;
 
 export const SCheckoutForm = styled.form`
@@ -25,6 +28,10 @@ export const SCheckoutForm = styled.form`
 
 export const SCheckoutInputs = styled.div`
   width: 50%;
+
+  @media screen and (max-width: 950px){
+    width: 100%;
+  }
 `;
 
 const InputBase = styled.input`
@@ -113,6 +120,10 @@ export const SCheckoutInfo = styled.div`
     border-radius: 10px;
   }
   width: 50%;
+
+  @media screen and (max-width: 950px){
+    width: 100%;
+  }
 `;
 
 export const SCheckoutProduct = styled.div`
@@ -154,21 +165,39 @@ export const SCheckoutProductTable = styled(SCartCardTable)``;
 export const SCheckoutProductTableBody = styled(SCartCardTableBody)`
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   padding: 10px;
+
+  @media screen and (max-width: 465px){
+    padding: 0;
+  }
+
 `;
 
 export const SCheckoutProductTableBox = styled(SCartCardTableBox)`
   width: 100%;
+  @media screen and (max-width: 465px){
+      height: 100px;
+      padding: 0;
+  }
+  margin-top: ${({isFirst}) => (isFirst ? "20px" : "0")};
+  margin-bottom: ${({isLast}) => (isLast ? "20px" : "0")};
 `;
 
-export const SCheckoutProductTableBoxImageContent = styled(
-  SCartCardTableBoxImageContent
-)``;
+export const SCheckoutProductTableBoxImageContent = styled(SCartCardTableBoxImageContent)`
+  @media screen and (max-width: 465px){
+      height: 70%;
+  }
+  
+`;
 
-export const SCheckoutProductTableBoxNameContent = styled(
-  SCartCardTableBoxNameContent
-)`
+export const SCheckoutProductTableBoxNameContent = styled(SCartCardTableBoxNameContent)`
   justify-content: space-between;
   padding: 12px 15px;
+
+  @media screen and (max-width: 465px){
+    > img {
+      display: none;
+    }
+  }
 `;
 
 export const SCheckoutProductButtonsContainer = styled.div`
@@ -184,7 +213,6 @@ export const SCheckoutProductQuantity = styled.span`
 const SCheckoutProductButton = styled.button`
   width: 30px;
   height: 30px;
-  /* background-color: red; */
   background-color: transparent;
   border-radius: 30%;
   border: 1px solid #d4d4d4;
@@ -206,6 +234,9 @@ export const SCheckoutProductLeftButton = styled(SCheckoutProductButton)``;
 export const SCheckoutProductRightButton = styled(SCheckoutProductButton)``;
 
 export const SCheckoutProductTablePrice = styled.td`
+  > img {
+    display: none;
+  }
   > hr {
     width: 95%;
     height: 2px;
@@ -233,6 +264,23 @@ export const SCheckoutProductTablePrice = styled.td`
   flex-direction: column-reverse;
   font-size: 16px;
   gap: 20px;
+
+  @media screen and (max-width: 465px){
+      > img {
+        display: flex;
+      }
+      > hr {
+        width: 90%;
+        transform: rotate(155deg);
+      }
+      > span {
+        ::after {
+          font-size: 12px;
+        }
+      }
+      font-size: 14px;
+      gap: 10px;
+  }
 `;
 
 export const SCheckoutPricingRowContainer = styled.div`
