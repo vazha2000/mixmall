@@ -27,6 +27,7 @@ import {
   SFormSubmitButtonContainer,
   SLastnameInput,
   SMailInput,
+  SPaymentSelect,
   SPhoneInput,
   SPopulatedAreaInput,
   SPostalCodeInput,
@@ -117,10 +118,13 @@ export const Checkout = () => {
       firstname: formData?.firstname,
       lastname: formData?.lastname,
       companyName: formData?.companyName,
-      phoneNumber: formData?.phoneNumber,
-      populatedArea: formData?.populatedArea,
       region: formData?.region,
+      populatedArea: formData?.populatedArea,
       streetAddress: formData?.streetAddress,
+      postalCode: formData?.postalCode,
+      phoneNumber: formData?.phoneNumber,
+      email: formData?.email,
+      paymentMethod: formData?.paymentMethod
     };
 
     emailjs.send(serviceID, templateID, emailData, userID).then(
@@ -142,17 +146,15 @@ export const Checkout = () => {
         quantity: item.productQuantity,
       },
     ]);
-    console.log(data)
+    console.log(data);
     // sendEmail(data)
-    reset()
+    reset();
   };
 
   return (
     <SCheckout>
       <SCheckoutInputs>
-        <SCheckoutForm
-          onSubmit={handleSubmit(onSubmit)}
-        >
+        <SCheckoutForm onSubmit={handleSubmit(onSubmit)}>
           <SCheckoutInputsLabel>გადახდის დეტალები</SCheckoutInputsLabel>
           <SFirstLastnameContainer>
             <SFirstnameInput
@@ -257,6 +259,19 @@ export const Checkout = () => {
             placeholder="ელფოსტის მისამართი"
           />
           {/* {errors.email && <div>{errors.email?.message}</div>} */}
+          <SPaymentSelect
+            name="paymentMethod"
+            {...register("paymentMethod", {
+              required: "გადახდის მეთოდის მონიშვნა აუცილებელია",
+            })}
+            isError={!!errors.paymentMethod}
+          >
+            <option value="" hidden>
+              აირჩიე გადახდის მეთოდი
+            </option>
+            <option value="ქეში">ნაღდი ანგარიშსწორება</option>
+            <option value="ბარათი">ანგარიშზე დარიცხვა</option>
+          </SPaymentSelect>
           <SFormSubmitButtonContainer>
             <SFormSubmitButton type="submit" disabled={cart.length === 0}>
               შეკვეთის განთავსება
@@ -268,8 +283,10 @@ export const Checkout = () => {
         {cart.length === 0 ? (
           <div>კალათა ცარიელია</div>
         ) : (
-          <>
-            <label htmlFor="">თქვენი შეკვეთა</label>
+          <div>
+            <h5 style={{ paddingTop: "15px", paddingLeft: "10px" }}>
+              თქვენი შეკვეთა
+            </h5>
             <SCheckoutProductTable>
               <SCheckoutProductTableBody>
                 {cart.map((item, index) => (
@@ -344,7 +361,7 @@ export const Checkout = () => {
             </SCheckoutPricingRowContainer>
 
             {/* <SCheckoutPricing>კოკო</SCheckoutPricing> */}
-          </>
+          </div>
         )}
       </SCheckoutInfo>
     </SCheckout>

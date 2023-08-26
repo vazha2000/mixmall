@@ -13,7 +13,7 @@ export const SCheckout = styled.div`
   display: flex;
   margin-top: 50px;
   box-sizing: border-box;
-  padding: 0 40px;
+  padding: 0 10px;
   gap: 50px;
 `;
 
@@ -70,6 +70,10 @@ export const SCountrySelect = styled.select`
 
 export const SRegionSelect = styled(SCountrySelect)``;
 
+export const SPaymentSelect = styled(SCountrySelect)`
+
+`
+
 export const SDistrictInput = styled(InputBase)``;
 
 export const SPopulatedAreaInput = styled(InputBase)``;
@@ -104,6 +108,10 @@ export const SFormSubmitButton = styled.button`
 `;
 
 export const SCheckoutInfo = styled.div`
+  > div:nth-child(1) {
+    border: 1px solid rgba(0,0,0, 0.4);
+    border-radius: 10px;
+  }
   width: 50%;
 `;
 
@@ -144,11 +152,7 @@ export const SCheckoutPricing = styled.div`
 export const SCheckoutProductTable = styled(SCartCardTable)``;
 
 export const SCheckoutProductTableBody = styled(SCartCardTableBody)`
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 0;
-  border-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
   padding: 10px;
 `;
 
@@ -235,7 +239,6 @@ export const SCheckoutPricingRowContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.4);
   border-top: none;
   background-color: #f2f2f2;
   border-bottom-left-radius: 10px;
