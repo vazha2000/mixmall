@@ -62,11 +62,11 @@ export const majorAppliance = [
     products: [
       {
         id: generateProductId(),
-        productImage: ["../assets/images/მაცივრები/Macivari-MIDEA-MDRF632FGF28/Macivari-MIDEA-MDRF632FGF28-1.webp", "../assets/images/მაცივრები/Macivari-MIDEA-MDRF632FGF28/Macivari-MIDEA-MDRF632FGF28-2.webp"],
+        productImage: "../assets/images/computerTechnic/testpc.png",
         discountRate: "20%",
         isDiscount: false,
         productName: "Asuss Gaming PC",
-        currentPrice: 500,
+        currentPrice: 2319,
         oldPrice: 600,
         alt: "test",
         isInWishlist: false,
@@ -117,18 +117,31 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "საყინულე მაცივრები",
+    name: "ჩასაშენებელი სამეული",
     subcategoryName: "103",
     products: [
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მაცივრები/Macivari-MIDEA-MDRF632FGF28/Macivari-MIDEA-MDRF632FGF28-1.webp", "../assets/images/მაცივრები/Macivari-MIDEA-MDRF632FGF28/Macivari-MIDEA-MDRF632FGF28-2.webp"],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
+        isDiscount: false,
+        productName: "Asuss Gaming PC",
+        currentPrice: 2319,
+        oldPrice: 600,
         alt: "test",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "weight": "200g",
+            "screen size": "1080p",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
+          }
+        ]
+        
       },
       {
         id: productIdCounter++,
@@ -161,10 +174,10 @@ export const majorAppliance = [
         alt: "test",
       },
     ]
-  },
+  },  
   {
     id: uuidv4(),
-    name: "აქსესუარები",
+    name: "საყინულე მაცივრები",
     subcategoryName: "104",
     products: [
       {
@@ -211,7 +224,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ჭურჭლის სარეცხი მანქანები",
+    name: "აქსესუარები",
     subcategoryName: "105",
     products: [
       {
@@ -258,7 +271,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "გაზქურები",
+    name: "ჭურჭლის სარეცხი მანქანები",
     subcategoryName: "106",
     products: [
       {
@@ -305,7 +318,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "მაგიდაზე დასადგამი ქურის ზედაპირები",
+    name: "გაზქურები",
     subcategoryName: "107",
     products: [
       {
@@ -352,7 +365,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ტელევიზორები",
+    name: "მაგიდაზე დასადგამი ქურის ზედაპირები",
     subcategoryName: "108",
     products: [
       {
@@ -399,7 +412,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ჩასაშენებელი ღუმელები",
+    name: "ტელევიზორები",
     subcategoryName: "109",
     products: [
       {
@@ -446,7 +459,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "გამწოვები",
+    name: "ჩასაშენებელი ღუმელები",
     subcategoryName: "110",
     products: [
       {
@@ -493,7 +506,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ორთქლის საწმენდი აპარატები",
+    name: "გამწოვები",
     subcategoryName: "111",
     products: [
       {
@@ -540,7 +553,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "საკერავი მანქანები",
+    name: "ორთქლის საწმენდი აპარატები",
     subcategoryName: "112",
     products: [
       {
@@ -587,7 +600,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ტანსაცმლისა და ფეხსაცმლის საშრობები",
+    name: "საკერავი მანქანები",
     subcategoryName: "113",
     products: [
       {
@@ -634,7 +647,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ღვინის მაცივრები",
+    name: "ტანსაცმლისა და ფეხსაცმლის საშრობები",
     subcategoryName: "114",
     products: [
       {
@@ -681,7 +694,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ჩასაშენებელი ქურის ზედაპირები",
+    name: "ღვინის მაცივრები",
     subcategoryName: "115",
     products: [
       {
@@ -728,7 +741,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "სარეცხი მანქანები",
+    name: "ჩასაშენებელი ქურის ზედაპირები",
     subcategoryName: "116",
     products: [
       {
@@ -775,7 +788,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "სარეცხი მანქანა საშრობით",
+    name: "სარეცხი მანქანები",
     subcategoryName: "117",
     products: [
       {
@@ -822,7 +835,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ელექტრო ღუმელები",
+    name: "სარეცხი მანქანა საშრობით",
     subcategoryName: "118",
     products: [
       {
@@ -869,7 +882,7 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ჩასაშენებელი ელექტრო ღუმელები",
+    name: "ელექტრო ღუმელები",
     subcategoryName: "119",
     products: [
       {
@@ -916,8 +929,55 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "წყლის დისპენსერები",
+    name: "ჩასაშენებელი ელექტრო ღუმელები",
     subcategoryName: "120",
+    products: [
+      {
+        id: productIdCounter++,
+        productImage: "../assets/images/computerTechnic/testpc.png",
+        discountRate: "20%",
+        isDiscount: true,
+        productName: "Asus Gaming PC",
+        currentPrice: "$500",
+        oldPrice: "$600",
+        alt: "test",
+      },
+      {
+        id: productIdCounter++,
+        productImage: "../assets/images/computerTechnic/testpc.png",
+        discountRate: "20%",
+        isDiscount: true,
+        productName: "Asus Gaming PC",
+        currentPrice: "$500",
+        oldPrice: "$600",
+        alt: "test",
+      },
+      {
+        id: productIdCounter++,
+        productImage: "../assets/images/computerTechnic/testpc.png",
+        discountRate: "20%",
+        isDiscount: true,
+        productName: "Asus Gaming PC",
+        currentPrice: "$500",
+        oldPrice: "$600",
+        alt: "test",
+      },
+      {
+        id: productIdCounter++,
+        productImage: "../assets/images/computerTechnic/testpc.png",
+        discountRate: "20%",
+        isDiscount: true,
+        productName: "Asus Gaming PC",
+        currentPrice: "$500",
+        oldPrice: "$600",
+        alt: "test",
+      },
+    ]
+  },
+  {
+    id: uuidv4(),
+    name: "წყლის დისპენსერები",
+    subcategoryName: "121",
     products: [
       {
         id: productIdCounter++,
