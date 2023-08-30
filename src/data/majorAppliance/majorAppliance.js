@@ -62,56 +62,127 @@ export const majorAppliance = [
     products: [
       {
         id: generateProductId(),
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-REGAL-AG263W/REGAL-AG263W-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-REGAL-AG263W/REGAL-AG263W-2.webp"],
         discountRate: "20%",
         isDiscount: false,
-        productName: "Asuss Gaming PC",
-        currentPrice: 2319,
+        productName: "მაცივარი REGAL AG263W (1052) (213 L)",
+        currentPrice: 599,
         oldPrice: 600,
-        alt: "test",
+        warranty: "3 წელი",
+        alt: "REGAL",
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "200g",
-            "screen size": "1080p",
-            "color": "yellow",
-            "length": "50m",
-            "width": "3000cm",
-            "cpu": "i9-9900k",
-            "brand": "intel"
+            "ბრენდი": "REGAL",
+            "მოდელი": "AG263W (1052)",
+            "ტიპი": "მაცივარი",
+            "თაროების მასალა მაცივარში": "მინა",
+            "გაგრილების ტიპი": "De-Frost",
+            "მთლიანი მოცულობა": "213ლ",
+            "ენერგოეფექტურობის კლასი": "A+",
+            "კონტროლი": "ელექტრონული",
+            "ტემპერატურის რეგულირება": "კი",
+            "კარების რაოდენობა": "2",
+            "საყინულე განყოფილების ადგილმდებარეობა": "ზედა ნაწილში",
+            "განათება": "კი",
+            "ზომები (სიგანე x სიღრმეx სიმაღლე)": "55*55*145სმ",
+            "ფერი": "თეთრი"
           }
         ]
         
       },
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ნახევრად-მშრალი-მაცივარი-MIDEA-MDRD142SLF30/MIDEA-MDRD142SLF30-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ნახევრად-მშრალი-მაცივარი-MIDEA-MDRD142SLF30/MIDEA-MDRD142SLF30-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ნახევრად-მშრალი-მაცივარი-MIDEA-MDRD142SLF30/MIDEA-MDRD142SLF30-3.webp"],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "ნახევრად მშრალი მაცივარი MIDEA MDRD142SLF30 (93 L)",
+        currentPrice: 399,
+        oldPrice: 600,
+        warranty: "3 წელი",
+        alt: "MIDEA",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "ბრენდი": "MIDEA",
+            "მოდელი": "MDRD142SLF30 ",
+            "ტიპი": "ერთკამერიანი",
+            "პროდუქციის ტიპი": "ნახევრად მშრალი",
+            "საერთო მოცულობა": "93ლ",
+            "ენერგომოხმარების კლასი": "A+",
+            "ძაბვა": "220V-240V/50Hz",
+            "ხმაურის დონე": "41dB",
+            "კარის მასალა": "რკინა",
+            "ბოსტნეულის განყოფილება": "1",
+            "თაროების რაოდენობა": "2",
+            "საყინულის მდებარეობა": "ზედა",
+            "ფერი": "შავი",
+            "ზომა": "47/44/85სმ",
+            "გარანტია": "3 წელი"
+          }
+        ]
+        
       },
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-MIDEA-MDRT294FGF01-(207-L)/MIDEA-MDRT294FGF01-1.png", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-MIDEA-MDRT294FGF01-(207-L)/MIDEA-MDRT294FGF01-2.png", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-MIDEA-MDRT294FGF01-(207-L)/MIDEA-MDRT294FGF01-3.png"],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "მაცივარი MIDEA MDRT294FGF01 (207 L)",
+        currentPrice: 639,
+        oldPrice: 600,
+        warranty: "3 წელი",
+        alt: "MIDEA",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "ბრენდი": "MIDEA",
+            "მოდელი": "MDRT294FGF01",
+            "კლიმატის კლასი": "N-ST",
+            "გალღობის ტიპი": "ნახევრად მშრალი",
+            "მთლიანი მოცულობა": "207ლ",
+            "მაცივრის მოცულობა": "166ლ",
+            "საყინულე ტევადობა": "41ლ",
+            "თაროების მასალა": "მინა",
+            "ენერგოეფექტურობის კლასი": "A+",
+            "წონა": "40კგ",
+            "სიგანე": "550მმ",
+            "სიმაღლე": "1430მმ",
+            "სიღრმე": "550მმ",
+            "პროდუქტის ფერი": "თეთრი"
+          }
+        ]
+        
       },
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ორკამერიანი-მაცივარი-MDRT294FGF02-(204-L)/MIDEA-MDRT294FGF02-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ორკამერიანი-მაცივარი-MDRT294FGF02-(204-L)/MIDEA-MDRT294FGF02-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ორკამერიანი-მაცივარი-MDRT294FGF02-(204-L)/MIDEA-MDRT294FGF02-3.webp",],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "ორკამერიანი მაცივარი MDRT294FGF02 (204 L)",
+        currentPrice: 669,
+        oldPrice: 600,
+        warranty: "3 წელი",
+        alt: "MIDEA",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "ბრენდი": "MIDEA",
+            "მოდელი": "MDRT294FGF02",
+            "კლიმატის კლასი": "N-ST",
+            "მთლიანი მოცულობა": "207ლ",
+            "მაცივრის მოცულობა": "166ლ",
+            "საყინულე ტევადობა": "41ლ",
+            "თაროების მასალა": "მინა",
+            "ენერგოეფექტურობის კლასი": "A+",
+            "წონა": "40კგ",
+            "სიგანე": "550მმ",
+            "სიმაღლე": "1430მმ",
+            "სიღრმე": "550მმ",
+            "პროდუქტის ფერი": "ვერცხლისფერი"
+          }
+        ]
+        
       },
     ]
   },
