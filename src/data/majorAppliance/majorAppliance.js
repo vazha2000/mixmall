@@ -2,6 +2,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 let productIdCounter = 101;
 
+const generateProductId = () => {
+  return productIdCounter++;
+};
+
 
 export const majorAppliance = [
   {
@@ -57,14 +61,27 @@ export const majorAppliance = [
     subcategoryName: "102",
     products: [
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მაცივრები/Macivari-MIDEA-MDRF632FGF28/Macivari-MIDEA-MDRF632FGF28-1.webp", "../assets/images/მაცივრები/Macivari-MIDEA-MDRF632FGF28/Macivari-MIDEA-MDRF632FGF28-2.webp"],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
+        isDiscount: false,
+        productName: "Asuss Gaming PC",
+        currentPrice: 500,
+        oldPrice: 600,
         alt: "test",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "weight": "200g",
+            "screen size": "1080p",
+            "color": "yellow",
+            "length": "50m",
+            "width": "3000cm",
+            "cpu": "i9-9900k",
+            "brand": "intel"
+          }
+        ]
+        
       },
       {
         id: productIdCounter++,
