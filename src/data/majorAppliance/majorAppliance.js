@@ -419,57 +419,127 @@ export const majorAppliance = [
     products: [
       {
         id: generateProductId(),
-        productImage: ["../assets/images/მაცივრები/Macivari-MIDEA-MDRF632FGF28/Macivari-MIDEA-MDRF632FGF28-1.webp", "../assets/images/მაცივრები/Macivari-MIDEA-MDRF632FGF28/Macivari-MIDEA-MDRF632FGF28-2.webp"],
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-BLACK/AlneoMain.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-BLACK/Alneo1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-BLACK/Alneo2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-BLACK/Alneo3.webp"],
         discountRate: "20%",
         isDiscount: false,
-        productName: "Asuss Gaming PC",
-        currentPrice: 2319,
+        productName: "ჩასაშენებელი სამეული ALNEO BLACK",
+        currentPrice: 760,
         oldPrice: 600,
-        alt: "test",
+        warranty: "3 წელი",
+        alt: "Alneo",
         isInWishlist: false,
         descriptions: [
           {
-            "weight": "200g",
-            "screen size": "1080p",
-            "color": "yellow",
-            "length": "50m",
-            "width": "3000cm",
-            "cpu": "i9-9900k",
-            "brand": "intel"
+            "გამწოვი":"ALNEO T9500 BLACK (01464) /60*30*13/",
+            "პერფორმანსი": "600მ³",
+            "გამწოვის ზომა": "60*30*13",
+            "გაზქურის ზედაპირი:":"Alneo6064GB-(01552)",
+            "გაზქურის ზომა": "60*51",
+            "მინა": "დიახ",
+            "თუჯის დასადგმელი":"დიახ",
+            "გაზკონტროლი": "დიახ",
+            "ჩასაშენებელი ღუმელი":"ALNEO A5010T (01633) ემალის დაფარვით",
+            "პროგრამა": "6",
+            "მექაინუკური მართვა": "დიახ"
           }
         ]
         
       },
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V1/AlneoInoxMain.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V1/AlneoInox1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V1/AlneoInox2.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V1/AlneoInox3.webp",],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "ჩასაშენებელი სამეული ALNEO INOX V1",
+        currentPrice: 749,
+        oldPrice: 600,
+        warranty: "3 წელი",
+        alt: "Alneo",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "გამწოვი":"ALNEO ASLCF-2 INOX (01463)",
+            "პერფორმანსი": "600მ³",
+            "გამწოვის ზომა": "60*30*13",
+            "გაზქურის ზედაპირი:":"Alneo6064 INOX-(01551)",
+            "გაზქურის ზომა": "60*51",
+            "უჟანგავი მეტალი": "დიახ",
+            "თუჯის დასადგმელი": "დიახ",
+            "გაზკონტროლი":"დიახ",
+            "ფერი": "ვერცხლისფერი",
+            "ჩასაშენებელი ღუმელი":"ALNEO A5010 inox (01634) ინოქსი", 
+            "პროგრამა": "6",
+            "მექანიკური მართვა":"დიახ"
+          }
+        ]
+        
       },
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V2/AlneoInoxV2Main.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V2/AlneoInoxV2-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V2/AlneoInoxV2-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V2/AlneoInoxV2-3.webp"],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "ჩასაშენებელი სამეული ALNEO INOX V2",
+        currentPrice: 749,
+        oldPrice: 600,
+        warranty: "3 წელი",
+        alt: "Alneo",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "გამწოვი":"ALNEO T9500 Inox (01465)",
+            "პერფორმანსი": "600მ³",
+            "გამწოვის ზომა": "60*30*13",
+            "გამწოვის ფერი": "ვერცხლისფერი",
+            "გაზქურის ზედაპირი:":"Alneo6064 INOX-(01551)",
+            "გაზქურის ზომა": "60*51",
+            "უჟანგავი მეტალი": "დიახ",
+            "თუჯის დასადგმელი": "დიახ",
+            "გაზკონტროლი":"დიახ",
+            "ფერი": "ვერცხლისფერი",
+            "ჩასაშენებელი ღუმელი":"ALNEO A5010 inox (01634) ინოქსი", 
+            "პროგრამა": "6",
+            "მექანიკური მართვა":"დიახ"
+          }
+        ]
+        
       },
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-SILVERLINE-INOX/SilverlineInoxMain.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-SILVERLINE-INOX/SilverlineInox1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-SILVERLINE-INOX/SilverlineInox2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-SILVERLINE-INOX/SilverlineInox3.webp"],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "ჩასაშენებელი-სამეული-SILVERLINE-INOX",
+        currentPrice: 1179,
+        oldPrice: 600,
+        warranty: "3 წელი",
+        alt: "Silverline",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "გამწოვი":"Silverline 1144.5 Inox(03495)",
+            "პერფორმანსი": "1000მ³",
+            "გამწოვის ზომა": "60*30*21.5",
+            "გამწოვის ფერი": "ვერცხლისფერი",
+            "გაზქურის ზედაპირი:":"Silverline as5472x02(04018)ინოქსი",
+            "სამი გაზი + 1 დენი": "დიახ",
+            "ორმაგი წვა": "დიახ",
+            "თუჯის სადგამი": "დიახ",
+            "გაზკონტროლი": "დიახ",
+            "ჩასაშენებელი ღუმელი":"Silverline BO6502X02 (045228)", 
+            "პროგრამა": "6",
+            "ერთდროული წვა":"დიახ",
+            "კონვექცია": "დიახ",
+            "ღუმელის ზომა": "60სმ",
+            "გალღობა": "დიახ",
+            "ტაიმერი": "დიახ",
+            "გრილი": "დიახ",
+            "ფერი": "ვერცხლისფერი",
+          }
+        ]
+        
       },
+      
     ]
   },  
   {
@@ -572,45 +642,111 @@ export const majorAppliance = [
     subcategoryName: "106",
     products: [
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჭურჭლის სარეცხი მანქანები/ჭურჭლის-სარეცხი-მანქანა-REGAL-AG101-SILVER-(11083)-(13 პერსონა)/REGAL-AG101-SILVER.webp"],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "ჭურჭლის სარეცხი მანქანა REGAL AG101 SILVER (11083) (13 პერსონა)",
+        currentPrice: 689,
+        oldPrice: 600,
+        warranty: "3 წელი",
+        alt: "REGAL",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "ბრენდი":"REGAL", 
+            "მოდელი":"AG101 SILVER", 
+            "ტიპი":"ჭურჭლის სარეცხი მანქანა", 
+            "პერსონების რაოდენობა":"13",
+            "ენერგოეფექტურობის კლასი":"A++",
+            "ნახევრად  ჩატვირთვის ფუნქცია":"დიახ",
+            "შრობა":"კონდესატით",
+            "კალათა ჩანგლებისთვის": "1",
+            "ზომა":"H85/W60/D60",
+            "ფერი":"ნაცრისფერი"                        
+          }
+        ]
+        
       },
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჭურჭლის სარეცხი მანქანები/ჭურჭლის-სარეცხი-მანქანა-TOSHIBA-DW-10F1CIS(W)-(10 პერსონა)/DW-10F1CIS(W).webp"],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "ჭურჭლის სარეცხი მანქანა TOSHIBA DW-10F1CIS(W) (10 პერსონა)",
+        currentPrice: 1039,
+        oldPrice: 600,
+        warranty: "5 წელი",
+        alt: "TOSHIBA",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "ბრენდი":"TOSHIBA", 
+            "მოდელი":"DW-10F1CIS(W)",
+            "ტიპი":"ჭურჭლის სარეცხი მანქანა", 
+            "პერსონების რაოდენობა":"10",
+            "ხმაურის დონე": "46dB",
+            "დისპლეი": "LED",
+            "ენერგოეფექტურობის კლასი":"A++",
+            "ანტიბაქტერიული ფილტრი":"დიახ",
+            "გავლების ფუნქცია მაღალ ტემპერატურაზე":"დიახ",                    
+          }
+        ]
+        
       },
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჭურჭლის სარეცხი მანქანები/ჭურჭლის-სარეცხი-მანქანა-TOSHIBA-DW-10F1CIS(S)-(10-პერსონა)/Website 550x550 Size.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჭურჭლის სარეცხი მანქანები/ჭურჭლის-სარეცხი-მანქანა-TOSHIBA-DW-10F1CIS(S)-(10-პერსონა)/Website 550x550 Size2.webp",],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "ჭურჭლის სარეცხი მანქანა TOSHIBA DW-10F1CIS(S) (10 პერსონა)",
+        currentPrice: 1059,
+        oldPrice: 600,
+        warranty: "5 წელი",
+        alt: "TOSHIBA",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "ბრენდი":"TOSHIBA", 
+            "მოდელი":"DW-10F1CIS(S)",
+            "ტიპი":"ჭურჭლის სარეცხი მანქანა", 
+            "პერსონების რაოდენობა":"10",
+            "ხმაურის დონე": "49dB",
+            "დისპლეი": "LED",
+            "ენერგოეფექტურობის კლასი":"A++",
+            "ანტიბაქტერიული ფილტრი":"დიახ",
+            "გავლების ფუნქცია მაღალ ტემპერატურაზე":"დიახ",                    
+          }
+        ]
+        
       },
       {
-        id: productIdCounter++,
-        productImage: "../assets/images/computerTechnic/testpc.png",
+        id: generateProductId(),
+        productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჭურჭლის სარეცხი მანქანები/ჭურჭლის-სარეცხი-მანქანა-TOSHIBA-DW-14F2CIS(BS)-(14-პერსონა)/Dish1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჭურჭლის სარეცხი მანქანები/ჭურჭლის-სარეცხი-მანქანა-TOSHIBA-DW-14F2CIS(BS)-(14-პერსონა)/Dish2.webp"],
         discountRate: "20%",
-        isDiscount: true,
-        productName: "Asus Gaming PC",
-        currentPrice: "$500",
-        oldPrice: "$600",
-        alt: "test",
+        isDiscount: false,
+        productName: "ჭურჭლის სარეცხი მანქანა TOSHIBA DW-14F2CIS(BS) (14 პერსონა)",
+        currentPrice: 1399,
+        oldPrice: 600,
+        warranty: "5 წელი",
+        alt: "TOSHIBA",
+        isInWishlist: false,
+        descriptions: [
+          {
+            "ტიპი":"ჩასაშენებელი",
+            "ენერგოეფექტურობის კლასი":"A++",
+            "კომპლექტი": "14",
+            "რეჟიმი":"8",
+            "ინტენსიური შრობა": "დიახ",
+            "ანტიბაქტერიული ფილტრი": "დიახ",
+            "ორმაგი სარეცხი ზონა": "დიახ",
+            "70°C ცხელი წყლით რეცხვა":"დიახ"                    
+          }
+        ]
+        
       },
+      
+      
     ]
   },
   {
