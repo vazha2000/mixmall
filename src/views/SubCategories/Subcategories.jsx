@@ -34,6 +34,10 @@ export const Subcategories = ({ item }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [item]);
+
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
