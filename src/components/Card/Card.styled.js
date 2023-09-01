@@ -127,7 +127,16 @@ export const SCartPriceWrapper = styled.div`
       filter: invert(40%) sepia(100%) saturate(10000%) hue-rotate(349deg)
         brightness(92%) contrast(100%);
     }
-    margin-left: 20px;
+  }
+
+  @media screen and (max-width: 450px){
+    font-size: 14px;
+
+    >div {
+      img {
+        width: 12px;
+      }
+    }
   }
 `;
 
