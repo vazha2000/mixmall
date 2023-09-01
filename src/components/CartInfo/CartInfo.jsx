@@ -95,7 +95,7 @@ export const CartInfo = ({
                           <div>
                             {item.productQuantity} x{" "}
                             <span>
-                              {item.currentPrice}
+                              {item.currentPrice.toFixed(2)}
                               <img src="assets/svg/lari.svg" alt="lari icon" />
                             </span>
                           </div>
