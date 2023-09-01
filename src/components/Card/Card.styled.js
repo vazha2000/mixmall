@@ -36,7 +36,8 @@ export const SAddToCardButton = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 10px 0;
+  text-align: center;
   cursor: pointer;
   transition: 0.2s ease;
   background-color: ${({ isInCart }) => (isInCart ? "#df3d41" : "fff")};
@@ -48,15 +49,7 @@ export const SAddToCardButton = styled(motion.div)`
   }
 
   > span {
-    font-size: 14px;
-  }
-
-  @media screen and (max-width: 480px) {
-    padding: 15px 0;
-
-    > span {
-      font-size: 12px;
-    }
+    font-size: 12px;
   }
 `;
 export const SCardSaleDiscount = styled.span`
@@ -96,8 +89,8 @@ export const SCardInfo = styled.div`
   flex-direction: column;
 `;
 
-export const SCardProductName = styled.h4`
-  font-size: 13px;
+export const SCardProductName = styled.span`
+  font-size: 12px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -110,7 +103,7 @@ export const SCardProductName = styled.h4`
   &:hover {
     text-decoration-line: underline;
     text-decoration-color: #1f1f1f;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
   }
 `;
 
@@ -129,40 +122,46 @@ export const SCartPriceWrapper = styled.div`
   width: max-content;
   display: flex;
 
-  > div {
-    margin-left: 20px;
+  > div:nth-child(1) {
+    > img {
+      filter: invert(40%) sepia(100%) saturate(10000%) hue-rotate(349deg)
+        brightness(92%) contrast(100%);
+    }
+  }
+
+  @media screen and (max-width: 450px){
+    font-size: 14px;
+
+    >div {
+      img {
+        width: 12px;
+      }
+    }
   }
 `;
 
 export const SCardOldPriceWrapper = styled(SCartPriceWrapper)`
   > hr {
-    width: 80%;
+    width: 100%;
     height: 2px;
-    background-color: #df3d41;
+    background-color: #1f1f1f;
     border: none;
-    transform: rotate(165deg);
     position: absolute;
-    top: 7px;
+    top: 8px;
+    right: 0;
+  }
+  > div:nth-child(1) {
+    > img {
+      filter: brightness(1) invert(0);
+    }
+    margin-left: 0;
   }
 `;
 
 export const SCardOldPrice = styled.span`
-  &::after {
-    content: "99";
-    position: absolute;
-    top: -25%;
-    font-size: 15px;
-  }
 `;
 export const SCardPrice = styled.span`
   color: #df3d41;
-
-  &::after {
-    content: "99";
-    position: absolute;
-    top: -25%;
-    font-size: 15px;
-  }
 `;
 
 export const SCardContentWrapper = styled.div`

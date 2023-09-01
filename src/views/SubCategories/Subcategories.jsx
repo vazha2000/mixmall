@@ -14,6 +14,7 @@ import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 import { ProductsFilter } from "../../components/ProductsFilter";
 import { SubcategoryPagination } from "../../components/SubcategoryPagination";
 import { useLocation } from "react-router-dom";
+import { Breadcrumb } from "../../components/Breadcrumb";
 
 export const Subcategories = ({ item }) => {
 
@@ -33,6 +34,10 @@ export const Subcategories = ({ item }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [item]);
+
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -43,7 +48,8 @@ export const Subcategories = ({ item }) => {
   const paginatedList = item.products.slice(firstIndex, lastIndex);
   return (
     <SSubcategories>
-      <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs>
+      {/* <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs> */}
+      {/* <Breadcrumb /> */}
       <div style={{ display: "flex", marginTop: "30px" }}>
         <SSubcategoriesSidebarContainer>
           <ProductsFilter />

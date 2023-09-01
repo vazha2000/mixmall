@@ -6,15 +6,6 @@ export const SDropDownMenuWrapper = styled.div`
   > div:nth-child(1) {
     height: 100%;
     transition: box-shadow 0.3s ease-in-out;
-      /* box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2); */
-
-    /* &:hover {
-      -webkit-box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
-      box-shadow: 11px 0px 21px 3px rgba(0, 0, 0, 0.75);
-      transition: box-shadow 0.3s ease-in-out;
-      box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
-    } */
   }
   position: absolute;
   top: 15px;

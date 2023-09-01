@@ -19,9 +19,8 @@ export const BestSellingProducts = () => {
     <SBestSellingProducts>
       <SBestSellingProductsLabel>
         <img src="assets/svg/labelIcon.svg" alt="label icon" />
-        <SBestSellingProductsLabelText>ამ თვეში</SBestSellingProductsLabelText>
+        <SBestSellingProductsLabelText>საუკეთესოდ გაყიდვადი პროდუქცია</SBestSellingProductsLabelText>
       </SBestSellingProductsLabel>
-      <SBestSellingProductsHeader>საუკეთესოდ გაყიდვადი პროდუქცია</SBestSellingProductsHeader>
       <SBestSellingProductsItems>
       {testProducts.map((item, index) => {
           return <Card

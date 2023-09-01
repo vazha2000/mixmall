@@ -240,25 +240,13 @@ export const SCheckoutProductTablePrice = styled.td`
   > hr {
     width: 95%;
     height: 2px;
-    background-color: #df3d41;
+    background-color: #1f1f1f;
     border: none;
-    transform: rotate(160deg);
     position: absolute;
-    top: 2px;
+    top: 6px;
     right: 8px;
   }
-  > span {
-    position: relative;
-    display: flex;
-    gap: 12px;
-    ::after {
-      content: "99";
-      position: absolute;
-      top: -10px;
-      right: 12px;
-      font-size: 14px;
-    }
-  }
+  
   position: relative;
   display: flex;
   flex-direction: column-reverse;

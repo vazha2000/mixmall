@@ -11,7 +11,9 @@ export const SBestSellingProductsLabel = styled(SBrowseByCategoryLabel)`
 `
 
 export const SBestSellingProductsLabelText = styled(SBrowseByCategoryLabelText)`
-
+  @media screen and (max-width: 450px){
+    font-size: 12px;
+  }
 `
 
 export const SBestSellingProductsHeader = styled.h2`

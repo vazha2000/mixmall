@@ -338,11 +338,11 @@ export const Checkout = () => {
                         width={20}
                       />
                       <span>
-                        {item.currentPrice}.
+                        {item.currentPrice.toFixed(2)}
                         <img src="assets/svg/lari.svg" alt="lari icon" />
                       </span>
                       <span>
-                        {item?.oldPrice}.
+                        {item?.oldPrice.toFixed(2)}
                         <img src="assets/svg/lari.svg" alt="lari icon" />
                       </span>
                       <hr />

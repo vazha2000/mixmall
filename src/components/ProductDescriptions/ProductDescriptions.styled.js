@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const SProductDescription = styled.div``;
+export const SProductDescription = styled.div`
+  padding: 0 10px;
+`;
 
 export const SProductDescriptionTableHeader = styled.tr`
   background-color: #df3d41;

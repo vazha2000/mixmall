@@ -5,6 +5,7 @@ export const SProductPage = styled.div`
   display: flex;
   margin: 3rem 0;
   padding: 0 15px;
+  gap: 10px;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -13,9 +14,10 @@ export const SProductPage = styled.div`
 `;
 
 export const SProductPageImages = styled.div`
-  flex: 3;
+  flex: 3.5;
   display: flex;
   height: max-content;
+  justify-content: center;
 
   @media screen and (max-width: 1400px) {
     flex-direction: column-reverse;
@@ -26,24 +28,27 @@ export const SProductPageImages = styled.div`
 `;
 
 export const SProductPageSmallImages = styled.div`
-  flex: 1;
+  
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 60px;
+  transform: translate(-50%);
+  gap: 15px;
 
-  @media screen and (max-width: 1400px) {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 96%;
+  @media screen and (max-width: 380px){
+    width: 50px;
   }
-  @media screen and (max-width: 1024px) {
-    flex-direction: column;
+  @media screen and (max-width: 330px){
+    width: 40px;
   }
 `;
 
 export const SProductPageSmallImage = styled.img`
-  width: 80%;
-  border-radius: 5px;
+  min-width: 100%;
+  border: 1px solid #b8b8b8;
   background-color: #fff;
   box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
@@ -66,17 +71,17 @@ export const SProductPageSmallImage = styled.img`
 `;
 
 export const SProductPageMainImage = styled.div`
-  flex: 4;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 export const SProductPageBigImage = styled.img`
-  width: 90%;
+  width: 100%;
   object-fit: cover;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background-color: #fff;
   box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
@@ -104,7 +109,6 @@ export const SProductPageOptions = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 10px;
   box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -2px 2px 10px -1px rgba(0, 0, 0, 0.2);

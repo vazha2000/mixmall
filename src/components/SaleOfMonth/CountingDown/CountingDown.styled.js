@@ -3,9 +3,14 @@ import styled from "styled-components";
 export const SCountingDown = styled.div`
   display: flex;
   gap: 20px;
+  font-size: 14px;
 
-  @media screen and (max-width: 760px) {
-    gap: 15px;
+  @media screen and (max-width: 500px) {
+    gap: 10px;
+    justify-content: center;
+  }
+  @media screen and (max-width: 280px) {
+    gap: 5px;
   }
 `
 
