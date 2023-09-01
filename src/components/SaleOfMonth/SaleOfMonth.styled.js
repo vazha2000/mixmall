@@ -5,7 +5,7 @@ import {
 } from "../BrowseByCategory/BrowseByCategory.styled";
 
 export const SSaleOfMonth = styled.div`
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 0 10px;
 `;
 
