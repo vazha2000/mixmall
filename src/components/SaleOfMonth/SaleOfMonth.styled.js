@@ -6,13 +6,20 @@ import {
 
 export const SSaleOfMonth = styled.div`
   margin-top: 20px;
-  margin-bottom: 4.375rem;
   padding: 0 10px;
 `;
 
 export const SSaleOfMonthLabel = styled(SBrowseByCategoryLabel)`
   margin-bottom: 1.5rem;
 `;
+
+export const SCountingDownLabel = styled.div`
+  display: block;
+
+  @media screen and (max-width: 500px){
+    display: none;
+  }
+`
 
 export const SSaleOfMonthLabelText = styled(SBrowseByCategoryLabelText)``;
 export const SSaleOfMonthHeaderButton = styled.div`
@@ -29,16 +36,19 @@ export const SSaleOfMonthHeaderCountingDown = styled.div`
   display: flex;
   gap: 87px;
   align-items: flex-end;
+  display: none;
 
   @media screen and (max-width: 900px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
   }
+  @media screen and (max-width: 500px){
+    display: block ;
+  }
 `
 
 export const SSaleOfMonthButton = styled.button`
-  /* padding: 1rem 3rem; */
   background-color: #df3d41;
   border-radius: 0.25rem;
   border: none;
@@ -47,9 +57,6 @@ export const SSaleOfMonthButton = styled.button`
   color: #f2f2f2;
   height: 50px;
   width: 160px;
-  position: absolute;
-  top: 0;
-  right: 0;
   white-space: nowrap;
 
   &:hover {
@@ -63,8 +70,13 @@ export const SSaleOfMonthButton = styled.button`
   }
 `;
 
+export const SSAleOfMonthButtonContainer = styled.div`
+  text-align: center;
+  margin: 50px 0;
+`
+
 export const SSaleOfMonthItems = styled.div`
-  margin-top: 60px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
