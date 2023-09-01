@@ -122,7 +122,7 @@ export const SCartPriceWrapper = styled.div`
   width: max-content;
   display: flex;
 
-  > div {
+  > div:nth-child(1) {
     > img {
       filter: invert(40%) sepia(100%) saturate(10000%) hue-rotate(349deg)
         brightness(92%) contrast(100%);
@@ -133,13 +133,19 @@ export const SCartPriceWrapper = styled.div`
 
 export const SCardOldPriceWrapper = styled(SCartPriceWrapper)`
   > hr {
-    width: 80%;
+    width: 100%;
     height: 2px;
     background-color: #1f1f1f;
     border: none;
     position: absolute;
     top: 8px;
     right: 0;
+  }
+  > div:nth-child(1) {
+    > img {
+      filter: brightness(1) invert(0);
+    }
+    margin-left: 0;
   }
 `;
 
