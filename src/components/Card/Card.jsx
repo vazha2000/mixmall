@@ -116,11 +116,12 @@ export const Card = (props) => {
   };
 
   const formatNumber = (number) => {
-    const parts = number.toFixed(2).split('.');
+    const parts = number.toFixed(2).split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return parts.join('.');
+    return parts.join(".");
   };
   const formattedPrice = formatNumber(currentPrice);
+  const formattedOldPrice = formatNumber(oldPrice);
   return (
     <SCard
       onMouseEnter={handleHover}
@@ -158,11 +159,11 @@ export const Card = (props) => {
         <SCardPriceContainer isHovered={isHovered}>
           {isDiscount && (
             <SCardOldPriceWrapper>
-              <SCardOldPrice>{oldPrice}.</SCardOldPrice>
-              <hr />
               <div>
                 <img src="assets/svg/lari.svg" alt="lari icon" width={15} />
               </div>
+              <SCardOldPrice>{formattedOldPrice}</SCardOldPrice>
+              <hr />
             </SCardOldPriceWrapper>
           )}
           <SCartPriceWrapper>

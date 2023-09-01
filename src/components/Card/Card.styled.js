@@ -123,6 +123,10 @@ export const SCartPriceWrapper = styled.div`
   display: flex;
 
   > div {
+    > img {
+      filter: invert(40%) sepia(100%) saturate(10000%) hue-rotate(349deg)
+        brightness(92%) contrast(100%);
+    }
     margin-left: 20px;
   }
 `;
@@ -131,21 +135,15 @@ export const SCardOldPriceWrapper = styled(SCartPriceWrapper)`
   > hr {
     width: 80%;
     height: 2px;
-    background-color: #df3d41;
+    background-color: #1f1f1f;
     border: none;
-    transform: rotate(165deg);
     position: absolute;
-    top: 7px;
+    top: 8px;
+    right: 0;
   }
 `;
 
 export const SCardOldPrice = styled.span`
-  &::after {
-    content: "99";
-    position: absolute;
-    top: -25%;
-    font-size: 15px;
-  }
 `;
 export const SCardPrice = styled.span`
   color: #df3d41;
