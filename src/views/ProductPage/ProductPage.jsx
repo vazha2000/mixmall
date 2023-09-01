@@ -176,7 +176,8 @@ export const ProductPage = ({ product }) => {
           productName={product.productName}
         />
         <SProductPageImages>
-          <SProductPageSmallImages>
+          <SProductPageMainImage>
+            <SProductPageSmallImages>
             {product.productImage.map((item, index) => (
               <SProductPageSmallImage
                 onClick={() => setIsImageClicked(index)}
@@ -186,7 +187,6 @@ export const ProductPage = ({ product }) => {
               />
             ))}
           </SProductPageSmallImages>
-          <SProductPageMainImage>
             <SProductPageBigImage
               src={product.productImage[0]}
               onClick={() => setIsImageClicked(0)}
