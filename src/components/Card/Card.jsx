@@ -114,6 +114,13 @@ export const Card = (props) => {
       setShowCartPopup(false);
     }, 1500);
   };
+
+  const formatNumber = (number) => {
+    const parts = number.toFixed(2).split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join('.');
+  };
+  const formattedPrice = formatNumber(currentPrice);
   return (
     <SCard
       onMouseEnter={handleHover}
@@ -128,7 +135,12 @@ export const Card = (props) => {
         showCartRemovePopup={showCartRemovePopup}
         productName={productName}
       />
-      {isDiscount && <SCardSaleDiscount isHovered={isHovered} discountRate={discountRate}></SCardSaleDiscount>}
+      {isDiscount && (
+        <SCardSaleDiscount
+          isHovered={isHovered}
+          discountRate={discountRate}
+        ></SCardSaleDiscount>
+      )}
       <SCardContentWrapper isHovered={isHovered}>
         <SStyledLink to={path}>
           <SCardImageContainer>
@@ -149,19 +161,23 @@ export const Card = (props) => {
               <SCardOldPrice>{oldPrice}.</SCardOldPrice>
               <hr />
               <div>
-                <img src="assets/svg/lari.svg" alt="lari icon" width={15}/>
+                <img src="assets/svg/lari.svg" alt="lari icon" width={15} />
               </div>
             </SCardOldPriceWrapper>
           )}
           <SCartPriceWrapper>
-            <SCardPrice>{currentPrice}.</SCardPrice>
             <div>
-              <img src="assets/svg/lari.svg" alt="lari icon" width={15}/>
+              <img src="assets/svg/lari.svg" alt="lari icon" width={15} />
             </div>
+            <SCardPrice>{formattedPrice}</SCardPrice>
           </SCartPriceWrapper>
         </SCardPriceContainer>
         <SAddToCardButton isInCart={isInCart} onClick={handleCartClick}>
-          {isInCart ? <span>წაშლა</span> : <span>დამატება</span>}
+          {isInCart ? (
+            <span>კალათიდან წაშლა</span>
+          ) : (
+            <span>კალათაში დამატება</span>
+          )}
         </SAddToCardButton>
       </SCardContentWrapper>
       <SCardWishlist
