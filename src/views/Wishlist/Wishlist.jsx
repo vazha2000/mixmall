@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { WishlistContext } from "../../context/WishlistContext";
-import { SWishlist, SWishlistEmpty } from "./Wishlist.styled";
+import { SWishlist, SWishlistEmpty, SWishlistEmptyContainer } from "./Wishlist.styled";
 import { Card } from "../../components/Card/Card";
 
 export const Wishlist = () => {
@@ -20,9 +20,9 @@ export const Wishlist = () => {
   };
 
   return (
-    <SWishlist quantity={wishlist.length % 4 !== 2}>
+    <SWishlist quantity={wishlist.length === 0}>
       {wishlist.length === 0 && (
-        <SWishlistEmpty>შენი სურვილების სია ცარიელია</SWishlistEmpty>
+          <SWishlistEmpty>შენი სურვილების სია ცარიელია</SWishlistEmpty>
       )}
       {wishlist.map((item, index) => (
         <Card
