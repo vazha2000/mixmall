@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import { WishlistContext } from "../../context/WishlistContext";
-import { SWishlist, SWishlistEmpty, SWishlistEmptyContainer } from "./Wishlist.styled";
+import { SWishlist, SWishlistEmpty } from "./Wishlist.styled";
 import { Card } from "../../components/Card/Card";
 
 export const Wishlist = () => {
   const { wishlist } = useContext(WishlistContext);
-  console.log(wishlist)
 
   const [hoverStates, setHoverStates] = useState(
     wishlist.map(() => false)

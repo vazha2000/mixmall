@@ -5,6 +5,7 @@ export const SProductPage = styled.div`
   display: flex;
   margin: 3rem 0;
   padding: 0 15px;
+  gap: 10px;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -33,13 +34,20 @@ export const SProductPageSmallImages = styled.div`
   position: absolute;
   bottom: 5px;
   left: 50%;
-  width: 18%;
-  gap: 10px;
+  width: 60px;
   transform: translate(-50%);
+  gap: 15px;
+
+  @media screen and (max-width: 380px){
+    width: 50px;
+  }
+  @media screen and (max-width: 330px){
+    width: 40px;
+  }
 `;
 
 export const SProductPageSmallImage = styled.img`
-  width: 80%;
+  min-width: 100%;
   border: 1px solid #b8b8b8;
   background-color: #fff;
   box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.2);
@@ -70,7 +78,7 @@ export const SProductPageMainImage = styled.div`
 `;
 
 export const SProductPageBigImage = styled.img`
-  width: 90%;
+  width: 100%;
   object-fit: cover;
   border: 1px solid rgba(0, 0, 0, 0.1);
   /* border-radius: 10px; */
