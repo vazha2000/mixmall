@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
+  SEmptyProducts,
   SSubcategories,
   SSubcategoriesBreadcrumbs,
   SSubcategoriesCategories,
@@ -69,7 +70,7 @@ export const Subcategories = ({ item }) => {
             onFilterChange={handleFilterChange}
           />
         </SSubcategoriesSidebarContainer>
-        <SSubcategoriesProducts>
+        {filteredProducts.length === 0 ? <SEmptyProducts><h3>სია ცარიელია</h3></SEmptyProducts> : <SSubcategoriesProducts>
           {paginatedList.map((card, index) => {
             return (
               <Card
@@ -90,7 +91,8 @@ export const Subcategories = ({ item }) => {
               />
             );
           })}
-        </SSubcategoriesProducts>
+        </SSubcategoriesProducts>}
+        
       </div>
       <SubcategoryPagination
         item={filteredProducts}

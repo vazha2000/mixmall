@@ -98,7 +98,7 @@ export const SCardProductName = styled.span`
   padding-left: 4px;
   cursor: pointer;
   width: max-content;
-  height: 35px;
+  height: 30px;
 
   &:hover {
     text-decoration-line: underline;
