@@ -16,10 +16,16 @@ export const SSubcategoriesSidebarContainer = styled.div`
   flex: 1;
   flex-direction: column;
   position: relative;
+`
 
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }  
+export const SFilterProducts = styled.div`
+  display: flex;
+  margin-top: 30px;
+  gap: 10px;
+
+  @media screen and (max-width: 830px){
+    flex-direction: column-reverse;
+  }
 `
 
 export const SSubcategoriesCategories = styled(motion.button)`

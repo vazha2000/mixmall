@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const SProductsFilter = styled.div`
-  width: 95%;
+  width: 100%;
   /* margin-top: .8rem; */
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ededed;

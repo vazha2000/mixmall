@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   SEmptyProducts,
+  SFilterProducts,
   SSubcategories,
   SSubcategoriesBreadcrumbs,
   SSubcategoriesCategories,
@@ -61,7 +62,7 @@ export const Subcategories = ({ item }) => {
     <SSubcategories>
       {/* <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs> */}
       {/* <Breadcrumb /> */}
-      <div style={{ display: "flex", marginTop: "30px" }}>
+      <SFilterProducts>
         <SSubcategoriesSidebarContainer>
           <ProductsFilter
             maxPrice={maxPrice}
@@ -93,7 +94,7 @@ export const Subcategories = ({ item }) => {
           })}
         </SSubcategoriesProducts>}
         
-      </div>
+      </SFilterProducts>
       <SubcategoryPagination
         item={filteredProducts}
         onPageChange={handlePageChange}
