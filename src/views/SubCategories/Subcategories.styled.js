@@ -55,3 +55,16 @@ export const SSubcategoriesProducts = styled.ul`
     grid-template-columns: repeat(2, 1fr);
   }
 `
+
+export const SEmptyProducts = styled.div`
+  > h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`
