@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   SPriceFilter,
   SPriceFilterButton,
@@ -19,6 +19,11 @@ export const ProductsFilter = ({ minPrice, maxPrice, products, onFilterChange })
   const STEP = 1;
   const MIN = minPrice;
   const MAX = maxPrice;
+
+
+  useEffect(() => {
+    setValues([minPrice, maxPrice]);
+  }, [minPrice, maxPrice]);
 
   const filterByPrice = (minPrice, maxPrice) => {
     const filteredProducts = products.filter((product) => {
