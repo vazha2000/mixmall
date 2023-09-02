@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const SLayout = styled.div`
-  width: 70%;
+  /* width: 70%; */
+  width: 1240px;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -13,7 +14,7 @@ export const SLayout = styled.div`
 
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.15), -5px 0px 10px rgba(0, 0, 0, 0.15);
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1260px){
     width: 100%;
   }
 `
