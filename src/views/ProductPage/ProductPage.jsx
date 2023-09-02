@@ -199,7 +199,7 @@ export const ProductPage = ({ product }) => {
             <span>{product.currentPrice.toFixed(2)} ₾</span>
             {product.isDiscount && <span>{product.oldPrice.toFixed(2)} ₾</span>}
           </SProductPrices>
-          <SProductWarranty>გარანტია: <span>2 წელი</span></SProductWarranty>
+          <SProductWarranty>გარანტია: <span>{product.warranty}</span></SProductWarranty>
           <SProductQuantityBuyFavorites>
             <div>
               <SProductQuantity>

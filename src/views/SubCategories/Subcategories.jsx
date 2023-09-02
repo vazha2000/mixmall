@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Sidebar } from "../../components/Sidebar";
 import {
   SSubcategories,
   SSubcategoriesBreadcrumbs,
@@ -10,17 +9,20 @@ import {
 } from "./Subcategories.styled";
 import { Card } from "../../components/Card";
 import { testProducts } from "../../data/data";
-import { SearchInputHamburger } from "../../components/SearchInputHamburger";
 import { ProductsFilter } from "../../components/ProductsFilter";
 import { SubcategoryPagination } from "../../components/SubcategoryPagination";
 import { useLocation } from "react-router-dom";
 import { Breadcrumb } from "../../components/Breadcrumb";
 
 export const Subcategories = ({ item }) => {
+  const productPrices = item.products.map((item) => item.currentPrice);
+  const maxPrice = Math.max(...productPrices);
+  const minPrice = Math.min(...productPrices);
 
   const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
+  const [filteredProducts, setFilteredProducts] = useState(item.products);
 
-  const { pathname } = useLocation();  
+  const { pathname } = useLocation();
   const subcategoryPath = pathname + "/";
 
   const handleHover = (index) => {
@@ -35,6 +37,8 @@ export const Subcategories = ({ item }) => {
   const itemsPerPage = 4;
 
   useEffect(() => {
+    setHoverStates(testProducts.map(() => false));
+    setFilteredProducts(item.products);
     setCurrentPage(1);
   }, [item]);
 
@@ -45,14 +49,25 @@ export const Subcategories = ({ item }) => {
   const lastIndex = currentPage * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
 
-  const paginatedList = item.products.slice(firstIndex, lastIndex);
+  const paginatedList = filteredProducts.slice(firstIndex, lastIndex);
+
+  const handleFilterChange = (newFilteredProducts) => {
+    setFilteredProducts(newFilteredProducts);
+    setCurrentPage(1);
+  };
+
   return (
     <SSubcategories>
       {/* <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs> */}
       {/* <Breadcrumb /> */}
       <div style={{ display: "flex", marginTop: "30px" }}>
         <SSubcategoriesSidebarContainer>
-          <ProductsFilter />
+          <ProductsFilter
+            maxPrice={maxPrice}
+            minPrice={minPrice}
+            products={item.products}
+            onFilterChange={handleFilterChange}
+          />
         </SSubcategoriesSidebarContainer>
         <SSubcategoriesProducts>
           {paginatedList.map((card, index) => {
@@ -78,7 +93,7 @@ export const Subcategories = ({ item }) => {
         </SSubcategoriesProducts>
       </div>
       <SubcategoryPagination
-        item={item}
+        item={filteredProducts}
         onPageChange={handlePageChange}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
@@ -87,3 +102,4 @@ export const Subcategories = ({ item }) => {
     </SSubcategories>
   );
 };
+

@@ -16,7 +16,7 @@ export const SubcategoryPagination = ({
   itemsPerPage,
   setCurrentPage,
 }) => {
-  const totalPages = Math.ceil(item.products.length / itemsPerPage);
+  const totalPages = Math.ceil(item.length / itemsPerPage);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {

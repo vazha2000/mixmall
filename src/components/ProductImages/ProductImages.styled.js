@@ -33,7 +33,7 @@ export const SProductImageContainer = styled.div`
   max-height: 90%;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: inherit;
+  background-color: #fff;
 `;
 export const SProductImage = styled.img`
   object-fit: contain;
