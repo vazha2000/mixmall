@@ -20,7 +20,6 @@ export const Subcategories = ({ item }) => {
   const productPrices = item.products.map((item) => item.currentPrice);
   const maxPrice = Math.max(...productPrices);
   const minPrice = Math.min(...productPrices);
-  console.log(item)
 
   const [hoverStates, setHoverStates] = useState(saleProducts.map(() => false));
   const [filteredProducts, setFilteredProducts] = useState(item.products);
