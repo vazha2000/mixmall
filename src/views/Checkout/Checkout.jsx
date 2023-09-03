@@ -29,7 +29,6 @@ import {
   SFormSubmitButtonContainer,
   SLastnameInput,
   SMailInput,
-  SOrderNotification,
   SPaymentSelect,
   SPhoneInput,
   SPopulatedAreaInput,
