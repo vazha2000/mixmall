@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { SBestSellingProducts, SBestSellingProductsButton, SBestSellingProductsButtonWrapper, SBestSellingProductsHeader, SBestSellingProductsItems, SBestSellingProductsLabel, SBestSellingProductsLabelText } from './BestSellingProducts.styled'
-import { testProducts } from '../../data/data'
+import { saleProducts } from '../../data/data'
 import { Card } from '../Card'
 
 export const BestSellingProducts = () => {
 
-  const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
+  const [hoverStates, setHoverStates] = useState(saleProducts.map(() => false));
 
   const handleHover = (index) => {
     setHoverStates((prevStates) => {
@@ -22,7 +22,7 @@ export const BestSellingProducts = () => {
         <SBestSellingProductsLabelText>საუკეთესოდ გაყიდვადი პროდუქცია</SBestSellingProductsLabelText>
       </SBestSellingProductsLabel>
       <SBestSellingProductsItems>
-      {testProducts.map((item, index) => {
+      {saleProducts.map((item, index) => {
           return <Card
           key={index}
           productImage={item.productImage}
