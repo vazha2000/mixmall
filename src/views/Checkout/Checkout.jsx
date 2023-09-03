@@ -184,24 +184,17 @@ export const Checkout = () => {
   };
 
   const onSubmit = (data) => {
-    data.cart = cart.map((item) => ({
-      productName: item.productName,
-      price: item.currentPrice,
-      oldPrice: item.oldPrice,
-      quantity: item.productQuantity,
-    }));
-    console.log(data);
-    sendEmail(data)
+    // data.cart = cart.map((item) => ({
+    //   productName: item.productName,
+    //   price: item.currentPrice,
+    //   oldPrice: item.oldPrice,
+    //   quantity: item.productQuantity,
+    // }));
+    // console.log(data);
+    // sendEmail(data)
     // setCart([])
     reset();
   };
-
-  const data = cart.map((item) => ({
-    productName: item.productName,
-    quantity: item.productQuantity,
-    price: item.currentPrice,
-  }))
-  console.log(data[0].price * data[0].quantity)
 
   return (
     <>
