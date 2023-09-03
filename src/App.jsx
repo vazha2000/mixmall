@@ -11,6 +11,7 @@ import { CheckoutProvider } from "./context/CheckoutContext";
 import { Checkout } from "./views/Checkout";
 import { SearchedProducts } from "./views/SearchedProducts";
 import { AllFoundProductsProvider } from "./context/AllFoundProductsContext";
+import { SellingProducts } from "./views/SellingProducts";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
               <Route path="/wishlist" element={<Wishlist />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/search-products" element={<SearchedProducts />} />
+              <Route path="/selling-products" element={<SellingProducts />}/>
             </Routes>
           </Layout>
         </AllFoundProductsProvider>
