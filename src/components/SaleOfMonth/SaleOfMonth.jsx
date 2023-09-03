@@ -54,6 +54,7 @@ export const SaleOfMonth = () => {
               handleHover={() => handleHover(index)}
               isHovered={hoverStates[index]}
               path={`${item.categoryName}/${item.subcategoryName}/${item.productName}`}
+              id={item.id}
             />
           );
         })}

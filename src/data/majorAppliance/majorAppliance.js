@@ -61,7 +61,7 @@ export const majorAppliance = [
     subcategoryName: "მაცივრები",
     products: [
       {
-        id: generateProductId(),
+        id: 1,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-REGAL-AG263W/REGAL-AG263W-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-REGAL-AG263W/REGAL-AG263W-2.webp"],
         discountRate: "20%",
         isDiscount: false,
@@ -92,7 +92,7 @@ export const majorAppliance = [
         
       },
       {
-        id: generateProductId(),
+        id: 2,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ნახევრად-მშრალი-მაცივარი-MIDEA-MDRD142SLF30/MIDEA-MDRD142SLF30-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ნახევრად-მშრალი-მაცივარი-MIDEA-MDRD142SLF30/MIDEA-MDRD142SLF30-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ნახევრად-მშრალი-მაცივარი-MIDEA-MDRD142SLF30/MIDEA-MDRD142SLF30-3.webp"],
         discountRate: "20%",
         isDiscount: false,
@@ -124,7 +124,7 @@ export const majorAppliance = [
         
       },
       {
-        id: generateProductId(),
+        id: 3,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-MIDEA-MDRT294FGF01-(207-L)/MIDEA-MDRT294FGF01-1.png", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-MIDEA-MDRT294FGF01-(207-L)/MIDEA-MDRT294FGF01-2.png", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/მაცივარი-MIDEA-MDRT294FGF01-(207-L)/MIDEA-MDRT294FGF01-3.png"],
         discountRate: "20%",
         isDiscount: false,
@@ -155,7 +155,7 @@ export const majorAppliance = [
         
       },
       {
-        id: generateProductId(),
+        id: 4,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ორკამერიანი-მაცივარი-MDRT294FGF02-(204-L)/MIDEA-MDRT294FGF02-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ორკამერიანი-მაცივარი-MDRT294FGF02-(204-L)/MIDEA-MDRT294FGF02-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/მაცივრები/ორკამერიანი-მაცივარი-MDRT294FGF02-(204-L)/MIDEA-MDRT294FGF02-3.webp",],
         discountRate: "20%",
         isDiscount: false,
@@ -418,7 +418,7 @@ export const majorAppliance = [
     subcategoryName: "ჩასაშენებელი სამეული",
     products: [
       {
-        id: generateProductId(),
+        id: 1,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-BLACK/AlneoMain.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-BLACK/Alneo1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-BLACK/Alneo2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-BLACK/Alneo3.webp"],
         discountRate: "20%",
         isDiscount: false,
@@ -446,7 +446,7 @@ export const majorAppliance = [
         
       },
       {
-        id: generateProductId(),
+        id: 2,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V1/AlneoInoxMain.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V1/AlneoInox1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V1/AlneoInox2.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V1/AlneoInox3.webp",],
         discountRate: "20%",
         isDiscount: false,
@@ -475,7 +475,7 @@ export const majorAppliance = [
         
       },
       {
-        id: generateProductId(),
+        id: 3,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V2/AlneoInoxV2Main.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V2/AlneoInoxV2-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V2/AlneoInoxV2-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-ALNEO-INOX-V2/AlneoInoxV2-3.webp"],
         discountRate: "20%",
         isDiscount: false,
@@ -505,7 +505,7 @@ export const majorAppliance = [
         
       },
       {
-        id: generateProductId(),
+        id: 4,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-SILVERLINE-INOX/SilverlineInoxMain.webp","../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-SILVERLINE-INOX/SilverlineInox1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-SILVERLINE-INOX/SilverlineInox2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ჩასაშენებელი სამეული/ჩასაშენებელი-სამეული-SILVERLINE-INOX/SilverlineInox3.webp"],
         discountRate: "20%",
         isDiscount: false,
@@ -849,7 +849,7 @@ export const majorAppliance = [
     subcategoryName: "ტელევიზორები",
     products: [
       {
-        id: generateProductId(),
+        id: 5,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2E-LED-32-HD-32A06K-Smart-Android-Black/32A06K-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2E-LED-32-HD-32A06K-Smart-Android-Black/32A06K-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2E-LED-32-HD-32A06K-Smart-Android-Black/32A06K-3.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2E-LED-32-HD-32A06K-Smart-Android-Black/32A06K-4.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2E-LED-32-HD-32A06K-Smart-Android-Black/32A06K-5.webp"],
         discountRate: "20%",
         isDiscount: false,
@@ -888,7 +888,7 @@ export const majorAppliance = [
         
       },
       {
-        id: generateProductId(),
+        id: 6,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-43-FHD-43A06K-Smart-Android-Black/43A06K-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-43-FHD-43A06K-Smart-Android-Black/43A06K-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-43-FHD-43A06K-Smart-Android-Black/43A06K-3.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-43-FHD-43A06K-Smart-Android-Black/43A06K-4.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-43-FHD-43A06K-Smart-Android-Black/43A06K-5.webp"],
         discountRate: "20%",
         isDiscount: false,
@@ -921,7 +921,7 @@ export const majorAppliance = [
         
       },
       {
-        id: generateProductId(),
+        id: 7,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-50-4K-50A06K-Smart-Android-Black/50A06K-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-50-4K-50A06K-Smart-Android-Black/50A06K-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-50-4K-50A06K-Smart-Android-Black/50A06K-3.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-50-4K-50A06K-Smart-Android-Black/50A06K-4.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-50-4K-50A06K-Smart-Android-Black/50A06K-5.webp",],
         discountRate: "20%",
         isDiscount: false,
@@ -956,7 +956,7 @@ export const majorAppliance = [
         
       },
       {
-        id: generateProductId(),
+        id: 8,
         productImage: ["../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-55-4K-55A06L-Smart-Android-Black/55A06L-1.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-55-4K-55A06L-Smart-Android-Black/55A06L-2.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-55-4K-55A06L-Smart-Android-Black/55A06L-3.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-55-4K-55A06L-Smart-Android-Black/55A06L-4.webp", "../assets/images/მსხვილი-საყოფაცხოვრებო-ტექნიკა/ტელევიზორები/ტელევიზორი-2Е-TV-LED-55-4K-55A06L-Smart-Android-Black/55A06L-5.webp",],
         discountRate: "20%",
         isDiscount: false,
