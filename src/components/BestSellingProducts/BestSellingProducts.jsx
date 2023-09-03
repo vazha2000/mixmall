@@ -15,6 +15,8 @@ export const BestSellingProducts = () => {
     })
   }
 
+  const visibleProducts = bestSellingProducts.slice(0, 8);
+
   return (
     <SBestSellingProducts>
       <SBestSellingProductsLabel>
@@ -22,9 +24,10 @@ export const BestSellingProducts = () => {
         <SBestSellingProductsLabelText>საუკეთესოდ გაყიდვადი პროდუქცია</SBestSellingProductsLabelText>
       </SBestSellingProductsLabel>
       <SBestSellingProductsItems>
-      {bestSellingProducts.map((item, index) => {
+      {visibleProducts.map((item, index) => {
           return <Card
           key={index}
+          index={index}
           productImage={item.productImage}
           discountRate={item.discountRate}
           isDiscount={item.isDiscount}
@@ -34,7 +37,8 @@ export const BestSellingProducts = () => {
           alt={item.alt}
           handleHover={() => handleHover(index)}
           isHovered={hoverStates[index]}
-          path={`${item.categoryName}/${item.subcategoryName}/${item.productName}`}
+          path={`/${item.categoryName}/${item.subcategoryName}/${item.productName}`}
+          id={item.id}
         />
         })}
       </SBestSellingProductsItems>
