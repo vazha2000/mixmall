@@ -10,12 +10,11 @@ import {
   SSaleOfMonthLabelText,
 } from "./SaleOfMonth.styled";
 import { Card } from "../Card";
-import { testProducts } from "../../data/data";
+import { saleProducts } from "../../data/data";
 import { CountingDown } from "./CountingDown/CountingDown";
-import { SLine } from "../BrowseByCategory/BrowseByCategory.styled";
 
 export const SaleOfMonth = () => {
-  const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
+  const [hoverStates, setHoverStates] = useState(saleProducts.map(() => false));
 
   const handleHover = (index) => {
     setHoverStates((prevStates) => {
@@ -25,7 +24,7 @@ export const SaleOfMonth = () => {
     });
   };
 
-  const visibleProducts = testProducts.slice(0, 4);
+  const visibleProducts = saleProducts.slice(0, 4);
 
   return (
     <SSaleOfMonth>
@@ -44,6 +43,7 @@ export const SaleOfMonth = () => {
           return (
             <Card
               key={index}
+              index={index}
               productImage={item.productImage}
               discountRate={item.discountRate}
               isDiscount={item.isDiscount}
@@ -53,6 +53,7 @@ export const SaleOfMonth = () => {
               alt={item.alt}
               handleHover={() => handleHover(index)}
               isHovered={hoverStates[index]}
+              path={`${item.categoryName}/${item.subcategoryName}/${item.productName}`}
             />
           );
         })}

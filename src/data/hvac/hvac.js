@@ -11,7 +11,7 @@ export const hvac = [
   {
     id: uuidv4(),
     name: "კონდიციონერები",
-    subcategoryName: "701",
+    subcategoryName: "კონდიციონერები",
     products: [
       {
         id: generateProductId(),

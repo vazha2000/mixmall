@@ -10,7 +10,7 @@ import {
   SSubcategoriesSidebarWrapper,
 } from "./Subcategories.styled";
 import { Card } from "../../components/Card";
-import { testProducts } from "../../data/data";
+import { saleProducts } from "../../data/data";
 import { ProductsFilter } from "../../components/ProductsFilter";
 import { SubcategoryPagination } from "../../components/SubcategoryPagination";
 import { useLocation } from "react-router-dom";
@@ -21,7 +21,7 @@ export const Subcategories = ({ item }) => {
   const maxPrice = Math.max(...productPrices);
   const minPrice = Math.min(...productPrices);
 
-  const [hoverStates, setHoverStates] = useState(testProducts.map(() => false));
+  const [hoverStates, setHoverStates] = useState(saleProducts.map(() => false));
   const [filteredProducts, setFilteredProducts] = useState(item.products);
 
   const { pathname } = useLocation();
@@ -39,7 +39,7 @@ export const Subcategories = ({ item }) => {
   const itemsPerPage = 4;
 
   useEffect(() => {
-    setHoverStates(testProducts.map(() => false));
+    setHoverStates(saleProducts.map(() => false));
     setFilteredProducts(item.products);
     setCurrentPage(1);
   }, [item]);

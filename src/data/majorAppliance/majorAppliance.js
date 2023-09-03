@@ -58,7 +58,7 @@ export const majorAppliance = [
   {
     id: uuidv4(),
     name: "მაცივრები",
-    subcategoryName: "102",
+    subcategoryName: "მაცივრები",
     products: [
       {
         id: generateProductId(),
@@ -415,7 +415,7 @@ export const majorAppliance = [
   {
     id: uuidv4(),
     name: "ჩასაშენებელი სამეული",
-    subcategoryName: "103",
+    subcategoryName: "ჩასაშენებელი სამეული",
     products: [
       {
         id: generateProductId(),
@@ -846,7 +846,7 @@ export const majorAppliance = [
   {
     id: uuidv4(),
     name: "ტელევიზორები",
-    subcategoryName: "109",
+    subcategoryName: "ტელევიზორები",
     products: [
       {
         id: generateProductId(),
