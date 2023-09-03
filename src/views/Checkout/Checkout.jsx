@@ -19,6 +19,7 @@ import {
   SCheckoutProductTableBoxImageContent,
   SCheckoutProductTableBoxNameContent,
   SCheckoutProductTablePrice,
+  SCheckoutStyledLink,
   SCompanyNameInput,
   SCountrySelect,
   SDistrictInput,
@@ -38,12 +39,14 @@ import {
 import { CheckoutContext } from "../../context/CheckoutContext";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
+import { SStyledLink } from "../../components/DropdownMenu/DropdownMenu.styled";
 
 export const Checkout = () => {
   const { cart, setCart, removeFromCart, updateProductQuantity } =
     useContext(CheckoutContext);
 
-  console.log(cart);
+  // console.log(cart);
 
   const totalPrice = cart.reduce((sum, item) => {
     const productPrice = item.productQuantity * item.currentPrice;
@@ -160,8 +163,12 @@ export const Checkout = () => {
         <SCheckoutCartEmpty>
           <h2>თქვენი კალათა ცარიელია</h2>
           <div>
-            <h4>მთავარ გვერდზე დაბრუნება</h4>
-            <img src="assets/svg/home.svg" alt="" />
+            <SCheckoutStyledLink to="/">
+              <h4>მთავარ გვერდზე დაბრუნება</h4>
+            </SCheckoutStyledLink>
+            <Link to="/">
+              <img src="assets/svg/home.svg" alt="" />
+            </Link>
           </div>
         </SCheckoutCartEmpty>
       ) : (

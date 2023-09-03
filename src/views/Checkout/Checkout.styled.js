@@ -6,26 +6,22 @@ import {
   SCartCardTableBoxImageContent,
   SCartCardTableBoxNameContent,
 } from "../../components/CartInfo/CartInfo.styled";
+import { Link } from "react-router-dom";
 
 export const SCheckoutCartEmpty = styled.div`
-  > div > h4 {
-    cursor: pointer;
-    margin: 20px 0 10px 0;
+  > h2 {
+    margin-bottom: 10px;
+  }
+  text-align: center;
+`
+export const SCheckoutStyledLink = styled(Link)`
+  text-decoration: none;
+  color: #1f1f1f;
 
-    &:hover {
+  &:hover {
       color: #df3d41;
       transition: 0.1s ease;
     }
-  }
-  > div > img {
-    cursor: pointer;
-
-    &:hover {
-      filter: invert(40%) sepia(80%) saturate(10000%) hue-rotate(349deg)
-        brightness(92%) contrast(100%);
-    }
-  }
-  text-align: center;
 `
 
 export const SCheckout = styled.div`
