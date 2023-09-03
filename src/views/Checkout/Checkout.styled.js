@@ -7,6 +7,27 @@ import {
   SCartCardTableBoxNameContent,
 } from "../../components/CartInfo/CartInfo.styled";
 
+export const SCheckoutCartEmpty = styled.div`
+  > div > h4 {
+    cursor: pointer;
+    margin: 20px 0 10px 0;
+
+    &:hover {
+      color: #df3d41;
+      transition: 0.1s ease;
+    }
+  }
+  > div > img {
+    cursor: pointer;
+
+    &:hover {
+      filter: invert(40%) sepia(80%) saturate(10000%) hue-rotate(349deg)
+        brightness(92%) contrast(100%);
+    }
+  }
+  text-align: center;
+`
+
 export const SCheckout = styled.div`
   display: flex;
   margin-top: 50px;
