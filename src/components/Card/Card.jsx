@@ -144,7 +144,7 @@ export const Card = (props) => {
       )}
       <SCardContentWrapper isHovered={isHovered}>
         <SStyledLink to={path}>
-          <SCardImageContainer>
+          <SCardImageContainer onClick={() => window.scrollTo({top: 0, left: 0})}>
             <SCardImageWrapper>
               <SCardImage src={productImage[0]} alt="" />
             </SCardImageWrapper>
@@ -153,7 +153,7 @@ export const Card = (props) => {
 
         <SCardInfo>
           <SStyledLink to={path}>
-            <SCardProductName>{productName}</SCardProductName>
+            <SCardProductName onClick={() => window.scrollTo({top: 0, left: 0})}>{productName}</SCardProductName>
           </SStyledLink>
         </SCardInfo>
         <SCardPriceContainer isHovered={isHovered}>
