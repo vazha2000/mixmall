@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { SBestSellingProducts, SBestSellingProductsButton, SBestSellingProductsButtonWrapper, SBestSellingProductsHeader, SBestSellingProductsItems, SBestSellingProductsLabel, SBestSellingProductsLabelText } from './BestSellingProducts.styled'
-import { saleProducts } from '../../data/data'
+import { bestSellingProducts } from '../../data/data'
 import { Card } from '../Card'
 
 export const BestSellingProducts = () => {
 
-  const [hoverStates, setHoverStates] = useState(saleProducts.map(() => false));
+  const [hoverStates, setHoverStates] = useState(bestSellingProducts.map(() => false));
 
   const handleHover = (index) => {
     setHoverStates((prevStates) => {
@@ -22,7 +22,7 @@ export const BestSellingProducts = () => {
         <SBestSellingProductsLabelText>საუკეთესოდ გაყიდვადი პროდუქცია</SBestSellingProductsLabelText>
       </SBestSellingProductsLabel>
       <SBestSellingProductsItems>
-      {saleProducts.map((item, index) => {
+      {bestSellingProducts.map((item, index) => {
           return <Card
           key={index}
           productImage={item.productImage}
@@ -34,6 +34,7 @@ export const BestSellingProducts = () => {
           alt={item.alt}
           handleHover={() => handleHover(index)}
           isHovered={hoverStates[index]}
+          path={`${item.categoryName}/${item.subcategoryName}/${item.productName}`}
         />
         })}
       </SBestSellingProductsItems>
