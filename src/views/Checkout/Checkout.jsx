@@ -29,6 +29,7 @@ import {
   SFormSubmitButtonContainer,
   SLastnameInput,
   SMailInput,
+  SOrderNotification,
   SPaymentSelect,
   SPhoneInput,
   SPopulatedAreaInput,
@@ -120,6 +121,15 @@ export const Checkout = () => {
     const templateID = "template_673scd6";
     const userID = "1djXRcgUQ3KyzVEvg";
 
+    const products = cart.map((item) => ({
+      productName: item.productName,
+      price: item.currentPrice,
+      oldPrice: item.oldPrice,
+      quantity: item.productQuantity,
+    }));
+
+    const length = products.length
+
     const emailData = {
       firstname: formData?.firstname,
       lastname: formData?.lastname,
@@ -131,6 +141,37 @@ export const Checkout = () => {
       phoneNumber: formData?.phoneNumber,
       email: formData?.email,
       paymentMethod: formData?.paymentMethod,
+      totalPrice: totalPrice,
+      productName1: products[0]?.productName,
+      productName2: products[1]?.productName,
+      productName3: products[2]?.productName,
+      productName4: products[3]?.productName,
+      productName5: products[4]?.productName,
+      productName6: products[5]?.productName,
+      productName7: products[6]?.productName,
+      productName8: products[7]?.productName,
+      productName9: products[8]?.productName,
+      productName10: products[9]?.productName,
+      quantity1: products[0]?.quantity,
+      quantity2: products[1]?.quantity,
+      quantity3: products[2]?.quantity,
+      quantity4: products[3]?.quantity,
+      quantity5: products[4]?.quantity,
+      quantity6: products[5]?.quantity,
+      quantity7: products[6]?.quantity,
+      quantity8: products[7]?.quantity,
+      quantity9: products[8]?.quantity,
+      quantity10: products[9]?.quantity,
+      price1: products[0]?.price * products[0]?.quantity,
+      price2: products[1]?.price * products[1]?.quantity,
+      price3: products[2]?.price * products[2]?.quantity,
+      price4: products[3]?.price * products[3]?.quantity,
+      price5: products[4]?.price * products[4]?.quantity,
+      price6: products[5]?.price * products[5]?.quantity,
+      price7: products[6]?.price * products[6]?.quantity,
+      price8: products[7]?.price * products[7]?.quantity,
+      price9: products[8]?.price * products[8]?.quantity,
+      price10: products[9]?.price * products[9]?.quantity,
     };
 
     emailjs.send(serviceID, templateID, emailData, userID).then(
@@ -144,16 +185,15 @@ export const Checkout = () => {
   };
 
   const onSubmit = (data) => {
-    data.cart = cart.map((item) => [
-      {
-        productName: item.productName,
-        price: item.currentPrice,
-        oldPrice: item.oldPrice,
-        quantity: item.productQuantity,
-      },
-    ]);
-    console.log(data);
+    // data.cart = cart.map((item) => ({
+    //   productName: item.productName,
+    //   price: item.currentPrice,
+    //   oldPrice: item.oldPrice,
+    //   quantity: item.productQuantity,
+    // }));
+    // console.log(data);
     // sendEmail(data)
+    setCart([])
     reset();
   };
 

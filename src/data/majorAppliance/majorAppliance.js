@@ -430,7 +430,7 @@ export const majorAppliance = [
         isInWishlist: false,
         descriptions: [
           {
-            "გამწოვი":"ALNEO T9500 BLACK (01464) /60*30*13/",
+            "გამწოვი":"ALNEO T9500 BLACK (01464)",
             "პერფორმანსი": "600მ³",
             "გამწოვის ზომა": "60*30*13",
             "გაზქურის ზედაპირი:":"Alneo6064GB-(01552)",
