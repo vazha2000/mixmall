@@ -29,6 +29,7 @@ import {
   SFormSubmitButtonContainer,
   SLastnameInput,
   SMailInput,
+  SOrderNotification,
   SPaymentSelect,
   SPhoneInput,
   SPopulatedAreaInput,
@@ -192,7 +193,7 @@ export const Checkout = () => {
     // }));
     // console.log(data);
     // sendEmail(data)
-    // setCart([])
+    setCart([])
     reset();
   };
 
