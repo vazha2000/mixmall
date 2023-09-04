@@ -87,12 +87,12 @@ export const Navbar = () => {
           {/* <SNavInputContainer>
             <SearchInput />
           </SNavInputContainer> */}
-          <SStyledLink to={"tel:+995 579 33 33 11"}>
+          <SStyledLink to={"tel:+995 555 55 55 55"}>
             <SNavContactContainer>
               <SNavContactIconContainer>
                 <img src="assets/svg/phone.svg" alt="phone icon" />
               </SNavContactIconContainer>
-              <span>+995 579 33 33 11</span>
+              <span>+995 555 55 55 55</span>
             </SNavContactContainer>
           </SStyledLink>
 
@@ -173,7 +173,7 @@ export const Navbar = () => {
             }))
           }
         >
-          <SNavMenuItems>ONLINE განვადება</SNavMenuItems>
+          <SNavMenuItems>განვადება</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavMenuItemsContainer
           isMenuHovered={menuItemsHover.contact}

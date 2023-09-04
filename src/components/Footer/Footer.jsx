@@ -43,11 +43,11 @@ export const Footer = () => {
           <div>
             <SFooterContactIcon>
               <img src="assets/svg/phone.svg" alt="" width={20} />
-              <span>579-33-33-11</span>
+              <span>579-55-55-55</span>
             </SFooterContactIcon>
             <SFooterContactIcon>
               <img src="assets/svg/envelope.svg" alt="" width={20} />
-              <span>mixmall.ge@gmail.com</span>
+              <span>primebasket12@gmail.com</span>
             </SFooterContactIcon>
           </div>
         </SFooterContact>
