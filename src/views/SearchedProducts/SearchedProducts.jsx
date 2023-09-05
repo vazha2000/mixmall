@@ -28,12 +28,6 @@ export const SearchedProducts = () => {
     });
   };
 
-  // const handlePageChange = (pageNumber) => {
-  //   if (pageNumber >= 1 && pageNumber <= totalPages) {
-  //     setCurrentPage(pageNumber);
-  //   }
-  // };
-
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -119,7 +113,6 @@ export const SearchedProducts = () => {
             ],
             index
           ) => (
-            <div key={index}>
               <Card
                 key={index}
                 index={index}
@@ -136,13 +129,12 @@ export const SearchedProducts = () => {
                 path={`/${categoryName}/${productId}/${productName}`}
                 id={id}
               />
-            </div>
           )
         )}
       </SSearchedProductsContainer>
       {currentProducts.length == 0 ? (
         <SSearchedProductsNoData>
-          <h1>პროდუქტების სია ცარიელია</h1>
+          <h1>PRODUCT LIST IS EMPTY</h1>
         </SSearchedProductsNoData>
       ) : (
         <SSearchedProductsPagination>
@@ -179,7 +171,3 @@ export const SearchedProducts = () => {
     </div>
   );
 };
-
-{
-  /* <span>Page {currentPage} of {totalPages}</span> */
-}

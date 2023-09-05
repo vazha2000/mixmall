@@ -30,23 +30,23 @@ export const Footer = () => {
       </SFooterLogoSocial>
       <SFooterInfoContact>
         <SFooterInfo>
-          <div>საინფორმაციო</div>
+          <div>INFORMATION</div>
           <div>
-            <span>ჩვენს შესახებ</span>
-            <span>საგარანტიო პირობები</span>
-            <span>მიწოდების პირობები</span>
-            <span>კონფიდენციალურობა</span>
+            <span>ABOUT US</span>
+            <span>WARRANTY SERVICE</span>
+            <span>DELIVERY SERVICE</span>
+            <span>TERMS & CONDITIONS</span>
           </div>
         </SFooterInfo>
         <SFooterContact>
-          <div>კონტაქტი</div>
+          <div>CONTACT</div>
           <div>
             <SFooterContactIcon>
-              <img src="assets/svg/phone.svg" alt="" width={20} />
-              <span>579-55-55-55</span>
+              <img src="assets/svg/phone.svg" alt="phone" width={20} />
+              <span>555-55-55-55</span>
             </SFooterContactIcon>
             <SFooterContactIcon>
-              <img src="assets/svg/envelope.svg" alt="" width={20} />
+              <img src="assets/svg/envelope.svg" alt="envelope" width={20} />
               <span>primebasket12@gmail.com</span>
             </SFooterContactIcon>
           </div>

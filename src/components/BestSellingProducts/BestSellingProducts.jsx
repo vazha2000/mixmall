@@ -32,7 +32,7 @@ export const BestSellingProducts = () => {
       <SBestSellingProductsLabel>
         <img src="assets/svg/labelIcon.svg" alt="label icon" />
         <SBestSellingProductsLabelText>
-          საუკეთესოდ გაყიდვადი პროდუქცია
+          BEST SELLING PRODUCTS
         </SBestSellingProductsLabelText>
       </SBestSellingProductsLabel>
       <SBestSellingProductsItems>
@@ -58,7 +58,7 @@ export const BestSellingProducts = () => {
       </SBestSellingProductsItems>
       <SBestSellingProductsButtonWrapper>
         <Link to="/selling-products">
-          <SBestSellingProductsButton onClick={() => window.scrollTo({top: 0, left: 0})}>ყველას ნახვა</SBestSellingProductsButton>
+          <SBestSellingProductsButton onClick={() => window.scrollTo({top: 0, left: 0})}>VIEW ALL</SBestSellingProductsButton>
         </Link>
       </SBestSellingProductsButtonWrapper>
     </SBestSellingProducts>

@@ -21,7 +21,7 @@ export const Wishlist = () => {
   return (
     <SWishlist quantity={wishlist.length === 0}>
       {wishlist.length === 0 && (
-          <SWishlistEmpty>შენი სურვილების სია ცარიელია</SWishlistEmpty>
+          <SWishlistEmpty>YOUR WISHLIST IS EMPTY</SWishlistEmpty>
       )}
       {wishlist.map((item, index) => (
         <Card
