@@ -184,14 +184,7 @@ export const Checkout = () => {
   };
 
   const onSubmit = (data) => {
-    // data.cart = cart.map((item) => ({
-    //   productName: item.productName,
-    //   price: item.currentPrice,
-    //   oldPrice: item.oldPrice,
-    //   quantity: item.productQuantity,
-    // }));
-    // console.log(data);
-    // sendEmail(data)
+    sendEmail(data)
     setCart([])
     reset();
   };

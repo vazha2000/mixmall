@@ -87,12 +87,12 @@ export const Navbar = () => {
           {/* <SNavInputContainer>
             <SearchInput />
           </SNavInputContainer> */}
-          <SStyledLink to={"tel:+995 579 33 33 11"}>
+          <SStyledLink to={"tel:+995 555 55 55 55"}>
             <SNavContactContainer>
               <SNavContactIconContainer>
                 <img src="assets/svg/phone.svg" alt="phone icon" />
               </SNavContactIconContainer>
-              <span>+995 579 33 33 11</span>
+              <span>+995 555 55 55 55</span>
             </SNavContactContainer>
           </SStyledLink>
 
@@ -132,7 +132,7 @@ export const Navbar = () => {
         >
           <SNavMenuCategories onClick={handleCategoriesClick}>
             <img src="assets/svg/burgerMenu.svg" alt="burger menu" />
-            <span>კატეგორიები</span>
+            <span>CATEGORIES</span>
           </SNavMenuCategories>
           {isCategoriesActive && (
             <SNavSidebarWrapper>
@@ -156,7 +156,7 @@ export const Navbar = () => {
             }))
           }
         >
-          <SNavMenuItems>მთავარი</SNavMenuItems>
+          <SNavMenuItems>MAIN</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavMenuItemsContainer
           isMenuHovered={menuItemsHover.onlineInstallment}
@@ -173,7 +173,7 @@ export const Navbar = () => {
             }))
           }
         >
-          <SNavMenuItems>ONLINE განვადება</SNavMenuItems>
+          <SNavMenuItems>INSTALLMENT</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavMenuItemsContainer
           isMenuHovered={menuItemsHover.contact}
@@ -190,7 +190,7 @@ export const Navbar = () => {
             }))
           }
         >
-          <SNavMenuItems>კონტაქტი</SNavMenuItems>
+          <SNavMenuItems>CONTACT</SNavMenuItems>
         </SNavMenuItemsContainer>
         <SNavInputContainer>
           <SearchInput />

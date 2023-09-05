@@ -129,7 +129,7 @@ export const MobileMenu = ({ isOpen, setIsOpen }) => {
           })}
         </SMobileMenuCategoriesContainer>
         <SMobileMenuCategoriesList>მთავარი</SMobileMenuCategoriesList>
-        <SMobileMenuCategoriesList>ONLINE განვადება</SMobileMenuCategoriesList>
+        <SMobileMenuCategoriesList>განვადება</SMobileMenuCategoriesList>
         <SMobileMenuCategoriesList>კონტაქტი</SMobileMenuCategoriesList>
       </SMobileMenuCategories>
     </SMobileMenu>
