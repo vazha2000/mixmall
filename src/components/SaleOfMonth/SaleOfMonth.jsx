@@ -30,7 +30,7 @@ export const SaleOfMonth = () => {
     <SSaleOfMonth>
       <SSaleOfMonthLabel>
         <img src="assets/svg/labelIcon.svg" alt="label icon" />
-        <SSaleOfMonthLabelText>თვის აქცია</SSaleOfMonthLabelText>
+        <SSaleOfMonthLabelText>SALE OF THE MONTH</SSaleOfMonthLabelText>
         <SCountingDownLabel>
           <CountingDown />
         </SCountingDownLabel>
@@ -60,7 +60,7 @@ export const SaleOfMonth = () => {
         })}
       </SSaleOfMonthItems>
       <SSAleOfMonthButtonContainer>
-        <SSaleOfMonthButton>ყველას ნახვა</SSaleOfMonthButton>
+        <SSaleOfMonthButton>VIEW ALL</SSaleOfMonthButton>
       </SSAleOfMonthButtonContainer>
     </SSaleOfMonth>
   );

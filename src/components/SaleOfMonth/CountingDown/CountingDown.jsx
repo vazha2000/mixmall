@@ -39,22 +39,22 @@ export const CountingDown = () => {
   return (
     <SCountingDown>
             <SCountingDownTimeContainer>
-              <span>დღე</span>
+              <span>DAY</span>
               <h2>{remainingTime.days.toString().padStart(2, '0')}</h2>
             </SCountingDownTimeContainer>
             <img src="assets/svg/colon.svg" alt="colon" />
             <SCountingDownTimeContainer>
-              <span>საათი</span>
+              <span>HOUR</span>
               <h2>{remainingTime.hours.toString().padStart(2, '0')}</h2>
             </SCountingDownTimeContainer>
             <img src="assets/svg/colon.svg" alt="colon" />
             <SCountingDownTimeContainer>
-              <span>წუთი</span>
+              <span>MINUTE</span>
               <h2>{remainingTime.minutes.toString().padStart(2, '0')}</h2>
             </SCountingDownTimeContainer>
             <img src="assets/svg/colon.svg" alt="colon" />
             <SCountingDownTimeContainer>
-              <span>წამი</span>
+              <span>SECOND</span>
               <h2>{remainingTime.seconds.toString().padStart(2, '0')}</h2>
             </SCountingDownTimeContainer>
           </SCountingDown>
