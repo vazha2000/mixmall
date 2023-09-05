@@ -14,7 +14,7 @@ import { vehicles } from "./vehicles/vehicles";
 export const categoriesListItems = [
   {
     id: 1,
-    name: "კომპიუტერული ტექნიკა",
+    name: "COMPUTER TECHNOLOGY",
     categoryName: "computer&technic",
     subcategories: [
       ...computerTechnic
@@ -24,7 +24,7 @@ export const categoriesListItems = [
   },
   {
     id: 2,
-    name: "მსხვილი საყოფაცხოვრებო ტექნიკა",
+    name: "MAJOR APPLIANCE",
     categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
     subcategories: [...majorAppliance],
     svg: "assets/svg/CategoriesIcons/washingmachine.svg",
@@ -32,7 +32,7 @@ export const categoriesListItems = [
   },
   {
     id: 3,
-    name: "წვრილი საყოფაცხოვრებო ტექნიკა",
+    name: "SMALL APPLIANCE",
     categoryName: "small&appliance",
     subcategories: [...smallAppliance],
     svg: "assets/svg/CategoriesIcons/iron.svg",
@@ -40,7 +40,7 @@ export const categoriesListItems = [
   },
   {
     id: 4,
-    name: "ხელსაწყო ინსტრუმენტები",
+    name: "TOOLS",
     categoryName: "tools",
     subcategories: [...tools],
     svg: "assets/svg/CategoriesIcons/tools.svg",
@@ -48,7 +48,7 @@ export const categoriesListItems = [
   },
   {
     id: 5,
-    name: "მობილური ტელეფონები",
+    name: "MOBILE PHONES",
     categoryName: "mobile&phones",
     subcategories: [...phones],
     svg: "assets/svg/CategoriesIcons/mobile.svg",
@@ -56,7 +56,7 @@ export const categoriesListItems = [
   },
   {
     id: 6,
-    name: "თავის მოვლის საშუალებები",
+    name: "SELFCARE",
     categoryName: "selfcare",
     subcategories: [...selfcare],
     svg: "assets/svg/CategoriesIcons/selfcare.svg",
@@ -64,7 +64,7 @@ export const categoriesListItems = [
   },
   {
     id: 7,
-    name: "ჰობი და გართობა",
+    name: "HOBBIES",
     categoryName: "hobbies",
     subcategories: [...hobbies],
     svg: "assets/svg/CategoriesIcons/sports.svg",
@@ -72,7 +72,7 @@ export const categoriesListItems = [
   },
   {
     id: 8,
-    name: "გათბობა და გაგრილება",
+    name: "HVAC",
     categoryName: "hvac",
     subcategories: [...hvac],
     svg: "assets/svg/CategoriesIcons/conditioner.svg",
@@ -80,7 +80,7 @@ export const categoriesListItems = [
   },
   {
     id: 9,
-    name: "საბავშვო ინვენტარი",
+    name: "CHILDREN INVENTORY",
     categoryName: "children&inventory",
     subcategories: [...childrenInventory],
     svg: "assets/svg/CategoriesIcons/toys.svg",
@@ -88,7 +88,7 @@ export const categoriesListItems = [
   },
   {
     id: 10,
-    name: "სამზარეულოს ტექნიკა",
+    name: "KITCHEN APPLIANCES",
     categoryName: "kitchen&technic",
     subcategories: [...kitchenTechnic],
     svg: "assets/svg/CategoriesIcons//kitchen.svg",
@@ -96,7 +96,7 @@ export const categoriesListItems = [
   },
   {
     id: 11,
-    name: "ინტერიერი და ავეჯი",
+    name: "INTERIOR AND FURNITURE",
     categoryName: "interior&furniture",
     subcategories: [...interiorFurniture],
     svg: "assets/svg/CategoriesIcons/furniture.svg",
@@ -104,7 +104,7 @@ export const categoriesListItems = [
   },
   {
     id: 12,
-    name: "ავტომობილების განყოფილება",
+    name: "VEHICLES",
     categoryName: "vehicles",
     subcategories: [...vehicles],
     svg: "assets/svg/CategoriesIcons/car.svg",
