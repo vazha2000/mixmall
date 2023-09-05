@@ -140,23 +140,23 @@ export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked, wi
         onBlur={handleBlur}
         onChange={handleSearch}
         value={searchQuery}
-        placeholder="პროდუქტების ძიება"
+        placeholder="Search For Products"
       />
       <SSearchButtonContainer>
-        <span>ძიება</span>
+        <span>SEARCH</span>
         <img src="assets/svg/search.svg" alt="search" />
       </SSearchButtonContainer>
       <SSearchedProducts filteredProducts={filteredProducts.length === 0}>
         <tbody>
           {isLoading && searchQuery !== "" ? (
             <SLoadingResult>
-              <td>ძიება...</td>
+              <td>SEARCHING...</td>
             </SLoadingResult>
           ) : filteredProducts.length === 0 &&
             isFocused &&
             searchQuery !== "" ? (
             <SLoadingResult>
-              <td>ვერაფერი მოიძებნა</td>
+              <td>NOTHING WAS FOUND</td>
             </SLoadingResult>
           ) : (
             filteredProducts.map(
@@ -202,7 +202,7 @@ export const SearchInput = ({setIsMobileSearchClicked, isMobileSearchClicked, wi
                           onClick={handleClickProduct}
                         >
                           <SShowAllProductsButton onClick={isMobileSearchClicked && (() => setIsMobileSearchClicked(false))}>
-                            ყველას ნახვა
+                            VIEW ALL
                           </SShowAllProductsButton>
                         </SStyledLink>
                       </td>
