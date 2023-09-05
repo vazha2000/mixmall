@@ -39,22 +39,22 @@ export const CountingDown = () => {
   return (
     <SCountingDown>
             <SCountingDownTimeContainer>
-              <span>DAY</span>
+              <span>{remainingTime.days > 1 ? "DAYS" : "DAY"}</span>
               <h2>{remainingTime.days.toString().padStart(2, '0')}</h2>
             </SCountingDownTimeContainer>
             <img src="assets/svg/colon.svg" alt="colon" />
             <SCountingDownTimeContainer>
-              <span>HOUR</span>
+              <span>{remainingTime.hours > 1 ? "HOURS" : "HOUR"}</span>
               <h2>{remainingTime.hours.toString().padStart(2, '0')}</h2>
             </SCountingDownTimeContainer>
             <img src="assets/svg/colon.svg" alt="colon" />
             <SCountingDownTimeContainer>
-              <span>MINUTE</span>
+              <span>{remainingTime.minutes > 1 ? "MINUTES" : "MINUTE"}</span>
               <h2>{remainingTime.minutes.toString().padStart(2, '0')}</h2>
             </SCountingDownTimeContainer>
             <img src="assets/svg/colon.svg" alt="colon" />
             <SCountingDownTimeContainer>
-              <span>SECOND</span>
+              <span>{remainingTime.seconds > 1 ? "SECONDS" : "SECOND"}</span>
               <h2>{remainingTime.seconds.toString().padStart(2, '0')}</h2>
             </SCountingDownTimeContainer>
           </SCountingDown>
