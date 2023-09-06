@@ -57,8 +57,8 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "მაცივრები",
-    subcategoryName: "მაცივრები",
+    name: "REFRIGERATORS",
+    subcategoryName: "refrigerators",
     products: [
       {
         id: 1,
@@ -845,8 +845,8 @@ export const majorAppliance = [
   },
   {
     id: uuidv4(),
-    name: "ტელევიზორები",
-    subcategoryName: "ტელევიზორები",
+    name: "TV",
+    subcategoryName: "tv",
     products: [
       {
         id: 5,
