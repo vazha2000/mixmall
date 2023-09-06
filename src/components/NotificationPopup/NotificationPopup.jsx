@@ -23,7 +23,7 @@ export const NotificationPopup = ({
               exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
             >
               <img src="assets/svg/cart.svg" alt="cart icon" />
-              <span>პროდუქტი {productName} დაემატა კალათაში</span>
+              <span>PRODUCT {productName} HAS BEEN ADDED TO THE CART</span>
             </SProductAddedToWishlist>
           </SCenteredContainer>
         )}
@@ -37,7 +37,7 @@ export const NotificationPopup = ({
               exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
             >
               <img src="assets/svg/cart.svg" alt="cart icon" />
-              <span>პროდუქტი {productName} წაიშალა კალათიდან</span>
+              <span>PRODUCT {productName} HAS BEEN REMOVED FROM CART</span>
             </SProductAddedToWishlist>
           </SCenteredContainer>
         )}
@@ -51,7 +51,7 @@ export const NotificationPopup = ({
               exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
             >
               <img src="assets/svg/wishlist.svg" alt="wishlist icon" />
-              <span>პროდუქტი {productName} დაემატა სურვილების სიაში</span>
+              <span>PRODUCT {productName} HAS BEEN ADDED TO THE WISHLIST</span>
             </SProductAddedToWishlist>
           </SCenteredContainer>
         )}
@@ -65,7 +65,7 @@ export const NotificationPopup = ({
               exit={{ y: -40, opacity: 0, transition: { duration: 0.3 } }}
             >
               <img src="assets/svg/wishlist.svg" alt="wishlist icon" />
-              <span>პროდუქტი {productName} წაიშალა სურვილების სიიდან</span>
+              <span>PRODUCT {productName} HAS BEEN REMOVED FROM THE WISHLIST</span>
             </SProductAddedToWishlist>
           </SCenteredContainer>
         )}
