@@ -25,7 +25,7 @@ export const categoriesListItems = [
   {
     id: 2,
     name: "MAJOR APPLIANCE",
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
+    categoryName: "major appliance",
     subcategories: [...majorAppliance],
     svg: "assets/svg/CategoriesIcons/washingmachine.svg",
     alt: "washingmachine",

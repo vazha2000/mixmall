@@ -20,7 +20,7 @@ export const ProductDescriptions = ({ product }) => {
       <SProductDescriptionTable>
         <tbody>
           <SProductDescriptionTableHeader>
-            <td>დეტალური მახასიათებლები</td>
+            <td>DETAILED SPECIFICATIONS</td>
           </SProductDescriptionTableHeader>
           {keys.slice(0, numDescriptionsToShow).map((item, index) => (
             <SProductDescriptionTableRow
@@ -40,7 +40,7 @@ export const ProductDescriptions = ({ product }) => {
         <SShowButtonContainer>
           {!showAllDescriptions ? (
             <button onClick={() => setShowAllDescriptions(true)}>
-              მეტის ჩვენება
+              SHOW MORE
             </button>
           ) : (
             <button onClick={() => setShowAllDescriptions(false)}>
