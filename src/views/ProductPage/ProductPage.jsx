@@ -227,7 +227,7 @@ export const ProductPage = ({ product }) => {
 
             <SProductButtonsWrapper>
               <SProductBuyNow onClick={handleCartClick} isInCart={isInCart}>
-                {isInCart ? "კალათიდან წაშლა" : "კალათაში დამატება"}
+                {isInCart ? "REMOVE FROM CART" : "ADD TO CART"}
               </SProductBuyNow>
               <SAddToFavorites
                 onClick={handleWishlistClick}
@@ -239,14 +239,14 @@ export const ProductPage = ({ product }) => {
           </SProductQuantityBuyFavorites>
           <SOnlineInstallmentBanksPayment>
             <SPaymentMethods>
-              <h4>გადახდის მეთოდები</h4>
+              <h4>PAYMENT METHODS</h4>
               <div>
-                <span>საბანკო გადარიცხვა</span>
-                <span>ნაღდი ანგარიშსწორება</span>
+                <span>TRANSFER TO BANK ACCOUNT</span>
+                <span>PAYING BY CASH</span>
               </div>
             </SPaymentMethods>
             <SOnlineInstallmentBanks>
-              <h4>ონლაინ განვადება</h4>
+              <h4>INSTALLMENT</h4>
               <div>
                 <img
                   src="assets/images/bankLogos/bog.png"

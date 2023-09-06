@@ -61,7 +61,7 @@ export const CartInfo = ({
           <SCartInfoHeaderContainer>
             <SCartInfoHeaderIconContent>
               <img src="assets/svg/cart.svg" alt="cart icon" />
-              <h3>კალათა</h3>
+              <h3>CART</h3>
             </SCartInfoHeaderIconContent>
             <SCartInfoHeaderClose>
               <img
@@ -74,7 +74,7 @@ export const CartInfo = ({
           {cart.length === 0 ? (
             <SCartEmpty>
               <img src="assets/svg/cart.svg" alt="cart icon" />
-              <h1>თქვენი კალათა ცარიელია</h1>
+              <h1>YOUR CART IS EMPTY</h1>
             </SCartEmpty>
           ) : (
             <>
@@ -112,7 +112,7 @@ export const CartInfo = ({
               </SCartCardTableContainer>
               <SCartCardTableTotal>
                 <span>
-                  ჯამი: {totalPrice}
+                  TOTAL: {totalPrice}
                   <img src="assets/svg/lari.svg" alt="lari icon" />
                 </span>
               </SCartCardTableTotal>
@@ -125,7 +125,7 @@ export const CartInfo = ({
               setIsCartClicked(false);
             }}
           >
-            <span>კალათის ნახვა</span>
+            <span>VIEW CART</span>
           </SCartinfoCheckoutButton>
         </SStyledLink>
       </SCartInfo>
