@@ -46,3 +46,18 @@ My eCommerce website is feature-rich, allowing users to browse and purchase prod
 14. **Mobile Menu and Search:** Ensures usability on smaller screens.
 15. **Pagination:** Implemented for subcategory pages.
 16. **Price Filters:** Users can filter products by price range on subcategory pages.
+
+## Installation
+
+1. Close the repository: git clone https://github.com/vazha2000/mixmall.git
+2. Navigate to the project directory: cd mixmall
+3. Install dependencies: npm install
+
+## Usage
+
+1. To run the development server, use the following command: **npm run dev**
+
+## License 
+
+**This project is the original work of Vazha Sikturashvili. All rights are reserved**
+**If you are interested in using, modifying or distributing this project, please contact Vazha Sikturashvili for permission and licensing details**
