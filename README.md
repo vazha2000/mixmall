@@ -50,8 +50,8 @@ My eCommerce website is feature-rich, allowing users to browse and purchase prod
 ## Installation
 
 1. Close the repository: git clone https://github.com/vazha2000/mixmall.git
-2. Navigate to the project directory: cd mixmall
-3. Install dependencies: npm install
+2. Navigate to the project directory: **cd mixmall**
+3. Install dependencies: **npm install**
 
 ## Usage
 
@@ -59,5 +59,6 @@ My eCommerce website is feature-rich, allowing users to browse and purchase prod
 
 ## License 
 
-**This project is the original work of Vazha Sikturashvili. All rights are reserved**
-**If you are interested in using, modifying or distributing this project, please contact Vazha Sikturashvili for permission and licensing details**
+1. **This project is the original work of Vazha Sikturashvili. All rights are reserved**
+
+2. **If you are interested in using, modifying or distributing this project, please contact Vazha Sikturashvili for permission and licensing details**
