@@ -7,7 +7,7 @@ export const SCard = styled.div`
   padding-bottom: 20px;
   border: ${({ isHovered }) =>
     isHovered ? "1px solid rgba(0,0,0, 0.4);" : "1px solid rgba(0,0,0, 0.15);"};
-  /* border-radius: 10px; */
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
 `;
@@ -34,6 +34,7 @@ export const SAddToCardButton = styled(motion.div)`
   margin: 0 auto;
   border: 1px solid rgba(0, 0, 0, 0.2);
   display: flex;
+  border-radius: 8px;
   justify-content: center;
   align-items: center;
   padding: 10px 0;
