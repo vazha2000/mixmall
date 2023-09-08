@@ -28,19 +28,19 @@ My eCommerce website is feature-rich, allowing users to browse and purchase prod
 
 ## Features
 
-**Categories Dropdown Menu with Subcategories:** Easy navigation through product categories and subcategories.
-**Sale of the Month Countdown:** A countdown timer to higlight special deals.
-**Best Selling Products Section:** Allows users to view all best-selling products.
-**Brands Carousel:** An automatic carousel showcasing brands.
-**Wishlist and Cart Functionality:** Implemented using the useContext hook for easy data management.
-**Wishlist Functionality:** Users can add and remove products from their wishlist.
-**Add to cart functionality:** Products added to the cart are stored in LocalStorage for data persistance.
-**Product Search:** A sessionStorage-based search functionality.
-**Searched Products Page:** All searched products listed on the page. Implemented pagination for better UX.
-**Product Page:** Detailed product pages with descriptions and image galleries.
-**Product Image Gallery:** Users can navigate through multiple images for each product.
-**Checkout Page:** Includes order summary, a form with validation, and an option to send inquiries via email.
-**Fully Responsive Design:** The website adapts to various screen sizes, including mobile and tablet.
-**Mobile Menu and Search:** Ensures usability on smaller screens.
-**Pagination:** Implemented for subcategory pages.
-**Price Filters:** Users can filter products by price range on subcategory pages.
+-**Categories Dropdown Menu with Subcategories:** Easy navigation through product categories and subcategories.
+-**Sale of the Month Countdown:** A countdown timer to higlight special deals.
+-**Best Selling Products Section:** Allows users to view all best-selling products.
+-**Brands Carousel:** An automatic carousel showcasing brands.
+-**Wishlist and Cart Functionality:** Implemented using the useContext hook for easy data management.
+-**Wishlist Functionality:** Users can add and remove products from their wishlist.
+-**Add to cart functionality:** Products added to the cart are stored in LocalStorage for data persistance.
+-**Product Search:** A sessionStorage-based search functionality.
+-**Searched Products Page:** All searched products listed on the page. Implemented pagination for better UX.
+-**Product Page:** Detailed product pages with descriptions and image galleries.
+-**Product Image Gallery:** Users can navigate through multiple images for each product.
+-**Checkout Page:** Includes order summary, a form with validation, and an option to send inquiries via email.
+-**Fully Responsive Design:** The website adapts to various screen sizes, including mobile and tablet.
+-**Mobile Menu and Search:** Ensures usability on smaller screens.
+-**Pagination:** Implemented for subcategory pages.
+-**Price Filters:** Users can filter products by price range on subcategory pages.
