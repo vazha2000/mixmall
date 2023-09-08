@@ -21,12 +21,15 @@ My eCommerce website is feature-rich, allowing users to browse and purchase prod
 
 ## Technologies Used
 
+My project leverages a variety of technologies and libraries to deliver a robust eCommerce platform:
+
 1. **React.js:** The core framework used for building the entire frontend of the application.
 2. **Styled Components:** To manage and maintain the styling of my website components.
 3. **Slick Slider Library:** Used to implement sliders and carousels for showcasing ads and brands.
 4. **React-hook-form:** Employs this library for efficient and easy form handling, especially in checkout process.
 5. **emailjs library:** Enables the functionality to send emails to the company's email address when users submit unquiries.
 6. **LocalStorage and SessionStorage:** Utilized to persist user data, including cart items, wishlists, and product searches, ensuring a seamless experience even after page refresh.
+7. **React Router DOM:** Used for client-side routing to a create smooth, single-page application experience.
 
 ## Features
 
