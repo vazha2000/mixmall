@@ -146,7 +146,7 @@ export const Card = (props) => {
         <SStyledLink to={path}>
           <SCardImageContainer onClick={() => window.scrollTo({top: 0, left: 0})}>
             <SCardImageWrapper>
-              <SCardImage src={productImage[0]} alt="" />
+              <SCardImage src={productImage[0]} alt="image" />
             </SCardImageWrapper>
           </SCardImageContainer>
         </SStyledLink>
@@ -175,9 +175,9 @@ export const Card = (props) => {
         </SCardPriceContainer>
         <SAddToCardButton isInCart={isInCart} onClick={handleCartClick}>
           {isInCart ? (
-            <span>კალათიდან წაშლა</span>
+            <span>REMOVE</span>
           ) : (
-            <span>კალათაში დამატება</span>
+            <span>ADD TO CART</span>
           )}
         </SAddToCardButton>
       </SCardContentWrapper>

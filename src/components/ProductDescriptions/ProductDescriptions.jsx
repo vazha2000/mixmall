@@ -44,7 +44,7 @@ export const ProductDescriptions = ({ product }) => {
             </button>
           ) : (
             <button onClick={() => setShowAllDescriptions(false)}>
-              ნაკლების ჩვენება
+              SHOW LESS
             </button>
           )}
         </SShowButtonContainer>
