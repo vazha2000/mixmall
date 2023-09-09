@@ -54,7 +54,7 @@ My project leverages a variety of technologies and libraries to deliver a robust
 
 ## Installation
 
-1. Close the repository: git clone https://github.com/vazha2000/mixmall.git
+1. Clone the repository: git clone https://github.com/vazha2000/mixmall.git
 2. Navigate to the project directory: **cd mixmall**
 3. Install dependencies: **npm install**
 
