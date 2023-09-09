@@ -17,7 +17,9 @@ This is a fully responsive e-commerce website built using React.js with styled-c
 
 Welcome to my fully responsive eCommerce website built with React.js and styled components. The Project's design is fully my inspiration, which provides to users a seamless online shoppoing experience. This README will guide you through everything you need to know about this project. 
 
-My eCommerce website is feature-rich, allowing users to browse and purchase products, manage their wishlist and cart, and even send orders to the company via email. The website is designed to be responsive, user-firendly, catering the wide range of devices and screen sizes. 
+My eCommerce website is feature-rich, allowing users to browse and purchase products, manage their wishlist and cart, and even send orders to the company via email. The website is designed to be responsive, user-firendly, catering the wide range of devices and screen sizes.
+
+If you want to test subcategory products, go to **REFRIGERATOR** and **TV** Subcategories from **Major Appliances**.
 
 ## Technologies Used
 
