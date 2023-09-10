@@ -63,7 +63,7 @@ export const Brands = () => {
     <SBrands>
       <SBrandsLabel>
         <img src="assets/svg/labelIcon.svg" alt="label icon" />
-        <SBrandsLabelText>ჩვენი ბრენდები</SBrandsLabelText>
+        <SBrandsLabelText>OUR BRANDS</SBrandsLabelText>
       </SBrandsLabel>
       <SBrandsHeaderSlider>
         <SBrandsSlider>

@@ -46,7 +46,6 @@ export const Checkout = () => {
   const { cart, setCart, removeFromCart, updateProductQuantity } =
     useContext(CheckoutContext);
 
-  // console.log(cart);
 
   const totalPrice = cart.reduce((sum, item) => {
     const productPrice = item.productQuantity * item.currentPrice;
