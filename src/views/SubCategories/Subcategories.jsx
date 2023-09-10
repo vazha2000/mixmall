@@ -60,8 +60,6 @@ export const Subcategories = ({ item }) => {
 
   return (
     <SSubcategories>
-      {/* <SSubcategoriesBreadcrumbs>{item.name}</SSubcategoriesBreadcrumbs> */}
-      {/* <Breadcrumb /> */}
       <SFilterProducts>
         <SSubcategoriesSidebarContainer>
           <ProductsFilter
