@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SSideBarCategories, SSideBarCategoriesIconName, SSideBarCategoriesList } from "../Sidebar/Sidebar.styled";
+import { SSideBarCategories, SSideBarCategoriesList } from "../Sidebar/Sidebar.styled";
 import { motion } from "framer-motion";
 import { SCartInfoHeaderContainer } from "../CartInfo/CartInfo.styled";
 
