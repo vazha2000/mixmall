@@ -258,8 +258,8 @@ export const bestSellingProducts = [
     warranty: "3 წელი",
     alt: "REGAL",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
-    subcategoryName: "მაცივრები",
+    categoryName: "major appliance",
+    subcategoryName: "refrigerators",
     descriptions: [
       {
         "ბრენდი": "REGAL",
@@ -291,8 +291,8 @@ export const bestSellingProducts = [
     warranty: "3 წელი",
     alt: "MIDEA",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
-    subcategoryName: "მაცივრები",
+    categoryName: "major appliance",
+    subcategoryName: "refrigerators",
     descriptions: [
       {
         "ბრენდი": "MIDEA",
@@ -325,8 +325,8 @@ export const bestSellingProducts = [
     warranty: "3 წელი",
     alt: "MIDEA",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
-    subcategoryName: "მაცივრები",
+    categoryName: "major appliance",
+    subcategoryName: "refrigerators",
     descriptions: [
       {
         "ბრენდი": "MIDEA",
@@ -358,8 +358,8 @@ export const bestSellingProducts = [
     warranty: "3 წელი",
     alt: "MIDEA",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
-    subcategoryName: "მაცივრები",
+    categoryName: "major appliance",
+    subcategoryName: "refrigerators",
     descriptions: [
       {
         "ბრენდი": "MIDEA",
@@ -390,8 +390,8 @@ export const bestSellingProducts = [
     warranty: "1 წელი",
     alt: "2E",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
-    subcategoryName: "ტელევიზორები",
+    categoryName: "major appliance",
+    subcategoryName: "tv",
     descriptions: [
       {
         "ბრენდი": "2E",
@@ -431,8 +431,8 @@ export const bestSellingProducts = [
     warranty: "1 წელი",
     alt: "2E",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
-    subcategoryName: "ტელევიზორები",
+    categoryName: "major appliance",
+    subcategoryName: "tv",
     descriptions: [
       {
         "ბრენდი": "2E",
@@ -466,8 +466,8 @@ export const bestSellingProducts = [
     warranty: "1 წელი",
     alt: "2E",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
-    subcategoryName: "ტელევიზორები",
+    categoryName: "major appliance",
+    subcategoryName: "tv",
     descriptions: [
       {
         "ძაბვა":"220-240 V",
@@ -503,8 +503,8 @@ export const bestSellingProducts = [
     warranty: "1 წელი",
     alt: "2E",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
-    subcategoryName: "ტელევიზორები",
+    categoryName: "major appliance",
+    subcategoryName: "tv",
     descriptions: [
       {
         "ძაბვა":"220-240 V",
