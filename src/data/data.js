@@ -125,7 +125,7 @@ export const saleProducts = [
     warranty: "3 წელი",
     alt: "Alneo",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
+    categoryName: "major appliance",
     subcategoryName: "ჩასაშენებელი სამეული",
     descriptions: [
       {
@@ -155,7 +155,7 @@ export const saleProducts = [
     warranty: "3 წელი",
     alt: "Alneo",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
+    categoryName: "major appliance",
     subcategoryName: "ჩასაშენებელი სამეული",
     descriptions: [
       {
@@ -186,7 +186,7 @@ export const saleProducts = [
     warranty: "3 წელი",
     alt: "Alneo",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
+    categoryName: "major appliance",
     subcategoryName: "ჩასაშენებელი სამეული",
     descriptions: [
       {
@@ -218,7 +218,7 @@ export const saleProducts = [
     warranty: "3 წელი",
     alt: "Silverline",
     isInWishlist: false,
-    categoryName: "მსხვილი საყოფაცხოვრებო ტექნიკა",
+    categoryName: "major appliance",
     subcategoryName: "ჩასაშენებელი სამეული",
     descriptions: [
       {
