@@ -245,11 +245,6 @@ export const SNavMenuItemsContainer = styled.ul`
 export const SNavMenuItems = styled.li`
   text-align: center;
   margin-top: 4px;
-  /* &:hover {
-    cursor: pointer;
-    color: #df3d41;
-
-  } */
 `;
 
 export const SNavMenuDiscount = styled.div`
